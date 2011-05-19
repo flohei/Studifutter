@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		5C5109A00F9E4D700046BCF6 /* MensaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5109990F9E4D700046BCF6 /* MensaListViewController.m */; };
+		5C5109A10F9E4D700046BCF6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C51099B0F9E4D700046BCF6 /* RootViewController.m */; };
+		5C5109A20F9E4D700046BCF6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C51099D0F9E4D700046BCF6 /* DetailViewController.m */; };
+		5C5109A30F9E4D700046BCF6 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C51099F0F9E4D700046BCF6 /* InfoViewController.m */; };
+		5C5109B00F9E4D7F0046BCF6 /* Mensa.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5109A60F9E4D7F0046BCF6 /* Mensa.m */; };
+		5C5109B10F9E4D7F0046BCF6 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5109A80F9E4D7F0046BCF6 /* Meal.m */; };
+		5C5109B20F9E4D7F0046BCF6 /* MealTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5109AB0F9E4D7F0046BCF6 /* MealTableViewCell.m */; };
+		5C5109B30F9E4D7F0046BCF6 /* MultilineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5109AD0F9E4D7F0046BCF6 /* MultilineTableViewCell.m */; };
+		5C5109B40F9E4D7F0046BCF6 /* MensaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5109AF0F9E4D7F0046BCF6 /* MensaAppDelegate.m */; };
+		5C5109C10F9E4DC50046BCF6 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5109BC0F9E4DC50046BCF6 /* RootViewController.xib */; };
+		5C5109C20F9E4DC50046BCF6 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5109BD0F9E4DC50046BCF6 /* InfoView.xib */; };
+		5C5109C30F9E4DC50046BCF6 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5109BE0F9E4DC50046BCF6 /* Entitlements.plist */; };
+		5C5109C50F9E4E000046BCF6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5109C40F9E4E000046BCF6 /* MainWindow.xib */; };
+		5C5109CA0F9E4E870046BCF6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5109C90F9E4E870046BCF6 /* AudioToolbox.framework */; };
+		5CB5ACC50F9E596200354A64 /* icon_rot_BurgerBecher.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5ACC10F9E596200354A64 /* icon_rot_BurgerBecher.png */; };
+		5CB5ACC60F9E596200354A64 /* icon_rot_Haus.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5ACC20F9E596200354A64 /* icon_rot_Haus.png */; };
+		5CB5ACC70F9E596200354A64 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5ACC30F9E596200354A64 /* Icon.png */; };
+		5CB5ACC80F9E596200354A64 /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5ACC40F9E596200354A64 /* Mail.png */; };
+		5CB5ACCE0F9E59C200354A64 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB5ACCD0F9E59C200354A64 /* Default.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* Studifutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studifutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Studifutter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Studifutter_Prefix.pch; sourceTree = "<group>"; };
+		5C5109980F9E4D700046BCF6 /* MensaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaListViewController.h; sourceTree = "<group>"; };
+		5C5109990F9E4D700046BCF6 /* MensaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaListViewController.m; sourceTree = "<group>"; };
+		5C51099A0F9E4D700046BCF6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5C51099B0F9E4D700046BCF6 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5C51099C0F9E4D700046BCF6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5C51099D0F9E4D700046BCF6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5C51099E0F9E4D700046BCF6 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		5C51099F0F9E4D700046BCF6 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		5C5109A50F9E4D7F0046BCF6 /* Mensa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mensa.h; sourceTree = "<group>"; };
+		5C5109A60F9E4D7F0046BCF6 /* Mensa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mensa.m; sourceTree = "<group>"; };
+		5C5109A70F9E4D7F0046BCF6 /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		5C5109A80F9E4D7F0046BCF6 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		5C5109AA0F9E4D7F0046BCF6 /* MealTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealTableViewCell.h; sourceTree = "<group>"; };
+		5C5109AB0F9E4D7F0046BCF6 /* MealTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealTableViewCell.m; sourceTree = "<group>"; };
+		5C5109AC0F9E4D7F0046BCF6 /* MultilineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultilineTableViewCell.h; sourceTree = "<group>"; };
+		5C5109AD0F9E4D7F0046BCF6 /* MultilineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultilineTableViewCell.m; sourceTree = "<group>"; };
+		5C5109AE0F9E4D7F0046BCF6 /* MensaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaAppDelegate.h; sourceTree = "<group>"; };
+		5C5109AF0F9E4D7F0046BCF6 /* MensaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaAppDelegate.m; sourceTree = "<group>"; };
+		5C5109BC0F9E4DC50046BCF6 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		5C5109BD0F9E4DC50046BCF6 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
+		5C5109BE0F9E4DC50046BCF6 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		5C5109C40F9E4E000046BCF6 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		5C5109C90F9E4E870046BCF6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		5CB5ACC10F9E596200354A64 /* icon_rot_BurgerBecher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rot_BurgerBecher.png; sourceTree = "<group>"; };
+		5CB5ACC20F9E596200354A64 /* icon_rot_Haus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rot_Haus.png; sourceTree = "<group>"; };
+		5CB5ACC30F9E596200354A64 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		5CB5ACC40F9E596200354A64 /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mail.png; sourceTree = "<group>"; };
+		5CB5ACCD0F9E59C200354A64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				5C5109CA0F9E4E870046BCF6 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5C5109AE0F9E4D7F0046BCF6 /* MensaAppDelegate.h */,
+				5C5109AF0F9E4D7F0046BCF6 /* MensaAppDelegate.m */,
+				5C5109A90F9E4D7F0046BCF6 /* Custom Cells */,
+				5C5109A40F9E4D7F0046BCF6 /* Custom Types */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Studifutter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				5C5109970F9E4D700046BCF6 /* ViewController */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Studifutter_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CB5ACCD0F9E59C200354A64 /* Default.png */,
+				5CB5ACC00F9E596200354A64 /* Graphics */,
+				5C5109BC0F9E4DC50046BCF6 /* RootViewController.xib */,
+				5C5109C40F9E4E000046BCF6 /* MainWindow.xib */,
+				5C5109BD0F9E4DC50046BCF6 /* InfoView.xib */,
+				5C5109BE0F9E4DC50046BCF6 /* Entitlements.plist */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5109C90F9E4E870046BCF6 /* AudioToolbox.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C5109970F9E4D700046BCF6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5C5109980F9E4D700046BCF6 /* MensaListViewController.h */,
+				5C5109990F9E4D700046BCF6 /* MensaListViewController.m */,
+				5C51099A0F9E4D700046BCF6 /* RootViewController.h */,
+				5C51099B0F9E4D700046BCF6 /* RootViewController.m */,
+				5C51099C0F9E4D700046BCF6 /* DetailViewController.h */,
+				5C51099D0F9E4D700046BCF6 /* DetailViewController.m */,
+				5C51099E0F9E4D700046BCF6 /* InfoViewController.h */,
+				5C51099F0F9E4D700046BCF6 /* InfoViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5C5109A40F9E4D7F0046BCF6 /* Custom Types */ = {
+			isa = PBXGroup;
+			children = (
+				5C5109A50F9E4D7F0046BCF6 /* Mensa.h */,
+				5C5109A60F9E4D7F0046BCF6 /* Mensa.m */,
+				5C5109A70F9E4D7F0046BCF6 /* Meal.h */,
+				5C5109A80F9E4D7F0046BCF6 /* Meal.m */,
+			);
+			name = "Custom Types";
+			sourceTree = "<group>";
+		};
+		5C5109A90F9E4D7F0046BCF6 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C5109AA0F9E4D7F0046BCF6 /* MealTableViewCell.h */,
+				5C5109AB0F9E4D7F0046BCF6 /* MealTableViewCell.m */,
+				5C5109AC0F9E4D7F0046BCF6 /* MultilineTableViewCell.h */,
+				5C5109AD0F9E4D7F0046BCF6 /* MultilineTableViewCell.m */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		5CB5ACC00F9E596200354A64 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5CB5ACC10F9E596200354A64 /* icon_rot_BurgerBecher.png */,
+				5CB5ACC20F9E596200354A64 /* icon_rot_Haus.png */,
+				5CB5ACC30F9E596200354A64 /* Icon.png */,
+				5CB5ACC40F9E596200354A64 /* Mail.png */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Studifutter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Studifutter" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Studifutter;
+			productName = Studifutter;
+			productReference = 1D6058910D05DD3D006BFB54 /* Studifutter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Studifutter" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Studifutter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5109C10F9E4DC50046BCF6 /* RootViewController.xib in Resources */,
+				5C5109C20F9E4DC50046BCF6 /* InfoView.xib in Resources */,
+				5C5109C30F9E4DC50046BCF6 /* Entitlements.plist in Resources */,
+				5C5109C50F9E4E000046BCF6 /* MainWindow.xib in Resources */,
+				5CB5ACC50F9E596200354A64 /* icon_rot_BurgerBecher.png in Resources */,
+				5CB5ACC60F9E596200354A64 /* icon_rot_Haus.png in Resources */,
+				5CB5ACC70F9E596200354A64 /* Icon.png in Resources */,
+				5CB5ACC80F9E596200354A64 /* Mail.png in Resources */,
+				5CB5ACCE0F9E59C200354A64 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				5C5109A00F9E4D700046BCF6 /* MensaListViewController.m in Sources */,
+				5C5109A10F9E4D700046BCF6 /* RootViewController.m in Sources */,
+				5C5109A20F9E4D700046BCF6 /* DetailViewController.m in Sources */,
+				5C5109A30F9E4D700046BCF6 /* InfoViewController.m in Sources */,
+				5C5109B00F9E4D7F0046BCF6 /* Mensa.m in Sources */,
+				5C5109B10F9E4D7F0046BCF6 /* Meal.m in Sources */,
+				5C5109B20F9E4D7F0046BCF6 /* MealTableViewCell.m in Sources */,
+				5C5109B30F9E4D7F0046BCF6 /* MultilineTableViewCell.m in Sources */,
+				5C5109B40F9E4D7F0046BCF6 /* MensaAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Studifutter_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Studifutter;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: :Florian Heiber Softwareentwirkung und Beratung";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Studifutter_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Studifutter;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ABCB0D77-CAE2-4A91-A190-DCF4EC18A655";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Studifutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Studifutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

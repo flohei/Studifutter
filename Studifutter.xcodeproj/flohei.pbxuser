@@ -1,0 +1,174 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Studifutter */ = {
+		activeExec = 0;
+		executables = (
+			8F58FCDD10FC74440077345D /* Studifutter */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 8F58FCDD10FC74440077345D /* Studifutter */;
+		activeSDKPreference = iphonesimulator3.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Studifutter */;
+		codeSenseManager = 8F58FCF210FC74600077345D /* Code sense */;
+		executables = (
+			8F58FCDD10FC74440077345D /* Studifutter */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 286323649;
+			PBXWorkspaceStateSaveDate = 286323649;
+		};
+		perUserProjectItems = {
+			8F0FFA7B1110F3C900348591 /* PBXTextBookmark */ = 8F0FFA7B1110F3C900348591 /* PBXTextBookmark */;
+			8F2EEF5610FC96F600381EBE /* PBXTextBookmark */ = 8F2EEF5610FC96F600381EBE /* PBXTextBookmark */;
+			8F2EEF5710FC96F600381EBE /* PBXTextBookmark */ = 8F2EEF5710FC96F600381EBE /* PBXTextBookmark */;
+			8F2EEF5810FC96F600381EBE /* PBXTextBookmark */ = 8F2EEF5810FC96F600381EBE /* PBXTextBookmark */;
+			8F2EEF5A10FC96F600381EBE /* PBXTextBookmark */ = 8F2EEF5A10FC96F600381EBE /* PBXTextBookmark */;
+		};
+		sourceControlManager = 8F58FCF110FC74600077345D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5C5109A60F9E4D7F0046BCF6 /* Mensa.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {614, 426}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 425}";
+		};
+	};
+	5C5109A80F9E4D7F0046BCF6 /* Meal.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {929, 559}}";
+			sepNavSelRange = "{530, 394}";
+			sepNavVisRange = "{70, 924}";
+		};
+	};
+	5C5109AE0F9E4D7F0046BCF6 /* MensaAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {614, 585}}";
+			sepNavSelRange = "{524, 12}";
+			sepNavVisRange = "{173, 996}";
+		};
+	};
+	5C5109AF0F9E4D7F0046BCF6 /* MensaAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1251, 4121}}";
+			sepNavSelRange = "{5296, 348}";
+			sepNavVisRange = "{4869, 1134}";
+		};
+	};
+	8F0FFA7B1110F3C900348591 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C5109AF0F9E4D7F0046BCF6 /* MensaAppDelegate.m */;
+		name = "MensaAppDelegate.m: 160";
+		rLen = 348;
+		rLoc = 5296;
+		rType = 0;
+		vrLen = 1134;
+		vrLoc = 4869;
+	};
+	8F2EEF5610FC96F600381EBE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C5109A60F9E4D7F0046BCF6 /* Mensa.m */;
+		name = "Mensa.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 425;
+		vrLoc = 0;
+	};
+	8F2EEF5710FC96F600381EBE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C5109A80F9E4D7F0046BCF6 /* Meal.m */;
+		name = "Meal.m: 22";
+		rLen = 394;
+		rLoc = 530;
+		rType = 0;
+		vrLen = 924;
+		vrLoc = 70;
+	};
+	8F2EEF5810FC96F600381EBE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C5109AE0F9E4D7F0046BCF6 /* MensaAppDelegate.h */;
+		name = "MensaAppDelegate.h: 23";
+		rLen = 12;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 996;
+		vrLoc = 173;
+	};
+	8F2EEF5A10FC96F600381EBE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C5109AF0F9E4D7F0046BCF6 /* MensaAppDelegate.m */;
+		name = "MensaAppDelegate.m: 160";
+		rLen = 348;
+		rLoc = 5296;
+		rType = 0;
+		vrLen = 1135;
+		vrLoc = 4868;
+	};
+	8F58FCDD10FC74440077345D /* Studifutter */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Studifutter;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	8F58FCF110FC74600077345D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	8F58FCF210FC74600077345D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}

@@ -1,0 +1,402 @@
+TStudifutter
+v7
+r1
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk
+c000000004A42FA5A0000000000000110
+t1245903450
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/ResourceRules.plist
+c00000000493E25EF00000000000001E5
+t1228809711
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004967D3CF0000000000215BA0
+t1231541199
+s2186144
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004967D4FC0000000000197700
+t1231541500
+s1668864
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c00000000493E0BE40000000000001355
+t1228803044
+s4949
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004967C241000000000000067D
+t1231536705
+s1661
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004967D74500000000004724B0
+t1231542085
+s4662448
+
+N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004AD8432000000000004C7870
+t1255686944
+s5011568
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/InfoViewController.h
+c000000004A4291220000000000000186
+t1245876514
+s390
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.h
+c000000004A42912200000000000001BE
+t1245876514
+s446
+i<Foundation/Foundation.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m
+c000000004A42912200000000000003FE
+t1245876514
+s1022
+i"Meal.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.h
+c000000004A42912200000000000002CA
+t1245876514
+s714
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m
+c000000004A42912200000000000011D7
+t1245876514
+s4567
+i"MealTableViewCell.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.h
+c000000004A42912200000000000002AE
+t1245876514
+s686
+i<Foundation/Foundation.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m
+c000000004A42912200000000000001A9
+t1245876514
+s425
+i"Mensa.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.h
+c000000004A4291220000000000000498
+t1245876514
+s1176
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m
+c000000004A42912200000000000025E1
+t1245876514
+s9697
+i"MensaAppDelegate.h"
+i"RootViewController.h"
+i"Meal.h"
+i"InfoViewController.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.h
+c000000004A429122000000000000014B
+t1245876514
+s331
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m
+c000000004A429122000000000000064E
+t1245876514
+s1614
+i"MultilineTableViewCell.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/RootViewController.h
+c000000004A4291220000000000000291
+t1245876514
+s657
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Default.png
+c000000004A429123000000000004CBFF
+t1245876515
+s314367
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Entitlements.plist
+c000000004A42912300000000000000EE
+t1245876515
+s238
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Icon.png
+c000000004A4291230000000000000B85
+t1245876515
+s2949
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Mail.png
+c000000004A4291230000000000001616
+t1245876515
+s5654
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_BurgerBecher.png
+c000000004A4291230000000000001135
+t1245876515
+s4405
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_Haus.png
+c000000004A42912300000000000011BA
+t1245876515
+s4538
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib
+c000000004A4291230000000000004F4E
+t1245876515
+s20302
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib
+c000000004A42912300000000000044FA
+t1245876515
+s17658
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib
+c000000004A4291230000000000002050
+t1245876515
+s8272
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Studifutter_Prefix.pch
+c000000004A42912300000000000000BF
+t1245876515
+s191
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app.dSYM
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Default.png
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Entitlements.plist
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Icon.png
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Info.plist
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/InfoView.nib
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Mail.png
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/MainWindow.nib
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/PkgInfo
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/ResourceRules.plist
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/RootViewController.nib
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Studifutter
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/icon_rot_BurgerBecher.png
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/icon_rot_Haus.png
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/DetailViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/InfoViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/Meal.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MealTableViewCell.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/Mensa.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MensaAppDelegate.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MensaListViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MultilineTableViewCell.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/RootViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/Studifutter.LinkFileList
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/main.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m
+c000000004A429123000000000000018C
+t1245876515
+s396
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Library/MobileDevice/Provisioning Profiles/7522289C-AEDA-4D8D-925B-BB2DBBAB0706.mobileprovision
+c000000004B438CED0000000000002E32
+t1262718189
+s11826
+
+N/var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-fpjkmzyrfgasfncrddguwisqlvwf/Studifutter_Prefix.pch.gch
+t2
+s0
+
+NInfo.plist
+c000000004A4291230000000000000370
+t1245876515
+s880
+
+CCodeSign "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app"
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/DetailViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/InfoViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/Meal.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MealTableViewCell.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/Mensa.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MensaAppDelegate.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MensaListViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/MultilineTableViewCell.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/RootViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileC build/Studifutter.build/Debug-iphoneos/Studifutter.build/Objects-normal/armv6/main.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m" normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib"
+r0
+
+CCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib"
+r0
+
+CCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib"
+r0
+
+CCopyPNGFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Default.png" Default.png
+r0
+
+CCopyPNGFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Icon.png" Graphics/Icon.png
+r0
+
+CCopyPNGFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Mail.png" Graphics/Mail.png
+r0
+
+CCopyPNGFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/icon_rot_BurgerBecher.png" Graphics/icon_rot_BurgerBecher.png
+r0
+
+CCopyPNGFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/icon_rot_Haus.png" Graphics/icon_rot_Haus.png
+r0
+
+CCopyPlistFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Entitlements.plist" Entitlements.plist
+r0
+
+CCpResource build/Debug-iphoneos/Studifutter.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/ResourceRules.plist
+r0
+
+CGenerateDSYMFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app.dSYM" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Studifutter"
+r0
+
+CLd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Studifutter" normal armv6
+r0
+
+CProcessInfoPlistFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/Info.plist" Info.plist
+r0
+
+CProcessPCH /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-fpjkmzyrfgasfncrddguwisqlvwf/Studifutter_Prefix.pch.gch Studifutter_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_0
+r0
+
+CProcessProductPackaging "/Users/flohei/Library/MobileDevice/Provisioning Profiles/7522289C-AEDA-4D8D-925B-BB2DBBAB0706.mobileprovision" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app/embedded.mobileprovision"
+r0
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/Entitlements.plist "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphoneos/Studifutter.build/Studifutter.xcent"
+r0
+
+CTouch "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphoneos/Studifutter.app"
+r0
+

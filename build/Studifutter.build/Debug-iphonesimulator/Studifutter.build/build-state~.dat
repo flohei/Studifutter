@@ -1,0 +1,585 @@
+TStudifutter
+v7
+r0
+t284980301.846851
+cCheck dependencies
+cProcessInfoPlistFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Info.plist" Info.plist
+cCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib"
+cCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib"
+cCopyPlistFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Entitlements.plist" Entitlements.plist
+cCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib"
+cCpResource build/Debug-iphonesimulator/Studifutter.app/icon_rot_BurgerBecher.png Graphics/icon_rot_BurgerBecher.png
+cCpResource build/Debug-iphonesimulator/Studifutter.app/icon_rot_Haus.png Graphics/icon_rot_Haus.png
+cCpResource build/Debug-iphonesimulator/Studifutter.app/Icon.png Graphics/Icon.png
+cCpResource build/Debug-iphonesimulator/Studifutter.app/Mail.png Graphics/Mail.png
+cCpResource build/Debug-iphonesimulator/Studifutter.app/Default.png Default.png
+cProcessPCH /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch.gch Studifutter_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/main.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaListViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/RootViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/DetailViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/InfoViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Mensa.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Meal.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MealTableViewCell.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MultilineTableViewCell.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaAppDelegate.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk
+c000000004ABE051D00000000000000EE
+t1253967133
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004A0BAA26000000000026DB00
+t1242278438
+s2546432
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A0BAB370000000000260C20
+t1242278711
+s2493472
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A0BAB250000000000001355
+t1242278693
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A0CBEBB000000000000075E
+t1242349243
+s1886
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A0CBF5F0000000001432D80
+t1242349407
+s21179776
+
+N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004AD8432000000000004C7870
+t1255686944
+s5011568
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/InfoViewController.h
+c000000004A4291220000000000000186
+t1245876514
+s390
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.h
+c000000004A42912200000000000001BE
+t1245876514
+s446
+i<Foundation/Foundation.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m
+c000000004A42912200000000000003FE
+t1245876514
+s1022
+i"Meal.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.h
+c000000004A42912200000000000002CA
+t1245876514
+s714
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m
+c000000004A42912200000000000011D7
+t1245876514
+s4567
+i"MealTableViewCell.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.h
+c000000004A42912200000000000002AE
+t1245876514
+s686
+i<Foundation/Foundation.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m
+c000000004A42912200000000000001A9
+t1245876514
+s425
+i"Mensa.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.h
+c000000004A4291220000000000000498
+t1245876514
+s1176
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m
+c000000004A42912200000000000025E1
+t1245876514
+s9697
+i"MensaAppDelegate.h"
+i"RootViewController.h"
+i"Meal.h"
+i"InfoViewController.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.h
+c000000004A429122000000000000014B
+t1245876514
+s331
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m
+c000000004A429122000000000000064E
+t1245876514
+s1614
+i"MultilineTableViewCell.h"
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/RootViewController.h
+c000000004A4291220000000000000291
+t1245876514
+s657
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Default.png
+c000000004A429123000000000004CBFF
+t1245876515
+s314367
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Entitlements.plist
+c000000004A42912300000000000000EE
+t1245876515
+s238
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Icon.png
+c000000004A4291230000000000000B85
+t1245876515
+s2949
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Mail.png
+c000000004A4291230000000000001616
+t1245876515
+s5654
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_BurgerBecher.png
+c000000004A4291230000000000001135
+t1245876515
+s4405
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_Haus.png
+c000000004A42912300000000000011BA
+t1245876515
+s4538
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib
+c000000004A4291230000000000004F4E
+t1245876515
+s20302
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib
+c000000004A42912300000000000044FA
+t1245876515
+s17658
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib
+c000000004A4291230000000000002050
+t1245876515
+s8272
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Studifutter_Prefix.pch
+c000000004A42912300000000000000BF
+t1245876515
+s191
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app.dSYM
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Default.png
+t1263287499
+s314367
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Entitlements.plist
+t1263287499
+s62
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Icon.png
+t1263287499
+s2949
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Info.plist
+t1263287499
+s599
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/InfoView.nib
+t1263287499
+s5105
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Mail.png
+t1263287499
+s5654
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/MainWindow.nib
+t1263287499
+s3621
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/PkgInfo
+t1263287499
+s8
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/RootViewController.nib
+t1263287499
+s1495
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Studifutter
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/icon_rot_BurgerBecher.png
+t1263287499
+s4405
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/icon_rot_Haus.png
+t1263287499
+s4538
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/DetailViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/InfoViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Meal.o
+t1263287501
+s12128
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MealTableViewCell.o
+t1263287501
+s28068
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Mensa.o
+t1263287501
+s12540
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaAppDelegate.o
+t1263287501
+s66032
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaListViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MultilineTableViewCell.o
+t1263287501
+s23368
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/RootViewController.o
+t2
+s0
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Studifutter.LinkFileList
+c000000004B4C3CCB00000000000006AB
+t1263287499
+s1707
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/main.o
+t1263287501
+s6012
+
+N/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m
+c000000004A429123000000000000018C
+t1245876515
+s396
+i<UIKit/UIKit.h>
+
+N/var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch.gch
+t1263287501
+s12957072
+
+NInfo.plist
+c000000004A4291230000000000000370
+t1245876515
+s880
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies284980299#284980299#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/DetailViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.561549
+e284980301.567460
+r0
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/DetailViewController.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m: No such file or directory
+oi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effect
+oi686-apple-darwin10-gcc-4.2.1: no input files
+lSLF07#2@99"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m284980301#284980301#0(393"i686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m: No such file or directoryi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effecti686-apple-darwin10-gcc-4.2.1: no input filesCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 11(4@103"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 1284980301#18446744073709551615#0#0(1@0"0(0#0#91"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m4300885448#2321"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/DetailViewController.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/DetailViewController.o"1#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/InfoViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.567558
+e284980301.573452
+r0
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/InfoViewController.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m: No such file or directory
+oi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effect
+oi686-apple-darwin10-gcc-4.2.1: no input files
+lSLF07#2@97"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m284980301#284980301#0(391"i686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m: No such file or directoryi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effecti686-apple-darwin10-gcc-4.2.1: no input filesCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 11(4@103"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 1284980301#18446744073709551615#0#0(1@0"0(0#0#89"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m4300885448#2317"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoViewController.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/InfoViewController.o"1#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Meal.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.603616
+e284980301.668505
+r1
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Meal.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m284980301#284980301#0(0"0(0#0#83"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m4300885448#2297"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Meal.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Meal.o"0#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MealTableViewCell.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.639129
+e284980301.747537
+r1
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MealTableViewCell.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m: In function '-[MealTableViewCell initWithFrame:reuseIdentifier:]':
+o/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m:16: warning: 'initWithFrame:reuseIdentifier:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:177)
+lSLF07#2@104"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m284980301#284980301#0(492"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m: In function '-[MealTableViewCell initWithFrame:reuseIdentifier:]':/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m:16: warning: 'initWithFrame:reuseIdentifier:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:177)1(22@216"'initWithFrame:reuseIdentifier:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:177)284980301#165#327#0(6@96"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m267569314#16#0#16#0#33"'*' is deprecated (declared at *)0(0#0#96"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m4300885448#2323"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MealTableViewCell.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MealTableViewCell.o"0#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Mensa.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.573553
+e284980301.639021
+r1
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Mensa.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m284980301#284980301#0(0"0(0#0#84"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m4300885448#2299"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/Mensa.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/Mensa.o"0#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaAppDelegate.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.747651
+e284980301.846771
+r1
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaAppDelegate.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m: In function '-[MensaAppDelegate parser:didEndElement:namespaceURI:qualifiedName:]':
+o/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m:273: warning: format not a string literal and no format arguments
+lSLF07#2@103"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m284980301#284980301#0(343"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m: In function '-[MensaAppDelegate parser:didEndElement:namespaceURI:qualifiedName:]':/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m:273: warning: format not a string literal and no format arguments1(22@51"Format not a string literal and no format arguments284980301#181#162#0(6@95"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m267569314#273#0#273#0#51"format not a string literal and no format arguments0(0#0#95"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m4300885448#2321"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MensaAppDelegate.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaAppDelegate.o"0#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaListViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.545043
+e284980301.551541
+r0
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaListViewController.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m: No such file or directory
+oi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effect
+oi686-apple-darwin10-gcc-4.2.1: no input files
+lSLF07#2@102"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m284980301#284980301#0(396"i686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m: No such file or directoryi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effecti686-apple-darwin10-gcc-4.2.1: no input filesCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 11(4@103"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 1284980301#18446744073709551615#0#0(1@0"0(0#0#94"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m4300885448#2327"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MensaListViewController.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MensaListViewController.o"1#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MultilineTableViewCell.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.668613
+e284980301.751533
+r1
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MultilineTableViewCell.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m: In function '-[MultilineTableViewCell initWithFrame:reuseIdentifier:]':
+o/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m:15: warning: 'initWithFrame:reuseIdentifier:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:177)
+lSLF07#2@109"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m284980301#284980301#0(507"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m: In function '-[MultilineTableViewCell initWithFrame:reuseIdentifier:]':/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m:15: warning: 'initWithFrame:reuseIdentifier:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:177)1(22@216"'initWithFrame:reuseIdentifier:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h:177)284980301#175#332#0(6@101"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m267569314#15#0#15#0#33"'*' is deprecated (declared at *)0(0#0#101"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m4300885448#2333"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Classes/MultilineTableViewCell.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/MultilineTableViewCell.o"0#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/RootViewController.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.551650
+e284980301.561452
+r0
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/RootViewController.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m: No such file or directory
+oi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effect
+oi686-apple-darwin10-gcc-4.2.1: no input files
+lSLF07#2@97"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m284980301#284980301#0(391"i686-apple-darwin10-gcc-4.2.1: /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m: No such file or directoryi686-apple-darwin10-gcc-4.2.1: warning: '-x objective-c' after last input file has no effecti686-apple-darwin10-gcc-4.2.1: no input filesCommand /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 11(4@103"Command /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 failed with exit code 1284980301#18446744073709551615#0#0(1@0"0(0#0#89"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m4300885448#2317"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/RootViewController.o"1#
+
+CCompileC build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/main.o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980301.543744
+e284980301.603508
+r1
+xCompileC
+xbuild/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/main.o
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m284980301#284980301#0(0"0(0#0#75"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m4300885448#2289"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -include /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/main.m" -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib"
+s284980299.211856
+e284980299.763332
+r1
+xCompileXIB
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib
+lSLF07#2@23"CompileXIB InfoView.xib284980299#284980299#0(0"0(0#0#81"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib4300885448#576"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/InfoView.nib" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/InfoView.xib"0#
+
+CCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib"
+s284980299.647791
+e284980299.993216
+r1
+xCompileXIB
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@25"CompileXIB MainWindow.xib284980299#284980299#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#83"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib4300885448#580"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/MainWindow.nib" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/MainWindow.xib"0#
+
+CCompileXIB "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib"
+s284980299.209872
+e284980299.599903
+r1
+xCompileXIB
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib284980299#284980299#0(0"0(0#0#91"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib4300885448#596"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/RootViewController.nib" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/RootViewController.xib"0#
+
+CCopyPlistFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Entitlements.plist" Entitlements.plist
+s284980299.600004
+e284980299.647679
+r1
+xCopyPlistFile
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Entitlements.plist
+xEntitlements.plist
+lSLF07#2@23"Copy Entitlements.plist284980299#284980299#0(0"0(0#0#87"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Entitlements.plist4300885448#461"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist --convert binary1 Entitlements.plist --outdir "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"0#
+
+CCpResource build/Debug-iphonesimulator/Studifutter.app/Default.png Default.png
+s284980299.768196
+e284980299.828257
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Studifutter.app/Default.png
+xDefault.png
+lSLF07#2@16"Copy Default.png284980299#284980299#0(0"0(0#0#80"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Default.png4300885448#555"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Default.png" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"0#
+
+CCpResource build/Debug-iphonesimulator/Studifutter.app/Icon.png Graphics/Icon.png
+s284980299.764817
+e284980299.778596
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Studifutter.app/Icon.png
+xGraphics/Icon.png
+lSLF07#2@22"Copy Graphics/Icon.png284980299#284980299#0(0"0(0#0#86"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Icon.png4300885448#561"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Icon.png" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"0#
+
+CCpResource build/Debug-iphonesimulator/Studifutter.app/Mail.png Graphics/Mail.png
+s284980299.766473
+e284980299.801838
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Studifutter.app/Mail.png
+xGraphics/Mail.png
+lSLF07#2@22"Copy Graphics/Mail.png284980299#284980299#0(0"0(0#0#86"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Mail.png4300885448#561"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/Mail.png" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"0#
+
+CCpResource build/Debug-iphonesimulator/Studifutter.app/icon_rot_BurgerBecher.png Graphics/icon_rot_BurgerBecher.png
+s284980299.763426
+e284980299.772281
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Studifutter.app/icon_rot_BurgerBecher.png
+xGraphics/icon_rot_BurgerBecher.png
+lSLF07#2@39"Copy Graphics/icon_rot_BurgerBecher.png284980299#284980299#0(0"0(0#0#103"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_BurgerBecher.png4300885448#578"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_BurgerBecher.png" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"0#
+
+CCpResource build/Debug-iphonesimulator/Studifutter.app/icon_rot_Haus.png Graphics/icon_rot_Haus.png
+s284980299.764188
+e284980299.801506
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Studifutter.app/icon_rot_Haus.png
+xGraphics/icon_rot_Haus.png
+lSLF07#2@31"Copy Graphics/icon_rot_Haus.png284980299#284980299#0(0"0(0#0#95"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_Haus.png4300885448#570"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Graphics/icon_rot_Haus.png" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"0#
+
+CGenerateDSYMFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app.dSYM" "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Studifutter"
+r0
+
+CLd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Studifutter" normal i386
+r0
+
+CProcessInfoPlistFile "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Info.plist" Info.plist
+s284980299.198880
+e284980299.209769
+r1
+xProcessInfoPlistFile
+x/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist284980299#284980299#0(0"0(0#0#79"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Info.plist4300885448#575"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Info.plist -genpkginfo "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app/Info.plist"0#
+
+CProcessPCH /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch.gch Studifutter_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s284980299.993338
+e284980301.543538
+r1
+xProcessPCH
+x/var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch.gch
+xStudifutter_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@33"Precompile Studifutter_Prefix.pch284980299#284980301#0(0"0(0#0#91"/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Studifutter_Prefix.pch4300885448#2145"    cd "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.0.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-generated-files.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-own-target-headers.hmap" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-all-target-headers.hmap" -iquote "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/Studifutter-project-headers.hmap" "-F/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/include" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources/i386" "-I/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Studifutter.build/Debug-iphonesimulator/Studifutter.build/DerivedSources" -c "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/Studifutter_Prefix.pch" -o /var/folders/Fk/FkNkiUpWEDeWjqFvSoryRU+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/Studifutter_Prefix-dbktzsxorocecnapfqlvvhgksejq/Studifutter_Prefix.pch.gch0#
+
+CTouch "/Users/flohei/Documents/Coding/Projekte/Studifutter/App/v1/Final 1.0/build/Debug-iphonesimulator/Studifutter.app"
+r0
+
