@@ -1,0 +1,17 @@
+In file included from /Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:9:
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.h:10:17: error: Meal.h: No such file or directory
+In file included from /Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:9:
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.h:13: error: expected specifier-qualifier-list before 'Meal'
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.h:16: error: expected specifier-qualifier-list before 'Meal'
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:17: error: no declaration of property 'currentMeal' found in the interface
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m: In function '-[DetailViewController viewDidLoad]':
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:37: error: 'currentMeal' undeclared (first use in this function)
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:37: error: (Each undeclared identifier is reported only once
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:37: error: for each function it appears in.)
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m: In function '-[DetailViewController numberOfSectionsInTableView:]':
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:53: error: 'currentMeal' undeclared (first use in this function)
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:54: warning: control reaches end of non-void function
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m: In function '-[DetailViewController tableView:cellForRowAtIndexPath:]':
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:71: error: 'currentMeal' undeclared (first use in this function)
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m: In function '-[DetailViewController dealloc]':
+/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.m:91: error: 'currentMeal' undeclared (first use in this function)
