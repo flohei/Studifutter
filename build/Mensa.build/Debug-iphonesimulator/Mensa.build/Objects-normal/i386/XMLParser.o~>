@@ -1,0 +1,12 @@
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:53: error: syntax error before 'if'
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:57: error: 'currentIndex' undeclared here (not in a function)
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:58: error: 'parentArray' undeclared here (not in a function)
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:61: error: syntax error before 'if'
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:72: error: redefinition of 'currentParent'
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:59: error: previous definition of 'currentParent' was here
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:73: error: syntax error before 'if'
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:79: warning: type defaults to 'int' in declaration of 'currentElementName'
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:79: warning: initialization makes integer from pointer without a cast
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:79: warning: data definition has no type or storage class
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:80: error: syntax error before '}' token
+/Users/flo/Documents/Coding/Versuche/Cocoa/Mensa/Classes/XMLParser.m:90: warning: '@end' must appear in an @implementation context
