@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* MensaAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {922, 630}}";
+			sepNavSelRange = "{931, 0}";
+			sepNavVisRange = "{219, 956}";
+		};
+	};
+	1D3623250D0F684500981E51 /* MensaAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1194, 4186}}";
+			sepNavSelRange = "{3652, 0}";
+			sepNavVisRange = "{5653, 908}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* Mensa */ = {
+		activeExec = 0;
+		executables = (
+			5C37DB5F0F7E8B3300C26695 /* Mensa */,
+		);
+	};
+	28A0AAE50D9B0CCF005BE974 /* Mensa_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {900, 645}}";
+			sepNavSelRange = "{225, 0}";
+			sepNavVisRange = "{0, 316}";
+		};
+	};
+	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{254, 0}";
+			sepNavVisRange = "{0, 592}";
+		};
+	};
+	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {922, 1988}}";
+			sepNavSelRange = "{212, 0}";
+			sepNavVisRange = "{3500, 1364}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 5C37DB5F0F7E8B3300C26695 /* Mensa */;
+		activeSDKPreference = iphoneos3.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Mensa */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Mensa */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 5C37DB760F7E8B5400C26695 /* Code sense */;
+		executables = (
+			5C37DB5F0F7E8B3300C26695 /* Mensa */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					744,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					681,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 261222633;
+			PBXWorkspaceStateSaveDate = 261222633;
+		};
+		perUserProjectItems = {
+			5C2FABCA0F90FB2100223946 /* PBXTextBookmark */ = 5C2FABCA0F90FB2100223946 /* PBXTextBookmark */;
+			5C2FABD90F91014900223946 /* PBXTextBookmark */ = 5C2FABD90F91014900223946 /* PBXTextBookmark */;
+			5C2FABDA0F91014900223946 /* PBXTextBookmark */ = 5C2FABDA0F91014900223946 /* PBXTextBookmark */;
+			5C2FABDD0F91014900223946 /* PBXTextBookmark */ = 5C2FABDD0F91014900223946 /* PBXTextBookmark */;
+			5C2FABDF0F91014900223946 /* PBXTextBookmark */ = 5C2FABDF0F91014900223946 /* PBXTextBookmark */;
+			5C2FAC250F910BF600223946 /* PBXTextBookmark */ = 5C2FAC250F910BF600223946 /* PBXTextBookmark */;
+			5C2FAC300F91367000223946 /* PBXTextBookmark */ = 5C2FAC300F91367000223946 /* PBXTextBookmark */;
+			5C9A252C0F90A5DF0054C021 /* PlistBookmark */ = 5C9A252C0F90A5DF0054C021 /* PlistBookmark */;
+			5C9A25370F90A6F90054C021 /* PBXTextBookmark */ = 5C9A25370F90A6F90054C021 /* PBXTextBookmark */;
+			5CB1724C0F90E50C00DC96B9 /* PlistBookmark */ = 5CB1724C0F90E50C00DC96B9 /* PlistBookmark */;
+			5CB1724D0F90E50C00DC96B9 /* PlistBookmark */ = 5CB1724D0F90E50C00DC96B9 /* PlistBookmark */;
+			5CB172B00F90EA7300DC96B9 /* PBXTextBookmark */ = 5CB172B00F90EA7300DC96B9 /* PBXTextBookmark */;
+			5CB172B30F90EA7300DC96B9 /* PBXTextBookmark */ = 5CB172B30F90EA7300DC96B9 /* PBXTextBookmark */;
+			5CE6CB010F91F29300206609 /* PBXTextBookmark */ = 5CE6CB010F91F29300206609 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 5C37DB750F7E8B5400C26695 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5C2238220F83ED860097C3C4 /* MealTableViewCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {900, 645}}";
+			sepNavSelRange = "{407, 0}";
+			sepNavVisRange = "{0, 714}";
+		};
+	};
+	5C2238230F83ED860097C3C4 /* MealTableViewCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 1960}}";
+			sepNavSelRange = "{2679, 0}";
+			sepNavVisRange = "{1449, 1351}";
+		};
+	};
+	5C2FABCA0F90FB2100223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 8";
+		rLen = 0;
+		rLoc = 213;
+		rType = 0;
+		vrLen = 1023;
+		vrLoc = 0;
+	};
+	5C2FABD90F91014900223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C9E0FE20F8CFA6F00F12A34 /* InfoViewController.m */;
+		name = "InfoViewController.m: 10";
+		rLen = 0;
+		rLoc = 206;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 0;
+	};
+	5C2FABDA0F91014900223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* MensaAppDelegate.h */;
+		name = "MensaAppDelegate.h: 32";
+		rLen = 0;
+		rLoc = 931;
+		rType = 0;
+		vrLen = 956;
+		vrLoc = 219;
+	};
+	5C2FABDD0F91014900223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* MensaAppDelegate.h */;
+		name = "MensaAppDelegate.h: 32";
+		rLen = 0;
+		rLoc = 932;
+		rType = 0;
+		vrLen = 952;
+		vrLoc = 219;
+	};
+	5C2FABDF0F91014900223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C9E0FE20F8CFA6F00F12A34 /* InfoViewController.m */;
+		name = "InfoViewController.m: 10";
+		rLen = 0;
+		rLoc = 206;
+		rType = 0;
+		vrLen = 804;
+		vrLoc = 0;
+	};
+	5C2FAC250F910BF600223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* MensaAppDelegate.m */;
+		name = "MensaAppDelegate.m: 107";
+		rLen = 0;
+		rLoc = 3652;
+		rType = 0;
+		vrLen = 908;
+		vrLoc = 5653;
+	};
+	5C2FAC300F91367000223946 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 9";
+		rLen = 0;
+		rLoc = 212;
+		rType = 0;
+		vrLen = 1364;
+		vrLoc = 3500;
+	};
+	5C37DB5F0F7E8B3300C26695 /* Mensa */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Mensa;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	5C37DB750F7E8B5400C26695 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	5C37DB760F7E8B5400C26695 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	5C37DC620F7F7B3900C26695 /* Meal.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{229, 0}";
+			sepNavVisRange = "{0, 446}";
+		};
+	};
+	5C37DC630F7F7B3900C26695 /* Meal.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{359, 26}";
+			sepNavVisRange = "{0, 1020}";
+		};
+	};
+	5C4A1EF10F8BD12A00A66004 /* Mensa.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{516, 0}";
+			sepNavVisRange = "{0, 686}";
+		};
+	};
+	5C4A1EF20F8BD12A00A66004 /* Mensa.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{335, 0}";
+			sepNavVisRange = "{0, 425}";
+		};
+	};
+	5C7581360F865EDA0028FF77 /* MultilineTableViewCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {900, 645}}";
+			sepNavSelRange = "{324, 0}";
+			sepNavVisRange = "{0, 331}";
+		};
+	};
+	5C7581370F865EDA0028FF77 /* MultilineTableViewCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {984, 812}}";
+			sepNavSelRange = "{675, 0}";
+			sepNavVisRange = "{254, 1355}";
+		};
+	};
+	5C9A252C0F90A5DF0054C021 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 5C9A252D0F90A5DF0054C021;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	5C9A252D0F90A5DF0054C021 = {
+		isa = PBXFileReference;
+		lastKnownFileType = folder;
+		sourceTree = "<group>";
+	};
+	5C9A25370F90A6F90054C021 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* MensaAppDelegate.m */;
+		name = "MensaAppDelegate.m: 22";
+		rLen = 0;
+		rLoc = 523;
+		rType = 0;
+		vrLen = 1464;
+		vrLoc = 0;
+	};
+	5C9E0FE10F8CFA6F00F12A34 /* InfoViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{349, 0}";
+			sepNavVisRange = "{0, 356}";
+		};
+	};
+	5C9E0FE20F8CFA6F00F12A34 /* InfoViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {922, 490}}";
+			sepNavSelRange = "{206, 0}";
+			sepNavVisRange = "{0, 804}";
+		};
+	};
+	5CB1724C0F90E50C00DC96B9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Mensa-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/flo/Documents/Coding/Produktives/Mensa/03/Mensa-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	5CB1724D0F90E50C00DC96B9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Mensa-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/flo/Documents/Coding/Produktives/Mensa/03/Mensa-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	5CB172B00F90EA7300DC96B9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C2238230F83ED860097C3C4 /* MealTableViewCell.m */;
+		name = "MealTableViewCell.m: 75";
+		rLen = 0;
+		rLoc = 2679;
+		rType = 0;
+		vrLen = 1351;
+		vrLoc = 1449;
+	};
+	5CB172B30F90EA7300DC96B9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5C2238230F83ED860097C3C4 /* MealTableViewCell.m */;
+		name = "MealTableViewCell.m: 75";
+		rLen = 0;
+		rLoc = 2679;
+		rType = 0;
+		vrLen = 1351;
+		vrLoc = 1449;
+	};
+	5CBCC01F0F8562DD00522C8F /* MensaListViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 622}}";
+			sepNavSelRange = "{323, 0}";
+			sepNavVisRange = "{0, 381}";
+		};
+	};
+	5CBCC0200F8562DD00522C8F /* MensaListViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1566, 2366}}";
+			sepNavSelRange = "{511, 0}";
+			sepNavVisRange = "{4657, 1336}";
+		};
+	};
+	5CD27D950F84CBF200F5F2BB /* DetailViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {900, 622}}";
+			sepNavSelRange = "{299, 0}";
+			sepNavVisRange = "{0, 355}";
+		};
+	};
+	5CD27D960F84CBF200F5F2BB /* DetailViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1986, 1344}}";
+			sepNavSelRange = "{2245, 0}";
+			sepNavVisRange = "{1617, 1352}";
+		};
+	};
+	5CE6CB010F91F29300206609 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 9";
+		rLen = 0;
+		rLoc = 212;
+		rType = 0;
+		vrLen = 1364;
+		vrLoc = 3500;
+	};
+	8D1107310486CEB800E47090 /* Mensa-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{63, 272}, {937, 601}}";
+		};
+	};
+}
