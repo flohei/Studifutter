@@ -7,10 +7,11 @@
 //
 
 #import "XMLParser.h"
+#import "Meal.h"
 
 
 @implementation XMLParser
-@synthesize currentProperty, currentProperty, parsedArray, meals, success;
+@synthesize currentProperty, parsedArray, currentMeal, meals, success;
 
 #pragma mark -
 #pragma mark NSXMLParser delegate methods
@@ -63,7 +64,7 @@
 		success = NO;
 	}
 	@finally {
-		[self cleanupArray];
+		//[self cleanupArray];
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 		return meals;
 	}
@@ -112,11 +113,11 @@
 			// create a proper NSDate object 
 			NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
 			[formatter setDateFormat:@"dd.MM.yy"];			
-			NSDate *date = [formatter dateFromString:currentProperty];
+			NSDate *date = [formatter dateFromString:self.currentProperty];
 			
 			if (date == nil) {
 				NSLog(@"Date not set…");
-				NSLog(currentProperty);
+				NSLog(@"%@", self.currentProperty);
 			}
 			
 			self.currentMeal.date = date;

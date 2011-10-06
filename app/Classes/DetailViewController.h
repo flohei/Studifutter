@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Meal.h"
+
+@class MealSet;
 
 @interface DetailViewController : UITableViewController {
 	MealSet *currentMeal;

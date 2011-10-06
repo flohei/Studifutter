@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Meal.h"
 
-@interface XMLParser : NSObject {
+@class Meal;
+
+@interface XMLParser : NSObject <NSXMLParserDelegate> {
 	NSMutableString *currentProperty;
 	Meal *currentMeal;
 	NSMutableArray *parsedArray;

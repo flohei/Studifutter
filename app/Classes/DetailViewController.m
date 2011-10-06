@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Meal.h"
 #import "MealSet.h"
 #import "MensaAppDelegate.h"
 #import "MultilineTableViewCell.h"
@@ -14,6 +15,7 @@
 #define kTableViewRowHeight 66
 
 @implementation DetailViewController
+
 @synthesize currentMeal;
 
 - (void)viewDidLoad {
@@ -50,7 +52,7 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[currentMeal getMealTexts] count];
+    return [[self.currentMeal meals] count];
 }
 
 // Customize the number of rows in the table view.
@@ -68,16 +70,16 @@
     }
     
     // Set up the cell...
-	NSArray *texts = [currentMeal getMealTexts];
+	NSArray *texts = [self.currentMeal getMealTexts];
 	
 	if (indexPath.section == 0) {
-		cell.text = [[texts objectAtIndex:0] stringByAppendingString:@"€"];
+		cell.textLabel.text = [[texts objectAtIndex:0] stringByAppendingString:@"€"];
 	}
 	else if (indexPath.section == 1) {
-		cell.text = [[texts objectAtIndex:1] stringByAppendingString:@"€"];
+		cell.textLabel.text = [[texts objectAtIndex:1] stringByAppendingString:@"€"];
 	}
 	else if (indexPath.section == 2) {
-		cell.text = [[texts objectAtIndex:2] stringByAppendingString:@"€"];
+		cell.textLabel.text = [[texts objectAtIndex:2] stringByAppendingString:@"€"];
 	}
 	
     return cell;

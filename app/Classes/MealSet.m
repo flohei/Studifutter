@@ -7,14 +7,26 @@
 //
 
 #import "MealSet.h"
+#import "Meal.h"
 
 
 @implementation MealSet
-@synthesize meals, date;
+@synthesize meals, date, text;
+
+- (NSArray *)getMealTexts {
+    NSMutableArray *texts = [[NSMutableArray alloc] init];
+    
+    for (Meal *m in meals) {
+        [texts addObject:m.text];
+    }
+    
+    return [texts autorelease];
+}
 
 - (void)dealloc {
 	[meals release];
 	[date release];
+    [text release];
 	[super dealloc];
 }
 

@@ -12,9 +12,11 @@
 @implementation Mensa
 @synthesize mealSets, name, street, zipcode, city, googleMapsURL;
 
-- (void)init {
+- (id)init {
 	[super init];
 	[self cleanupArray];
+    
+    return self;
 }
 
 // ****************************************************************************************
@@ -25,7 +27,7 @@
 	NSDate *today = [NSDate date];
 	// subtract one day (= 86400 seconds) for the today's
 	// meals to be displayed
-	today = [today addTimeInterval:-86400];
+	today = [today dateByAddingTimeInterval:-86400];
 	NSDate *referenceDate, *earlierDate;
 	
 	NSMutableArray *mealsToRemove = [[NSMutableArray alloc] init];

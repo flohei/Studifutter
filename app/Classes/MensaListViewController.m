@@ -102,13 +102,6 @@
 	return array;
 }
 
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark -
 #pragma mark Table view methods
 
@@ -133,7 +126,7 @@
     
     // Set up the cell...
 	Mensa *m = [mensaArray objectAtIndex:indexPath.row];
-	cell.text = m.name;
+	cell.textLabel.text = m.name;
 	
     return cell;
 }

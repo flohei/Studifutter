@@ -12,7 +12,7 @@
 @synthesize label;
 
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier]) {
 		// The frame variable is not used in this method. If you want to use it,
 		// you should set it to CGRectMake(10, 10, 280, 60)
 		

@@ -50,7 +50,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    MensaAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MensaAppDelegate *appDelegate = (MensaAppDelegate *)[[UIApplication sharedApplication] delegate];
 	return appDelegate.meals.count;
 }
 
@@ -88,7 +88,7 @@
 
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	MensaAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+	MensaAppDelegate *appDelegate = (MensaAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	MealSet *meal = [[appDelegate meals] objectAtIndex:indexPath.row];
 	NSLog(@"Switch to meal: %@", meal);
@@ -110,7 +110,7 @@
 	if (self.lastAcceleration) {
         if ([self AccelerationIsShakingLast:self.lastAcceleration current:acceleration threshold:0.7] && shakeCount >= 9) {
 			//Shaking here, DO stuff.			
-			MensaAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+			MensaAppDelegate *appDelegate = (MensaAppDelegate *)[[UIApplication sharedApplication] delegate];
 			if ([appDelegate fetchMeals:self]) {
 				[self.tableView reloadData];
 				NSLog(@"TableView reloaded.");

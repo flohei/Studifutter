@@ -12,9 +12,13 @@
 @interface MealSet : NSObject {
 	NSDate *date;
 	NSArray *meals;
+    NSString *text;
 }
 
 @property (nonatomic, retain) NSDate *date;
 @property (nonatomic, retain) NSArray *meals;
+@property (nonatomic, retain) NSString *text;
+
+- (NSArray *)getMealTexts;
 
 @end

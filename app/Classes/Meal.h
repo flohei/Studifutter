@@ -1,8 +1,8 @@
 //
 //  Meal.h
-//  Studifutter
+//  Mensa
 //
-//  Created by Florian Heiber on 20.04.09.
+//  Created by Florian Heiber on 29.03.09.
 //  Copyright 2009 rootof.net Florian Heiber & Daniel Wiewel GbR. All rights reserved.
 //
 
@@ -10,11 +10,15 @@
 
 
 @interface Meal : NSObject {
-	NSString *title;
-	NSNumber *price;
+	NSString *text;
+	NSString *day;
+	NSDate *date;
 }
 
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSNumber *price;
+@property (nonatomic, retain) NSString *text;
+@property (nonatomic, retain) NSString *day;
+@property (nonatomic, retain) NSDate *date;
+
+- (NSArray *)getMealTexts;
 
 @end
