@@ -1,4 +1,0 @@
-In file included from /Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/RootViewController.m:15:
-/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/DetailViewController.h:10:17: error: Meal.h: No such file or directory
-/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/RootViewController.m: In function '-[RootViewController tableView:didSelectRowAtIndexPath:]':
-/Users/flo/Documents/Coding/Produktives/Mensa/v2/01/Classes/RootViewController.m:97: warning: passing argument 1 of 'setCurrentMeal:' from distinct Objective-C type
