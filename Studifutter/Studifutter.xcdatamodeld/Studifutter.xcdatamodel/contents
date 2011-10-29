@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Menu" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="extraChars" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extraNumbers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="reducedPrice" optional="YES" syncable="YES"/>
+        <relationship name="restaurant" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="menu" inverseEntity="Restaurant" syncable="YES"/>
+    </entity>
+    <entity name="Restaurant" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="restaurantID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="menu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Menu" inverseName="restaurant" inverseEntity="Menu" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Restaurant" positionX="-270" positionY="-18" width="128" height="195"/>
+        <element name="Menu" positionX="-36" positionY="9" width="128" height="165"/>
+    </elements>
+</model>
