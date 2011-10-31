@@ -44,11 +44,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [error release];
-    [super dealloc];
-}
-
 #pragma mark Methods
 
 - (id)objectWithData:(NSData *)data {
@@ -58,12 +53,12 @@
         return nil;
     }
 
-	SBJsonStreamParserAccumulator *accumulator = [[[SBJsonStreamParserAccumulator alloc] init] autorelease];
+	SBJsonStreamParserAccumulator *accumulator = [[SBJsonStreamParserAccumulator alloc] init];
     
-    SBJsonStreamParserAdapter *adapter = [[[SBJsonStreamParserAdapter alloc] init] autorelease];
+    SBJsonStreamParserAdapter *adapter = [[SBJsonStreamParserAdapter alloc] init];
     adapter.delegate = accumulator;
 	
-	SBJsonStreamParser *parser = [[[SBJsonStreamParser alloc] init] autorelease];
+	SBJsonStreamParser *parser = [[SBJsonStreamParser alloc] init];
 	parser.maxDepth = self.maxDepth;
 	parser.delegate = adapter;
 	

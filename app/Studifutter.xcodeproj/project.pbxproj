@@ -41,6 +41,10 @@
 		8F729BF4145F2B4300FE166B /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BE6145F2B4300FE166B /* SBJsonTokeniser.m */; };
 		8F729BF5145F2B4300FE166B /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BE8145F2B4300FE166B /* SBJsonUTF8Stream.m */; };
 		8F729BF6145F2B4300FE166B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BEA145F2B4300FE166B /* SBJsonWriter.m */; };
+		8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFC145F2D5100FE166B /* SFAPICall.m */; };
+		8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFE145F2D5100FE166B /* SFAPIException.m */; };
+		8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C05145F2DE700FE166B /* NSString+URLEncode.m */; };
+		8F729C09145F31F600FE166B /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C08145F31F600FE166B /* Common.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,15 @@
 		8F729BE8145F2B4300FE166B /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		8F729BE9145F2B4300FE166B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		8F729BEA145F2B4300FE166B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		8F729BFB145F2D5100FE166B /* SFAPICall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPICall.h; sourceTree = "<group>"; };
+		8F729BFC145F2D5100FE166B /* SFAPICall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPICall.m; sourceTree = "<group>"; };
+		8F729BFD145F2D5100FE166B /* SFAPIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPIException.h; sourceTree = "<group>"; };
+		8F729BFE145F2D5100FE166B /* SFAPIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPIException.m; sourceTree = "<group>"; };
+		8F729C01145F2DA300FE166B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8F729C04145F2DE700FE166B /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
+		8F729C05145F2DE700FE166B /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
+		8F729C07145F31F600FE166B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		8F729C08145F31F600FE166B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +286,10 @@
 		8F729BCE145F2AC300FE166B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8F729BFB145F2D5100FE166B /* SFAPICall.h */,
+				8F729BFC145F2D5100FE166B /* SFAPICall.m */,
+				8F729BFD145F2D5100FE166B /* SFAPIException.h */,
+				8F729BFE145F2D5100FE166B /* SFAPIException.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -280,6 +297,11 @@
 		8F729BCF145F2AD000FE166B /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				8F729C07145F31F600FE166B /* Common.h */,
+				8F729C08145F31F600FE166B /* Common.m */,
+				8F729C01145F2DA300FE166B /* Constants.h */,
+				8F729C04145F2DE700FE166B /* NSString+URLEncode.h */,
+				8F729C05145F2DE700FE166B /* NSString+URLEncode.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -447,6 +469,10 @@
 				8F729BF4145F2B4300FE166B /* SBJsonTokeniser.m in Sources */,
 				8F729BF5145F2B4300FE166B /* SBJsonUTF8Stream.m in Sources */,
 				8F729BF6145F2B4300FE166B /* SBJsonWriter.m in Sources */,
+				8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */,
+				8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */,
+				8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */,
+				8F729C09145F31F600FE166B /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
