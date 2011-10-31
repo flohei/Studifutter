@@ -8,7 +8,7 @@
 
 #import "SFAppDelegate.h"
 
-#import "SFMasterViewController.h"
+#import "SFRestaurantViewController.h"
 
 @implementation SFAppDelegate
 
@@ -21,7 +21,7 @@
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    SFMasterViewController *controller = (SFMasterViewController *)navigationController.topViewController;
+    SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
