@@ -45,6 +45,8 @@
 		8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFE145F2D5100FE166B /* SFAPIException.m */; };
 		8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C05145F2DE700FE166B /* NSString+URLEncode.m */; };
 		8F729C09145F31F600FE166B /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C08145F31F600FE166B /* Common.m */; };
+		8F729C141460313900FE166B /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C131460313900FE166B /* Connection.m */; };
+		8F729C1C1460322100FE166B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C1B1460322100FE166B /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,10 @@
 		8F729C05145F2DE700FE166B /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		8F729C07145F31F600FE166B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		8F729C08145F31F600FE166B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		8F729C121460313900FE166B /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		8F729C131460313900FE166B /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		8F729C1A1460322000FE166B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8F729C1B1460322100FE166B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,10 +292,14 @@
 		8F729BCE145F2AC300FE166B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8F729C1A1460322000FE166B /* Reachability.h */,
+				8F729C1B1460322100FE166B /* Reachability.m */,
 				8F729BFB145F2D5100FE166B /* SFAPICall.h */,
 				8F729BFC145F2D5100FE166B /* SFAPICall.m */,
 				8F729BFD145F2D5100FE166B /* SFAPIException.h */,
 				8F729BFE145F2D5100FE166B /* SFAPIException.m */,
+				8F729C121460313900FE166B /* Connection.h */,
+				8F729C131460313900FE166B /* Connection.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -473,6 +483,8 @@
 				8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */,
 				8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */,
 				8F729C09145F31F600FE166B /* Common.m in Sources */,
+				8F729C141460313900FE166B /* Connection.m in Sources */,
+				8F729C1C1460322100FE166B /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
