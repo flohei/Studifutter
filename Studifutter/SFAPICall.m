@@ -12,6 +12,7 @@
 #import "SFAPIException.h"
 #import "NSString+URLEncode.h"
 #import "SBJson.h"
+#import "Common.h"
 
 
 static SBJsonParser *jsonParser;
@@ -324,8 +325,15 @@ static SBJsonParser *jsonParser;
     [_receivedData setLength:0];
 	_error = nil;
 	_response = nil;
+    
+    NSURLResponse *response;
+    NSError *error;
 	
-	NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&_response error:&_error];
+	NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    
+    _response = response;
+    _error = error;
+    
 	NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)_response;
     _statusCode = [httpResponse statusCode];
 	if (data) {
@@ -503,8 +511,7 @@ static SBJsonParser *jsonParser;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
 	// Store the response and retrieve HTTP status code
-	[_response release];
-	_response = [response retain];
+	_response = response;
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
     _statusCode = [httpResponse statusCode];
 	
@@ -518,7 +525,6 @@ static SBJsonParser *jsonParser;
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSLog(@"API response completely received");
-	[_connection release];
 	_connection = nil;
 	
 	// Signal the condition
@@ -530,7 +536,6 @@ static SBJsonParser *jsonParser;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
 	NSLog(@"API response error");
     _error = [error copy];
-	[_connection release];
 	_connection = nil;
 	
 	// Signal the condition

@@ -47,6 +47,7 @@
 		8F729C09145F31F600FE166B /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C08145F31F600FE166B /* Common.m */; };
 		8F729C141460313900FE166B /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C131460313900FE166B /* Connection.m */; };
 		8F729C1C1460322100FE166B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C1B1460322100FE166B /* Reachability.m */; };
+		8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		8F729C131460313900FE166B /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		8F729C1A1460322000FE166B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8F729C1B1460322100FE166B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
 				8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */,
 				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
@@ -188,6 +191,7 @@
 				8F0BA78F145C72F1003E2DE0 /* Foundation.framework */,
 				8F0BA791145C72F1003E2DE0 /* CoreGraphics.framework */,
 				8F0BA793145C72F1003E2DE0 /* CoreData.framework */,
+				8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */,
 				8F0BA7B3145C72F2003E2DE0 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;

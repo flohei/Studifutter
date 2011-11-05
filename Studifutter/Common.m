@@ -77,7 +77,7 @@ int hex2int(const char *hex) {
 + (NSDate *)dateWithString:(NSString *)string {
     if ([string isEqualToString:@""] || string == nil) return nil;
     
-	NSDateFormatter *formatter = [[NSDateFormatter alloc] init]];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
     @try {
         // time zone not support yet

@@ -86,13 +86,14 @@
 @private
 	NSString *error;
     NSMutableArray *stateStack;
-    __weak SBJsonStreamWriterState *state;
-    id<SBJsonStreamWriterDelegate> delegate;
+    __unsafe_unretained SBJsonStreamWriterState *state;
+    __unsafe_unretained id<SBJsonStreamWriterDelegate> delegate;
 	NSUInteger maxDepth;
     BOOL sortKeys, humanReadable;
 }
 
-@property (nonatomic, assign) __weak SBJsonStreamWriterState *state; // Internal
+//@property (nonatomic, assign) __weak SBJsonStreamWriterState *state; // Internal
+@property (nonatomic, assign) SBJsonStreamWriterState *state; // Internal
 @property (nonatomic, readonly, retain) NSMutableArray *stateStack; // Internal 
 
 /**
