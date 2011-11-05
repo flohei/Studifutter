@@ -9,6 +9,7 @@
 #import "SFAppDelegate.h"
 #import "Constants.h"
 #import "SFRestaurantViewController.h"
+#import "Connection.h"
 
 @implementation SFAppDelegate
 
@@ -90,6 +91,45 @@
             abort();
         } 
     }
+}
+
+#pragma mark - Custom Code
+
+- (void)downloadData {
+    NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
+    [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
+}
+
+- (void)doDownloadRestaurants {
+    // call the API here
+    bool success = [[Connection sharedConnection] readRestaurants];
+    
+    [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
+}
+
+- (void)finishedDownloadRestaurants:(bool)success {
+    // get the restaurants here and fetch all the menus for each restaurant
+    
+    if (success) {
+        // get all restaurants
+        NSArray *restaurants;
+        
+        // go ahead and look for every menu
+        for (Restaurant *r in restaurants) {
+            NSInvocationOperation *downloadMenu = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenuForRestaurant:) object:r];
+            [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenu];
+        }
+    }
+}
+
+- (void)doDownloadMenuForRestaurant:(Restaurant *)restaurant {
+    bool success = [[Connection sharedConnection] readMenuForRestaurant:restaurant];
+    
+    [self performSelectorOnMainThread:@selector(finishedDownloadMenuForRestaurant) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
+}
+
+- (void)finishedDownloadMenusForRestaurant:(bool)success {
+    // yay, got another menu
 }
 
 #pragma mark - Core Data stack
