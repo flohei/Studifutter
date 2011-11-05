@@ -117,7 +117,7 @@ typedef enum {
 */
 @interface SBJsonStreamParserAdapter : NSObject <SBJsonStreamParserDelegate> {
 @private
-	id<SBJsonStreamParserAdapterDelegate> delegate;
+	__unsafe_unretained id<SBJsonStreamParserAdapterDelegate> delegate;
 	NSUInteger levelsToSkip, depth;
 	__weak NSMutableArray *array;
 	__weak NSMutableDictionary *dict;

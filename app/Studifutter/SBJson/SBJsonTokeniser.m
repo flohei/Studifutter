@@ -50,12 +50,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [_error release];
-    [_stream release];
-    [super dealloc];
-}
-
 - (void)appendData:(NSData *)data_ {
     [_stream appendData:data_];
 }
@@ -161,16 +155,16 @@
                     [acc appendString:string];
 
                 } else if (ch == '"') {
-                    *token = [[string copy] autorelease];
+                    *token = [string copy];
                     [_stream skip];
                     return sbjson_token_string;
                 
                 } else {
-                    acc = [[string mutableCopy] autorelease];
+                    acc = [string mutableCopy];
                 }
             }
             @finally {
-                [string release];
+                
             }
         }
 
@@ -220,12 +214,12 @@
                         }
 
                         unichar pair[2] = {hi, lo};
-                        CFStringAppendCharacters((CFMutableStringRef)acc, pair, 2);
+                        CFStringAppendCharacters((__bridge CFMutableStringRef)acc, pair, 2);
                     } else if (SBStringIsIllegalSurrogateHighCharacter(hi)) {
                         self.error = @"Invalid high character in surrogate pair";
                         return sbjson_token_error;
                     } else {
-                        CFStringAppendCharacters((CFMutableStringRef)acc, &hi, 1);
+                        CFStringAppendCharacters((__bridge CFMutableStringRef)acc, &hi, 1);
                     }
 
 
@@ -233,7 +227,7 @@
                     unichar decoded;
                     if (![self decodeEscape:ch into:&decoded])
                         return sbjson_token_error;
-                    CFStringAppendCharacters((CFMutableStringRef)acc, &decoded, 1);
+                    CFStringAppendCharacters((__bridge CFMutableStringRef)acc, &decoded, 1);
                 }
 
                 break;
