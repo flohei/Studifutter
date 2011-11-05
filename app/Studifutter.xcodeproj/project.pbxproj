@@ -48,6 +48,10 @@
 		8F729C141460313900FE166B /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C131460313900FE166B /* Connection.m */; };
 		8F729C1C1460322100FE166B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C1B1460322100FE166B /* Reachability.m */; };
 		8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */; };
+		8F729C441464BADD00FE166B /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3A1464BADD00FE166B /* Menu.m */; };
+		8F729C451464BADD00FE166B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
+		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
+		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +139,14 @@
 		8F729C1A1460322000FE166B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8F729C1B1460322100FE166B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8F729C391464BADD00FE166B /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		8F729C3A1464BADD00FE166B /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		8F729C3B1464BADD00FE166B /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		8F729C3C1464BADD00FE166B /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
+		8F729C3E1464BADD00FE166B /* _Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Menu.h; sourceTree = "<group>"; };
+		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
+		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
+		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +300,8 @@
 		8F729BCA145F24F400FE166B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F729C361464BADD00FE166B /* Human */,
+				8F729C3D1464BADD00FE166B /* Machine */,
 				8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */,
 			);
 			name = Model;
@@ -298,12 +312,12 @@
 			children = (
 				8F729C1A1460322000FE166B /* Reachability.h */,
 				8F729C1B1460322100FE166B /* Reachability.m */,
+				8F729C121460313900FE166B /* Connection.h */,
+				8F729C131460313900FE166B /* Connection.m */,
 				8F729BFB145F2D5100FE166B /* SFAPICall.h */,
 				8F729BFC145F2D5100FE166B /* SFAPICall.m */,
 				8F729BFD145F2D5100FE166B /* SFAPIException.h */,
 				8F729BFE145F2D5100FE166B /* SFAPIException.m */,
-				8F729C121460313900FE166B /* Connection.h */,
-				8F729C131460313900FE166B /* Connection.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -352,6 +366,28 @@
 			);
 			name = SBJson;
 			path = Studifutter/SBJson;
+			sourceTree = "<group>";
+		};
+		8F729C361464BADD00FE166B /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				8F729C391464BADD00FE166B /* Menu.h */,
+				8F729C3A1464BADD00FE166B /* Menu.m */,
+				8F729C3B1464BADD00FE166B /* Restaurant.h */,
+				8F729C3C1464BADD00FE166B /* Restaurant.m */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		8F729C3D1464BADD00FE166B /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				8F729C3E1464BADD00FE166B /* _Menu.h */,
+				8F729C3F1464BADD00FE166B /* _Menu.m */,
+				8F729C401464BADD00FE166B /* _Restaurant.h */,
+				8F729C411464BADD00FE166B /* _Restaurant.m */,
+			);
+			path = Machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +525,10 @@
 				8F729C09145F31F600FE166B /* Common.m in Sources */,
 				8F729C141460313900FE166B /* Connection.m in Sources */,
 				8F729C1C1460322100FE166B /* Reachability.m in Sources */,
+				8F729C441464BADD00FE166B /* Menu.m in Sources */,
+				8F729C451464BADD00FE166B /* Restaurant.m in Sources */,
+				8F729C461464BADD00FE166B /* _Menu.m in Sources */,
+				8F729C471464BADD00FE166B /* _Restaurant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
