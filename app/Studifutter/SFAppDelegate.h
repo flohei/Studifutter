@@ -19,4 +19,8 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (void)downloadData;
+
+@property int operationBalance;
+
 @end

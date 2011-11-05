@@ -17,6 +17,7 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize operationBalance = _operationBalance;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,6 +35,8 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         CFRelease(uuid);
     }
+    
+    self.operationBalance = 0;
     
     return YES;
 }
@@ -95,9 +98,24 @@
 
 #pragma mark - Custom Code
 
+- (int)operationBalance {
+    return _operationBalance;
+}
+
+- (void)setOperationBalance:(int)operationBalance {
+    _operationBalance = operationBalance;
+    
+    if (operationBalance > 0) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    } else {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }
+}
+
 - (void)downloadData {
     NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
     [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
+    self.operationBalance += 1;
 }
 
 - (void)doDownloadRestaurants {
@@ -109,6 +127,7 @@
 
 - (void)finishedDownloadRestaurants:(bool)success {
     // get the restaurants here and fetch all the menus for each restaurant
+    self.operationBalance -= 1;
     
     if (success) {
         // get all restaurants
@@ -118,6 +137,7 @@
         for (Restaurant *r in restaurants) {
             NSInvocationOperation *downloadMenu = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenuForRestaurant:) object:r];
             [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenu];
+            self.operationBalance += 1;
         }
     }
 }
@@ -130,6 +150,7 @@
 
 - (void)finishedDownloadMenusForRestaurant:(bool)success {
     // yay, got another menu
+    self.operationBalance -= 1;
 }
 
 #pragma mark - Core Data stack
