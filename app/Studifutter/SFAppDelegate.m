@@ -7,7 +7,7 @@
 //
 
 #import "SFAppDelegate.h"
-
+#import "Constants.h"
 #import "SFRestaurantViewController.h"
 
 @implementation SFAppDelegate
@@ -23,6 +23,16 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    // create one of these fance new UUIDs if needed
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
+        CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorNull);
+        NSString *uuidString = (__bridge NSString *)CFUUIDCreateString(NULL, uuid);
+        NSLog(@"Created new custom UUID: %@", uuidString);
+        [[NSUserDefaults standardUserDefaults] setObject:uuidString forKey:UUID_KEY];
+        CFRelease(uuid);
+    }
+    
     return YES;
 }
 							
