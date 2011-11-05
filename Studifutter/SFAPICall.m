@@ -426,7 +426,7 @@ static SBJsonParser *jsonParser;
 	
 	[defaultArgs setObject:[[UIDevice currentDevice] systemName] forKey:@"AppID"];
 	[defaultArgs setObject:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"] forKey:@"AppVersion"];
-	[defaultArgs setObject:[UIDevice currentDevice].uniqueIdentifier forKey:@"ClientID"];
+	[defaultArgs setObject:[[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY] forKey:@"ClientID"];
 	[defaultArgs setObject:userAgent forKey:@"UserAgent"];
 	
 	return defaultArgs;
