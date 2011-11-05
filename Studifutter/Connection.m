@@ -10,6 +10,7 @@
 #import "SFAppDelegate.h"
 #import "Reachability.h"
 #import "SFAPICall.h"
+#import "Restaurant.h"
 
 @implementation Connection
 
@@ -18,6 +19,7 @@
 @synthesize hostReachable = _hostReachable;
 @synthesize internetActive = _internetActive;
 @synthesize hostActive = _hostActive;
+@synthesize sharedOperationQueue = _sharedOperationQueue;
 
 static Connection *_connection;
 
@@ -108,6 +110,30 @@ static Connection *_connection;
         _context = [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     return _context;
+}
+
+- (NSOperationQueue *)sharedOperationQueue {
+    if (!_sharedOperationQueue) {
+        _sharedOperationQueue = [[NSOperationQueue alloc] init];
+    }
+    
+    return _sharedOperationQueue;
+}
+
+- (bool)readRestaurants {
+    bool success = NO;
+    
+    NSString *requestPath = @"/api/restaurant/list";
+    
+    return success;
+}
+
+- (bool)readMenuForRestaurant:(Restaurant *)restaurant {
+    bool success = NO;
+    
+    NSString *requestPath = [NSString stringWithFormat:@"/api/restaurant/%d/menu", [restaurant restaurantIDValue]];
+    
+    return success;
 }
 
 @end

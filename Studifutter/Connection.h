@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Reachability;
+@class Restaurant;
 
 @interface Connection : NSObject
 
@@ -22,5 +23,10 @@
 - (void)checkNetworkStatus:(NSNotification *)notice;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
+
+@property (nonatomic, retain) NSOperationQueue *sharedOperationQueue;
+
+- (bool)readRestaurants;
+- (bool)readMenuForRestaurant:(Restaurant *)restaurant;
 
 @end
