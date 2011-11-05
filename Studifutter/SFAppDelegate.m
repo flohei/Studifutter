@@ -26,10 +26,11 @@
     
     // create one of these fance new UUIDs if needed
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
-        CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorNull);
+        CFUUIDRef uuid = CFUUIDCreate(NULL);
         NSString *uuidString = (__bridge NSString *)CFUUIDCreateString(NULL, uuid);
         NSLog(@"Created new custom UUID: %@", uuidString);
         [[NSUserDefaults standardUserDefaults] setObject:uuidString forKey:UUID_KEY];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         CFRelease(uuid);
     }
     
