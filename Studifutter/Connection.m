@@ -123,7 +123,8 @@ static Connection *_connection;
 - (bool)readRestaurants {
     bool success = NO;
     
-    NSString *requestPath = @"/api/restaurant/list";
+    NSString *requestPath = @"/restaurant/list";
+    NSDictionary *result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
     
     return success;
 }
@@ -131,7 +132,7 @@ static Connection *_connection;
 - (bool)readMenuForRestaurant:(Restaurant *)restaurant {
     bool success = NO;
     
-    NSString *requestPath = [NSString stringWithFormat:@"/api/restaurant/%d/menu", [restaurant restaurantIDValue]];
+    NSString *requestPath = [NSString stringWithFormat:@"/restaurant/%d/menu", [restaurant restaurantIDValue]];
     
     return success;
 }

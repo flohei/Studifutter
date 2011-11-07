@@ -36,6 +36,8 @@
         CFRelease(uuid);
     }
     
+    [Connection.sharedConnection readRestaurants];
+    
     self.operationBalance = 0;
     
     return YES;
