@@ -44,6 +44,7 @@
     return self;
 }
 
+
 #pragma mark Methods
 
 - (id)objectWithData:(NSData *)data {

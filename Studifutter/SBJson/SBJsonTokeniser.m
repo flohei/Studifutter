@@ -39,6 +39,7 @@
 @implementation SBJsonTokeniser
 
 @synthesize error = _error;
+@synthesize stream = _stream;
 
 - (id)init {
     self = [super init];
@@ -49,6 +50,7 @@
 
     return self;
 }
+
 
 - (void)appendData:(NSData *)data_ {
     [_stream appendData:data_];
@@ -164,7 +166,7 @@
                 }
             }
             @finally {
-                
+                string = nil;
             }
         }
 
@@ -213,13 +215,12 @@
                             return sbjson_token_error;
                         }
 
-                        unichar pair[2] = {hi, lo};
-                        CFStringAppendCharacters((__bridge CFMutableStringRef)acc, pair, 2);
+                        [acc appendFormat:@"%C%C", hi, lo];
                     } else if (SBStringIsIllegalSurrogateHighCharacter(hi)) {
                         self.error = @"Invalid high character in surrogate pair";
                         return sbjson_token_error;
                     } else {
-                        CFStringAppendCharacters((__bridge CFMutableStringRef)acc, &hi, 1);
+                        [acc appendFormat:@"%C", hi];
                     }
 
 
@@ -227,7 +228,7 @@
                     unichar decoded;
                     if (![self decodeEscape:ch into:&decoded])
                         return sbjson_token_error;
-                    CFStringAppendCharacters((__bridge CFMutableStringRef)acc, &decoded, 1);
+                    [acc appendFormat:@"%C", decoded];
                 }
 
                 break;

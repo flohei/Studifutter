@@ -52,6 +52,7 @@
     return self;
 }
 
+
 - (NSString*)stringWithObject:(id)value {
 	NSData *data = [self dataWithObject:value];
 	if (data)
