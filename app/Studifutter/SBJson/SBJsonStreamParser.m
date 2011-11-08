@@ -58,7 +58,6 @@
 }
 
 - (void)dealloc {
-	self.error = nil;
     self.state = nil;
 }
 
@@ -131,6 +130,13 @@
     self.state = [SBJsonStreamParserStateObjectStart sharedInstance];
 }
 
+- (void)handleObjectEnd: (sbjson_token_t) tok  {
+    self.state = [stateStack lastObject];
+    [stateStack removeLastObject];
+    [state parser:self shouldTransitionTo:tok];
+    [delegate parserFoundObjectEnd:self];
+}
+
 - (void)handleArrayStart {
 	if (stateStack.count >= maxDepth) {
         [self maxDepthError];
@@ -142,13 +148,28 @@
     self.state = [SBJsonStreamParserStateArrayStart sharedInstance];
 }
 
+- (void)handleArrayEnd: (sbjson_token_t) tok  {
+    self.state = [stateStack lastObject];
+    [stateStack removeLastObject];
+    [state parser:self shouldTransitionTo:tok];
+    [delegate parserFoundArrayEnd:self];
+}
+
+- (void) handleTokenNotExpectedHere: (sbjson_token_t) tok  {
+    NSString *tokenName = [self tokenName:tok];
+    NSString *stateName = [state name];
+
+    self.error = [NSString stringWithFormat:@"Token '%@' not expected %@", tokenName, stateName];
+    self.state = [SBJsonStreamParserStateError sharedInstance];
+}
+
 - (SBJsonStreamParserStatus)parse:(NSData *)data_ {
-    @try {
+    @autoreleasepool {
         [tokeniser appendData:data_];
         
         for (;;) {
             
-            if ([state isKindOfClass:[SBJsonStreamParserStateError class]])
+            if ([state isError])
                 return SBJsonStreamParserError;
             
             NSObject *token;
@@ -167,11 +188,7 @@
                 default:
                     
                     if (![state parser:self shouldAcceptToken:tok]) {
-                        NSString *tokenName = [self tokenName:tok];
-                        NSString *stateName = [state name];
-                        
-                        self.error = [NSString stringWithFormat:@"Token '%@' not expected %@", tokenName, stateName];
-                        self.state = [SBJsonStreamParserStateError sharedInstance];
+                        [self handleTokenNotExpectedHere: tok];
                         return SBJsonStreamParserError;
                     }
                     
@@ -181,10 +198,7 @@
                             break;
                             
                         case sbjson_token_object_end:
-                            self.state = [stateStack lastObject];
-                            [stateStack removeLastObject];
-                            [state parser:self shouldTransitionTo:tok];
-                            [delegate parserFoundObjectEnd:self];
+                            [self handleObjectEnd: tok];
                             break;
                             
                         case sbjson_token_array_start:
@@ -192,10 +206,7 @@
                             break;
                             
                         case sbjson_token_array_end:
-                            self.state = [stateStack lastObject];
-                            [stateStack removeLastObject];
-                            [state parser:self shouldTransitionTo:tok];
-                            [delegate parserFoundArrayEnd:self];
+                            [self handleArrayEnd: tok];
                             break;
                             
                         case sbjson_token_separator:
@@ -238,8 +249,6 @@
             }
         }
         return SBJsonStreamParserComplete;
-    }
-    @finally {
     }
 }
 

@@ -33,6 +33,7 @@
 
 @synthesize value;
 
+
 #pragma mark SBJsonStreamParserAdapterDelegate
 
 - (void)parser:(SBJsonStreamParser*)parser foundArray:(NSArray *)array {

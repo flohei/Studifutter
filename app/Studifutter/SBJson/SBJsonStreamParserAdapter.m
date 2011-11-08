@@ -59,6 +59,7 @@
 	return self;
 }	
 
+
 #pragma mark Private methods
 
 - (void)pop {
@@ -109,8 +110,8 @@
 #pragma mark Delegate methods
 
 - (void)parserFoundObjectStart:(SBJsonStreamParser*)parser {
-	if (++depth > levelsToSkip) {
-		dict = [[NSMutableDictionary alloc] init];
+	if (++depth > self.levelsToSkip) {
+		dict = [NSMutableDictionary new];
 		[stack addObject:dict];
 		currentType = SBJsonStreamParserAdapterObject;
 	}
@@ -121,7 +122,7 @@
 }
 
 - (void)parserFoundObjectEnd:(SBJsonStreamParser*)parser {
-	if (depth-- > levelsToSkip) {
+	if (depth-- > self.levelsToSkip) {
 		id value = dict;
 		[self pop];
 		[self parser:parser found:value];
@@ -129,7 +130,7 @@
 }
 
 - (void)parserFoundArrayStart:(SBJsonStreamParser*)parser {
-	if (++depth > levelsToSkip) {
+	if (++depth > self.levelsToSkip) {
 		array = [NSMutableArray new];
 		[stack addObject:array];
 		currentType = SBJsonStreamParserAdapterArray;
@@ -137,7 +138,7 @@
 }
 
 - (void)parserFoundArrayEnd:(SBJsonStreamParser*)parser {
-	if (depth-- > levelsToSkip) {
+	if (depth-- > self.levelsToSkip) {
 		id value = array;
 		[self pop];
 		[self parser:parser found:value];
