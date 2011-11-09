@@ -66,7 +66,16 @@
     if ([[segue identifier] isEqualToString:@"ShowDayList"]) {
         SFDayListViewController *dayListViewController = (SFDayListViewController *)[segue destinationViewController];
         dayListViewController.restaurant = [(RestaurantTableViewCell *)sender restaurant];
+    } else if ([[segue identifier] isEqualToString:@"ShowInfoView"]) {
+        SFInfoViewController *infoViewController = (SFInfoViewController *)[segue destinationViewController];
+        infoViewController.delegate = self;
     }
+}
+
+#pragma mark - Misc
+
+- (void)dismissInfoView {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - NSFetchedResultsController
