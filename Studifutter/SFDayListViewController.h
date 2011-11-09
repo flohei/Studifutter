@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAD/iAD.h>
 
 @class Restaurant;
 
 @interface SFDayListViewController : UITableViewController
 
 @property (nonatomic, retain) Restaurant *restaurant;
+@property (strong, nonatomic) IBOutlet ADBannerView *bannerView;
 
 @end
