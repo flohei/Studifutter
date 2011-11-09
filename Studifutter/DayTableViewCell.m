@@ -37,21 +37,17 @@
 
 - (void)updateLabels {
     NSString *dateString = nil;
-    NSMutableString *menuString = [NSMutableString string];
+    NSString *menuString = nil;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd."];
     
     dateString = [dateFormatter stringFromDate:[[self menuSet] date]];
-    
-    for (Menu *menu in [[self menuSet] menu]) {
-        [menuString appendFormat:@"%@, ", [menu name]];
-    }
-    
     [dateLabel setText:dateString];
-    
-    // I know, this is ugly, but remove the last to symbols ", "
-    [menuLabel setText:[menuString substringToIndex:[menuString length] - 3]];
+
+    // TODO: Localize "zum Beispiel"
+    menuString = [NSString stringWithFormat:@"%@: %@", @"zum Beispiel", [[[[self menuSet] menu] anyObject] name]];
+    [menuLabel setText:menuString];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
