@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SFInfoViewController.h"
 
-@interface SFRestaurantViewController : UITableViewController <SFInfoViewDelegate>
+@interface SFRestaurantViewController : UITableViewController <SFInfoViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;

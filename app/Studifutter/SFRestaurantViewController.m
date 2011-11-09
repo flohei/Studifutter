@@ -102,10 +102,11 @@
     
     NSFetchedResultsController *theFetchedResultsController = 
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-                                        managedObjectContext:self.context sectionNameKeyPath:nil 
+                                        managedObjectContext:[self context] 
+                                          sectionNameKeyPath:nil 
                                                    cacheName:@"Restaurant"];
     self.fetchedResultsController = theFetchedResultsController;
-    //_fetchedResultsController.delegate = self;
+    _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
 }
@@ -139,6 +140,10 @@
     cell.restaurant = restaurant;
     
     return cell;
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [[self tableView] reloadData];
 }
 
 @end
