@@ -275,14 +275,14 @@
 			children = (
 				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
 				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
+				8F729BC3145F245800FE166B /* SFInfoViewController.h */,
+				8F729BC4145F245800FE166B /* SFInfoViewController.m */,
 				8F729BB5145F23BB00FE166B /* SFDayListViewController.h */,
 				8F729BB6145F23BB00FE166B /* SFDayListViewController.m */,
 				8F729BB8145F240700FE166B /* SFMenuViewController.h */,
 				8F729BB9145F240700FE166B /* SFMenuViewController.m */,
 				8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */,
 				8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */,
-				8F729BC3145F245800FE166B /* SFInfoViewController.h */,
-				8F729BC4145F245800FE166B /* SFInfoViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
