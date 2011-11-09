@@ -56,6 +56,8 @@
 		8F729C451464BADD00FE166B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
 		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
+		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
+		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,10 @@
 		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
 		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
+		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
+		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
+		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
+		8F910BDE146AF180001F4E74 /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +291,10 @@
 			children = (
 				8F729BBF145F243900FE166B /* SFRestaurantDetailViewController.xib */,
 				8F729BC5145F245800FE166B /* SFInfoViewController.xib */,
+				8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */,
+				8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */,
+				8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */,
+				8F910BDE146AF180001F4E74 /* DayTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -546,6 +556,8 @@
 				8F729C471464BADD00FE166B /* _Restaurant.m in Sources */,
 				8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */,
 				8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */,
+				8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */,
+				8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
