@@ -298,7 +298,7 @@ static SBJsonParser *jsonParser;
 
 - (void)startConnectionWithURL:(NSURL*)url {
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url
-															  cachePolicy:NSURLRequestReturnCacheDataElseLoad
+															  cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
 														  timeoutInterval:30];
 	[urlRequest setValue:(_useJSON ? @"application/json" : @"application/x-www-form-urlencoded") forHTTPHeaderField:@"content-type"];
 	[urlRequest setHTTPMethod:@"POST"];
@@ -315,7 +315,7 @@ static SBJsonParser *jsonParser;
 
 - (void)startSynchronousAPIRequestWithURL:(NSURL *)url {
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url
-															  cachePolicy:NSURLRequestReturnCacheDataElseLoad
+															  cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
 														  timeoutInterval:30];
 	[urlRequest setValue:(_useJSON ? @"application/json" : @"application/x-www-form-urlencoded") forHTTPHeaderField:@"content-type"];
 	[urlRequest setHTTPMethod:@"POST"];
