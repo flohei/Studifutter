@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Restaurant;
+
 @interface SFDayListViewController : UITableViewController
+
+@property (nonatomic, retain) Restaurant *restaurant;
 
 @end
