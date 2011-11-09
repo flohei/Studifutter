@@ -7,10 +7,20 @@
 //
 
 #import "Connection.h"
+#import "Constants.h"
 #import "SFAppDelegate.h"
 #import "Reachability.h"
 #import "SFAPICall.h"
 #import "Restaurant.h"
+#import "MenuSet.h"
+#import "Menu.h"
+
+
+@interface Connection ()
+
+- (NSNumber *)cleanPrice:(NSString *)priceString;
+
+@end
 
 @implementation Connection
 
@@ -124,7 +134,39 @@ static Connection *_connection;
     bool success = NO;
     
     NSString *requestPath = @"/restaurant/list";
-    NSDictionary *result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
+    NSDictionary *result = nil;
+    
+    @try {
+        result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception);
+    }
+    
+    if (result) {
+        int status = [[result objectForKey:@"status"] intValue];
+        
+        if (status == SF_API_STATUS_OK) {
+            NSArray *rawRestaurants = [result objectForKey:@"data"];
+            for (NSDictionary *rawRestaurant in rawRestaurants) {
+                Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
+                
+                // ([rawMessage objectForKey:@"subject"] != [NSNull null]) ? [rawMessage objectForKey:@"subject"] : nil;
+                aNewRestaurant.name = ([rawRestaurant objectForKey:@"name"] != [NSNull null]) ? [rawRestaurant objectForKey:@"name"] : nil;
+                aNewRestaurant.restaurantID = ([rawRestaurant objectForKey:@"id"] != [NSNull null]) ? [NSNumber numberWithInt:[[rawRestaurant objectForKey:@"id"] intValue]] : nil;
+                aNewRestaurant.menuURL = ([rawRestaurant objectForKey:@"url"] != [NSNull null]) ? [rawRestaurant objectForKey:@"url"] : nil;
+                aNewRestaurant.closed = ([rawRestaurant objectForKey:@"closed"] != [NSNull null]) ? [NSNumber numberWithBool:[[rawRestaurant objectForKey:@"closed"] boolValue]] : nil;
+                aNewRestaurant.city = ([rawRestaurant objectForKey:@"city"] != [NSNull null]) ? [rawRestaurant objectForKey:@"city"] : nil;
+                aNewRestaurant.longitude = ([rawRestaurant objectForKey:@"longitude"] != [NSNull null]) ? [NSNumber numberWithDouble:[[rawRestaurant objectForKey:@"longitude"] doubleValue]] : nil;
+                aNewRestaurant.latitude = ([rawRestaurant objectForKey:@"latitude"] != [NSNull null]) ? [NSNumber numberWithDouble:[[rawRestaurant objectForKey:@"latitude"] doubleValue]] : nil;
+                aNewRestaurant.notes = ([rawRestaurant objectForKey:@"notes"] != [NSNull null]) ? [rawRestaurant objectForKey:@"notes"] : nil;
+                aNewRestaurant.street = ([rawRestaurant objectForKey:@"street"] != [NSNull null]) ? [rawRestaurant objectForKey:@"street"] : nil;
+                aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
+                
+                [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+            }
+        }
+    }
     
     return success;
 }
@@ -133,8 +175,71 @@ static Connection *_connection;
     bool success = NO;
     
     NSString *requestPath = [NSString stringWithFormat:@"/restaurant/%d/menu", [restaurant restaurantIDValue]];
+    NSDictionary *result = nil;
+    
+    @try {
+        result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception);
+    }
+    
+    if (result) {
+        int status = [[result objectForKey:@"status"] intValue];
+        
+        if (status == SF_API_STATUS_OK) {
+            NSArray *days = [result objectForKey:@"data"];
+            
+            for (NSDictionary *day in days) {
+                NSString *dateString = [day objectForKey:@"date"];
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"dd.MM.yy"];
+                [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+                NSDate *date = [dateFormatter dateFromString:dateString];
+                
+                MenuSet *menuSet = [[MenuSet alloc] initWithEntity:[NSEntityDescription entityForName:@"MenuSet" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
+                menuSet.restaurant = restaurant;
+                menuSet.date = date;
+                
+                for (NSDictionary *meal in [day objectForKey:@"meals"]) {
+                    Menu *menu = [[Menu alloc] initWithEntity:[NSEntityDescription entityForName:@"Menu" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
+                    
+                    menu.name = ([meal objectForKey:@"title"] != [NSNull null]) ? [meal objectForKey:@"title"] : nil;
+                    menu.price = ([meal objectForKey:@"price2"] != [NSNull null]) ? [self cleanPrice:[meal objectForKey:@"price2"]] : nil;
+                    menu.reducedPrice = ([meal objectForKey:@"price1"] != [NSNull null]) ? [self cleanPrice:[meal objectForKey:@"price1"]] : nil;
+                    menu.extraChars = ([meal objectForKey:@"extraChar"] != [NSNull null]) ? [meal objectForKey:@"extraChar"] : nil;
+                    menu.extraNumbers = ([meal objectForKey:@"extraNumber"] != [NSNull null]) ? [meal objectForKey:@"extraNumber"] : nil;
+                    menu.currency = @"€";
+                    
+                    menu.menuSet = menuSet;
+                }
+            }
+            
+            [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+        }
+    }
     
     return success;
+}
+
+- (NSNumber *)cleanPrice:(NSString *)priceString {
+    NSRange spaceRange = [priceString rangeOfString:@" "];
+    NSRange commaRange = [priceString rangeOfString:@","];
+    
+    NSString *cleanPriceString = priceString;
+    NSNumber *cleanPrice = nil;
+    
+    if (spaceRange.location != NSNotFound) {
+        cleanPriceString = [cleanPriceString substringToIndex:spaceRange.location];
+    }
+    
+    if (commaRange.location != NSNotFound) {
+        cleanPriceString = [cleanPriceString stringByReplacingOccurrencesOfString:@"," withString:@"."];
+    }
+    
+    cleanPrice = [NSNumber numberWithFloat:[cleanPriceString floatValue]];
+    
+    return cleanPrice;
 }
 
 @end
