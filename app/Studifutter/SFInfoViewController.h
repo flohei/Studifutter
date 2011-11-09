@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SFInfoViewDelegate
+
+- (void)dismissInfoView;
+
+@end
+
 @interface SFInfoViewController : UIViewController
+
+@property (nonatomic, retain) id <SFInfoViewDelegate> delegate;
+
+- (IBAction)done:(id)sender;
 
 @end
