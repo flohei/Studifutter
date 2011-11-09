@@ -134,7 +134,6 @@
     }
     
     Restaurant *restaurant = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:[indexPath row]];
-    [[Connection sharedConnection] readMenuForRestaurant:restaurant];
     
     // Configure the cell...
     cell.restaurant = restaurant;

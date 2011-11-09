@@ -23,4 +23,6 @@
 
 @property int operationBalance;
 
+- (NSArray *)localRestaurants;
+
 @end

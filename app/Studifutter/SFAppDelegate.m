@@ -36,7 +36,7 @@
         CFRelease(uuid);
     }
     
-    [Connection.sharedConnection readRestaurants];
+    [self downloadData];
     
     self.operationBalance = 0;
     
@@ -133,7 +133,7 @@
     
     if (success) {
         // get all restaurants
-        NSArray *restaurants;
+        NSArray *restaurants = [self localRestaurants];
         
         // go ahead and look for every menu
         for (Restaurant *r in restaurants) {
@@ -153,6 +153,34 @@
 - (void)finishedDownloadMenusForRestaurant:(bool)success {
     // yay, got another menu
     self.operationBalance -= 1;
+}
+
+- (NSArray *)localRestaurants {    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription 
+                                   entityForName:@"Restaurant" inManagedObjectContext:[self managedObjectContext]];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
+                              initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController = 
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+                                        managedObjectContext:[self managedObjectContext] 
+                                          sectionNameKeyPath:nil 
+                                                   cacheName:@"Restaurant"];
+    
+    NSError *error;
+	if (![theFetchedResultsController performFetch:&error]) {
+		// Update to handle the error appropriately.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+    
+    return [theFetchedResultsController fetchedObjects];
 }
 
 #pragma mark - Core Data stack

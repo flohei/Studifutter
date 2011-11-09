@@ -20,8 +20,6 @@
 
 - (NSNumber *)cleanPrice:(NSString *)priceString;
 
-- (NSArray *)localRestaurants;
-
 @end
 
 @implementation Connection
@@ -150,7 +148,7 @@ static Connection *_connection;
         
         if (status == SF_API_STATUS_OK) {
             NSArray *rawRestaurants = [result objectForKey:@"data"];
-            NSArray *localRestaurants = [self localRestaurants];
+            NSArray *localRestaurants = [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] localRestaurants];
             
             for (NSDictionary *rawRestaurant in rawRestaurants) {
                 Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
@@ -259,33 +257,6 @@ static Connection *_connection;
     cleanPrice = [NSNumber numberWithFloat:[cleanPriceString floatValue]];
     
     return cleanPrice;
-}
-
-- (NSArray *)localRestaurants {    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription 
-                                   entityForName:@"Restaurant" inManagedObjectContext:[self context]];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
-                              initWithKey:@"name" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    [fetchRequest setFetchBatchSize:20];
-    
-    NSFetchedResultsController *theFetchedResultsController = 
-    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-                                        managedObjectContext:self.context sectionNameKeyPath:nil 
-                                                   cacheName:@"Restaurant"];
-    
-    NSError *error;
-	if (![theFetchedResultsController performFetch:&error]) {
-		// Update to handle the error appropriately.
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
-	}
-    
-    return [theFetchedResultsController fetchedObjects];
 }
 
 @end
