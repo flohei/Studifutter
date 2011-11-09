@@ -4,7 +4,8 @@
 #import <CoreData/CoreData.h>
 
 
-@class Menu;
+@class MenuSet;
+
 
 
 
@@ -72,6 +73,14 @@
 
 
 
+@property (nonatomic, retain) NSString *menuURL;
+
+
+//- (BOOL)validateMenuURL:(id*)value_ error:(NSError**)error_;
+
+
+
+
 @property (nonatomic, retain) NSString *name;
 
 
@@ -117,9 +126,9 @@
 
 
 
-@property (nonatomic, retain) NSSet* menu;
+@property (nonatomic, retain) NSSet* menuSet;
 
-- (NSMutableSet*)menuSet;
+- (NSMutableSet*)menuSetSet;
 
 
 
@@ -128,10 +137,10 @@
 
 @interface _Restaurant (CoreDataGeneratedAccessors)
 
-- (void)addMenu:(NSSet*)value_;
-- (void)removeMenu:(NSSet*)value_;
-- (void)addMenuObject:(Menu*)value_;
-- (void)removeMenuObject:(Menu*)value_;
+- (void)addMenuSet:(NSSet*)value_;
+- (void)removeMenuSet:(NSSet*)value_;
+- (void)addMenuSetObject:(MenuSet*)value_;
+- (void)removeMenuSetObject:(MenuSet*)value_;
 
 @end
 
@@ -171,6 +180,12 @@
 
 
 
+- (NSString*)primitiveMenuURL;
+- (void)setPrimitiveMenuURL:(NSString*)value;
+
+
+
+
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
@@ -205,8 +220,8 @@
 
 
 
-- (NSMutableSet*)primitiveMenu;
-- (void)setPrimitiveMenu:(NSMutableSet*)value;
+- (NSMutableSet*)primitiveMenuSet;
+- (void)setPrimitiveMenuSet:(NSMutableSet*)value;
 
 
 @end

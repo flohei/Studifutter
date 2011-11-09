@@ -131,7 +131,7 @@
 
 
 
-@dynamic restaurant;
+@dynamic menuSet;
 
 	
 

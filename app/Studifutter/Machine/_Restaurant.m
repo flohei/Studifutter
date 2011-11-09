@@ -137,6 +137,13 @@
 
 
 
+@dynamic menuURL;
+
+
+
+
+
+
 @dynamic name;
 
 
@@ -191,13 +198,13 @@
 
 
 
-@dynamic menu;
+@dynamic menuSet;
 
 	
-- (NSMutableSet*)menuSet {
-	[self willAccessValueForKey:@"menu"];
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"menu"];
-	[self didAccessValueForKey:@"menu"];
+- (NSMutableSet*)menuSetSet {
+	[self willAccessValueForKey:@"menuSet"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"menuSet"];
+	[self didAccessValueForKey:@"menuSet"];
 	return result;
 }
 	

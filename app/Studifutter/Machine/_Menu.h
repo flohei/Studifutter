@@ -4,7 +4,7 @@
 #import <CoreData/CoreData.h>
 
 
-@class Restaurant;
+@class MenuSet;
 
 
 
@@ -91,9 +91,9 @@
 
 
 
-@property (nonatomic, retain) Restaurant* restaurant;
+@property (nonatomic, retain) MenuSet* menuSet;
 
-//- (BOOL)validateRestaurant:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateMenuSet:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -156,8 +156,8 @@
 
 
 
-- (Restaurant*)primitiveRestaurant;
-- (void)setPrimitiveRestaurant:(Restaurant*)value;
+- (MenuSet*)primitiveMenuSet;
+- (void)setPrimitiveMenuSet:(MenuSet*)value;
 
 
 @end
