@@ -26,6 +26,7 @@
 		8F10D77A14697D0F00896CE9 /* Studifutter-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
+		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */; };
 		8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB6145F23BB00FE166B /* SFDayListViewController.m */; };
 		8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB9145F240700FE166B /* SFMenuViewController.m */; };
@@ -96,6 +97,7 @@
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
 		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
+		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantViewController.h; sourceTree = "<group>"; };
 		8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantViewController.m; sourceTree = "<group>"; };
 		8F729BB5145F23BB00FE166B /* SFDayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDayListViewController.h; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
 				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
 				8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */,
 				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
@@ -212,6 +215,7 @@
 		8F0BA78C145C72F1003E2DE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F25E69B146B0337000D4806 /* iAd.framework */,
 				8F729BD0145F2B4300FE166B /* SBJson */,
 				8F0BA78D145C72F1003E2DE0 /* UIKit.framework */,
 				8F0BA78F145C72F1003E2DE0 /* Foundation.framework */,
