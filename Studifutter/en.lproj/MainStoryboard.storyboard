@@ -19,69 +19,6 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <scene sceneID="18">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
-                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="SFDayListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayCellIdentifier" id="Tkg-Dr-tbD" customClass="DayTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="uDm-wR-bCc">
-                                            <rect key="frame" x="8" y="0.0" width="45" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Frikadellen mit Gemüse, Pommes mit Cordon Bleu, Pizza" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="bfP-C0-2VI">
-                                            <rect key="frame" x="61" y="0.0" width="222" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dateLabel" destination="uDm-wR-bCc" id="YMA-Wn-cKu"/>
-                                    <outlet property="menuLabel" destination="bfP-C0-2VI" id="GBi-iS-grX"/>
-                                    <segue destination="uYF-SR-joF" kind="push" identifier="ShowMenu" id="Rkp-Io-idn"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="12" id="16"/>
-                            <outlet property="delegate" destination="12" id="15"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="When?" id="36"/>
-                    <connections>
-                        <outlet property="bannerView" destination="R6G-g8-qwY" id="LJn-Fr-Ok2"/>
-                    </connections>
-                </tableViewController>
-                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="R6G-g8-qwY">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <requiredContentSizeIdentifiers>
-                        <string>ADBannerContentSizeLandscape</string>
-                        <string>ADBannerContentSizePortrait</string>
-                    </requiredContentSizeIdentifiers>
-                </adBannerView>
-            </objects>
-            <point key="canvasLocation" x="912" y="64"/>
-        </scene>
         <scene sceneID="24">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -139,7 +76,7 @@
                                 <connections>
                                     <outlet property="restaurantAddressLabel" destination="zwW-8L-tDD" id="lze-IX-nmV"/>
                                     <outlet property="restaurantNameLabel" destination="mhk-fR-nA6" id="93x-bT-R0C"/>
-                                    <segue destination="12" kind="push" identifier="ShowDayList" id="eD1-ls-sDB"/>
+                                    <segue destination="Ows-If-Ldb" kind="push" identifier="ShowDayList" id="MPS-29-cDr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -192,6 +129,80 @@
             </objects>
             <point key="canvasLocation" x="1350" y="64"/>
         </scene>
+        <scene sceneID="6if-js-5DV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiE-en-vsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ows-If-Ldb" customClass="SFDayListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G6h-Eo-25F">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ILx-ES-VAC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="366"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayCellIdentifier" id="2eg-p4-bh2" customClass="DayTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Z5r-gb-O0s">
+                                                    <rect key="frame" x="8" y="0.0" width="45" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="zum Beispiel: Brokkoli-Nussecke mit Rahmkartoffeln" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="8" id="Jge-MA-TBN">
+                                                    <rect key="frame" x="61" y="0.0" width="227" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Z5r-gb-O0s" id="lTR-zb-UI7"/>
+                                            <outlet property="menuLabel" destination="Jge-MA-TBN" id="kOu-5s-PWg"/>
+                                            <segue destination="uYF-SR-joF" kind="push" id="0Ye-rf-wKc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ows-If-Ldb" id="jaA-qH-JIu"/>
+                                    <outlet property="delegate" destination="Ows-If-Ldb" id="DDp-fL-fLb"/>
+                                </connections>
+                            </tableView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PLW-nJ-8Cg">
+                                <rect key="frame" x="0.0" y="366" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <requiredContentSizeIdentifiers>
+                                    <string>ADBannerContentSizeLandscape</string>
+                                    <string>ADBannerContentSizePortrait</string>
+                                </requiredContentSizeIdentifiers>
+                                <connections>
+                                    <outlet property="delegate" destination="Ows-If-Ldb" id="MaK-8O-b4x"/>
+                                </connections>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="When?" id="5IX-4k-0un"/>
+                    <connections>
+                        <outlet property="bannerView" destination="PLW-nJ-8Cg" id="Pm8-PO-yHq"/>
+                        <outlet property="tableView" destination="ILx-ES-VAC" id="KHO-mm-wLe"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="912" y="64"/>
+        </scene>
         <scene sceneID="8ST-f2-bD6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUx-ch-Xl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,10 +236,11 @@
                 <relationship kind="outlet" name="restaurantNameLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="SFDayListViewController" superclassName="UITableViewController">
+        <class className="SFDayListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SFDayListViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="SFInfoViewController" superclassName="UIViewController">
