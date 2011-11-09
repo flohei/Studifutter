@@ -16,7 +16,7 @@
 
 @interface SFInfoViewController : UIViewController
 
-@property (nonatomic, retain) id <SFInfoViewDelegate> delegate;
+@property (nonatomic, assign) id <SFInfoViewDelegate> delegate;
 
 - (IBAction)done:(id)sender;
 
