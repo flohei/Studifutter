@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SFMenuViewController : UITableViewController
+@class MenuSet;
+
+@interface SFMenuViewController : UITableViewController 
+
+@property (nonatomic, retain) MenuSet *menuSet;
 
 @end
