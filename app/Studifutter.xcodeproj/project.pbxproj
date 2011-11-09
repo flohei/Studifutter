@@ -90,8 +90,6 @@
 		8F0BA7C0145C72F2003E2DE0 /* StudifutterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudifutterTests.h; sourceTree = "<group>"; };
 		8F0BA7C1145C72F2003E2DE0 /* StudifutterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudifutterTests.m; sourceTree = "<group>"; };
 		8F10D77214697CF700896CE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8F10D77414697CFC00896CE9 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8F10D77714697D0900896CE9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F10D77914697D0F00896CE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F10D78B146AE0F700896CE9 /* MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSet.h; sourceTree = "<group>"; };
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 		8F729BC3145F245800FE166B /* SFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFInfoViewController.h; sourceTree = "<group>"; };
 		8F729BC4145F245800FE166B /* SFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFInfoViewController.m; sourceTree = "<group>"; };
 		8F729BC5145F245800FE166B /* SFInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFInfoViewController.xib; sourceTree = "<group>"; };
-		8F729BCB145F26C700FE166B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "/Users/flohei/dev/studifutter-repo/trunk/app/StudifutterTests/de.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
 		8F729BD1145F2B4300FE166B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		8F729BD2145F2B4300FE166B /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		8F729BD3145F2B4300FE166B /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
@@ -588,7 +585,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F0BA7BE145C72F2003E2DE0 /* en */,
-				8F729BCB145F26C700FE166B /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -597,7 +593,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F10D77214697CF700896CE9 /* en */,
-				8F10D77414697CFC00896CE9 /* de */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -605,7 +600,6 @@
 		8F10D77614697D0900896CE9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8F10D77714697D0900896CE9 /* de */,
 				8F10D77914697D0F00896CE9 /* en */,
 			);
 			name = InfoPlist.strings;
