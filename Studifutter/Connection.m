@@ -20,6 +20,8 @@
 
 - (NSNumber *)cleanPrice:(NSString *)priceString;
 
+- (NSArray *)localRestaurants;
+
 @end
 
 @implementation Connection
@@ -148,6 +150,8 @@ static Connection *_connection;
         
         if (status == SF_API_STATUS_OK) {
             NSArray *rawRestaurants = [result objectForKey:@"data"];
+            NSArray *localRestaurants = [self localRestaurants];
+            
             for (NSDictionary *rawRestaurant in rawRestaurants) {
                 Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                 
@@ -163,7 +167,20 @@ static Connection *_connection;
                 aNewRestaurant.street = ([rawRestaurant objectForKey:@"street"] != [NSNull null]) ? [rawRestaurant objectForKey:@"street"] : nil;
                 aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
                 
-                [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+                // check if aNewRestaurant is already locally saved
+                bool notFound = YES;
+                for (Restaurant *localRestaurant in localRestaurants) {
+                    if ([[localRestaurant restaurantID] isEqualToNumber:[aNewRestaurant restaurantID]]) {
+                        notFound = NO;
+                    }
+                }
+                
+                // save aNewRestaurant if it has not been found locally; delete it otherwise
+                if (notFound) {
+                    [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+                } else {
+                    [[self context] deleteObject:aNewRestaurant];
+                }
             }
         }
     }
@@ -222,6 +239,8 @@ static Connection *_connection;
     return success;
 }
 
+#pragma mark - Helpers
+
 - (NSNumber *)cleanPrice:(NSString *)priceString {
     NSRange spaceRange = [priceString rangeOfString:@" "];
     NSRange commaRange = [priceString rangeOfString:@","];
@@ -240,6 +259,33 @@ static Connection *_connection;
     cleanPrice = [NSNumber numberWithFloat:[cleanPriceString floatValue]];
     
     return cleanPrice;
+}
+
+- (NSArray *)localRestaurants {    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription 
+                                   entityForName:@"Restaurant" inManagedObjectContext:[self context]];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
+                              initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController = 
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
+                                        managedObjectContext:self.context sectionNameKeyPath:nil 
+                                                   cacheName:@"Restaurant"];
+    
+    NSError *error;
+	if (![theFetchedResultsController performFetch:&error]) {
+		// Update to handle the error appropriately.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+    
+    return [theFetchedResultsController fetchedObjects];
 }
 
 @end
