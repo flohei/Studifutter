@@ -26,6 +26,12 @@
 		8F10D77A14697D0F00896CE9 /* Studifutter-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
+		8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */; };
+		8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250107146BC71000453E58 /* studifutter-app-icon-512.png */; };
+		8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */; };
+		8F25010F146BC71000453E58 /* studifutter-app-icon-spotlight-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250109146BC71000453E58 /* studifutter-app-icon-spotlight-29.png */; };
+		8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */; };
+		8F250111146BC71000453E58 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F25010B146BC71000453E58 /* Default.png */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */; };
 		8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB6145F23BB00FE166B /* SFDayListViewController.m */; };
@@ -95,6 +101,12 @@
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
 		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
+		8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-114-retina.png"; sourceTree = "<group>"; };
+		8F250107146BC71000453E58 /* studifutter-app-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-512.png"; sourceTree = "<group>"; };
+		8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-57-getanewphoneres.png"; sourceTree = "<group>"; };
+		8F250109146BC71000453E58 /* studifutter-app-icon-spotlight-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-spotlight-29.png"; sourceTree = "<group>"; };
+		8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-spotlight-58-retina.png"; sourceTree = "<group>"; };
+		8F25010B146BC71000453E58 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantViewController.h; sourceTree = "<group>"; };
 		8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantViewController.m; sourceTree = "<group>"; };
@@ -270,6 +282,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8F250105146BC71000453E58 /* ICON-DERIVATE */ = {
+			isa = PBXGroup;
+			children = (
+				8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */,
+				8F250107146BC71000453E58 /* studifutter-app-icon-512.png */,
+				8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */,
+				8F250109146BC71000453E58 /* studifutter-app-icon-spotlight-29.png */,
+				8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */,
+			);
+			path = "ICON-DERIVATE";
+			sourceTree = "<group>";
+		};
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +336,8 @@
 		8F729BC9145F248C00FE166B /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				8F250105146BC71000453E58 /* ICON-DERIVATE */,
+				8F25010B146BC71000453E58 /* Default.png */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -491,6 +517,12 @@
 				8F10D77514697CFC00896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F10D77814697D0900896CE9 /* InfoPlist.strings in Resources */,
 				8F10D77A14697D0F00896CE9 /* Studifutter-Info.plist in Resources */,
+				8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */,
+				8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */,
+				8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */,
+				8F25010F146BC71000453E58 /* studifutter-app-icon-spotlight-29.png in Resources */,
+				8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */,
+				8F250111146BC71000453E58 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
