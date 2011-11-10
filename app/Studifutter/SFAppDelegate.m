@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "SFRestaurantViewController.h"
 #import "Connection.h"
+#import "TestFlight.h"
 
 @implementation SFAppDelegate
 
@@ -21,6 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Register for the use of TestFlight
+    [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
+    
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
@@ -39,6 +43,8 @@
     [self downloadData];
     
     self.operationBalance = 0;
+    
+    [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
     return YES;
 }
@@ -130,6 +136,8 @@
 - (void)finishedDownloadRestaurants:(bool)success {
     // get the restaurants here and fetch all the menus for each restaurant
     self.operationBalance -= 1;
+    
+    [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
     
     if (success) {
         // get all restaurants
