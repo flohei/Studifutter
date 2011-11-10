@@ -19,5 +19,6 @@
 @property (nonatomic, assign) id <SFInfoViewDelegate> delegate;
 
 - (IBAction)done:(id)sender;
+- (IBAction)feedback:(id)sender;
 
 @end

@@ -60,4 +60,8 @@
     [[self delegate] dismissInfoView];
 }
 
+- (IBAction)feedback:(id)sender {
+    [TestFlight openFeedbackView];
+}
+
 @end
