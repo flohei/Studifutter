@@ -85,7 +85,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    Menu *menu = [[self allMenus] objectAtIndex:[indexPath section]];
+    
     // Configure the cell...
+    [[cell textLabel] setText:[menu name]];
     
     return cell;
 }

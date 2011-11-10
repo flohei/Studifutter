@@ -194,7 +194,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="Z5r-gb-O0s" id="lTR-zb-UI7"/>
                                             <outlet property="menuLabel" destination="Jge-MA-TBN" id="kOu-5s-PWg"/>
-                                            <segue destination="uYF-SR-joF" kind="push" id="0Ye-rf-wKc"/>
+                                            <segue destination="uYF-SR-joF" kind="push" identifier="ShowMenu" id="0Ye-rf-wKc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

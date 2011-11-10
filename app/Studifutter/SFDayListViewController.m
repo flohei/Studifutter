@@ -71,7 +71,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"DayList"]) {
+    if ([[segue identifier] isEqualToString:@"ShowMenu"]) {
         SFMenuViewController *menuViewController = (SFMenuViewController *)[segue destinationViewController];
         menuViewController.menuSet = [(DayTableViewCell *)sender menuSet];
     }
