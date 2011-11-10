@@ -128,12 +128,12 @@
 
 - (void)doDownloadRestaurants {
     // call the API here
-    bool success = [[Connection sharedConnection] readRestaurants];
+    BOOL success = [[Connection sharedConnection] readRestaurants];
     
     [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
-- (void)finishedDownloadRestaurants:(bool)success {
+- (void)finishedDownloadRestaurants:(BOOL)success {
     // get the restaurants here and fetch all the menus for each restaurant
     self.operationBalance -= 1;
     
@@ -153,12 +153,12 @@
 }
 
 - (void)doDownloadMenuForRestaurant:(Restaurant *)restaurant {
-    bool success = [[Connection sharedConnection] readMenuForRestaurant:restaurant];
+    BOOL success = [[Connection sharedConnection] readMenuForRestaurant:restaurant];
     
-    [self performSelectorOnMainThread:@selector(finishedDownloadMenuForRestaurant) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
+    [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
-- (void)finishedDownloadMenusForRestaurant:(bool)success {
+- (void)finishedDownloadMenusForRestaurant:(BOOL)success {
     // yay, got another menu
     self.operationBalance -= 1;
 }

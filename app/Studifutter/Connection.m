@@ -130,8 +130,8 @@ static Connection *_connection;
     return _sharedOperationQueue;
 }
 
-- (bool)readRestaurants {
-    bool success = NO;
+- (BOOL)readRestaurants {
+    BOOL success = NO;
     
     NSString *requestPath = @"/restaurant/list";
     NSDictionary *result = nil;
@@ -166,7 +166,7 @@ static Connection *_connection;
                 aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
                 
                 // check if aNewRestaurant is already locally saved
-                bool notFound = YES;
+                BOOL notFound = YES;
                 for (Restaurant *localRestaurant in localRestaurants) {
                     if ([[localRestaurant restaurantID] isEqualToNumber:[aNewRestaurant restaurantID]]) {
                         notFound = NO;
@@ -176,6 +176,7 @@ static Connection *_connection;
                 // save aNewRestaurant if it has not been found locally; delete it otherwise
                 if (notFound) {
                     [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+                    success = YES;
                 } else {
                     [[self context] deleteObject:aNewRestaurant];
                 }
@@ -186,8 +187,8 @@ static Connection *_connection;
     return success;
 }
 
-- (bool)readMenuForRestaurant:(Restaurant *)restaurant {
-    bool success = NO;
+- (BOOL)readMenuForRestaurant:(Restaurant *)restaurant {
+    BOOL success = NO;
     
     NSString *requestPath = [NSString stringWithFormat:@"/restaurant/%d/menu", [restaurant restaurantIDValue]];
     NSDictionary *result = nil;
@@ -231,6 +232,7 @@ static Connection *_connection;
             }
             
             [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+            success = YES;
         }
     }
     
