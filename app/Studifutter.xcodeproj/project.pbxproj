@@ -344,9 +344,9 @@
 		8F729BCF145F2AD000FE166B /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				8F729C01145F2DA300FE166B /* Constants.h */,
 				8F729C07145F31F600FE166B /* Common.h */,
 				8F729C08145F31F600FE166B /* Common.m */,
-				8F729C01145F2DA300FE166B /* Constants.h */,
 				8F729C04145F2DE700FE166B /* NSString+URLEncode.h */,
 				8F729C05145F2DE700FE166B /* NSString+URLEncode.m */,
 			);
