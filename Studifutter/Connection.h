@@ -15,8 +15,8 @@
 
 @property (nonatomic, assign) Reachability *internetReachable;
 @property (nonatomic, assign) Reachability *hostReachable;
-@property bool internetActive;
-@property bool hostActive;
+@property BOOL internetActive;
+@property BOOL hostActive;
 
 + (Connection *)sharedConnection;
 
@@ -26,7 +26,7 @@
 
 @property (nonatomic, retain) NSOperationQueue *sharedOperationQueue;
 
-- (bool)readRestaurants;
-- (bool)readMenuForRestaurant:(Restaurant *)restaurant;
+- (BOOL)readRestaurants;
+- (BOOL)readMenuForRestaurant:(Restaurant *)restaurant;
 
 @end
