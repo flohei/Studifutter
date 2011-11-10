@@ -12,6 +12,8 @@
 #import "Menu.h"
 #import "DayTableViewCell.h"
 #import "SFMenuViewController.h"
+#import "TestFlight.h"
+#import "Constants.h"
 
 @interface SFDayListViewController ()
 
@@ -105,7 +107,7 @@
     return cell;
 }
 
-#pragma mark - ADBannerViewDelegate
+#pragma mark - iAds
 
 - (void)moveBannerOffScreen {   
     if (!bannerVisible) return;
@@ -151,6 +153,11 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
     [self moveBannerOffScreen];
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
+    [TestFlight passCheckpoint:AD_WATCHED_CHECKPOINT];
+    return YES;
 }
 
 @end
