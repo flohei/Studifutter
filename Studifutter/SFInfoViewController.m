@@ -7,6 +7,8 @@
 //
 
 #import "SFInfoViewController.h"
+#import "Constants.h"
+#import "TestFlight.h"
 
 @implementation SFInfoViewController
 
@@ -35,6 +37,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [TestFlight passCheckpoint:INFO_SHOW_CHECKPOINT];
 }
 
 - (void)viewDidUnload
