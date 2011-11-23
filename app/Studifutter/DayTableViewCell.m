@@ -20,15 +20,6 @@
 
 @synthesize menuSet = _menuSet;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (void)setMenuSet:(MenuSet *)menuSet {
     _menuSet = menuSet;
     
@@ -48,13 +39,6 @@
     // TODO: Localize "zum Beispiel"
     menuString = [NSString stringWithFormat:@"%@: %@", @"zum Beispiel", [[[[self menuSet] menu] anyObject] name]];
     [menuLabel setText:menuString];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

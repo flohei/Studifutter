@@ -19,15 +19,6 @@
 
 @synthesize restaurant = _restaurant;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (void)setRestaurant:(Restaurant *)restaurant {
     _restaurant = restaurant;
     [self updateLabels];
@@ -38,13 +29,6 @@
     
     NSString *addressString = [NSString stringWithFormat:@"%@, %@", [[self restaurant] street], [[self restaurant] city]];
     [restaurantAddressLabel setText:addressString];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end
