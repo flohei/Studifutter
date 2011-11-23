@@ -204,14 +204,28 @@ static Connection *_connection;
         int status = [[result objectForKey:@"status"] intValue];
         
         if (status == SF_API_STATUS_OK) {
+            // get the last day of the currently locally saved menusets. do only save new ones
+            // actually newer than the last date.
+            NSDate *lastDayOfOldMenus = nil;
+            NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+            NSArray *sortedMenuSets = [[restaurant menuSetSet] sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
+            if ([sortedMenuSets count] > 0) {
+            MenuSet *lastMenuSet = [sortedMenuSets objectAtIndex:0];
+                lastDayOfOldMenus = [lastMenuSet date];
+            }
+            
             NSArray *days = [result objectForKey:@"data"];
             
-            for (NSDictionary *day in days) {
+            for (NSDictionary *day in days) { 
                 NSString *dateString = [day objectForKey:@"date"];
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 [dateFormatter setDateFormat:@"dd.MM.yy"];
                 [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
                 NSDate *date = [dateFormatter dateFromString:dateString];
+                
+                // compare the incoming date with the last one saved
+                NSTimeInterval halfADay = 43200;
+                if (lastDayOfOldMenus && date == [[lastDayOfOldMenus dateByAddingTimeInterval:halfADay] earlierDate:date]) continue;
                 
                 MenuSet *menuSet = [[MenuSet alloc] initWithEntity:[NSEntityDescription entityForName:@"MenuSet" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                 menuSet.restaurant = restaurant;
