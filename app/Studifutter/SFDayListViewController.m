@@ -12,6 +12,7 @@
 #import "Menu.h"
 #import "DayTableViewCell.h"
 #import "SFMenuViewController.h"
+#import "SFRestaurantDetailViewController.h"
 #import "TestFlight.h"
 #import "Constants.h"
 
@@ -74,6 +75,9 @@
     if ([[segue identifier] isEqualToString:@"ShowMenu"]) {
         SFMenuViewController *menuViewController = (SFMenuViewController *)[segue destinationViewController];
         menuViewController.menuSet = [(DayTableViewCell *)sender menuSet];
+    } else if ([[segue identifier] isEqualToString:@"ShowRestaurantDetails"]) {
+        SFRestaurantDetailViewController *restaurantDetailViewController = (SFRestaurantDetailViewController *)[segue destinationViewController];
+        restaurantDetailViewController.restaurant = self.restaurant;
     }
 }
 
