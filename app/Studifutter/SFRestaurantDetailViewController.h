@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <iAd/iAd.h>
 
-@interface SFRestaurantDetailViewController : UIViewController
+@class Restaurant;
+
+@interface SFRestaurantDetailViewController : UIViewController <MKMapViewDelegate> {
+    bool bannerVisible;
+}
+
+@property (nonatomic, retain) Restaurant *restaurant;
+
+@property (weak, nonatomic) IBOutlet UILabel *streetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *zipAndCityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
 
 @end
