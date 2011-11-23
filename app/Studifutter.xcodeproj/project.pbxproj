@@ -44,9 +44,7 @@
 		8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB6145F23BB00FE166B /* SFDayListViewController.m */; };
 		8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB9145F240700FE166B /* SFMenuViewController.m */; };
 		8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */; };
-		8F729BC1145F243900FE166B /* SFRestaurantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F729BBF145F243900FE166B /* SFRestaurantDetailViewController.xib */; };
 		8F729BC6145F245800FE166B /* SFInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BC4145F245800FE166B /* SFInfoViewController.m */; };
-		8F729BC7145F245800FE166B /* SFInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F729BC5145F245800FE166B /* SFInfoViewController.xib */; };
 		8F729BEB145F2B4300FE166B /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BD3145F2B4300FE166B /* NSObject+SBJson.m */; };
 		8F729BEC145F2B4300FE166B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BD6145F2B4300FE166B /* SBJsonParser.m */; };
 		8F729BED145F2B4300FE166B /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BD8145F2B4300FE166B /* SBJsonStreamParser.m */; };
@@ -131,10 +129,8 @@
 		8F729BB9145F240700FE166B /* SFMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMenuViewController.m; sourceTree = "<group>"; };
 		8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantDetailViewController.h; sourceTree = "<group>"; };
 		8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantDetailViewController.m; sourceTree = "<group>"; };
-		8F729BBF145F243900FE166B /* SFRestaurantDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFRestaurantDetailViewController.xib; sourceTree = "<group>"; };
 		8F729BC3145F245800FE166B /* SFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFInfoViewController.h; sourceTree = "<group>"; };
 		8F729BC4145F245800FE166B /* SFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFInfoViewController.m; sourceTree = "<group>"; };
-		8F729BC5145F245800FE166B /* SFInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SFInfoViewController.xib; sourceTree = "<group>"; };
 		8F729BD1145F2B4300FE166B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		8F729BD2145F2B4300FE166B /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		8F729BD3145F2B4300FE166B /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
@@ -344,8 +340,6 @@
 		8F729BC2145F244000FE166B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8F729BBF145F243900FE166B /* SFRestaurantDetailViewController.xib */,
-				8F729BC5145F245800FE166B /* SFInfoViewController.xib */,
 				8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */,
 				8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */,
 				8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */,
@@ -544,8 +538,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F729BC1145F243900FE166B /* SFRestaurantDetailViewController.xib in Resources */,
-				8F729BC7145F245800FE166B /* SFInfoViewController.xib in Resources */,
 				8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F10D77514697CFC00896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F10D77814697D0900896CE9 /* InfoPlist.strings in Resources */,
