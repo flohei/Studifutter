@@ -50,6 +50,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    bannerVisible = YES;
     [self moveBannerOnScreen];
     
     self.navigationItem.title = _restaurant.name;
@@ -59,8 +60,8 @@
     
     MKCoordinateRegion region;
     MKCoordinateSpan span;
-    span.latitudeDelta=0.1;
-    span.longitudeDelta=0.1;
+    span.latitudeDelta = 0.003;
+    span.longitudeDelta = 0.003;
     
     CLLocationCoordinate2D restaurantLocation;
     restaurantLocation.longitude = [_restaurant.longitude doubleValue];
