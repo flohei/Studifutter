@@ -36,8 +36,6 @@
 		8F250119146C0B1500453E58 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F250115146C0B1500453E58 /* release_notes.txt */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
-		8F5E9E53147D8C1D00FF2327 /* studifutter-infoscreen-blanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E52147D8C1D00FF2327 /* studifutter-infoscreen-blanko.png */; };
-		8F5E9E57147D8C5900FF2327 /* studifutter-postit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E55147D8C5900FF2327 /* studifutter-postit.png */; };
 		8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */; };
 		8F5E9E5A147D8CA700FF2327 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E59147D8CA700FF2327 /* Default.png */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
@@ -69,6 +67,8 @@
 		8F729C451464BADD00FE166B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
 		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
+		8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D03147E971E00AB17E9 /* SFViewController.m */; };
+		8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -118,8 +118,6 @@
 		8F250116146C0B1500453E58 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8F5E9E52147D8C1D00FF2327 /* studifutter-infoscreen-blanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-infoscreen-blanko.png"; sourceTree = "<group>"; };
-		8F5E9E55147D8C5900FF2327 /* studifutter-postit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-postit.png"; sourceTree = "<group>"; };
 		8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-schnipsel.png"; sourceTree = "<group>"; };
 		8F5E9E59147D8CA700FF2327 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
@@ -182,6 +180,10 @@
 		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
 		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
+		8F7C9D02147E971E00AB17E9 /* SFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
+		8F7C9D03147E971E00AB17E9 /* SFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
+		8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTableViewController.h; sourceTree = "<group>"; };
+		8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTableViewController.m; sourceTree = "<group>"; };
 		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
@@ -326,6 +328,10 @@
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8F7C9D02147E971E00AB17E9 /* SFViewController.h */,
+				8F7C9D03147E971E00AB17E9 /* SFViewController.m */,
+				8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */,
+				8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */,
 				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
 				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
 				8F729BC3145F245800FE166B /* SFInfoViewController.h */,
@@ -366,8 +372,6 @@
 			isa = PBXGroup;
 			children = (
 				8F5E9E59147D8CA700FF2327 /* Default.png */,
-				8F5E9E52147D8C1D00FF2327 /* studifutter-infoscreen-blanko.png */,
-				8F5E9E55147D8C5900FF2327 /* studifutter-postit.png */,
 				8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */,
 				8F250105146BC71000453E58 /* ICON-DERIVATE */,
 			);
@@ -554,8 +558,6 @@
 				8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */,
 				8F250118146C0B1500453E58 /* README.txt in Resources */,
 				8F250119146C0B1500453E58 /* release_notes.txt in Resources */,
-				8F5E9E53147D8C1D00FF2327 /* studifutter-infoscreen-blanko.png in Resources */,
-				8F5E9E57147D8C5900FF2327 /* studifutter-postit.png in Resources */,
 				8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */,
 				8F5E9E5A147D8CA700FF2327 /* Default.png in Resources */,
 			);
@@ -627,6 +629,8 @@
 				8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */,
 				8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */,
 				8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */,
+				8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */,
+				8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
