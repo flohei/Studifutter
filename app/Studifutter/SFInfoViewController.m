@@ -13,6 +13,7 @@
 @implementation SFInfoViewController
 
 @synthesize delegate = _delegate;
+@synthesize versionLabel = _versionLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,10 +40,13 @@
     // Do any additional setup after loading the view from its nib.
     
     [TestFlight passCheckpoint:INFO_SHOW_CHECKPOINT];
+    
+    [[self versionLabel] setText:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
 }
 
 - (void)viewDidUnload
 {
+    [self setVersionLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

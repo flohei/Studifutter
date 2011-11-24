@@ -17,6 +17,7 @@
 @interface SFInfoViewController : UIViewController
 
 @property (nonatomic, assign) id <SFInfoViewDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 - (IBAction)done:(id)sender;
 - (IBAction)feedback:(id)sender;
