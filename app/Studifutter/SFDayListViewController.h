@@ -6,12 +6,13 @@
 //  Copyright (c) 2011 rootof.net Heiber & Wiewel GbR. All rights reserved.
 //
 
+#import "SFViewController.h"
 #import <UIKit/UIKit.h>
 #import <iAD/iAD.h>
 
 @class Restaurant;
 
-@interface SFDayListViewController : UIViewController <ADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface SFDayListViewController : SFViewController <ADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource> {
     bool bannerVisible;
 }
 

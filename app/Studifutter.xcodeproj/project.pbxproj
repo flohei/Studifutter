@@ -42,6 +42,7 @@
 		8F6F134B147E990600FE5455 /* studifutter-infoscreen-blanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */; };
 		8F6F134C147E990600FE5455 /* studifutter-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1349147E990600FE5455 /* studifutter-pattern.png */; };
 		8F6F134D147E990600FE5455 /* studifutter-post-it.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F134A147E990600FE5455 /* studifutter-post-it.png */; };
+		8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F134F147EA15900FE5455 /* QuartzCore.framework */; };
 		8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */; };
 		8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB6145F23BB00FE166B /* SFDayListViewController.m */; };
 		8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB9145F240700FE166B /* SFMenuViewController.m */; };
@@ -128,6 +129,7 @@
 		8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-infoscreen-blanko.png"; sourceTree = "<group>"; };
 		8F6F1349147E990600FE5455 /* studifutter-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-pattern.png"; sourceTree = "<group>"; };
 		8F6F134A147E990600FE5455 /* studifutter-post-it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-post-it.png"; sourceTree = "<group>"; };
+		8F6F134F147EA15900FE5455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantViewController.h; sourceTree = "<group>"; };
 		8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantViewController.m; sourceTree = "<group>"; };
 		8F729BB5145F23BB00FE166B /* SFDayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDayListViewController.h; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */,
 				8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */,
 				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
 				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
@@ -229,7 +232,6 @@
 		8F0BA77E145C72F1003E2DE0 = {
 			isa = PBXGroup;
 			children = (
-				8F338218147D0BD4000344D3 /* MapKit.framework */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
 				8F0BA7BA145C72F2003E2DE0 /* StudifutterTests */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
@@ -249,6 +251,8 @@
 		8F0BA78C145C72F1003E2DE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F6F134F147EA15900FE5455 /* QuartzCore.framework */,
+				8F338218147D0BD4000344D3 /* MapKit.framework */,
 				8F250112146C0B1500453E58 /* TestFlightSDK0.8 */,
 				8F25E69B146B0337000D4806 /* iAd.framework */,
 				8F729BD0145F2B4300FE166B /* SBJson */,

@@ -36,15 +36,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     bannerVisible = YES;
     [self moveBannerOffScreen];
+    
+    [[self tableView] setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)viewDidUnload
@@ -56,12 +52,6 @@
     // e.g. self.myOutlet = nil;
     
     self.restaurant = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Misc
