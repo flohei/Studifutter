@@ -10,6 +10,7 @@
 #import "Restaurant.h"
 #import "TestFlight.h"
 #import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SFRestaurantDetailViewController ()
 
@@ -24,24 +25,8 @@
 @synthesize notesLabel = _notesLabel;
 @synthesize mapView = _mapView;
 @synthesize bannerView = _bannerView;
+@synthesize postItView = _postItView;
 @synthesize restaurant = _restaurant;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
@@ -67,8 +52,12 @@
     restaurantLocation.longitude = [_restaurant.longitude doubleValue];
     restaurantLocation.latitude = [_restaurant.latitude doubleValue];
     
+    CLLocationCoordinate2D center;
+    center.longitude = restaurantLocation.longitude;
+    center.latitude = restaurantLocation.latitude + 0.0013;
+    
     region.span = span;
-    region.center = restaurantLocation;
+    region.center = center;
     
     [self.mapView setRegion:region];
     [self.mapView regionThatFits:region];
@@ -82,6 +71,7 @@
     [self setNotesLabel:nil];
     [self setMapView:nil];
     [self setBannerView:nil];
+    [self setPostItView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

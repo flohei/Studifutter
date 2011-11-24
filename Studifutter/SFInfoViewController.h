@@ -6,6 +6,7 @@
 //  Copyright (c) 2011 rootof.net Heiber & Wiewel GbR. All rights reserved.
 //
 
+#import "SFViewController.h"
 #import <UIKit/UIKit.h>
 
 @protocol SFInfoViewDelegate
@@ -14,7 +15,7 @@
 
 @end
 
-@interface SFInfoViewController : UIViewController
+@interface SFInfoViewController : SFViewController
 
 @property (nonatomic, assign) id <SFInfoViewDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;

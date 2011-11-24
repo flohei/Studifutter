@@ -6,13 +6,14 @@
 //  Copyright (c) 2011 rootof.net Heiber & Wiewel GbR. All rights reserved.
 //
 
+#import "SFViewController.h"
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <iAd/iAd.h>
 
 @class Restaurant;
 
-@interface SFRestaurantDetailViewController : UIViewController <MKMapViewDelegate> {
+@interface SFRestaurantDetailViewController : SFViewController <MKMapViewDelegate> {
     bool bannerVisible;
 }
 
@@ -23,5 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
+@property (weak, nonatomic) IBOutlet UIImageView *postItView;
 
 @end
