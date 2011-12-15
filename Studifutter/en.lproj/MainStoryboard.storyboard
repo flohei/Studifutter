@@ -303,16 +303,10 @@
                         <connections>
                             <outlet property="dataSource" destination="uYF-SR-joF" id="Az0-GD-iOY"/>
                             <outlet property="delegate" destination="uYF-SR-joF" id="H55-ut-deJ"/>
-                            <outletCollection property="gestureRecognizers" destination="Dnm-q6-07h" appends="YES" id="f0F-ms-Cgb"/>
-                            <outletCollection property="gestureRecognizers" destination="Dnm-q6-07h" appends="YES" id="FTq-19-8h9"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Menu" id="yCG-qE-9MQ"/>
-                    <connections>
-                        <outlet property="swipeGestureRecognizer" destination="Dnm-q6-07h" id="IuX-Lu-S4D"/>
-                    </connections>
                 </tableViewController>
-                <swipeGestureRecognizer direction="right" id="Dnm-q6-07h"/>
             </objects>
             <point key="canvasLocation" x="1350" y="64"/>
         </scene>
@@ -421,6 +415,13 @@
         <image name="studifutter-schnipsel.png" width="609" height="131"/>
     </resources>
     <classes>
+        <class className="DayTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="MenuTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuTableViewCell.h"/>
             <relationships>
@@ -431,6 +432,25 @@
         </class>
         <class className="RestaurantTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="restaurantAddressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="restaurantNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SFDayListViewController" superclassName="SFViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFDayListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SFInfoViewController" superclassName="SFViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFInfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="feedback:"/>
+                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="SFMenuViewController" superclassName="SFTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SFMenuViewController.h"/>
@@ -438,8 +458,25 @@
                 <relationship kind="outlet" name="swipeGestureRecognizer" candidateClass="UISwipeGestureRecognizer"/>
             </relationships>
         </class>
+        <class className="SFRestaurantDetailViewController" superclassName="SFViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="postItView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="zipAndCityLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SFRestaurantViewController" superclassName="SFTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantViewController.h"/>
+        </class>
         <class className="SFTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SFTableViewController.h"/>
+        </class>
+        <class className="SFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
