@@ -25,6 +25,8 @@
 
 - (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate;
 
+- (NSString *)monthStringForDate:(NSDate *)date;
+
 @end
 
 @implementation SFDayListViewController
@@ -61,28 +63,29 @@
     if (!_sections) {
         NSMutableDictionary *mutableSections = [[NSMutableDictionary alloc] init];
         NSArray *allMenus = [self allMenus];
+        NSMutableArray *monthArray = [[NSMutableArray alloc] init];
         
-        for (Menu *menu in allMenus) {
+        for (MenuSet *menuSet in allMenus) {
             // get the month of the current menus date
-            NSDate *dateRepresentingThisMonth = [self dateReducedToMonthForDate:[menu date]];
+            NSString *monthStringForDate = [self monthStringForDate:[menuSet date]];
             
             // if we don't have an array for the current month yet go ahead and create one
-            NSMutableArray *menusInMonth = [mutableSections objectForKey:dateRepresentingThisMonth];
+            NSMutableArray *menusInMonth = [mutableSections objectForKey:monthStringForDate];
             if (!menusInMonth) {
                 menusInMonth = [[NSMutableArray alloc] init];
-                [mutableSections setObject:menusInMonth forKey:dateRepresentingThisMonth];
+                [mutableSections setObject:menusInMonth forKey:monthStringForDate];
+                [monthArray addObject:monthStringForDate];
             }
             
             // add the menu
-            [menusInMonth addObject:menu];
+            [menusInMonth addObject:menuSet];
         }
         
         _sections = (NSDictionary *)[mutableSections copy];
         mutableSections = nil;
         
         // create a list of sorted months
-        NSArray *unsortedMonths = [_sections allKeys];
-        self.sortedMonths = [unsortedMonths sortedArrayUsingSelector:@selector(compare:)];
+        self.sortedMonths = (NSArray *)monthArray;
     }
     
     return _sections;
@@ -113,6 +116,12 @@
     return month;
 }
 
+- (NSString *)monthStringForDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMMM"];
+    return [formatter stringFromDate:date];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowMenu"]) {
         SFMenuViewController *menuViewController = (SFMenuViewController *)[segue destinationViewController];
@@ -131,9 +140,8 @@
     return [[self sections] count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    NSDate *currentMonth = [[self sortedMonths] objectAtIndex:section];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSString *currentMonth = [[self sortedMonths] objectAtIndex:section];
     NSArray *menusThatMonth = [[self sections] objectForKey:currentMonth];
     return [menusThatMonth count];
 }
@@ -158,12 +166,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSDate *dateRepresentingThisMonth = [self.sortedMonths objectAtIndex:section];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMMM"];
-    NSString *monthString = [formatter stringFromDate:dateRepresentingThisMonth];
-    
-    return monthString;
+    NSString *monthName = [self.sortedMonths objectAtIndex:section];
+    return monthName;
 }
 
 #pragma mark - iAds
