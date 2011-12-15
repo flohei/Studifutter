@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Menu" representedClassName="Menu" syncable="YES">
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -12,7 +12,7 @@
     </entity>
     <entity name="MenuSet" representedClassName="MenuSet" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="menu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Menu" inverseName="menuSet" inverseEntity="Menu" syncable="YES"/>
+        <relationship name="menu" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Menu" inverseName="menuSet" inverseEntity="Menu" syncable="YES"/>
         <relationship name="restaurant" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="menuSet" inverseEntity="Restaurant" syncable="YES"/>
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES">
@@ -26,11 +26,11 @@
         <attribute name="restaurantID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="menuSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MenuSet" inverseName="restaurant" inverseEntity="MenuSet" syncable="YES"/>
+        <relationship name="menuSet" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MenuSet" inverseName="restaurant" inverseEntity="MenuSet" syncable="YES"/>
     </entity>
     <elements>
         <element name="Menu" positionX="-36" positionY="9" width="128" height="165"/>
-        <element name="Restaurant" positionX="-270" positionY="-18" width="128" height="210"/>
         <element name="MenuSet" positionX="-117" positionY="288" width="128" height="90"/>
+        <element name="Restaurant" positionX="-270" positionY="-18" width="128" height="210"/>
     </elements>
 </model>
