@@ -20,4 +20,7 @@
 @property (strong, nonatomic) IBOutlet ADBannerView *bannerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, retain) NSDictionary *sections;
+@property (nonatomic, retain) NSArray *sortedMonths;
+
 @end

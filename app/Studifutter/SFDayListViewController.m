@@ -23,6 +23,8 @@
 - (void)moveBannerOffScreen;
 - (void)moveBannerOnScreen;
 
+- (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate;
+
 @end
 
 @implementation SFDayListViewController
@@ -30,6 +32,8 @@
 @synthesize restaurant = _restaurant;
 @synthesize bannerView = _bannerView;
 @synthesize tableView = _tableView;
+@synthesize sections = _sections;
+@synthesize sortedMonths = _sortedMonths;
 
 #pragma mark - View lifecycle
 
@@ -47,18 +51,66 @@
 {
     [self setBannerView:nil];
     [self setTableView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    
+    [super viewDidUnload];    
     self.restaurant = nil;
 }
 
 #pragma mark - Misc
 
+- (NSDictionary *)sections {
+    if (!_sections) {
+        NSMutableDictionary *mutableSections = [[NSMutableDictionary alloc] init];
+        NSArray *allMenus = [self allMenus];
+        
+        for (Menu *menu in allMenus) {
+            // get the month of the current menus date
+            NSDate *dateRepresentingThisMonth = [self dateReducedToMonthForDate:[menu date]];
+            
+            // if we don't have an array for the current month yet go ahead and create one
+            NSMutableArray *menusInMonth = [mutableSections objectForKey:dateRepresentingThisMonth];
+            if (!menusInMonth) {
+                menusInMonth = [[NSMutableArray alloc] init];
+                [mutableSections setObject:menusInMonth forKey:dateRepresentingThisMonth];
+            }
+            
+            // add the menu
+            [menusInMonth addObject:menu];
+        }
+        
+        _sections = (NSDictionary *)[mutableSections copy];
+        mutableSections = nil;
+        
+        // create a list of sorted months
+        NSArray *unsortedMonths = [_sections allKeys];
+        self.sortedMonths = [unsortedMonths sortedArrayUsingSelector:@selector(compare:)];
+    }
+    
+    return _sections;
+}
+
 - (NSArray *)allMenus {
     NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     return [[[self restaurant] menuSet] sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
+}
+
+- (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate {
+    // Use the user's current calendar and time zone
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+    [calendar setTimeZone:timeZone];
+    
+    // Selectively convert the date components (year, month, day) of the input date
+    NSDateComponents *dateComps = [calendar components:NSMonthCalendarUnit fromDate:inputDate];
+    
+    // Set the time components manually
+    [dateComps setDay:0];
+    [dateComps setHour:0];
+    [dateComps setMinute:0];
+    [dateComps setSecond:0];
+    
+    // Convert back       
+    NSDate *month = [calendar dateFromComponents:dateComps];
+    return month;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -76,13 +128,14 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [[self sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [[self allMenus] count];
+    NSDate *currentMonth = [[self sortedMonths] objectAtIndex:section];
+    NSArray *menusThatMonth = [[self sections] objectForKey:currentMonth];
+    return [menusThatMonth count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,10 +148,22 @@
     }
     
     // Configure the cell...
-    MenuSet *menuSet = [[self allMenus] objectAtIndex:[indexPath row]];
+    NSDate *currentMonth = [[self sortedMonths] objectAtIndex:[indexPath section]];
+    NSArray *menusThatMonth = [[self sections] objectForKey:currentMonth];
+    
+    MenuSet *menuSet = [menusThatMonth objectAtIndex:[indexPath row]];
     cell.menuSet = menuSet;
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSDate *dateRepresentingThisMonth = [self.sortedMonths objectAtIndex:section];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMMM"];
+    NSString *monthString = [formatter stringFromDate:dateRepresentingThisMonth];
+    
+    return monthString;
 }
 
 #pragma mark - iAds
