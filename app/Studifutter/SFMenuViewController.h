@@ -14,6 +14,6 @@
 @interface SFMenuViewController : SFTableViewController 
 
 @property (nonatomic, retain) MenuSet *menuSet;
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeGestureRecognizer;
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipeGestureRecognizer;
 
 @end

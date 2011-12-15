@@ -24,12 +24,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[self swipeGestureRecognizer] addTarget:self action:@selector(handleSwipeGesture:)];
-    [[self swipeGestureRecognizer] setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft)];
+    [self setSwipeGestureRecognizer:[[UISwipeGestureRecognizer alloc] init]];
+    [[self swipeGestureRecognizer] addTarget:self action:@selector(handleSwipeLeftGesture:)];
+    [[self swipeGestureRecognizer] setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [[self view] addGestureRecognizer:[self swipeGestureRecognizer]];
+    [self setSwipeGestureRecognizer:nil];
+    
+    [self setSwipeGestureRecognizer:[[UISwipeGestureRecognizer alloc] init]];
+    [[self swipeGestureRecognizer] addTarget:self action:@selector(handleSwipeRightGesture:)];
+    [[self swipeGestureRecognizer] setDirection:UISwipeGestureRecognizerDirectionRight];
+    [[self view] addGestureRecognizer:[self swipeGestureRecognizer]];
+    [self setSwipeGestureRecognizer:nil];
 }
 
-- (void)handleSwipeGesture:(UISwipeGestureRecognizer *)recognizer {
-    NSLog(@"Swipe received.");
+- (void)handleSwipeLeftGesture:(UISwipeGestureRecognizer *)recognizer {
+    NSLog(@"Swipe left received.");
+}
+
+- (void)handleSwipeRightGesture:(UISwipeGestureRecognizer *)recognizer {
+    NSLog(@"Swipe right received.");
 }
 
 #pragma mark - View lifecycle
