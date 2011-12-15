@@ -29,8 +29,8 @@
         <relationship name="menuSet" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MenuSet" inverseName="restaurant" inverseEntity="MenuSet" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Menu" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="Menu" positionX="90" positionY="198" width="128" height="165"/>
         <element name="MenuSet" positionX="-117" positionY="288" width="128" height="90"/>
-        <element name="Restaurant" positionX="-270" positionY="-18" width="128" height="210"/>
+        <element name="Restaurant" positionX="-306" positionY="168" width="128" height="210"/>
     </elements>
 </model>

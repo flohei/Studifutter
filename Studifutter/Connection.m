@@ -210,7 +210,7 @@ static Connection *_connection;
             NSSortDescriptor *dateSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
             NSArray *sortedMenuSets = [[restaurant menuSetSet] sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
             if ([sortedMenuSets count] > 0) {
-            MenuSet *lastMenuSet = [sortedMenuSets objectAtIndex:0];
+                MenuSet *lastMenuSet = [sortedMenuSets objectAtIndex:0];
                 lastDayOfOldMenus = [lastMenuSet date];
             }
             
@@ -221,7 +221,15 @@ static Connection *_connection;
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 [dateFormatter setDateFormat:@"dd.MM.yy"];
                 [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-                NSDate *date = [dateFormatter dateFromString:dateString];
+                NSDate *date;
+                
+                @try {
+                    date = [dateFormatter dateFromString:dateString];
+                }
+                @catch (NSException *exception) {
+                    NSLog(@"Getting the date for a MenuSet of restaurant %@ failed", restaurant);
+                    continue;
+                }
                 
                 // compare the incoming date with the last one saved
                 NSTimeInterval halfADay = 43200;
@@ -243,9 +251,9 @@ static Connection *_connection;
                     
                     menu.menuSet = menuSet;
                 }
+                
+                [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
             }
-            
-            [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
             success = YES;
         }
     }

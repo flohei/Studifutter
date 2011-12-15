@@ -7,6 +7,7 @@
 //
 
 #import "SFTableViewController.h"
+#import "SFAppDelegate.h"
 
 
 @implementation SFTableViewController
@@ -17,6 +18,17 @@
 
     [[self tableView] setBackgroundColor:[UIColor clearColor]];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"studifutter-pattern"]]];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        NSLog(@"Shake detected, reload data.");
+        [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] refreshLocalData];
+    }
 }
 
 @end
