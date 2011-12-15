@@ -7,6 +7,7 @@
 //
 
 #import "SFViewController.h"
+#import "SFAppDelegate.h"
 
 @implementation SFViewController
 
@@ -15,6 +16,17 @@
     [super viewDidLoad];
     
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"studifutter-pattern"]]];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        NSLog(@"Shake detected, reload data.");
+        [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] refreshLocalData];
+    }
 }
 
 @end

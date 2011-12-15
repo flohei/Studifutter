@@ -19,7 +19,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
-- (void)downloadData;
+- (void)refreshLocalData;
 
 @property int operationBalance;
 
