@@ -20,39 +20,21 @@
 @implementation SFMenuViewController
 
 @synthesize menuSet = _menuSet;
+@synthesize swipeGestureRecognizer = _swipeGestureRecognizer;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[self swipeGestureRecognizer] addTarget:self action:@selector(handleSwipeGesture:)];
+    [[self swipeGestureRecognizer] setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft)];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+- (void)handleSwipeGesture:(UISwipeGestureRecognizer *)recognizer {
+    NSLog(@"Swipe received.");
 }
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -65,16 +47,14 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return [[self allMenus] count];
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return [[self allMenus] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,7 +66,7 @@
         cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Menu *menu = [[self allMenus] objectAtIndex:[indexPath section]];
+    Menu *menu = [[self allMenus] objectAtIndex:[indexPath row]];
     
     // Configure the cell...
     [[cell textLabel] setText:[menu name]];
@@ -94,4 +74,8 @@
     return cell;
 }
 
+- (void)viewDidUnload {
+    [self setSwipeGestureRecognizer:nil];
+    [super viewDidUnload];
+}
 @end
