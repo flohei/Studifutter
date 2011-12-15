@@ -19,4 +19,8 @@
     return self.street;
 }
 
+- (NSString *)description {
+    return self.name;
+}
+
 @end
