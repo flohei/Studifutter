@@ -11,6 +11,14 @@
 #import "SFRestaurantViewController.h"
 #import "Connection.h"
 #import "TestFlight.h"
+#import "Restaurant.h"
+#import "MenuSet.h"
+
+@interface SFAppDelegate ()
+
+- (void)cleanupLocalMenus;
+
+@end
 
 @implementation SFAppDelegate
 
@@ -40,13 +48,43 @@
         CFRelease(uuid);
     }
     
+    [self cleanupLocalMenus];
     [self downloadData];
-    
     self.operationBalance = 0;
     
     [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
     return YES;
+}
+
+- (void)cleanupLocalMenus {
+    if (self.localRestaurants) {
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+        [calendar setTimeZone:timeZone];
+        
+        NSDate *today = [NSDate date];
+        NSDateComponents *todaysComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:today];
+        
+        [todaysComponents setDay:[todaysComponents day] - 1];
+        
+        NSDate *yesterday = [calendar dateFromComponents:todaysComponents];
+        
+        for (Restaurant *r in self.localRestaurants) {            
+            for (MenuSet *ms in r.menuSet) {
+                NSDate *menuSetDate = [ms date];
+                
+                NSLog(@"yesterday: %@; menuSetDate: %@", yesterday, menuSetDate);
+                
+                if (menuSetDate == [menuSetDate earlierDate:yesterday]) {
+                    NSLog(@"delete!");
+                    [[self managedObjectContext] deleteObject:ms];
+                }
+            }
+            
+            [self saveContext];
+        }
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -129,7 +167,6 @@
 - (void)doDownloadRestaurants {
     // call the API here
     BOOL success = [[Connection sharedConnection] readRestaurants];
-    
     [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
@@ -154,7 +191,6 @@
 
 - (void)doDownloadMenuForRestaurant:(Restaurant *)restaurant {
     BOOL success = [[Connection sharedConnection] readMenuForRestaurant:restaurant];
-    
     [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
