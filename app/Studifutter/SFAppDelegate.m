@@ -49,8 +49,14 @@
         CFRelease(uuid);
     }
     
-    [self refreshLocalData];
     self.operationBalance = 0;
+    
+    // check if we need to update the local data
+    BOOL needsUpdate = NO;
+    for (Restaurant *r in [self localRestaurants]) {
+        if ([[r menuSet] count] < 5) needsUpdate = YES;
+    }
+    if (needsUpdate) [self refreshLocalData];
     
     [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
