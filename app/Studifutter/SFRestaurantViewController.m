@@ -12,6 +12,7 @@
 #import "Connection.h"
 #import "SFDayListViewController.h"
 #import "RestaurantTableViewCell.h"
+#import "FHGradientView.h"
 
 
 @implementation SFRestaurantViewController
@@ -111,6 +112,9 @@
     if (cell == nil) {
         cell = [[RestaurantTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    FHGradientView *backgroundView = [[FHGradientView alloc] initWithFrame:[cell bounds]];
+    [cell setSelectedBackgroundView:backgroundView];
     
     Restaurant *restaurant = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:[indexPath row]];
     
