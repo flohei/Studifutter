@@ -50,6 +50,12 @@
     [[self tableView] setBackgroundColor:[UIColor clearColor]];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
+}
+
 - (void)viewDidUnload
 {
     [self setBannerView:nil];
