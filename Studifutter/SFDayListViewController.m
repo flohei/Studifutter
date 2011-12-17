@@ -15,6 +15,7 @@
 #import "SFRestaurantDetailViewController.h"
 #import "TestFlight.h"
 #import "Constants.h"
+#import "FHGradientView.h"
 
 @interface SFDayListViewController ()
 
@@ -155,6 +156,9 @@
     if (cell == nil) {
         cell = [[DayTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    FHGradientView *backgroundView = [[FHGradientView alloc] initWithFrame:[cell bounds]];
+    [cell setSelectedBackgroundView:backgroundView];
     
     // Configure the cell...
     NSDate *currentMonth = [[self sortedMonths] objectAtIndex:[indexPath section]];

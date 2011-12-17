@@ -26,6 +26,7 @@
 		8F10D77A14697D0F00896CE9 /* Studifutter-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
+		8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A53BC149CFFAC00F915DE /* FHGradientView.m */; };
 		8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */; };
 		8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250107146BC71000453E58 /* studifutter-app-icon-512.png */; };
 		8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */; };
@@ -112,6 +113,8 @@
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
 		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
+		8F1A53BB149CFFAC00F915DE /* FHGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHGradientView.h; sourceTree = "<group>"; };
+		8F1A53BC149CFFAC00F915DE /* FHGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHGradientView.m; sourceTree = "<group>"; };
 		8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-114-retina.png"; sourceTree = "<group>"; };
 		8F250107146BC71000453E58 /* studifutter-app-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-512.png"; sourceTree = "<group>"; };
 		8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-57-getanewphoneres.png"; sourceTree = "<group>"; };
@@ -316,6 +319,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8F1A53BA149CFEF700F915DE /* Super classes */ = {
+			isa = PBXGroup;
+			children = (
+				8F7C9D02147E971E00AB17E9 /* SFViewController.h */,
+				8F7C9D03147E971E00AB17E9 /* SFViewController.m */,
+				8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */,
+				8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */,
+			);
+			name = "Super classes";
+			sourceTree = "<group>";
+		};
 		8F250105146BC71000453E58 /* ICON-DERIVATE */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,10 +356,7 @@
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8F7C9D02147E971E00AB17E9 /* SFViewController.h */,
-				8F7C9D03147E971E00AB17E9 /* SFViewController.m */,
-				8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */,
-				8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */,
+				8F1A53BA149CFEF700F915DE /* Super classes */,
 				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
 				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
 				8F729BC3145F245800FE166B /* SFInfoViewController.h */,
@@ -369,6 +380,8 @@
 				8F910BDE146AF180001F4E74 /* DayTableViewCell.m */,
 				8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */,
 				8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */,
+				8F1A53BB149CFFAC00F915DE /* FHGradientView.h */,
+				8F1A53BC149CFFAC00F915DE /* FHGradientView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -651,6 +664,7 @@
 				8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */,
 				8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */,
 				8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */,
+				8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
