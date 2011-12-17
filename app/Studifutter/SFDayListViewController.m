@@ -93,7 +93,8 @@
 
 - (NSArray *)allMenus {
     NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
-    return [[[self restaurant] menuSet] sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
+    NSSet *unsortedMenuSet = [[self restaurant] menuSet];
+    return [unsortedMenuSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
 }
 
 - (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate {
