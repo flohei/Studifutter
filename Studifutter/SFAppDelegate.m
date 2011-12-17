@@ -53,8 +53,12 @@
     
     // check if we need to update the local data
     BOOL needsUpdate = NO;
-    for (Restaurant *r in [self localRestaurants]) {
-        if ([[r menuSet] count] < 5) needsUpdate = YES;
+    if ([self localRestaurants]) {
+        for (Restaurant *r in [self localRestaurants]) {
+            if ([[r menuSet] count] < 5) needsUpdate = YES;
+        }
+    } else {
+        needsUpdate = YES;
     }
     if (needsUpdate) [self refreshLocalData];
     
@@ -157,15 +161,27 @@
     [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
     
     if (success) {
-        // get all restaurants
-        NSArray *restaurants = [self localRestaurants];
+//        // get all restaurants
+//        NSArray *restaurants = [self localRestaurants];
+//        
+//        // go ahead and look for every menu
+//        for (Restaurant *r in restaurants) {
+//            NSInvocationOperation *downloadMenu = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenuForRestaurant:) object:r];
+//            [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenu];
+//            self.operationBalance += 1;
+//        }
         
-        // go ahead and look for every menu
-        for (Restaurant *r in restaurants) {
-            NSInvocationOperation *downloadMenu = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenuForRestaurant:) object:r];
-            [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenu];
-            self.operationBalance += 1;
-        }
+        NSInvocationOperation *downloadMenus = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenusForRestaurants) object:nil];
+        [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenus];
+    }
+}
+
+- (void)doDownloadMenusForRestaurants {
+    NSArray *restaurants = [self localRestaurants];
+    
+    // go ahead and look for every menu
+    for (Restaurant *r in restaurants) {
+        [[Connection sharedConnection] readMenuForRestaurant:r];
     }
 }
 
@@ -204,7 +220,12 @@
 		exit(-1);  // Fail
 	}
     
-    return [theFetchedResultsController fetchedObjects];
+    NSArray *fetchedObjects = [theFetchedResultsController fetchedObjects];
+    if (!fetchedObjects || [fetchedObjects count] == 0) {
+        return nil;
+    } else {
+        return fetchedObjects;
+    }
 }
 
 #pragma mark - Core Data stack
