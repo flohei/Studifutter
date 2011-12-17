@@ -257,7 +257,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7A-PO-MWy" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="" title="Master" id="uYF-SR-joF" customClass="SFMenuViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="78" sectionHeaderHeight="22" sectionFooterHeight="22" id="vSn-Qd-eK6">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="78" sectionHeaderHeight="22" sectionFooterHeight="22" id="vSn-Qd-eK6">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -454,9 +454,6 @@
         </class>
         <class className="SFMenuViewController" superclassName="SFTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SFMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="swipeGestureRecognizer" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="SFRestaurantDetailViewController" superclassName="SFViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantDetailViewController.h"/>
