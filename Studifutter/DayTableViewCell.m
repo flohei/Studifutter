@@ -28,16 +28,22 @@
 
 - (void)updateLabels {
     NSString *dateString = nil;
-    NSString *menuString = nil;
+    NSString *menuString = [NSString string];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd."];
     
     dateString = [dateFormatter stringFromDate:[[self menuSet] date]];
     [dateLabel setText:dateString];
+    
+    for (Menu *menu in [[self menuSet] menu]) {
+        if (![menuString isEqualToString:[NSString string]]) {
+            menuString = [menuString stringByAppendingString:@", "];
+        }
+        
+        menuString = [menuString stringByAppendingString:[menu name]];
+    }
 
-    // TODO: Localize "zum Beispiel"
-    menuString = [NSString stringWithFormat:@"%@: %@", @"zum Beispiel", [[[[self menuSet] menu] anyObject] name]];
     [menuLabel setText:menuString];
 }
 
