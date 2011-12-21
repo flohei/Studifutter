@@ -21,3 +21,4 @@
 @end
 
 void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor, CGColorRef endColor, BOOL inEllipse);
+int hex2int(const char *hex);
