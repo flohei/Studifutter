@@ -242,11 +242,20 @@ static Connection *_connection;
                 for (NSDictionary *meal in [day objectForKey:@"meals"]) {
                     Menu *menu = [[Menu alloc] initWithEntity:[NSEntityDescription entityForName:@"Menu" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                     
-                    menu.name = ([meal objectForKey:@"title"] != [NSNull null]) ? [meal objectForKey:@"title"] : nil;
-                    menu.price = ([meal objectForKey:@"price2"] != [NSNull null]) ? [self cleanPrice:[meal objectForKey:@"price2"]] : nil;
-                    menu.reducedPrice = ([meal objectForKey:@"price1"] != [NSNull null]) ? [self cleanPrice:[meal objectForKey:@"price1"]] : nil;
-                    menu.extraChars = ([meal objectForKey:@"extraChar"] != [NSNull null]) ? [meal objectForKey:@"extraChar"] : nil;
-                    menu.extraNumbers = ([meal objectForKey:@"extraNumber"] != [NSNull null]) ? [meal objectForKey:@"extraNumber"] : nil;
+                    NSString *name = [meal objectForKey:@"title"];
+                    NSString *priceString = [meal objectForKey:@"price2"];
+                    NSString *reducedPriceString = [meal objectForKey:@"price1"];
+                    NSString *extraChars = [meal objectForKey:@"extraChar"];
+                    NSString *extraNumbers = [meal objectForKey:@"extraNumber"];
+                    
+                    NSNumber *price = [self cleanPrice:priceString];
+                    NSNumber *reducedPrice = [self cleanPrice:reducedPriceString];
+                    
+                    menu.name = (name != (id)[NSNull null]) ? [meal objectForKey:@"title"] : nil;
+                    menu.price = (price != (id)[NSNull null]) ? price : nil;
+                    menu.reducedPrice = (reducedPrice != (id)[NSNull null]) ? reducedPrice : nil;
+                    menu.extraChars = (extraChars != (id)[NSNull null]) ? [meal objectForKey:@"extraChar"] : nil;
+                    menu.extraNumbers = (extraNumbers != (id)[NSNull null]) ? [meal objectForKey:@"extraNumber"] : nil;
                     menu.currency = @"€";
                     
                     menu.menuSet = menuSet;
