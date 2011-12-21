@@ -7,10 +7,12 @@
 //
 
 #import "SFMenuViewController.h"
+#import "Restaurant.h"
 #import "MenuSet.h"
 #import "Menu.h"
 #import "MenuTableViewCell.h"
 #import "FHGradientView.h"
+#import "PostItView.h"
 
 @interface SFMenuViewController ()
 
@@ -36,6 +38,13 @@
     [[self swipeGestureRecognizer] setDirection:UISwipeGestureRecognizerDirectionRight];
     [[self view] addGestureRecognizer:[self swipeGestureRecognizer]];
     [self setSwipeGestureRecognizer:nil];
+    
+    NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
+    if (![restaurantNotes isEqualToString:@""]) {
+        PostItView *postItView = [[PostItView alloc] initWithFrame:CGRectMake(10, 0, 280, 160)];
+        [postItView setPostItText:restaurantNotes];
+        [[self tableView] setTableFooterView:postItView];
+    }
 }
 
 - (void)handleSwipeLeftGesture:(UISwipeGestureRecognizer *)recognizer {
@@ -71,8 +80,7 @@
     return [[self allMenus] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"MenuCellIdentifier";
     
     MenuTableViewCell *cell = (MenuTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -86,7 +94,7 @@
     Menu *menu = [[self allMenus] objectAtIndex:[indexPath row]];
     
     // Configure the cell...
-    [[cell textLabel] setText:[menu name]];
+    [cell setMenu:menu];
     
     return cell;
 }

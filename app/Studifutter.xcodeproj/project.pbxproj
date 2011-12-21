@@ -36,6 +36,7 @@
 		8F250119146C0B1500453E58 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F250115146C0B1500453E58 /* release_notes.txt */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
+		8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D2C6214A20EA7007023AF /* PostItView.m */; };
 		8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */; };
 		8F5E9E5A147D8CA700FF2327 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E59147D8CA700FF2327 /* Default.png */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
@@ -125,6 +126,8 @@
 		8F250116146C0B1500453E58 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8F5D2C6114A20EA7007023AF /* PostItView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItView.h; sourceTree = "<group>"; };
+		8F5D2C6214A20EA7007023AF /* PostItView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItView.m; sourceTree = "<group>"; };
 		8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-schnipsel.png"; sourceTree = "<group>"; };
 		8F5E9E59147D8CA700FF2327 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 				8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */,
 				8F1A53BB149CFFAC00F915DE /* FHGradientView.h */,
 				8F1A53BC149CFFAC00F915DE /* FHGradientView.m */,
+				8F5D2C6114A20EA7007023AF /* PostItView.h */,
+				8F5D2C6214A20EA7007023AF /* PostItView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -663,6 +668,7 @@
 				8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */,
 				8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */,
 				8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */,
+				8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

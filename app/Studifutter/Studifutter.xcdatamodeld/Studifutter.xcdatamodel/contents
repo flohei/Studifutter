@@ -6,8 +6,8 @@
         <attribute name="extraChars" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="extraNumbers" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="reducedPrice" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="reducedPrice" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <relationship name="menuSet" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MenuSet" inverseName="menu" inverseEntity="MenuSet" syncable="YES"/>
     </entity>
     <entity name="MenuSet" representedClassName="MenuSet" syncable="YES">
