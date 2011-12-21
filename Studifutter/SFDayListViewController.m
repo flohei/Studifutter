@@ -48,6 +48,8 @@
     [self moveBannerOffScreen];
     
     [[self tableView] setBackgroundColor:[UIColor clearColor]];
+    
+    [[self navigationItem] setTitle:[[self restaurant] name]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -142,8 +144,7 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return [[self sections] count];
 }
@@ -154,8 +155,7 @@
     return [menusThatMonth count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"DayCellIdentifier";
     
     DayTableViewCell *cell = (DayTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -179,6 +179,17 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     NSString *monthName = [self.sortedMonths objectAtIndex:section];
     return monthName;
+}
+
+#pragma mark - Table view delegate
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    NSString *title = [self tableView:tableView titleForHeaderInSection:section];
+    [label setText:title];
+    [label setBackgroundColor:[UIColor clearColor]];
+    
+    return label;
 }
 
 #pragma mark - iAds

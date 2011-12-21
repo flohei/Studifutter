@@ -29,11 +29,11 @@
     
     NSMutableString *infoString = [NSMutableString stringWithFormat:@"%.2f€/%.2f€", _menu.priceValue, _menu.reducedPriceValue];
     
-    if (![_menu.extraChars isEqualToString:@""]) {
+    if (_menu.extraChars.length > 0) {
         [infoString appendFormat:@" - %@", _menu.extraChars];
     }
     
-    if (![_menu.extraNumbers isEqualToString:@""]) {
+    if (_menu.extraNumbers.length > 0) {
         [infoString appendFormat:@" - %@", _menu.extraNumbers];
     }
     
