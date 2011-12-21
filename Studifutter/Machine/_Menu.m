@@ -83,22 +83,22 @@
 
 
 
-- (short)priceValue {
+- (float)priceValue {
 	NSNumber *result = [self price];
-	return [result shortValue];
+	return [result floatValue];
 }
 
-- (void)setPriceValue:(short)value_ {
-	[self setPrice:[NSNumber numberWithShort:value_]];
+- (void)setPriceValue:(float)value_ {
+	[self setPrice:[NSNumber numberWithFloat:value_]];
 }
 
-- (short)primitivePriceValue {
+- (float)primitivePriceValue {
 	NSNumber *result = [self primitivePrice];
-	return [result shortValue];
+	return [result floatValue];
 }
 
-- (void)setPrimitivePriceValue:(short)value_ {
-	[self setPrimitivePrice:[NSNumber numberWithShort:value_]];
+- (void)setPrimitivePriceValue:(float)value_ {
+	[self setPrimitivePrice:[NSNumber numberWithFloat:value_]];
 }
 
 
@@ -109,22 +109,22 @@
 
 
 
-- (short)reducedPriceValue {
+- (float)reducedPriceValue {
 	NSNumber *result = [self reducedPrice];
-	return [result shortValue];
+	return [result floatValue];
 }
 
-- (void)setReducedPriceValue:(short)value_ {
-	[self setReducedPrice:[NSNumber numberWithShort:value_]];
+- (void)setReducedPriceValue:(float)value_ {
+	[self setReducedPrice:[NSNumber numberWithFloat:value_]];
 }
 
-- (short)primitiveReducedPriceValue {
+- (float)primitiveReducedPriceValue {
 	NSNumber *result = [self primitiveReducedPrice];
-	return [result shortValue];
+	return [result floatValue];
 }
 
-- (void)setPrimitiveReducedPriceValue:(short)value_ {
-	[self setPrimitiveReducedPrice:[NSNumber numberWithShort:value_]];
+- (void)setPrimitiveReducedPriceValue:(float)value_ {
+	[self setPrimitiveReducedPrice:[NSNumber numberWithFloat:value_]];
 }
 
 

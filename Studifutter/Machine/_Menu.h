@@ -69,9 +69,9 @@
 @property (nonatomic, retain) NSNumber *price;
 
 
-@property short priceValue;
-- (short)priceValue;
-- (void)setPriceValue:(short)value_;
+@property float priceValue;
+- (float)priceValue;
+- (void)setPriceValue:(float)value_;
 
 //- (BOOL)validatePrice:(id*)value_ error:(NSError**)error_;
 
@@ -81,9 +81,9 @@
 @property (nonatomic, retain) NSNumber *reducedPrice;
 
 
-@property short reducedPriceValue;
-- (short)reducedPriceValue;
-- (void)setReducedPriceValue:(short)value_;
+@property float reducedPriceValue;
+- (float)reducedPriceValue;
+- (void)setReducedPriceValue:(float)value_;
 
 //- (BOOL)validateReducedPrice:(id*)value_ error:(NSError**)error_;
 
@@ -140,8 +140,8 @@
 - (NSNumber*)primitivePrice;
 - (void)setPrimitivePrice:(NSNumber*)value;
 
-- (short)primitivePriceValue;
-- (void)setPrimitivePriceValue:(short)value_;
+- (float)primitivePriceValue;
+- (void)setPrimitivePriceValue:(float)value_;
 
 
 
@@ -149,8 +149,8 @@
 - (NSNumber*)primitiveReducedPrice;
 - (void)setPrimitiveReducedPrice:(NSNumber*)value;
 
-- (short)primitiveReducedPriceValue;
-- (void)setPrimitiveReducedPriceValue:(short)value_;
+- (float)primitiveReducedPriceValue;
+- (void)setPrimitiveReducedPriceValue:(float)value_;
 
 
 

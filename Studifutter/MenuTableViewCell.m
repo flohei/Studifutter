@@ -27,7 +27,16 @@
 - (void)updateLabels {
     [nameLabel setText:[[self menu] name]];
     
-    NSString *infoString = [NSString stringWithFormat:@"%.2f€/%2f€ - %@ %@", _menu.priceValue/100, _menu.reducedPriceValue/100, _menu.extraChars, _menu.extraNumbers];
+    NSMutableString *infoString = [NSMutableString stringWithFormat:@"%.2f€/%.2f€", _menu.priceValue, _menu.reducedPriceValue];
+    
+    if (![_menu.extraChars isEqualToString:@""]) {
+        [infoString appendFormat:@" - %@", _menu.extraChars];
+    }
+    
+    if (![_menu.extraNumbers isEqualToString:@""]) {
+        [infoString appendFormat:@" - %@", _menu.extraNumbers];
+    }
+    
     [infoLabel setText:infoString];
 }
 @end
