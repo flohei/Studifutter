@@ -23,7 +23,6 @@
 		8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77114697CF700896CE9 /* MainStoryboard.storyboard */; };
 		8F10D77514697CFC00896CE9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77114697CF700896CE9 /* MainStoryboard.storyboard */; };
 		8F10D77814697D0900896CE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77614697D0900896CE9 /* InfoPlist.strings */; };
-		8F10D77A14697D0F00896CE9 /* Studifutter-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A53BC149CFFAC00F915DE /* FHGradientView.m */; };
@@ -580,7 +579,6 @@
 				8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F10D77514697CFC00896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F10D77814697D0900896CE9 /* InfoPlist.strings in Resources */,
-				8F10D77A14697D0F00896CE9 /* Studifutter-Info.plist in Resources */,
 				8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */,
 				8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */,
 				8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */,
