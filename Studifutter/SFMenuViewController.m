@@ -7,6 +7,7 @@
 //
 
 #import "SFMenuViewController.h"
+#import "SFDayListViewController.h"
 #import "Restaurant.h"
 #import "MenuSet.h"
 #import "Menu.h"
@@ -17,6 +18,9 @@
 @interface SFMenuViewController ()
 
 - (NSArray *)allMenus;
+- (NSArray *)allMenuSets;
+
+- (void)setInterface;
 
 @end
 
@@ -39,6 +43,10 @@
     [[self view] addGestureRecognizer:[self swipeGestureRecognizer]];
     [self setSwipeGestureRecognizer:nil];
     
+    [self setInterface];
+}
+
+- (void)setInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
     if (![restaurantNotes isEqualToString:@""]) {
         PostItView *postItView = [[PostItView alloc] initWithFrame:CGRectMake(10, 0, 280, 160)];
@@ -52,11 +60,51 @@
 }
 
 - (void)handleSwipeLeftGesture:(UISwipeGestureRecognizer *)recognizer {
-    NSLog(@"Swipe left received.");
+    NSArray *allMenus = [self allMenuSets];
+    MenuSet *nextMenuSet = nil;
+    BOOL currentMenuSetFound = NO;
+    
+    for (MenuSet *ms in allMenus) {
+        if (currentMenuSetFound) {
+            nextMenuSet = ms;
+            break;
+        }
+        
+        if ([ms isEqual:[self menuSet]]) currentMenuSetFound = YES;
+    }
+    
+    if (nextMenuSet) {
+        [self setMenuSet:nextMenuSet];
+        [[self tableView] reloadData];
+        [self setInterface];
+    }
 }
 
 - (void)handleSwipeRightGesture:(UISwipeGestureRecognizer *)recognizer {
-    NSLog(@"Swipe right received.");
+    NSArray *allMenus = [self allMenuSets];
+    MenuSet *previousMenuSet = nil;
+    BOOL currentMenuSetFound = NO;
+    
+    for (MenuSet *ms in allMenus) {
+        if ([ms isEqual:[self menuSet]]) {
+            currentMenuSetFound = YES;
+            break;
+        }
+        
+        previousMenuSet = ms;
+    }
+    
+    if (currentMenuSetFound && previousMenuSet) {
+        [self setMenuSet:previousMenuSet];
+        [[self tableView] reloadData];
+        [self setInterface];
+    }
+}
+
+- (NSArray *)allMenuSets {
+    NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    NSSet *unsortedMenuSet = [[[self menuSet] restaurant] menuSet];
+    return [unsortedMenuSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
 }
 
 #pragma mark - View lifecycle
