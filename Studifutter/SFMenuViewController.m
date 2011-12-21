@@ -45,6 +45,10 @@
         [postItView setPostItText:restaurantNotes];
         [[self tableView] setTableFooterView:postItView];
     }
+    
+    NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
+    [titleDateFormatter setDateFormat:@"dd.MM."];
+    [[self navigationItem] setTitle:[titleDateFormatter stringFromDate:[[self menuSet] date]]];
 }
 
 - (void)handleSwipeLeftGesture:(UISwipeGestureRecognizer *)recognizer {
