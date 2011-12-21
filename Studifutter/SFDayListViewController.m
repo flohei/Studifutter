@@ -183,13 +183,23 @@
 
 #pragma mark - Table view delegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 44;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 280, 44)];
     NSString *title = [self tableView:tableView titleForHeaderInSection:section];
     [label setText:title];
+    [label setFont:[UIFont boldSystemFontOfSize:14]];
+    [label setTextColor:[UIColor whiteColor]];
     [label setBackgroundColor:[UIColor clearColor]];
     
-    return label;
+    [containerView setBackgroundColor:[UIColor blackColor]];
+    [containerView addSubview:label];
+    
+    return containerView;
 }
 
 #pragma mark - iAds
