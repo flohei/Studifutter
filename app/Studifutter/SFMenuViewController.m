@@ -56,7 +56,10 @@
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
     [titleDateFormatter setDateFormat:@"dd.MM."];
-    [[self navigationItem] setTitle:[titleDateFormatter stringFromDate:[[self menuSet] date]]];
+    [titleDateFormatter setDoesRelativeDateFormatting:YES];
+    NSString *dateString = [titleDateFormatter stringFromDate:[[self menuSet] date]];
+    
+    [[self navigationItem] setTitle:dateString];
 }
 
 - (void)handleSwipeLeftGesture:(UISwipeGestureRecognizer *)recognizer {
