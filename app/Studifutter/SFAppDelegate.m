@@ -54,6 +54,8 @@
     // check if we need to update the local data
     BOOL needsUpdate = NO;
     if ([self localRestaurants]) {
+        [self cleanupLocalMenus];
+        
         for (Restaurant *r in [self localRestaurants]) {
             if ([[r menuSet] count] < 5) needsUpdate = YES;
         }
