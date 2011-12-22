@@ -1,0 +1,3 @@
+RewriteEngine on 
+RewriteRule ^list$ api.php
+RewriteRule ^([0-9]+)/menu$ api.php?id=$1
