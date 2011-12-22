@@ -8,7 +8,6 @@
 
 #import "MenuTableViewCell.h"
 #import "Menu.h"
-#import "SHK.h"
 
 @interface MenuTableViewCell ()
 
