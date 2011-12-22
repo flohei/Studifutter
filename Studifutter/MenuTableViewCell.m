@@ -8,6 +8,7 @@
 
 #import "MenuTableViewCell.h"
 #import "Menu.h"
+#import "SHK.h"
 
 @interface MenuTableViewCell ()
 
@@ -22,6 +23,17 @@
 - (void)setMenu:(Menu *)menu {
     _menu = menu;
     [self updateLabels];
+    
+    UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc]
+                                                         initWithTarget:self 
+                                                         action:@selector(shareOptions:)];
+    longPressRecognizer.minimumPressDuration = 0.5;
+    longPressRecognizer.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:longPressRecognizer];
+}
+
+- (IBAction)shareOptions:(UIGestureRecognizer *)sender {
+    NSLog(@"Show share kit here");
 }
 
 - (void)updateLabels {
@@ -39,4 +51,5 @@
     
     [infoLabel setText:infoString];
 }
+
 @end
