@@ -55,9 +55,13 @@
     }
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
-    [titleDateFormatter setDateFormat:@"dd.MM."];
+    //[titleDateFormatter setDateFormat:@"dd.MM."];
+    [titleDateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [titleDateFormatter setDoesRelativeDateFormatting:YES];
     NSString *dateString = [titleDateFormatter stringFromDate:[[self menuSet] date]];
+    
+    NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
+    [titleDateFormatter setLocale:frLocale];
     
     [[self navigationItem] setTitle:dateString];
 }
