@@ -109,7 +109,7 @@
         NSDate *today = [NSDate date];
         NSDateComponents *todaysComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:today];
         
-        [todaysComponents setDay:[todaysComponents day] - 1];
+        //[todaysComponents setDay:[todaysComponents day] - 1];
         
         NSDate *yesterday = [calendar dateFromComponents:todaysComponents];
         
