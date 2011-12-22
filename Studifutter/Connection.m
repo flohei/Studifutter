@@ -19,6 +19,7 @@
 @interface Connection ()
 
 - (NSNumber *)cleanPrice:(NSString *)priceString;
+- (void)alertForException:(NSException *)exception;
 
 @end
 
@@ -113,6 +114,24 @@ static Connection *_connection;
 }
 
 /**
+ Raises an UIAlertView for a given exception.
+ 
+ @param exception The exception the NSAlert shall be created for.
+ */
+- (void)alertForException:(NSException *)exception {
+    [self performSelectorInBackground:@selector(showAlertForException:) withObject:exception];
+}
+
+- (void)showAlertForException:(NSException *)exception {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[exception name]
+                                                        message:[exception reason]
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"OK" 
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+/**
  Returns the App's managed object context, saved in the App delegate.
  */
 - (NSManagedObjectContext *)context {
@@ -140,6 +159,7 @@ static Connection *_connection;
         result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
     }
     @catch (NSException *exception) {
+        [self alertForException:exception];
         NSLog(@"%@", exception);
     }
     
@@ -197,6 +217,7 @@ static Connection *_connection;
         result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
     }
     @catch (NSException *exception) {
+        [self alertForException:exception];
         NSLog(@"%@", exception);
     }
     
