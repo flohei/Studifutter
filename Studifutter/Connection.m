@@ -268,7 +268,6 @@ static Connection *_connection;
                     NSString *reducedPriceString = [meal objectForKey:@"price1"];
                     NSString *extraChars = [meal objectForKey:@"extraChar"];
                     NSString *extraNumbers = [meal objectForKey:@"extraNumber"];
-                    
                     NSNumber *price = [self cleanPrice:priceString];
                     NSNumber *reducedPrice = [self cleanPrice:reducedPriceString];
                     
