@@ -39,7 +39,7 @@
     SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
-    // create one of these fance new UUIDs if needed
+    // create one of these fancy new UUIDs if needed
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
         CFUUIDRef uuid = CFUUIDCreate(NULL);
         NSString *uuidString = (__bridge NSString *)CFUUIDCreateString(NULL, uuid);
@@ -50,19 +50,7 @@
     }
     
     self.operationBalance = 0;
-    
-    // check if we need to update the local data
-    BOOL needsUpdate = NO;
-    if ([self localRestaurants]) {
-        [self cleanupLocalMenus];
-        
-        for (Restaurant *r in [self localRestaurants]) {
-            if ([[r menuSet] count] < 5) needsUpdate = YES;
-        }
-    } else {
-        needsUpdate = YES;
-    }
-    if (needsUpdate) [self refreshLocalData];
+    [self refreshLocalData];
     
     [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
@@ -95,9 +83,12 @@
 }
 
 - (void)refreshLocalData {
-    [self cleanupLocalMenus];
-    [self downloadData];
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    if ([[Connection sharedConnection] internetActive] && [[Connection sharedConnection] hostActive]) {
+        [self downloadData];
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    } else {
+        [self cleanupLocalMenus];
+    }
 }
 
 - (void)cleanupLocalMenus {
@@ -109,8 +100,7 @@
         NSDate *today = [NSDate date];
         NSDateComponents *todaysComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:today];
         
-        //[todaysComponents setDay:[todaysComponents day] - 1];
-        
+        //[todaysComponents setDay:[todaysComponents day] - 1];        
         NSDate *yesterday = [calendar dateFromComponents:todaysComponents];
         
         for (Restaurant *r in self.localRestaurants) {            
@@ -128,73 +118,6 @@
             [self saveContext];
         }
     }
-}
-
-- (int)operationBalance {
-    return _operationBalance;
-}
-
-- (void)setOperationBalance:(int)operationBalance {
-    _operationBalance = operationBalance;
-    
-    if (operationBalance > 0) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    } else {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    }
-}
-
-- (void)downloadData {
-    NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
-    [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
-    self.operationBalance += 1;
-}
-
-- (void)doDownloadRestaurants {
-    // call the API here
-    BOOL success = [[Connection sharedConnection] readRestaurants];
-    [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
-}
-
-- (void)finishedDownloadRestaurants:(BOOL)success {
-    // get the restaurants here and fetch all the menus for each restaurant
-    self.operationBalance -= 1;
-    
-    [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
-    
-    if (success) {
-//        // get all restaurants
-//        NSArray *restaurants = [self localRestaurants];
-//        
-//        // go ahead and look for every menu
-//        for (Restaurant *r in restaurants) {
-//            NSInvocationOperation *downloadMenu = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenuForRestaurant:) object:r];
-//            [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenu];
-//            self.operationBalance += 1;
-//        }
-        
-        NSInvocationOperation *downloadMenus = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenusForRestaurants) object:nil];
-        [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenus];
-    }
-}
-
-- (void)doDownloadMenusForRestaurants {
-    NSArray *restaurants = [self localRestaurants];
-    
-    // go ahead and look for every menu
-    for (Restaurant *r in restaurants) {
-        [[Connection sharedConnection] readMenuForRestaurant:r];
-    }
-}
-
-- (void)doDownloadMenuForRestaurant:(Restaurant *)restaurant {
-    BOOL success = [[Connection sharedConnection] readMenuForRestaurant:restaurant];
-    [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
-}
-
-- (void)finishedDownloadMenusForRestaurant:(BOOL)success {
-    // yay, got another menu
-    self.operationBalance -= 1;
 }
 
 - (NSArray *)localRestaurants {    
@@ -228,6 +151,63 @@
     } else {
         return fetchedObjects;
     }
+}
+
+#pragma mark Operation Balance
+
+- (int)operationBalance {
+    return _operationBalance;
+}
+
+- (void)setOperationBalance:(int)operationBalance {
+    _operationBalance = operationBalance;
+    
+    if (operationBalance > 0) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    } else {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }
+}
+
+#pragma mark Download
+
+- (void)downloadData {
+    NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
+    [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
+    self.operationBalance += 1;
+}
+
+- (void)doDownloadRestaurants {
+    // call the API here
+    BOOL success = [[Connection sharedConnection] readRestaurants];
+    [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
+}
+
+- (void)finishedDownloadRestaurants:(BOOL)success {
+    // get the restaurants here and fetch all the menus for each restaurant
+    self.operationBalance -= 1;
+    
+    if (success) {
+        [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
+        
+        NSInvocationOperation *downloadMenus = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenusForRestaurants) object:nil];
+        [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenus];
+    }
+}
+
+- (void)doDownloadMenusForRestaurants {
+    NSArray *restaurants = [self localRestaurants];
+    
+    // go ahead and look for every menu
+    for (Restaurant *r in restaurants) {
+        [[Connection sharedConnection] readMenuForRestaurant:r];
+    }
+    
+    [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:nil waitUntilDone:YES];
+}
+
+- (void)finishedDownloadMenusForRestaurant:(BOOL)success {
+    [self cleanupLocalMenus];
 }
 
 #pragma mark - Core Data stack
