@@ -20,7 +20,7 @@
 - (NSArray *)allMenus;
 - (NSArray *)allMenuSets;
 
-- (void)setInterface;
+- (void)setupInterface;
 
 @end
 
@@ -43,26 +43,27 @@
     [[self view] addGestureRecognizer:[self swipeGestureRecognizer]];
     [self setSwipeGestureRecognizer:nil];
     
-    [self setInterface];
+    [self setupInterface];
 }
 
-- (void)setInterface {
+- (void)setupInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
     if (![restaurantNotes isEqualToString:@""]) {
-        PostItView *postItView = [[PostItView alloc] initWithFrame:CGRectMake(10, 0, 280, 160)];
-        [postItView setPostItText:restaurantNotes];
-        [[self tableView] setTableFooterView:postItView];
+        UILabel *notesLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 160)];
+        [notesLabel  setText:restaurantNotes];
+        [notesLabel setNumberOfLines:0];
+        [notesLabel setLineBreakMode:UILineBreakModeWordWrap];
+        [notesLabel setFont:[UIFont systemFontOfSize:10]];
+        [notesLabel setBackgroundColor:[UIColor clearColor]];
+        [[self tableView] setTableFooterView:notesLabel];
     }
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
     //[titleDateFormatter setDateFormat:@"dd.MM."];
     [titleDateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [titleDateFormatter setDoesRelativeDateFormatting:YES];
+    
     NSString *dateString = [titleDateFormatter stringFromDate:[[self menuSet] date]];
-    
-    NSLocale *frLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"fr_FR"];
-    [titleDateFormatter setLocale:frLocale];
-    
     [[self navigationItem] setTitle:dateString];
 }
 
@@ -83,7 +84,7 @@
     if (nextMenuSet) {
         [self setMenuSet:nextMenuSet];
         [[self tableView] reloadData];
-        [self setInterface];
+        [self setupInterface];
     }
 }
 
@@ -104,7 +105,7 @@
     if (currentMenuSetFound && previousMenuSet) {
         [self setMenuSet:previousMenuSet];
         [[self tableView] reloadData];
-        [self setInterface];
+        [self setupInterface];
     }
 }
 

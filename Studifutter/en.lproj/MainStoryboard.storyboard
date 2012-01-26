@@ -46,25 +46,25 @@
                                     <outlet property="delegate" destination="JWk-CF-sIF" id="WsV-4p-xwC"/>
                                 </connections>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="studifutter-post-it.png" id="wEv-6J-OM4">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="studifutter-post-it.png" id="wEv-6J-OM4">
                                 <rect key="frame" x="3" y="-5" width="198" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ohm-Platz 1" lineBreakMode="tailTruncation" minimumFontSize="10" id="QVq-0b-nDU">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ohm-Platz 1" lineBreakMode="tailTruncation" minimumFontSize="10" id="QVq-0b-nDU">
                                 <rect key="frame" x="23" y="11" width="159" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="90443 Nürnberg" lineBreakMode="tailTruncation" minimumFontSize="10" id="W07-Ci-Ncw">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="90443 Nürnberg" lineBreakMode="tailTruncation" minimumFontSize="10" id="W07-Ci-Ncw">
                                 <rect key="frame" x="23" y="29" width="159" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In diesem Restaurant gibt es nichts Besonderes, nur den ganzen Kram von gestern." lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="OJR-zC-thO">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In diesem Restaurant gibt es nichts Besonderes, nur den ganzen Kram von gestern." lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="OJR-zC-thO">
                                 <rect key="frame" x="23" y="58" width="159" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
