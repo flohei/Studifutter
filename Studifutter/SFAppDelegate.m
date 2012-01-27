@@ -83,12 +83,8 @@
 }
 
 - (void)refreshLocalData {
-    if ([[Connection sharedConnection] internetActive] && [[Connection sharedConnection] hostActive]) {
-        [self downloadData];
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    } else {
-        [self cleanupLocalMenus];
-    }
+    [self downloadData];
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 - (void)cleanupLocalMenus {
@@ -197,13 +193,16 @@
 
 - (void)doDownloadMenusForRestaurants {
     NSArray *restaurants = [self localRestaurants];
+    BOOL success = YES;
     
     // go ahead and look for every menu
     for (Restaurant *r in restaurants) {
-        [[Connection sharedConnection] readMenuForRestaurant:r];
+        if (![[Connection sharedConnection] readMenuForRestaurant:r]) {
+            success = NO;
+        }
     }
     
-    [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:nil waitUntilDone:YES];
+    [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
 - (void)finishedDownloadMenusForRestaurant:(BOOL)success {
