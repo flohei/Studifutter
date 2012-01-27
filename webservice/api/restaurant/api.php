@@ -7,6 +7,42 @@ if($_GET['nocache'] == true){
 	$nocache = 1;
 }
 
+/* DB LOG*/
+
+
+	$AppId = htmlentities($_POST['AppID']);
+	$AppVersion = htmlentities($_POST['AppVersion']);
+	$ClientId = htmlentities($_POST['ClientID']);
+	$UserAgent = htmlentities($_POST['UserAgent']);
+	$Checksum = htmlentities($_POST['checksum']);
+
+	$con = mysql_connect("localhost","root","nMEK8aqblf0PQM");
+	if (!$con)
+  		die('no database connection: ' . mysql_error());
+	mysql_select_db("studifutter", $con);
+	$sql = "INSERT INTO access (appid, appversion, clientid, useragent, checksum) VALUES ('".$AppId."', '".$AppVersion."', '".$ClientId."', '".$UserAgent."', '".$Checksum."')";
+	
+	mysql_query($sql);
+	mysql_close($con);
+
+
+
+
+
+$defaultNotes = 'Beilagen sind nicht im Preis enthalten
+X = kein Schweinefleisch
+V = Vegetarisch
+R = Rindfleisch
+1 mit Farbstoff
+4 mit Konservierungsstoff
+7 mit Antioxidationsmittel
+8 mit Geschmacksverstärker
+9 geschwefelt
+10 geschwärzt
+11 gewachst
+12 mit Phosphat
+5 mit Süßungsmittel';
+
 $locations[] = array(
 'id' => '1', 
 'url' => 'http://www.studentenwerk.uni-erlangen.de/verpflegung/de/sp-eichstaett.shtml', 
@@ -15,7 +51,7 @@ $locations[] = array(
 'latitude' => '48.888649',
 'longitude' => '11.190262',
 'name' => 'Eichstätt',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Universitätsallee 2',
 'zipCode' => '85072',
 );
@@ -27,7 +63,7 @@ $locations[] = array(
 'latitude' => '48.768438',
 'longitude' => '11.43136',
 'name' => 'Ingolstadt',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Esplanade 10',
 'zipCode' => '85049',
 );
@@ -39,7 +75,7 @@ $locations[] = array(
 'latitude' => '49.306322',
 'longitude' => '10.569792',
 'name' => 'Ansbach',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Residenzstr. 8',
 'zipCode' => '91522',
 );
@@ -51,7 +87,7 @@ $locations[] = array(
 'latitude' => '49.594773',
 'longitude' => '11.009846',
 'name' => 'Mensa Langemarckplatz Erlangen',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Langemarckplatz 4',
 'zipCode' => '91054',
 );
@@ -63,7 +99,7 @@ $locations[] = array(
 'latitude' => '49.576995',
 'longitude' => '11.029758',
 'name' => 'Südmensa Erlangen',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Erwin-Rommel-Str. 60',
 'zipCode' => '91058',
 );
@@ -75,7 +111,7 @@ $locations[] = array(
 'latitude' => '49.455544',
 'longitude' => '11.084003',
 'name' => 'Mensa Insel Schütt Nürnberg',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Andreij-Sacharow-Platz 1',
 'zipCode' => '90403',
 );
@@ -87,7 +123,7 @@ $locations[] = array(
 'latitude' => '49.440562',
 'longitude' => '11.112843',
 'name' => 'Mensa Regensburger Straße Nürnberg',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Regensburger Straße 160',
 'zipCode' => '90478',
 );
@@ -99,7 +135,7 @@ $locations[] = array(
 'latitude' => '49.454707',
 'longitude' => '11.094432',
 'name' => 'Mensateria',
-'notes' => '',
+'notes' => $defaultNotes,
 'street' => 'Wollentorstr. 4',
 'zipCode' => '90409',
 );
