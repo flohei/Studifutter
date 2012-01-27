@@ -13,14 +13,10 @@
 
 @interface Connection : NSObject
 
-@property (nonatomic, assign) Reachability *internetReachable;
-@property (nonatomic, assign) Reachability *hostReachable;
-@property BOOL internetActive;
-@property BOOL hostActive;
-
 + (Connection *)sharedConnection;
 
-- (void)checkNetworkStatus:(NSNotification *)notice;
+@property BOOL hostReachable;
+- (void)reachabilityChanged:(NSNotification*)note;
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 
