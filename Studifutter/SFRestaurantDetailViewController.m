@@ -38,7 +38,6 @@
     bannerVisible = YES;
     [self moveBannerOnScreen];
     
-    self.navigationItem.title = _restaurant.name;
     self.streetLabel.text = _restaurant.street;
     self.zipAndCityLabel.text = [NSString stringWithFormat:@"%@ %@", _restaurant.zipCode, _restaurant.city];
     self.notesLabel.text = _restaurant.notes;
@@ -54,7 +53,7 @@
     
     CLLocationCoordinate2D center;
     center.longitude = restaurantLocation.longitude;
-    center.latitude = restaurantLocation.latitude + 0.0013;
+    center.latitude = restaurantLocation.latitude;
     
     region.span = span;
     region.center = center;
@@ -89,10 +88,9 @@
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"restaurantLocation"];
 	annotationView.animatesDrop = YES;
     annotationView.pinColor = MKPinAnnotationColorRed;
+    annotationView.canShowCallout = YES;
 	return annotationView;
 }
-
-#pragma mark - iAds
 
 #pragma mark - iAds
 
