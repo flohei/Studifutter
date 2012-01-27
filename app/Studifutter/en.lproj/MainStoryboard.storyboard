@@ -243,7 +243,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Restaurants" id="hvE-id-DSS">
-                        <barButtonItem key="leftBarButtonItem" title="Über…" style="plain" id="2ee-dl-TAg">
+                        <barButtonItem key="leftBarButtonItem" title="Über…" id="2ee-dl-TAg">
                             <connections>
                                 <segue destination="Hp4-j7-pYH" kind="modal" identifier="ShowInfoView" id="LAv-cb-QaQ"/>
                             </connections>
