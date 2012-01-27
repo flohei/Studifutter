@@ -49,8 +49,8 @@
 - (void)setupInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
     if (![restaurantNotes isEqualToString:@""]) {
-        UILabel *notesLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 160)];
-        [notesLabel  setText:restaurantNotes];
+        UILabel *notesLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 280, 160)];
+        [notesLabel setText:restaurantNotes];
         [notesLabel setNumberOfLines:0];
         [notesLabel setLineBreakMode:UILineBreakModeWordWrap];
         [notesLabel setFont:[UIFont systemFontOfSize:10]];
