@@ -74,7 +74,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Mensataria" id="Ltx-r6-93G"/>
+                    <navigationItem key="navigationItem" title="Karte" id="Ltx-r6-93G"/>
                     <connections>
                         <outlet property="bannerView" destination="qh3-ON-o6K" id="UQw-7l-Tnb"/>
                         <outlet property="mapView" destination="dau-be-EFQ" id="2Xx-zc-ENw"/>
@@ -376,7 +376,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Next Days" id="5IX-4k-0un">
-                        <barButtonItem key="rightBarButtonItem" title="Details" id="f2G-1V-2VH">
+                        <barButtonItem key="rightBarButtonItem" title="Karte" id="f2G-1V-2VH">
                             <connections>
                                 <segue destination="JWk-CF-sIF" kind="push" identifier="ShowRestaurantDetails" id="tFy-B0-8SA"/>
                             </connections>
@@ -414,68 +414,6 @@
         <image name="studifutter-post-it.png" width="626" height="401"/>
         <image name="studifutter-schnipsel.png" width="609" height="131"/>
     </resources>
-    <classes>
-        <class className="DayTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MenuTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="infoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RestaurantTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="restaurantAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="restaurantNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFDayListViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFDayListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SFInfoViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFInfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="feedback:"/>
-                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFMenuViewController" superclassName="SFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFMenuViewController.h"/>
-        </class>
-        <class className="SFRestaurantDetailViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="postItView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="zipAndCityLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFRestaurantViewController" superclassName="SFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantViewController.h"/>
-        </class>
-        <class className="SFTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFTableViewController.h"/>
-        </class>
-        <class className="SFViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
