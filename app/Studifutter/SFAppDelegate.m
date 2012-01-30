@@ -43,7 +43,7 @@
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
         CFUUIDRef uuid = CFUUIDCreate(NULL);
         NSString *uuidString = (__bridge NSString *)CFUUIDCreateString(NULL, uuid);
-        NSLog(@"Created new custom UUID: %@", uuidString);
+        //NSLog(@"Created new custom UUID: %@", uuidString);
         [[NSUserDefaults standardUserDefaults] setObject:uuidString forKey:UUID_KEY];
         [[NSUserDefaults standardUserDefaults] synchronize];
         CFRelease(uuid);
@@ -76,8 +76,11 @@
              
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
              */
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            //NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            //abort();
+            
+            // undo the last changes and notify the user
+            [[[self managedObjectContext] undoManager] undo];
         } 
     }
 }
@@ -102,11 +105,7 @@
         for (Restaurant *r in self.localRestaurants) {            
             for (MenuSet *ms in r.menuSet) {
                 NSDate *menuSetDate = [ms date];
-                
-                NSLog(@"yesterday: %@; menuSetDate: %@", yesterday, menuSetDate);
-                
                 if (menuSetDate == [menuSetDate earlierDate:yesterday]) {
-                    NSLog(@"delete!");
                     [[self managedObjectContext] deleteObject:ms];
                 }
             }
@@ -137,7 +136,7 @@
     NSError *error;
 	if (![theFetchedResultsController performFetch:&error]) {
 		// Update to handle the error appropriately.
-		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		//NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
     
@@ -195,11 +194,34 @@
     NSArray *restaurants = [self localRestaurants];
     BOOL success = YES;
     
+    NSMutableArray *exceptions = [[NSMutableArray alloc] init];
+    
     // go ahead and look for every menu
     for (Restaurant *r in restaurants) {
-        if (![[Connection sharedConnection] readMenuForRestaurant:r]) {
-            success = NO;
+        @try {
+            if (![[Connection sharedConnection] readMenuForRestaurant:r]) {
+                success = NO;
+            }
         }
+        @catch (NSException *exception) {
+            // log the exception
+            [exceptions addObject:exception];
+        }
+    }
+    
+    // check if there were any exceptions
+    if ([exceptions count] > 0) {
+        // notify the user
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Oops..." 
+                                                          message:@"Something went terribly wrong. Please try again later." 
+                                                         delegate:nil 
+                                                cancelButtonTitle:@"Ok" 
+                                                otherButtonTitles:nil];
+        [message show];
+        
+        // we could loop through all error messages here and create a more adequate string for the user.
+        
+        exceptions = nil;
     }
     
     [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
@@ -224,6 +246,11 @@
     if (coordinator != nil) {
         __managedObjectContext = [[NSManagedObjectContext alloc] init];
         [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+        
+        // create an undo manager
+        NSUndoManager *undoManager = [[NSUndoManager alloc] init];
+        [__managedObjectContext setUndoManager:undoManager];
+        undoManager = nil;
     }
     return __managedObjectContext;
 }
@@ -256,7 +283,7 @@
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        //NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }    
     

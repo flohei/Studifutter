@@ -111,7 +111,8 @@ static Connection *_connection;
     }
     @catch (NSException *exception) {
         [self alertForException:exception];
-        NSLog(@"%@", exception);
+        //NSLog(@"%@", exception);
+        @throw exception;
     }
     
     if (result) {
@@ -122,6 +123,8 @@ static Connection *_connection;
             NSArray *localRestaurants = [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] localRestaurants];
             
             for (NSDictionary *rawRestaurant in rawRestaurants) {
+                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] beginUndoGrouping];
+                
                 Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                 
                 // ([rawMessage objectForKey:@"subject"] != [NSNull null]) ? [rawMessage objectForKey:@"subject"] : nil;
@@ -143,6 +146,8 @@ static Connection *_connection;
                         notFound = NO;
                     }
                 }
+                
+                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] endUndoGrouping];
                 
                 // save aNewRestaurant if it has not been found locally; delete it otherwise
                 if (notFound) {
@@ -168,8 +173,7 @@ static Connection *_connection;
         result = [SFAPICall dictionaryFromRequestPath:requestPath postArgs:nil getArgs:nil];
     }
     @catch (NSException *exception) {
-        [self alertForException:exception];
-        NSLog(@"%@", exception);
+        @throw exception;
     }
     
     if (result) {
@@ -199,13 +203,15 @@ static Connection *_connection;
                     date = [dateFormatter dateFromString:dateString];
                 }
                 @catch (NSException *exception) {
-                    NSLog(@"Getting the date for a MenuSet of restaurant %@ failed", restaurant);
+                    //NSLog(@"Getting the date for a MenuSet of restaurant %@ failed", restaurant);
                     continue;
                 }
                 
                 // compare the incoming date with the last one saved
                 NSTimeInterval halfADay = 43200;
                 if (lastDayOfOldMenus && date == [[lastDayOfOldMenus dateByAddingTimeInterval:halfADay] earlierDate:date]) continue;
+                
+                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] beginUndoGrouping];
                 
                 MenuSet *menuSet = [[MenuSet alloc] initWithEntity:[NSEntityDescription entityForName:@"MenuSet" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                 menuSet.restaurant = restaurant;
@@ -231,6 +237,8 @@ static Connection *_connection;
                     
                     menu.menuSet = menuSet;
                 }
+                
+                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] endUndoGrouping];
                 
                 [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
             }
