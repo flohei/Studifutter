@@ -53,7 +53,7 @@
 #define SF_API_STATUS_ERROR                             400
 
 // Exception Name ([exception name])
-#define AX_API_ERROR                                    @"SFAPIError"
+#define SF_API_ERROR                                    @"SFAPIError"
 
 // Error Types ([exception type])
 #define SF_API_ERROR_TYPE_JSON			                @"JSONError"
