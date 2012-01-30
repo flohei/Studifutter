@@ -74,7 +74,7 @@ static Connection *_connection;
 }
 
 - (void)showAlertForException:(NSException *)exception {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[exception name]
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Ups..."
                                                         message:[exception reason]
                                                        delegate:nil 
                                               cancelButtonTitle:@"OK" 
