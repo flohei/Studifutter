@@ -212,8 +212,8 @@
     // check if there were any exceptions
     if ([exceptions count] > 0) {
         // notify the user
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Oops..." 
-                                                          message:@"Something went terribly wrong. Please try again later." 
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..." 
+                                                          message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal." 
                                                          delegate:nil 
                                                 cancelButtonTitle:@"OK" 
                                                 otherButtonTitles:nil];
