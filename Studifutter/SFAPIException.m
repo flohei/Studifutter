@@ -20,7 +20,7 @@
 		reason = [error localizedDescription];
 	}
     
-	if (self = [super initWithName:AX_API_ERROR reason:reason userInfo:userInfo]){
+	if (self = [super initWithName:SF_API_ERROR reason:reason userInfo:userInfo]){
 		_type = type;
 		_NSError = error;
 		return self;
