@@ -32,7 +32,7 @@
 }
 
 - (IBAction)shareOptions:(UIGestureRecognizer *)sender {
-    NSLog(@"Show share kit here");
+    //NSLog(@"Show share kit here");
 }
 
 - (void)updateLabels {

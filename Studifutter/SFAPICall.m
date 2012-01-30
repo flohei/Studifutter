@@ -212,7 +212,7 @@ static SBJsonParser *jsonParser;
 		NSDictionary *answer = [[self.class jsonParser] objectWithString:rawAnswer error:&jsonError];
         
 		if (jsonError != nil) {
-			NSLog(@"JSON error: %@ | %@", [jsonError description], rawAnswer);
+			//NSLog(@"JSON error: %@ | %@", [jsonError description], rawAnswer);
 			SFAPIException *exc = [[SFAPIException alloc] initWithType:SF_API_ERROR_TYPE_JSON reason:nil userInfo:nil error:jsonError];
 			@throw exc;
 		}
@@ -221,7 +221,7 @@ static SBJsonParser *jsonParser;
         
         // handle the special error cases here
 		if (status != SF_API_STATUS_OK) {
-			NSLog(@"API Error Code: %d", status);
+			//NSLog(@"API Error Code: %d", status);
 			
 			SFAPIException *exc = [[SFAPIException alloc] initWithStatusCode:status reason:[answer objectForKey:@"statusmessage"] userInfo:nil error:nil];
 			@throw exc;
@@ -259,7 +259,7 @@ static SBJsonParser *jsonParser;
 }
 
 - (NSString *)doRequest {
-	NSLog(@"Calling API: %@", _requestPath);
+	//NSLog(@"Calling API: %@", _requestPath);
 	[self prepareRequestData];
 	
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self.class getAPIServerPath], _requestPath]];
@@ -267,17 +267,17 @@ static SBJsonParser *jsonParser;
 	// Initiate asynchronous URL connection on main thread and block the calling thread
 	NSTimeInterval start = CFAbsoluteTimeGetCurrent();
 	if (![NSThread isMainThread]) {
-		NSLog(@"Asynchronous API call from background thread");
+		//NSLog(@"Asynchronous API call from background thread");
 		[self performSelectorOnMainThread:@selector(startConnectionWithURL:) withObject:url waitUntilDone:YES];
 		if (_connection) {
 			[_condition lock];
 			[_condition wait];
 			[_condition unlock];
 		} else {
-			NSLog(@"failed to establish a connection for %@", [url absoluteString]);
+			//NSLog(@"failed to establish a connection for %@", [url absoluteString]);
 		}
 	} else {
-		NSLog(@"Synchronous API call on main thread");
+		//NSLog(@"Synchronous API call on main thread");
 		[self startSynchronousAPIRequestWithURL:url];
 	}
     
@@ -285,7 +285,7 @@ static SBJsonParser *jsonParser;
 	NSLog(@"API request on network executed within: %f sec", delta);
     
 	if (_error != nil || [_receivedData length] == 0) {
-		NSLog(@"Request error: %@", [_error description]);
+		//NSLog(@"Request error: %@", [_error description]);
 		SFAPIException *exc = [[SFAPIException alloc] initWithType:SF_API_ERROR_TYPE_NETWORK reason:nil userInfo:nil error:_error];
 		@throw exc;
 	}
@@ -393,9 +393,9 @@ static SBJsonParser *jsonParser;
 			[postData appendString:@"&"];
 		}
         
-        NSLog(@"stringToChecksum: %@", stringToChecksum);
+        //NSLog(@"stringToChecksum: %@", stringToChecksum);
 		_checksum = [Common md5:stringToChecksum];
-        NSLog(@"checksum: %@", _checksum);
+        //NSLog(@"checksum: %@", _checksum);
 		[postData appendFormat:@"checksum=%@", _checksum];
         
         if (!_useJSON) {
@@ -409,11 +409,11 @@ static SBJsonParser *jsonParser;
             _postString = [JSONWriter stringWithObject:JSONDictionary error:&JSONError];
             
             if (JSONError) {
-                NSLog(@"%@", JSONError);
+                //NSLog(@"%@", JSONError);
             }
         }
         
-        NSLog(@"postString: %@", _postString);
+        //NSLog(@"postString: %@", _postString);
 	}
 }
 
@@ -515,16 +515,16 @@ static SBJsonParser *jsonParser;
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
     _statusCode = [httpResponse statusCode];
 	
-	NSLog(@"HTTP response with status code %d", _statusCode);
+	//NSLog(@"HTTP response with status code %d", _statusCode);
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	NSLog(@"API response: appending %d bytes", [data length]);
+	//NSLog(@"API response: appending %d bytes", [data length]);
     [_receivedData appendData:data];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	NSLog(@"API response completely received");
+	//NSLog(@"API response completely received");
 	_connection = nil;
 	
 	// Signal the condition
@@ -534,7 +534,7 @@ static SBJsonParser *jsonParser;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	NSLog(@"API response error");
+	//NSLog(@"API response error");
     _error = [error copy];
 	_connection = nil;
 	

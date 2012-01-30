@@ -26,7 +26,6 @@
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.subtype == UIEventSubtypeMotionShake) {
-        NSLog(@"Shake detected, reload data.");
         [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] refreshLocalData];
     }
 }

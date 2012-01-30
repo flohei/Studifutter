@@ -85,7 +85,7 @@ int hex2int(const char *hex) {
         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];	
         return [formatter dateFromString:string];
     } @catch (NSException *exception) {
-        NSLog(@"Error parsing date string %@: %@", string, [exception description]);
+        //NSLog(@"Error parsing date string %@: %@", string, [exception description]);
         return nil;
     }
 }
