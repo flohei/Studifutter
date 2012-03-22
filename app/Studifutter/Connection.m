@@ -14,6 +14,7 @@
 #import "Restaurant.h"
 #import "MenuSet.h"
 #import "Menu.h"
+#import "NSString+TrimWhitespace.h"
 
 
 @interface Connection ()
@@ -228,7 +229,7 @@ static Connection *_connection;
                     NSNumber *price = [self cleanPrice:priceString];
                     NSNumber *reducedPrice = [self cleanPrice:reducedPriceString];
                     
-                    menu.name = (name != (id)[NSNull null]) ? [meal objectForKey:@"title"] : nil;
+                    menu.name = (name != (id)[NSNull null]) ? [name trimWhitespace] : nil;
                     menu.price = (price != (id)[NSNull null]) ? price : nil;
                     menu.reducedPrice = (reducedPrice != (id)[NSNull null]) ? reducedPrice : nil;
                     menu.extraChars = (extraChars != (id)[NSNull null]) ? [meal objectForKey:@"extraChar"] : nil;
