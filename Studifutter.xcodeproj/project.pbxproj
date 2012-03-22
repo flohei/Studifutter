@@ -21,7 +21,6 @@
 		8F0BA7BF145C72F2003E2DE0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F0BA7BD145C72F2003E2DE0 /* InfoPlist.strings */; };
 		8F0BA7C2145C72F2003E2DE0 /* StudifutterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7C1145C72F2003E2DE0 /* StudifutterTests.m */; };
 		8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77114697CF700896CE9 /* MainStoryboard.storyboard */; };
-		8F10D77514697CFC00896CE9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77114697CF700896CE9 /* MainStoryboard.storyboard */; };
 		8F10D77814697D0900896CE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77614697D0900896CE9 /* InfoPlist.strings */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
@@ -36,6 +35,7 @@
 		8F250119146C0B1500453E58 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F250115146C0B1500453E58 /* release_notes.txt */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
+		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D2C6214A20EA7007023AF /* PostItView.m */; };
 		8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */; };
 		8F5E9E5A147D8CA700FF2327 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E59147D8CA700FF2327 /* Default.png */; };
@@ -126,6 +126,8 @@
 		8F250116146C0B1500453E58 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
+		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
 		8F5D2C6114A20EA7007023AF /* PostItView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItView.h; sourceTree = "<group>"; };
 		8F5D2C6214A20EA7007023AF /* PostItView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItView.m; sourceTree = "<group>"; };
 		8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-schnipsel.png"; sourceTree = "<group>"; };
@@ -445,6 +447,8 @@
 				8F729C08145F31F600FE166B /* Common.m */,
 				8F729C04145F2DE700FE166B /* NSString+URLEncode.h */,
 				8F729C05145F2DE700FE166B /* NSString+URLEncode.m */,
+				8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */,
+				8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -554,7 +558,7 @@
 		8F0BA780145C72F1003E2DE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
 			};
 			buildConfigurationList = 8F0BA783145C72F1003E2DE0 /* Build configuration list for PBXProject "Studifutter" */;
@@ -582,7 +586,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */,
-				8F10D77514697CFC00896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F10D77814697D0900896CE9 /* InfoPlist.strings in Resources */,
 				8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */,
 				8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */,
@@ -669,6 +672,7 @@
 				8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */,
 				8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */,
 				8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */,
+				8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
