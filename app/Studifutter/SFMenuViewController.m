@@ -48,7 +48,7 @@
 
 - (void)setupInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
-    if (![restaurantNotes isEqualToString:@""]) {        
+    if (![restaurantNotes isEqualToString:[NSString string]]) {        
         UITextView *notesTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 120, 160)];
         [notesTextView setText:restaurantNotes];
         [notesTextView setFont:[UIFont systemFontOfSize:10]];
