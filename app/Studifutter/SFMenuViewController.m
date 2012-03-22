@@ -48,18 +48,18 @@
 
 - (void)setupInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
-    if (![restaurantNotes isEqualToString:@""]) {
-        UILabel *notesLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 280, 160)];
-        [notesLabel setText:restaurantNotes];
-        [notesLabel setNumberOfLines:0];
-        [notesLabel setLineBreakMode:UILineBreakModeWordWrap];
-        [notesLabel setFont:[UIFont systemFontOfSize:10]];
-        [notesLabel setBackgroundColor:[UIColor clearColor]];
-        [[self tableView] setTableFooterView:notesLabel];
+    if (![restaurantNotes isEqualToString:@""]) {        
+        UITextView *notesTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 120, 160)];
+        [notesTextView setText:restaurantNotes];
+        [notesTextView setFont:[UIFont systemFontOfSize:10]];
+        [notesTextView setBackgroundColor:[UIColor clearColor]];
+        [notesTextView setEditable:NO];
+        [[self tableView] setTableFooterView:notesTextView];
+        [notesTextView sizeToFit];
     }
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
-    //[titleDateFormatter setDateFormat:@"dd.MM."];
+//    [titleDateFormatter setDateFormat:@"dd.MM."];
     [titleDateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [titleDateFormatter setDoesRelativeDateFormatting:YES];
     
