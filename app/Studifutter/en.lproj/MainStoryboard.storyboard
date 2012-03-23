@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -20,6 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
+        <!--Restaurant Detail View Controller - Karte-->
         <scene sceneID="wIe-oa-YQT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q69-cw-9mQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,6 +91,7 @@
             </objects>
             <point key="canvasLocation" x="1350" y="641"/>
         </scene>
+        <!--Info View Controller - Detail-->
         <scene sceneID="24">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -123,7 +127,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Idee" lineBreakMode="tailTruncation" minimumFontSize="10" id="hs7-WW-DJ5">
-                                <rect key="frame" x="77" y="173" width="151" height="21"/>
+                                <rect key="frame" x="77" y="151" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -137,41 +141,55 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Simon Heidingsfelder" lineBreakMode="tailTruncation" minimumFontSize="10" id="1yf-y2-nr5">
-                                <rect key="frame" x="77" y="196" width="192" height="21"/>
+                                <rect key="frame" x="77" y="174" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Code" lineBreakMode="tailTruncation" minimumFontSize="10" id="hW6-Al-awf">
-                                <rect key="frame" x="77" y="288" width="151" height="21"/>
+                                <rect key="frame" x="77" y="267" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lars Thorben Fischer" lineBreakMode="tailTruncation" minimumFontSize="10" id="AGK-GN-fRG">
-                                <rect key="frame" x="77" y="266" width="192" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Design" lineBreakMode="tailTruncation" minimumFontSize="10" id="zXP-7f-uWz">
-                                <rect key="frame" x="77" y="220" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Kathrin Ziegelhöfer" lineBreakMode="tailTruncation" minimumFontSize="10" id="elI-zw-APH">
                                 <rect key="frame" x="77" y="244" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Design" lineBreakMode="tailTruncation" minimumFontSize="10" id="zXP-7f-uWz">
+                                <rect key="frame" x="77" y="198" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Kathrin Ziegelhöfer" lineBreakMode="tailTruncation" minimumFontSize="10" id="elI-zw-APH">
+                                <rect key="frame" x="77" y="221" width="192" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Florian Heiber" lineBreakMode="tailTruncation" minimumFontSize="10" id="YVg-Am-rVA">
+                                <rect key="frame" x="77" y="336" width="192" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Steffen Wiewel" lineBreakMode="tailTruncation" minimumFontSize="10" id="up8-3y-PIQ">
+                                <rect key="frame" x="77" y="290" width="192" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Daniel Wiewel" lineBreakMode="tailTruncation" minimumFontSize="10" id="mI4-Rp-pqg">
                                 <rect key="frame" x="77" y="313" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -195,6 +213,7 @@
             </objects>
             <point key="canvasLocation" x="1350" y="1223"/>
         </scene>
+        <!--Restaurant View Controller - Master-->
         <scene sceneID="tXH-6h-5Am">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4To-OC-Dan" sceneMemberID="firstResponder"/>
@@ -253,6 +272,7 @@
             </objects>
             <point key="canvasLocation" x="468" y="64"/>
         </scene>
+        <!--Menu View Controller - Master-->
         <scene sceneID="Ted-Jm-nCA">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7A-PO-MWy" sceneMemberID="firstResponder"/>
@@ -310,6 +330,7 @@
             </objects>
             <point key="canvasLocation" x="1350" y="64"/>
         </scene>
+        <!--Day List View Controller - Next Days-->
         <scene sceneID="6if-js-5DV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiE-en-vsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -337,7 +358,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Brokkoli-Nussecke mit Rahmkartoffeln" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" minimumFontSize="12" id="Jge-MA-TBN">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Brokkoli-Nussecke mit Rahmkartoffeln" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="12" adjustsFontSizeToFit="NO" id="Jge-MA-TBN">
                                                     <rect key="frame" x="61" y="0.0" width="227" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -390,6 +411,7 @@
             </objects>
             <point key="canvasLocation" x="912" y="64"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="8ST-f2-bD6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUx-ch-Xl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
