@@ -38,7 +38,6 @@
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D2C6214A20EA7007023AF /* PostItView.m */; };
 		8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */; };
-		8F5E9E5A147D8CA700FF2327 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E59147D8CA700FF2327 /* Default.png */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
 		8F669F5C149A636900B7CE96 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F669F5B149A636900B7CE96 /* AudioToolbox.framework */; };
 		8F6F134B147E990600FE5455 /* studifutter-infoscreen-blanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */; };
@@ -73,6 +72,7 @@
 		8F729C451464BADD00FE166B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
 		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
+		8F78A27F1521E8B90060BE14 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F78A2811521E8B90060BE14 /* Default.png */; };
 		8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D03147E971E00AB17E9 /* SFViewController.m */; };
 		8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
@@ -126,12 +126,11 @@
 		8F250116146C0B1500453E58 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
+		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
 		8F5D2C6114A20EA7007023AF /* PostItView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItView.h; sourceTree = "<group>"; };
 		8F5D2C6214A20EA7007023AF /* PostItView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItView.m; sourceTree = "<group>"; };
 		8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-schnipsel.png"; sourceTree = "<group>"; };
-		8F5E9E59147D8CA700FF2327 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		8F669F5B149A636900B7CE96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -197,6 +196,11 @@
 		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
 		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
+		8F78A27B1521E36D0060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = /Users/flohei/dev/studifutter/Studifutter/de.lproj/MainStoryboard.storyboard; sourceTree = "<absolute>"; };
+		8F78A27C1521E36D0060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = /Users/flohei/dev/studifutter/Studifutter/de.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		8F78A27E1521E36D0060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = /Users/flohei/dev/studifutter/StudifutterTests/de.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		8F78A2801521E8B90060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Default.png; sourceTree = "<group>"; };
+		8F78A2821521E8C30060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/Default.png; sourceTree = "<group>"; };
 		8F7C9D02147E971E00AB17E9 /* SFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
 		8F7C9D03147E971E00AB17E9 /* SFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
 		8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTableViewController.h; sourceTree = "<group>"; };
@@ -407,7 +411,7 @@
 				8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */,
 				8F6F1349147E990600FE5455 /* studifutter-pattern.png */,
 				8F6F134A147E990600FE5455 /* studifutter-post-it.png */,
-				8F5E9E59147D8CA700FF2327 /* Default.png */,
+				8F78A2811521E8B90060BE14 /* Default.png */,
 				8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */,
 				8F250105146BC71000453E58 /* ICON-DERIVATE */,
 			);
@@ -595,7 +599,7 @@
 				8F250118146C0B1500453E58 /* README.txt in Resources */,
 				8F250119146C0B1500453E58 /* release_notes.txt in Resources */,
 				8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */,
-				8F5E9E5A147D8CA700FF2327 /* Default.png in Resources */,
+				8F78A27F1521E8B90060BE14 /* Default.png in Resources */,
 				8F6F134B147E990600FE5455 /* studifutter-infoscreen-blanko.png in Resources */,
 				8F6F134C147E990600FE5455 /* studifutter-pattern.png in Resources */,
 				8F6F134D147E990600FE5455 /* studifutter-post-it.png in Resources */,
@@ -699,6 +703,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F0BA7BE145C72F2003E2DE0 /* en */,
+				8F78A27E1521E36D0060BE14 /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -707,6 +712,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F10D77214697CF700896CE9 /* en */,
+				8F78A27B1521E36D0060BE14 /* de */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -715,8 +721,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F10D77914697D0F00896CE9 /* en */,
+				8F78A27C1521E36D0060BE14 /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8F78A2811521E8B90060BE14 /* Default.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F78A2801521E8B90060BE14 /* en */,
+				8F78A2821521E8C30060BE14 /* de */,
+			);
+			name = Default.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
