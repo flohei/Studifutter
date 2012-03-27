@@ -56,7 +56,7 @@
 #define SF_API_ERROR                                    @"SFAPIError"
 
 // Error Types ([exception type])
-#define SF_API_ERROR_TYPE_JSON			                @"JSONError"
-#define SF_API_ERROR_TYPE_STATUS		                @"APIStatusError"
-#define SF_API_ERROR_TYPE_NETWORK		                @"NetworkError"
-#define SF_API_ERROR_TYPE_LOGIN			                @"LoginError"
+#define SF_API_ERROR_TYPE_JSON                          @"JSONError"
+#define SF_API_ERROR_TYPE_STATUS                        @"APIStatusError"
+#define SF_API_ERROR_TYPE_NETWORK                       @"NetworkError"
+#define SF_API_ERROR_TYPE_LOGIN                         @"LoginError"

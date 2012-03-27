@@ -33,11 +33,11 @@
 		case SF_API_STATUS_INVALID_CHECKSUM:
 		case SF_API_STATUS_UNKNOWN_METHOD:
 		case SF_API_STATUS_MISSING_PARAMETER:
-			reason = @"Ungültige Anfrage";
+			reason = NSLocalizedString(@"API_ERROR_INVALID_CALL", @"Ungültige Anfrage");
 			break;
 		case SF_API_STATUS_UNKNOWN_ERROR:
 		default:
-			reason = @"Unbekannter Fehler";
+			reason = NSLocalizedString(@"API_ERROR_UNKNOWN", @"Unbekannter Fehler");
 			break;
 	}
     
