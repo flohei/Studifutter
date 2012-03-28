@@ -14,7 +14,7 @@
 		<string>studifutter-app-icon-114-retina.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>net.rootof.studifutter</string>
+	<string>net.rootof.mensa</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
