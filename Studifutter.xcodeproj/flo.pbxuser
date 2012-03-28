@@ -1,0 +1,222 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Studifutter */ = {
+		activeExec = 0;
+		executables = (
+			5CFB2E920F9FA74B00516549 /* Studifutter */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 5CFB2E920F9FA74B00516549 /* Studifutter */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Studifutter */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Studifutter */,
+		);
+		codeSenseManager = 5CFB2E9C0F9FA76A00516549 /* Code sense */;
+		executables = (
+			5CFB2E920F9FA74B00516549 /* Studifutter */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					720,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					680,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 262620546;
+			PBXWorkspaceStateSaveDate = 262620546;
+		};
+		perUserProjectItems = {
+			5C8F96280FA74C0F00428576 /* PlistBookmark */ = 5C8F96280FA74C0F00428576 /* PlistBookmark */;
+		};
+		sourceControlManager = 5CFB2E9B0F9FA76A00516549 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5C8F96280FA74C0F00428576 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 5C8F96290FA74C0F00428576;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	5C8F96290FA74C0F00428576 = {
+		isa = PBXFileReference;
+		sourceTree = "<group>";
+	};
+	5CC082ED0FA727E900C2FDC7 /* RawMeal.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{520, 0}";
+			sepNavVisRange = "{0, 527}";
+		};
+	};
+	5CC082EE0FA727E900C2FDC7 /* RawMeal.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{267, 0}";
+			sepNavVisRange = "{0, 274}";
+		};
+	};
+	5CC083240FA738D700C2FDC7 /* RestaurantXMLParser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 606}";
+		};
+	};
+	5CC083250FA738D700C2FDC7 /* RestaurantXMLParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1062, 1876}}";
+			sepNavSelRange = "{4752, 0}";
+			sepNavVisRange = "{0, 1701}";
+		};
+	};
+	5CFB2E920F9FA74B00516549 /* Studifutter */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Studifutter;
+		sourceDirectories = (
+		);
+	};
+	5CFB2E9B0F9FA76A00516549 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	5CFB2E9C0F9FA76A00516549 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	5CFB2EA70F9FA77000516549 /* Restaurant.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{257, 0}";
+			sepNavVisRange = "{0, 843}";
+		};
+	};
+	5CFB2EA80F9FA77000516549 /* Restaurant.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 994}}";
+			sepNavSelRange = "{374, 0}";
+			sepNavVisRange = "{0, 1266}";
+		};
+	};
+	5CFB2EA90F9FA77000516549 /* MealSet.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 386}";
+		};
+	};
+	5CFB2EAA0F9FA77000516549 /* MealSet.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 312}";
+		};
+	};
+	5CFB2EAB0F9FA77000516549 /* Meal.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 464}";
+		};
+	};
+	5CFB2EAC0F9FA77000516549 /* Meal.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 728}";
+		};
+	};
+	5CFB2EB20F9FA77000516549 /* RestaurantAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{422, 0}";
+			sepNavVisRange = "{0, 796}";
+		};
+	};
+	5CFB2EB30F9FA77000516549 /* RestaurantAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {948, 1806}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{363, 1846}";
+		};
+	};
+	5CFB2EB40F9FA77000516549 /* MealXMLParser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {898, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 773}";
+		};
+	};
+	5CFB2EB50F9FA77000516549 /* MealXMLParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1194, 2576}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1506}";
+		};
+	};
+}
