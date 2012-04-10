@@ -8,6 +8,7 @@
 
 #import "SFViewController.h"
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @protocol SFInfoViewDelegate
 
@@ -15,12 +16,14 @@
 
 @end
 
-@interface SFInfoViewController : SFViewController
+@interface SFInfoViewController : SFViewController <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, assign) id <SFInfoViewDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 - (IBAction)done:(id)sender;
 - (IBAction)feedback:(id)sender;
+- (IBAction)mail:(id)sender;
+- (IBAction)twitter:(id)sender;
 
 @end
