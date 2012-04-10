@@ -68,4 +68,24 @@
     [TestFlight openFeedbackView];
 }
 
+- (IBAction)mail:(id)sender {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+        [mailComposer setSubject:NSLocalizedString(@"MAIL_SUBJECT_FEEDBACK", @"Subject line")];
+        [mailComposer setToRecipients:[NSArray arrayWithObject:@"studifutter@rtfnt.com"]];
+        [mailComposer setMailComposeDelegate:self];
+        [self presentModalViewController:mailComposer animated:YES];
+    }
+}
+
+#pragma mark - MFMailComposeDelegate 
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+	[self becomeFirstResponder];
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)twitter:(id)sender {
+}
+
 @end
