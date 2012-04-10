@@ -32,10 +32,11 @@
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
-		8F450BFF1534628600F647CF /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450BFB1534628600F647CF /* libTestFlight.a */; };
 		8F450C001534628600F647CF /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F450BFC1534628600F647CF /* README.txt */; };
 		8F450C011534628600F647CF /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F450BFD1534628600F647CF /* release_notes.txt */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
+		8F450C05153468BF00F647CF /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C04153468BF00F647CF /* libTestFlight.a */; };
+		8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C0615346A1C00F647CF /* libz.dylib */; };
 		8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D2C6214A20EA7007023AF /* PostItView.m */; };
 		8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
@@ -127,11 +128,12 @@
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
-		8F450BFB1534628600F647CF /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		8F450BFC1534628600F647CF /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		8F450BFD1534628600F647CF /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		8F450BFE1534628600F647CF /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F450C02153462A100F647CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8F450C04153468BF00F647CF /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		8F450C0615346A1C00F647CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8F5D2C6114A20EA7007023AF /* PostItView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItView.h; sourceTree = "<group>"; };
 		8F5D2C6214A20EA7007023AF /* PostItView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItView.m; sourceTree = "<group>"; };
 		8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-schnipsel.png"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */,
 				8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */,
 				8F669F5C149A636900B7CE96 /* AudioToolbox.framework in Frameworks */,
 				8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */,
@@ -234,7 +237,7 @@
 				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
-				8F450BFF1534628600F647CF /* libTestFlight.a in Frameworks */,
+				8F450C05153468BF00F647CF /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +258,6 @@
 		8F0BA77E145C72F1003E2DE0 = {
 			isa = PBXGroup;
 			children = (
-				8F450C02153462A100F647CF /* MessageUI.framework */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
 				8F0BA7BA145C72F2003E2DE0 /* StudifutterTests */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
@@ -275,6 +277,8 @@
 		8F0BA78C145C72F1003E2DE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F450C0615346A1C00F647CF /* libz.dylib */,
+				8F450C02153462A100F647CF /* MessageUI.framework */,
 				8F450BFA1534628600F647CF /* TestFlightSDK1 */,
 				8F669F5B149A636900B7CE96 /* AudioToolbox.framework */,
 				8F6F134F147EA15900FE5455 /* QuartzCore.framework */,
@@ -364,7 +368,7 @@
 		8F450BFA1534628600F647CF /* TestFlightSDK1 */ = {
 			isa = PBXGroup;
 			children = (
-				8F450BFB1534628600F647CF /* libTestFlight.a */,
+				8F450C04153468BF00F647CF /* libTestFlight.a */,
 				8F450BFC1534628600F647CF /* README.txt */,
 				8F450BFD1534628600F647CF /* release_notes.txt */,
 				8F450BFE1534628600F647CF /* TestFlight.h */,
@@ -827,7 +831,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK0.8\"",
 					"\"$(SRCROOT)/TestFlightSDK1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -844,7 +847,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK0.8\"",
 					"\"$(SRCROOT)/TestFlightSDK1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
