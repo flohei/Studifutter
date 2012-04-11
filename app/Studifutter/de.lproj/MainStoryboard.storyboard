@@ -131,7 +131,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="feedback:" destination="gBY-0J-LX6" eventType="touchUpInside" id="K7O-Gd-Ty4"/>
                                     <action selector="mail:" destination="gBY-0J-LX6" eventType="touchUpInside" id="B1L-zj-V19"/>
                                 </connections>
                             </button>
@@ -147,7 +146,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="twitter:" destination="gBY-0J-LX6" eventType="touchUpInside" id="229-0S-Wz1"/>
+                                    <segue destination="Gm1-8B-PY5" kind="push" identifier="ShowWebView" id="Wc5-Pi-l4U"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="studifutter.rtfnt.com" lineBreakMode="tailTruncation" minimumFontSize="10" id="uFm-Av-RP8">
@@ -165,7 +164,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3.0" lineBreakMode="tailTruncation" minimumFontSize="10" id="WwL-1Q-sIe">
-                                <rect key="frame" x="273" y="56" width="34" height="21"/>
+                                <rect key="frame" x="273" y="56" width="35" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -243,6 +242,31 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1350" y="1223"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="zhS-8J-JaH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saX-Zf-yHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Gm1-8B-PY5" customClass="SFWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dme-3f-rly">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="Pfr-Rm-MOU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sIl-Sl-ZXv"/>
+                    <connections>
+                        <outlet property="webView" destination="Pfr-Rm-MOU" id="7ob-m4-jfE"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1920" y="1218"/>
         </scene>
         <!--Restaurant View Controller - Master-->
         <scene sceneID="3nF-Q3-J8G">
@@ -503,7 +527,6 @@
                 <relationship kind="action" name="done:"/>
                 <relationship kind="action" name="feedback:"/>
                 <relationship kind="action" name="mail:"/>
-                <relationship kind="action" name="twitter:"/>
                 <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -529,6 +552,12 @@
         </class>
         <class className="SFViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SFViewController.h"/>
+        </class>
+        <class className="SFWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFWebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

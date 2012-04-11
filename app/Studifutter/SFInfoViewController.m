@@ -9,6 +9,7 @@
 #import "SFInfoViewController.h"
 #import "Constants.h"
 #import "TestFlight.h"
+#import "SFWebViewController.h"
 
 @implementation SFInfoViewController
 
@@ -30,6 +31,14 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"ShowWebView"]) {
+        SFWebViewController *webViewController = (SFWebViewController *)[segue destinationViewController];
+        [webViewController setWebURL:[NSURL URLWithString:@"http://www.twitter.com/studifutter"]];
+        [webViewController setTitle:@"Twitter"];
+    }
 }
 
 #pragma mark - View lifecycle
@@ -75,6 +84,9 @@
         [mailComposer setToRecipients:[NSArray arrayWithObject:@"studifutter@rtfnt.com"]];
         [mailComposer setMailComposeDelegate:self];
         [self presentModalViewController:mailComposer animated:YES];
+    } else {
+        NSString *mailURLString = [NSString stringWithFormat:@"mailto:studifutter@rtfnt.com?subject=%@", NSLocalizedString(@"MAIL_SUBJECT_FEEDBACK", @"Subject line")];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailURLString]];
     }
 }
 
@@ -83,9 +95,6 @@
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
 	[self becomeFirstResponder];
 	[self dismissModalViewControllerAnimated:YES];
-}
-
-- (IBAction)twitter:(id)sender {
 }
 
 @end

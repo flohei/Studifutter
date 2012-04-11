@@ -79,10 +79,9 @@
 		8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
+		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
 		8FFC1BA71523413B001F0EF1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BA51523413B001F0EF1 /* MainStoryboard.storyboard */; };
-		8FFC1BA915234144001F0EF1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BA51523413B001F0EF1 /* MainStoryboard.storyboard */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
-		8FFC1BAE1523416B001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +214,8 @@
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDE146AF180001F4E74 /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
+		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
+		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
 		8FFC1BA61523413B001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8FFC1BA815234144001F0EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8FFC1BAB15234163001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -390,6 +391,8 @@
 				8F729BB9145F240700FE166B /* SFMenuViewController.m */,
 				8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */,
 				8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */,
+				8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */,
+				8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -617,9 +620,7 @@
 				8F6F134D147E990600FE5455 /* studifutter-post-it.png in Resources */,
 				8F78A2851521F0090060BE14 /* Localizable.strings in Resources */,
 				8FFC1BA71523413B001F0EF1 /* MainStoryboard.storyboard in Resources */,
-				8FFC1BA915234144001F0EF1 /* MainStoryboard.storyboard in Resources */,
 				8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */,
-				8FFC1BAE1523416B001F0EF1 /* InfoPlist.strings in Resources */,
 				8F450C001534628600F647CF /* README.txt in Resources */,
 				8F450C011534628600F647CF /* release_notes.txt in Resources */,
 			);
@@ -696,6 +697,7 @@
 				8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */,
 				8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */,
 				8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */,
+				8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
