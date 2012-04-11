@@ -24,6 +24,5 @@
 - (IBAction)done:(id)sender;
 - (IBAction)feedback:(id)sender;
 - (IBAction)mail:(id)sender;
-- (IBAction)twitter:(id)sender;
 
 @end
