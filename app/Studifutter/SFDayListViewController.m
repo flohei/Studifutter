@@ -58,8 +58,7 @@
     [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [self setBannerView:nil];
     [self setTableView:nil];
     [super viewDidUnload];    
@@ -67,6 +66,13 @@
 }
 
 #pragma mark - Misc
+
+- (void)setRestaurant:(Restaurant *)restaurant {
+    _restaurant = restaurant;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 - (NSDictionary *)sections {
     if (!_sections) {

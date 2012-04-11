@@ -23,4 +23,8 @@
     return self.name;
 }
 
+- (NSString *)coreDataID {
+    return [[[self objectID] URIRepresentation] absoluteString];
+}
+
 @end

@@ -389,7 +389,7 @@
         <scene sceneID="lXO-yY-8uj">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVI-3v-SmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="D0p-7k-JH1" customClass="SFDayListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DayListViewController" id="D0p-7k-JH1" customClass="SFDayListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8dl-dL-PTZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
