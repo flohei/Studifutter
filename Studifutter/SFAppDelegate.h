@@ -25,4 +25,7 @@
 
 - (NSArray *)localRestaurants;
 
+- (NSManagedObjectID *)managedObjectIDForURIRepresentation:(NSURL *)URL;
+- (NSManagedObject *)managedObjectForID:(NSString *)ID;
+
 @end

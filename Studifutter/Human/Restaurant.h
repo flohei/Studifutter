@@ -8,4 +8,6 @@
 @property (nonatomic, readonly, copy) NSString *subtitle;
 @property (nonatomic, readonly, copy) NSString *title;
 
+- (NSString *)coreDataID;
+
 @end

@@ -9,6 +9,7 @@
 #import "SFAppDelegate.h"
 #import "Constants.h"
 #import "SFRestaurantViewController.h"
+#import "SFDayListViewController.h"
 #import "Connection.h"
 #import "TestFlight.h"
 #import "Restaurant.h"
@@ -51,6 +52,14 @@
     
     self.operationBalance = 0;
     [self refreshLocalData];
+    
+    // check if there's a last restaurant saved. if so push it.
+    Restaurant *lastRestaurant = (Restaurant *)[self managedObjectForID:[[NSUserDefaults standardUserDefaults] objectForKey:LAST_OPENED_RESTAURANT_ID]];
+    if (lastRestaurant) {
+        SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
+        [dayListViewController setRestaurant:lastRestaurant];
+        [navigationController pushViewController:dayListViewController animated:NO];
+    }
     
     [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
@@ -292,6 +301,27 @@
     }    
     
     return __persistentStoreCoordinator;
+}
+
+- (NSManagedObjectID *)managedObjectIDForURIRepresentation:(NSURL *)URL {
+    return [self.persistentStoreCoordinator managedObjectIDForURIRepresentation:URL];
+}
+
+- (NSManagedObject *)managedObjectForID:(NSString *)ID {
+    NSManagedObject *result = nil;
+    
+    @try {
+        NSURL *IDURL = [NSURL URLWithString:ID];
+        NSManagedObjectID *managedObjectID = [self managedObjectIDForURIRepresentation:IDURL];
+        if (managedObjectID) {
+            result = [self.managedObjectContext objectWithID:managedObjectID];
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception);
+    }
+    
+    return result;
 }
 
 #pragma mark - Application's Documents directory
