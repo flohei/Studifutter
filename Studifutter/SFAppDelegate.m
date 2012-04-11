@@ -87,7 +87,7 @@
 
 - (void)refreshLocalData {
     [self downloadData];
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+//    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 - (void)cleanupLocalMenus {
