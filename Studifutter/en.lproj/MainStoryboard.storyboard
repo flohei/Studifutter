@@ -126,7 +126,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3.0" lineBreakMode="tailTruncation" minimumFontSize="10" id="yGs-XI-rjm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3.0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="yGs-XI-rjm">
                                 <rect key="frame" x="267" y="56" width="33" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
