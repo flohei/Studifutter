@@ -85,6 +85,7 @@
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
 		8FD1583E1536117B0078508A /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD1583D1536117B0078508A /* info.png */; };
+		8FD5EB9215370A98008476F8 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FD5EB9115370A98008476F8 /* Entitlements.plist */; };
 		8FFC1BA71523413B001F0EF1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BA51523413B001F0EF1 /* MainStoryboard.storyboard */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -226,6 +227,7 @@
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
 		8FD1583D1536117B0078508A /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = Graphics/info.png; sourceTree = "<group>"; };
+		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8FFC1BA61523413B001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = de; path = de.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8FFC1BA815234144001F0EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8FFC1BAB15234163001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */,
 				8F0BA79B145C72F1003E2DE0 /* main.m */,
 				8F0BA79D145C72F1003E2DE0 /* Studifutter-Prefix.pch */,
+				8FD5EB9115370A98008476F8 /* Entitlements.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				8F6232F6153613E200BA786E /* twitter.png in Resources */,
 				8F04F22E1536F5F100BA25C7 /* info-white.png in Resources */,
 				8F04F2311536FC5200BA25C7 /* pin.png in Resources */,
+				8FD5EB9215370A98008476F8 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +853,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
@@ -867,6 +872,7 @@
 		8F0BA7C7145C72F2003E2DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
@@ -914,6 +920,68 @@
 			};
 			name = Release;
 		};
+		8FD5EB8E153709ED008476F8 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad hoc";
+		};
+		8FD5EB8F153709ED008476F8 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Studifutter/Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
+				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad hoc";
+		};
+		8FD5EB90153709ED008476F8 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Studifutter.app/Studifutter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
+				INFOPLIST_FILE = "StudifutterTests/StudifutterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = "Ad hoc";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -922,6 +990,7 @@
 			buildConfigurations = (
 				8F0BA7C3145C72F2003E2DE0 /* Debug */,
 				8F0BA7C4145C72F2003E2DE0 /* Release */,
+				8FD5EB8E153709ED008476F8 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -931,6 +1000,7 @@
 			buildConfigurations = (
 				8F0BA7C6145C72F2003E2DE0 /* Debug */,
 				8F0BA7C7145C72F2003E2DE0 /* Release */,
+				8FD5EB8F153709ED008476F8 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -940,6 +1010,7 @@
 			buildConfigurations = (
 				8F0BA7C9145C72F2003E2DE0 /* Debug */,
 				8F0BA7CA145C72F2003E2DE0 /* Release */,
+				8FD5EB90153709ED008476F8 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
