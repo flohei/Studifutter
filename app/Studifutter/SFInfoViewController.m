@@ -83,6 +83,7 @@
         [mailComposer setSubject:NSLocalizedString(@"MAIL_SUBJECT_FEEDBACK", @"Subject line")];
         [mailComposer setToRecipients:[NSArray arrayWithObject:@"studifutter@rtfnt.com"]];
         [mailComposer setMailComposeDelegate:self];
+        [[mailComposer navigationBar] setBarStyle:UIBarStyleBlack];
         [self presentModalViewController:mailComposer animated:YES];
     } else {
         NSString *mailURLString = [NSString stringWithFormat:@"mailto:studifutter@rtfnt.com?subject=%@", NSLocalizedString(@"MAIL_SUBJECT_FEEDBACK", @"Subject line")];
