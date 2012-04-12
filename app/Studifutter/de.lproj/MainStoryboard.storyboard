@@ -149,15 +149,8 @@
                                     <segue destination="Gm1-8B-PY5" kind="push" identifier="ShowWebView" id="Wc5-Pi-l4U"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="studifutter.rtfnt.com" lineBreakMode="tailTruncation" minimumFontSize="10" id="uFm-Av-RP8">
-                                <rect key="frame" x="77" y="81" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Idee" lineBreakMode="tailTruncation" minimumFontSize="10" id="pgn-6Y-8vs">
-                                <rect key="frame" x="77" y="151" width="151" height="21"/>
+                                <rect key="frame" x="77" y="106" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -171,56 +164,56 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Simon Heidingsfelder" lineBreakMode="tailTruncation" minimumFontSize="10" id="hSC-U0-Lgx">
-                                <rect key="frame" x="77" y="174" width="192" height="21"/>
+                                <rect key="frame" x="77" y="129" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Code" lineBreakMode="tailTruncation" minimumFontSize="10" id="WDS-Hh-yhh">
-                                <rect key="frame" x="77" y="267" width="151" height="21"/>
+                                <rect key="frame" x="77" y="222" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lars Thorben Fischer" lineBreakMode="tailTruncation" minimumFontSize="10" id="mpi-Gm-cRO">
-                                <rect key="frame" x="77" y="244" width="192" height="21"/>
+                                <rect key="frame" x="77" y="199" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Design" lineBreakMode="tailTruncation" minimumFontSize="10" id="UUk-gy-g73">
-                                <rect key="frame" x="77" y="198" width="151" height="21"/>
+                                <rect key="frame" x="77" y="153" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Kathrin Ziegelhöfer" lineBreakMode="tailTruncation" minimumFontSize="10" id="IAy-7X-LbD">
-                                <rect key="frame" x="77" y="221" width="192" height="21"/>
+                                <rect key="frame" x="77" y="176" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Florian Heiber" lineBreakMode="tailTruncation" minimumFontSize="10" id="gke-Cx-bWL">
-                                <rect key="frame" x="77" y="336" width="192" height="21"/>
+                                <rect key="frame" x="77" y="291" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Steffen Wiewel" lineBreakMode="tailTruncation" minimumFontSize="10" id="hTu-fD-uuD">
-                                <rect key="frame" x="77" y="290" width="192" height="21"/>
+                                <rect key="frame" x="77" y="245" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Daniel Wiewel" lineBreakMode="tailTruncation" minimumFontSize="10" id="yfD-6I-Ssy">
-                                <rect key="frame" x="77" y="313" width="192" height="21"/>
+                                <rect key="frame" x="77" y="268" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -464,10 +457,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nächste Tage" id="QM9-w5-Dii">
-                        <barButtonItem key="rightBarButtonItem" title="Karte" id="VH4-fD-miv">
-                            <connections>
-                                <segue destination="F8c-e6-yiX" kind="push" identifier="ShowRestaurantDetails" id="2Tb-4b-FBp"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KmF-XY-xMa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oHF-Tt-wzo">
+                                <rect key="frame" x="289" y="5" width="26" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="pin.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="F8c-e6-yiX" kind="push" identifier="ShowRestaurantDetails" id="3Rs-3S-Q0s"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -502,6 +507,7 @@
     <resources>
         <image name="info-white.png" width="16" height="16"/>
         <image name="mail1.png" width="32" height="32"/>
+        <image name="pin.png" width="16" height="16"/>
         <image name="studifutter-infoscreen-blanko.png" width="640" height="830"/>
         <image name="studifutter-post-it.png" width="626" height="401"/>
         <image name="studifutter-schnipsel.png" width="609" height="131"/>
