@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -285,7 +284,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Restaurants" id="hvE-id-DSS">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Jeq-0c-cPC">
+                        <barButtonItem key="leftBarButtonItem" id="Jeq-0c-cPC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WWP-Ww-AAU">
                                 <rect key="frame" x="5" y="5" width="26" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -432,7 +431,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Next Days" id="5IX-4k-0un">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="kFh-I4-ciJ">
+                        <barButtonItem key="rightBarButtonItem" id="kFh-I4-ciJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SOx-Ly-l6w">
                                 <rect key="frame" x="289" y="5" width="26" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
