@@ -49,7 +49,14 @@
     
     [[self tableView] setBackgroundColor:[UIColor clearColor]];
     
-    [[self navigationItem] setTitle:[[self restaurant] name]];
+    NSString *titleString = nil;
+    if ([[[self restaurant] name] length] > MAX_TITLE_LENGTH) {
+        NSString *substring = [[[self restaurant] name] substringToIndex:MAX_TITLE_LENGTH - 1];
+        titleString = [NSString stringWithFormat:@"%@…", substring];
+    } else {
+        titleString = [[self restaurant] name];
+    }
+    [[self navigationItem] setTitle:titleString];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
