@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -443,10 +444,10 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JWk-CF-sIF" kind="push" identifier="ShowRestaurantDetails" id="dJh-BW-DSS"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="JWk-CF-sIF" kind="push" identifier="ShowRestaurantDetails" id="jrv-BT-8Ag"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -511,75 +512,6 @@
         <image name="studifutter-schnipsel.png" width="609" height="131"/>
         <image name="twitter.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="DayTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MenuTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="infoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RestaurantTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="restaurantAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="restaurantNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFDayListViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFDayListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SFInfoViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFInfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="feedback:"/>
-                <relationship kind="action" name="mail:"/>
-                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFMenuViewController" superclassName="SFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFMenuViewController.h"/>
-        </class>
-        <class className="SFRestaurantDetailViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="postItView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="zipAndCityLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFRestaurantViewController" superclassName="SFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantViewController.h"/>
-        </class>
-        <class className="SFTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFTableViewController.h"/>
-        </class>
-        <class className="SFViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFViewController.h"/>
-        </class>
-        <class className="SFWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFWebViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
