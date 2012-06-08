@@ -208,6 +208,9 @@ static Connection *_connection;
                     continue;
                 }
                 
+                // if the date is nil stop adding the new menu set
+                if (!date) continue;
+                
                 // compare the incoming date with the last one saved
                 NSTimeInterval halfADay = 43200;
                 if (lastDayOfOldMenus && date == [[lastDayOfOldMenus dateByAddingTimeInterval:halfADay] earlierDate:date]) continue;
