@@ -16,6 +16,7 @@
 
 #define UUID_KEY                                        @"UUIDKEY"
 #define RESTAURANTS_UPDATED_NOTIFICATION                @"RestaurantsUpdatedNotification"
+#define MENUS_UPDATED_NOTIFICATION                      @"MenusUpdatedNotification"
 #define LAST_OPENED_RESTAURANT_ID                       @"LastOpenedRestaurantID"
 #define MAX_TITLE_LENGTH                                13
 

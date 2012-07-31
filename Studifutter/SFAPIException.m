@@ -7,7 +7,6 @@
 //
 
 #import "SFAPIException.h"
-#import "Constants.h"
 
 
 @implementation SFAPIException

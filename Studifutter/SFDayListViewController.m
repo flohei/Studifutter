@@ -14,7 +14,6 @@
 #import "SFMenuViewController.h"
 #import "SFRestaurantDetailViewController.h"
 #import "TestFlight.h"
-#import "Constants.h"
 #import "FHGradientView.h"
 
 @interface SFDayListViewController ()
@@ -27,6 +26,7 @@
 - (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate;
 
 - (NSString *)monthStringForDate:(NSDate *)date;
+- (void)reloadData:(NSNotification *)notification;
 
 @end
 
@@ -40,9 +40,10 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData:) name:MENUS_UPDATED_NOTIFICATION object:nil];
     
     bannerVisible = YES;
     [self moveBannerOffScreen];
@@ -61,11 +62,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
 }
 
 - (void)viewDidUnload {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setBannerView:nil];
     [self setTableView:nil];
     [super viewDidUnload];    
@@ -73,6 +76,10 @@
 }
 
 #pragma mark - Misc
+
+- (void)reloadData:(NSNotification *)notification {
+    [[self tableView] reloadData];
+}
 
 - (void)setRestaurant:(Restaurant *)restaurant {
     _restaurant = restaurant;

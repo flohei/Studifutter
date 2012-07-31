@@ -7,7 +7,6 @@
 //
 
 #import "SFAPICall.h"
-#import "Constants.h"
 #import "SFAppDelegate.h"
 #import "SFAPIException.h"
 #import "NSString+URLEncode.h"

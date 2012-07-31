@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Constants.h"
 
 
 @interface SFAPIException : NSException {

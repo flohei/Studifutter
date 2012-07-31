@@ -7,7 +7,6 @@
 //
 
 #import "Connection.h"
-#import "Constants.h"
 #import "SFAppDelegate.h"
 #import "Reachability.h"
 #import "SFAPICall.h"

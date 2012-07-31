@@ -14,6 +14,11 @@
 #import "RestaurantTableViewCell.h"
 #import "FHGradientView.h"
 
+@interface SFRestaurantViewController ()
+
+- (void)reloadData:(NSNotification *)notification;
+
+@end
 
 @implementation SFRestaurantViewController
 
@@ -22,9 +27,10 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData:) name:RESTAURANTS_UPDATED_NOTIFICATION object:nil];
     
     NSError *error;
 	if (![[self fetchedResultsController] performFetch:&error]) {
@@ -52,6 +58,10 @@
 }
 
 #pragma mark - Misc
+
+- (void)reloadData:(NSNotification *)notification {
+    [[self tableView] reloadData];
+}
 
 - (void)dismissInfoView {
     [self dismissModalViewControllerAnimated:YES];
