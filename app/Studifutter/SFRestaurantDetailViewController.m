@@ -9,7 +9,6 @@
 #import "SFRestaurantDetailViewController.h"
 #import "Restaurant.h"
 #import "TestFlight.h"
-#import "Constants.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SFRestaurantDetailViewController ()

@@ -7,7 +7,6 @@
 //
 
 #import "SFInfoViewController.h"
-#import "Constants.h"
 #import "TestFlight.h"
 #import "SFWebViewController.h"
 

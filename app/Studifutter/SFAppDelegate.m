@@ -7,7 +7,6 @@
 //
 
 #import "SFAppDelegate.h"
-#import "Constants.h"
 #import "SFRestaurantViewController.h"
 #import "SFDayListViewController.h"
 #import "Connection.h"
@@ -238,6 +237,7 @@
 
 - (void)finishedDownloadMenusForRestaurant:(BOOL)success {
     [self cleanupLocalMenus];
+    [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:MENUS_UPDATED_NOTIFICATION object:nil]];
 }
 
 #pragma mark - Core Data stack
