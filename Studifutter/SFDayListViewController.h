@@ -17,6 +17,7 @@
 }
 
 @property (nonatomic, retain) Restaurant *restaurant;
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet ADBannerView *bannerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

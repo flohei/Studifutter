@@ -19,13 +19,6 @@
 @end
 
 @implementation SFRestaurantDetailViewController
-@synthesize streetLabel = _streetLabel;
-@synthesize zipAndCityLabel = _zipAndCityLabel;
-@synthesize notesLabel = _notesLabel;
-@synthesize mapView = _mapView;
-@synthesize bannerView = _bannerView;
-@synthesize postItView = _postItView;
-@synthesize restaurant = _restaurant;
 
 #pragma mark - View lifecycle
 

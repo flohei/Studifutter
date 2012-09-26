@@ -28,15 +28,12 @@
 - (NSString *)monthStringForDate:(NSDate *)date;
 - (void)reloadData:(NSNotification *)notification;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bannerVisibleConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHiddenConstraint;
+
 @end
 
 @implementation SFDayListViewController
-
-@synthesize restaurant = _restaurant;
-@synthesize bannerView = _bannerView;
-@synthesize tableView = _tableView;
-@synthesize sections = _sections;
-@synthesize sortedMonths = _sortedMonths;
 
 #pragma mark - View lifecycle
 
@@ -71,6 +68,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setBannerView:nil];
     [self setTableView:nil];
+    [self setContainerView:nil];
+    [self setBannerHiddenConstraint:nil];
     [super viewDidUnload];    
     self.restaurant = nil;
 }
@@ -162,6 +161,20 @@
     }
 }
 
+- (NSLayoutConstraint *)bannerHiddenConstraint {
+    if (!_bannerHiddenConstraint) {
+        _bannerHiddenConstraint = [NSLayoutConstraint constraintWithItem:_bannerView
+                                                               attribute:NSLayoutAttributeBottom
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:_containerView
+                                                               attribute:NSLayoutAttributeBottom
+                                                              multiplier:1.0
+                                                                constant:50.0];
+    }
+    
+    return _bannerHiddenConstraint;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -224,49 +237,33 @@
 
 #pragma mark - iAds
 
-- (void)moveBannerOffScreen {   
+- (void)moveBannerOffScreen {
     if (!bannerVisible) return;
+    NSLog(@"moving banner off screen");
     
-    float offset = self.bannerView.frame.size.height;
-    
-    CGRect bannerFrame = [[self bannerView] frame];
-    bannerFrame.origin.y += offset;
-    
-    CGRect tableFrame = [[self tableView] frame];
-    tableFrame.size.height += offset;
-    
-    [UIView beginAnimations:@"MoveAdOffScreen" context:nil];
-    [[self bannerView] setFrame:bannerFrame];
-    [[self tableView] setFrame:tableFrame];
-    [UIView commitAnimations];
+    [_containerView removeConstraint:[self bannerVisibleConstraint]];
+    [_containerView addConstraint:[self bannerHiddenConstraint]];
     
     bannerVisible = NO;
 }
 
 - (void)moveBannerOnScreen {
     if (bannerVisible) return;
+    NSLog(@"moving banner on screen");
     
-    float offset = self.bannerView.frame.size.height;
-    
-    CGRect bannerFrame = [[self bannerView] frame];
-    bannerFrame.origin.y -= offset;
-    
-    CGRect tableFrame = [[self tableView] frame];
-    tableFrame.size.height -= offset;
-    
-    [UIView beginAnimations:@"MoveAdOnScreen" context:nil];
-    [[self bannerView] setFrame:bannerFrame];
-    [[self tableView] setFrame:tableFrame];
-    [UIView commitAnimations];
+    [_containerView removeConstraint:[self bannerHiddenConstraint]];
+    [_containerView addConstraint:[self bannerVisibleConstraint]];
     
     bannerVisible = YES;
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    NSLog(@"%s", __FUNCTION__);
     [self moveBannerOnScreen];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"%s", __FUNCTION__);
     [self moveBannerOffScreen];
 }
 
