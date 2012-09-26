@@ -19,6 +19,7 @@
 
 - (void)cleanupLocalMenus;
 - (void)downloadData;
+- (void)clearStores;
 
 @end
 
@@ -154,6 +155,26 @@
     } else {
         return fetchedObjects;
     }
+}
+
+- (void)completeCleanup {
+    [self clearStores];
+    [self downloadData];
+}
+
+- (void)clearStores {
+    NSArray *stores = [[self persistentStoreCoordinator] persistentStores];
+    
+    for (NSPersistentStore *store in stores) {
+        NSError *error = nil;
+        [[NSFileManager defaultManager] removeItemAtPath:store.URL.path error:&error];
+        
+        NSAssert(error == nil, [error localizedDescription]);
+    }
+    
+    __managedObjectContext = nil;
+    __managedObjectModel = nil;
+    __persistentStoreCoordinator = nil;
 }
 
 #pragma mark Operation Balance
