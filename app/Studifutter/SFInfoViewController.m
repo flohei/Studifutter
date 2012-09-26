@@ -10,27 +10,13 @@
 #import "TestFlight.h"
 #import "SFWebViewController.h"
 
+@interface SFInfoViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
+@end
+
 @implementation SFInfoViewController
-
-@synthesize delegate = _delegate;
-@synthesize versionLabel = _versionLabel;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowWebView"]) {
@@ -47,6 +33,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    UIImage *background;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    if ([UIScreen mainScreen].scale == 2.f && screenHeight == 568.0f) {
+        background = [UIImage imageNamed:@"studifutter-infoscreen-blanko-568h@2x.png"];
+    } else {
+        background = [UIImage imageNamed:@"studifutter-infoscreen-blanko.png"];
+    }
+    
+    [[self backgroundImageView] setImage:background];
+    
     [TestFlight passCheckpoint:INFO_SHOW_CHECKPOINT];
     
     [[self versionLabel] setText:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
@@ -55,6 +51,7 @@
 - (void)viewDidUnload
 {
     [self setVersionLabel:nil];
+    [self setBackgroundImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
