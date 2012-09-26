@@ -21,6 +21,8 @@
 
 - (void)refreshLocalData;
 
+- (void)completeCleanup;
+
 @property int operationBalance;
 
 - (NSArray *)localRestaurants;

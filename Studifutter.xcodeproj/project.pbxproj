@@ -27,6 +27,7 @@
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A53BC149CFFAC00F915DE /* FHGradientView.m */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
+		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
 		8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */; };
 		8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250107146BC71000453E58 /* studifutter-app-icon-512.png */; };
 		8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */; };
@@ -134,6 +135,8 @@
 		8F1E5CF516134A3200E5E79F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8F1E5CF816134A3D00E5E79F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFA16134A4400E5E79F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
+		8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
 		8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-114-retina.png"; sourceTree = "<group>"; };
 		8F250107146BC71000453E58 /* studifutter-app-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-512.png"; sourceTree = "<group>"; };
 		8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-57-getanewphoneres.png"; sourceTree = "<group>"; };
@@ -420,6 +423,8 @@
 				8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */,
 				8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */,
 				8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */,
+				8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */,
+				8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -747,6 +752,7 @@
 				8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */,
 				8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */,
 				8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */,
+				8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
