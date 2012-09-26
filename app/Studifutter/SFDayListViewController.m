@@ -239,31 +239,39 @@
 
 - (void)moveBannerOffScreen {
     if (!bannerVisible) return;
-    NSLog(@"moving banner off screen");
     
-    [_containerView removeConstraint:[self bannerVisibleConstraint]];
-    [_containerView addConstraint:[self bannerHiddenConstraint]];
+    // layout to starting position  
+    [_containerView layoutIfNeeded];
+    
+    [UIView animateWithDuration:.5 animations:^{
+        [_containerView removeConstraint:[self bannerVisibleConstraint]];
+        [_containerView addConstraint:[self bannerHiddenConstraint]];
+        [_containerView layoutIfNeeded];
+    }];
     
     bannerVisible = NO;
 }
 
 - (void)moveBannerOnScreen {
     if (bannerVisible) return;
-    NSLog(@"moving banner on screen");
     
-    [_containerView removeConstraint:[self bannerHiddenConstraint]];
-    [_containerView addConstraint:[self bannerVisibleConstraint]];
+    // layout to starting position
+    [_containerView layoutIfNeeded];
+    
+    [UIView animateWithDuration:.5 animations:^{
+        [_containerView removeConstraint:[self bannerHiddenConstraint]];
+        [_containerView addConstraint:[self bannerVisibleConstraint]];
+        [_containerView layoutIfNeeded];
+    }];
     
     bannerVisible = YES;
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    NSLog(@"%s", __FUNCTION__);
     [self moveBannerOnScreen];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"%s", __FUNCTION__);
     [self moveBannerOffScreen];
 }
 
