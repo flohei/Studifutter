@@ -80,7 +80,7 @@
         [mailComposer setToRecipients:[NSArray arrayWithObject:@"studifutter@rtfnt.com"]];
         [mailComposer setMailComposeDelegate:self];
         [[mailComposer navigationBar] setBarStyle:UIBarStyleBlack];
-        [self presentModalViewController:mailComposer animated:YES];
+        [self presentViewController:mailComposer animated:YES completion:nil];
     } else {
         NSString *mailURLString = [NSString stringWithFormat:@"mailto:studifutter@rtfnt.com?subject=%@", NSLocalizedString(@"MAIL_SUBJECT_FEEDBACK", @"Subject line")];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailURLString]];
@@ -91,7 +91,7 @@
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
 	[self becomeFirstResponder];
-	[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
