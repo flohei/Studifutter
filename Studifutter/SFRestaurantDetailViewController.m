@@ -11,10 +11,24 @@
 #import "TestFlight.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface SFRestaurantDetailViewController ()
+@interface SFRestaurantDetailViewController () {
+    bool bannerVisible;
+}
 
 - (void)moveBannerOffScreen;
 - (void)moveBannerOnScreen;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bannerVisibleConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHiddenConstraint;
+
+@property (strong, nonatomic) IBOutlet UIView *containerView;
+
+@property (weak, nonatomic) IBOutlet UILabel *streetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *zipAndCityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
+@property (weak, nonatomic) IBOutlet UIImageView *postItView;
 
 @end
 
@@ -28,7 +42,7 @@
     // Do any additional setup after loading the view from its nib.
     
     bannerVisible = YES;
-    [self moveBannerOnScreen];
+    [self moveBannerOffScreen];
     
     self.streetLabel.text = _restaurant.street;
     self.zipAndCityLabel.text = [NSString stringWithFormat:@"%@ %@", _restaurant.zipCode, _restaurant.city];
@@ -64,8 +78,6 @@
     [self setBannerView:nil];
     [self setPostItView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -86,21 +98,31 @@
 
 #pragma mark - iAds
 
-- (void)moveBannerOffScreen {   
+- (NSLayoutConstraint *)bannerHiddenConstraint {
+    if (!_bannerHiddenConstraint) {
+        _bannerHiddenConstraint = [NSLayoutConstraint constraintWithItem:_bannerView
+                                                               attribute:NSLayoutAttributeBottom
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:_containerView
+                                                               attribute:NSLayoutAttributeBottom
+                                                              multiplier:1.0
+                                                                constant:50.0];
+    }
+    
+    return _bannerHiddenConstraint;
+}
+
+- (void)moveBannerOffScreen {
     if (!bannerVisible) return;
     
-    float offset = self.bannerView.frame.size.height;
+    // layout to starting position
+    [_containerView layoutIfNeeded];
     
-    CGRect bannerFrame = [[self bannerView] frame];
-    bannerFrame.origin.y += offset;
-    
-    CGRect tableFrame = [[self mapView] frame];
-    tableFrame.size.height += offset;
-    
-    [UIView beginAnimations:@"MoveAdOffScreen" context:nil];
-    [[self bannerView] setFrame:bannerFrame];
-    [[self mapView] setFrame:tableFrame];
-    [UIView commitAnimations];
+    [UIView animateWithDuration:.5 animations:^{
+        [_containerView removeConstraint:[self bannerVisibleConstraint]];
+        [_containerView addConstraint:[self bannerHiddenConstraint]];
+        [_containerView layoutIfNeeded];
+    }];
     
     bannerVisible = NO;
 }
@@ -108,18 +130,14 @@
 - (void)moveBannerOnScreen {
     if (bannerVisible) return;
     
-    float offset = self.bannerView.frame.size.height;
+    // layout to starting position
+    [_containerView layoutIfNeeded];
     
-    CGRect bannerFrame = [[self bannerView] frame];
-    bannerFrame.origin.y -= offset;
-    
-    CGRect tableFrame = [[self mapView] frame];
-    tableFrame.size.height -= offset;
-    
-    [UIView beginAnimations:@"MoveAdOnScreen" context:nil];
-    [[self bannerView] setFrame:bannerFrame];
-    [[self mapView] setFrame:tableFrame];
-    [UIView commitAnimations];
+    [UIView animateWithDuration:.5 animations:^{
+        [_containerView removeConstraint:[self bannerHiddenConstraint]];
+        [_containerView addConstraint:[self bannerVisibleConstraint]];
+        [_containerView layoutIfNeeded];
+    }];
     
     bannerVisible = YES;
 }

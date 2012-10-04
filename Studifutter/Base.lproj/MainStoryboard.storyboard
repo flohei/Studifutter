@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="feI-Nk-fv4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="feI-Nk-fv4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -41,17 +41,20 @@
                                 </connections>
                             </adBannerView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-h3-sqi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" type="user" id="fS1-vG-NoU"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="F8c-e6-yiX" id="8O6-8r-qeJ"/>
                                 </connections>
                             </mapView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="studifutter-post-it.png" translatesAutoresizingMaskIntoConstraints="NO" id="KV8-SJ-YiF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="studifutter-post-it.png" translatesAutoresizingMaskIntoConstraints="NO" id="KV8-SJ-YiF">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="142" id="8oG-Dk-Lif"/>
                                     <constraint firstAttribute="width" constant="198" id="NSB-Wq-7H6"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ohm-Platz 1" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-7O-hPd">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ohm-Platz 1" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-7O-hPd">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YlQ-RB-zbN"/>
                                     <constraint firstAttribute="width" constant="159" id="zCl-Rk-xkA"/>
@@ -60,7 +63,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="90443 Nürnberg" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBH-8d-5n5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="90443 Nürnberg" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBH-8d-5n5">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3CH-CX-jA1"/>
                                 </constraints>
@@ -68,7 +71,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In diesem Restaurant gibt es nichts Besonderes, nur den ganzen Kram von gestern." lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="T8k-FS-Rae">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In diesem Restaurant gibt es nichts Besonderes, nur den ganzen Kram von gestern." lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="T8k-FS-Rae">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="zVm-8r-Wnx"/>
                                 </constraints>
@@ -79,29 +82,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KV8-SJ-YiF" firstAttribute="centerX" secondItem="vaE-7O-hPd" secondAttribute="centerX" type="default" id="2Rv-df-Snf"/>
-                            <constraint firstItem="a4M-Mm-P0W" firstAttribute="bottom" secondItem="py2-3X-UNx" secondAttribute="bottom" type="user" id="6O4-Kx-Lfz"/>
-                            <constraint firstItem="KV8-SJ-YiF" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" constant="3" id="7gr-JM-67e"/>
-                            <constraint firstItem="iR4-h3-sqi" firstAttribute="trailing" secondItem="py2-3X-UNx" secondAttribute="trailing" type="default" id="8WI-oY-M0G"/>
-                            <constraint firstItem="iR4-h3-sqi" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" type="default" id="99s-Uz-vmj"/>
+                            <constraint firstItem="a4M-Mm-P0W" firstAttribute="top" secondItem="iR4-h3-sqi" secondAttribute="bottom" type="user" id="3kO-qj-JdH"/>
+                            <constraint firstItem="OBH-8d-5n5" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="54" id="KgM-f1-fRa"/>
+                            <constraint firstAttribute="bottom" secondItem="a4M-Mm-P0W" secondAttribute="bottom" constant="-1" type="user" id="KvB-yG-oSU"/>
                             <constraint firstItem="T8k-FS-Rae" firstAttribute="trailing" secondItem="OBH-8d-5n5" secondAttribute="trailing" type="default" id="LhS-uG-52P"/>
-                            <constraint firstItem="a4M-Mm-P0W" firstAttribute="top" secondItem="iR4-h3-sqi" secondAttribute="bottom" constant="-1" type="user" id="Mdf-1q-Mh9"/>
                             <constraint firstItem="OBH-8d-5n5" firstAttribute="leading" secondItem="T8k-FS-Rae" secondAttribute="leading" type="default" id="Qm0-2l-mRt"/>
+                            <constraint firstItem="iR4-h3-sqi" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" type="user" id="QmX-Bh-3iN"/>
                             <constraint firstItem="a4M-Mm-P0W" firstAttribute="trailing" secondItem="py2-3X-UNx" secondAttribute="trailing" type="default" id="SjW-bx-GfC"/>
+                            <constraint firstItem="iR4-h3-sqi" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="167" type="user" id="Wpc-Nc-Phj"/>
+                            <constraint firstItem="iR4-h3-sqi" firstAttribute="trailing" secondItem="py2-3X-UNx" secondAttribute="trailing" type="user" id="aK4-hd-nQH"/>
+                            <constraint firstItem="KV8-SJ-YiF" firstAttribute="centerX" secondItem="vaE-7O-hPd" secondAttribute="centerX" type="default" id="b2F-5s-Zrs"/>
                             <constraint firstItem="a4M-Mm-P0W" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" type="default" id="bV4-rX-7jh"/>
                             <constraint firstItem="T8k-FS-Rae" firstAttribute="top" secondItem="OBH-8d-5n5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gTx-DE-FPZ"/>
-                            <constraint firstItem="iR4-h3-sqi" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" type="user" id="j2c-lO-fhi"/>
-                            <constraint firstItem="vaE-7O-hPd" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="11" id="jzk-k8-nbx"/>
+                            <constraint firstItem="KV8-SJ-YiF" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mH3-1v-kbM"/>
+                            <constraint firstItem="T8k-FS-Rae" firstAttribute="centerX" secondItem="iR4-h3-sqi" secondAttribute="centerX" type="default" id="ma6-xf-bJU"/>
+                            <constraint firstItem="vaE-7O-hPd" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="36" id="n7R-kU-TYB"/>
                             <constraint firstItem="OBH-8d-5n5" firstAttribute="leading" secondItem="vaE-7O-hPd" secondAttribute="leading" type="default" id="nvd-Gj-RPY"/>
-                            <constraint firstItem="OBH-8d-5n5" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="29" id="oVP-ke-5yl"/>
-                            <constraint firstItem="a4M-Mm-P0W" firstAttribute="bottom" secondItem="py2-3X-UNx" secondAttribute="bottom" type="user" id="s8F-i6-xLr"/>
-                            <constraint firstItem="KV8-SJ-YiF" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="-5" id="tBg-lY-aTl"/>
                             <constraint firstItem="vaE-7O-hPd" firstAttribute="trailing" secondItem="OBH-8d-5n5" secondAttribute="trailing" type="default" id="yus-P2-2nZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Karte" id="dkv-kK-VIl"/>
                     <connections>
                         <outlet property="bannerView" destination="a4M-Mm-P0W" id="CAN-b2-TRS"/>
+                        <outlet property="bannerVisibleConstraint" destination="KvB-yG-oSU" id="mIx-2x-Bb5"/>
+                        <outlet property="containerView" destination="py2-3X-UNx" id="z8f-KP-ZJv"/>
                         <outlet property="mapView" destination="iR4-h3-sqi" id="qjj-Z4-tpI"/>
                         <outlet property="notesLabel" destination="T8k-FS-Rae" id="GAK-s3-SNN"/>
                         <outlet property="postItView" destination="KV8-SJ-YiF" id="kJh-MK-5dL"/>
@@ -688,85 +692,6 @@
         <image name="studifutter-schnipsel.png" width="609" height="131"/>
         <image name="twitter.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="DayTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MenuTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="infoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RestaurantTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="restaurantAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="restaurantNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFDayListViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFDayListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bannerHiddenConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="bannerVisibleConstraint" candidateClass="NSLayoutConstraint"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SFInfoViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFInfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="feedback:"/>
-                <relationship kind="action" name="mail:"/>
-                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="versionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFMenuViewController" superclassName="SFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFMenuViewController.h"/>
-        </class>
-        <class className="SFRestaurantDetailViewController" superclassName="SFViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="postItView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="zipAndCityLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SFRestaurantViewController" superclassName="SFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFRestaurantViewController.h"/>
-        </class>
-        <class className="SFSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFSettingsViewController.h"/>
-        </class>
-        <class className="SFTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFTableViewController.h"/>
-        </class>
-        <class className="SFViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFViewController.h"/>
-        </class>
-        <class className="SFWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SFWebViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
