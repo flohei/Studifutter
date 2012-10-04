@@ -2,6 +2,8 @@
 
 @implementation MenuSet
 
-// Custom logic goes here.
+- (NSString *)description {
+    return [NSString stringWithFormat:@"MenuSet for day %@ in restaurant %@", [self date], [self restaurant]];
+}
 
 @end
