@@ -38,7 +38,15 @@
 - (void)updateLabels {
     [nameLabel setText:[[self menu] name]];
     
-    NSMutableString *infoString = [NSMutableString stringWithFormat:@"%.2f€/%.2f€", _menu.priceValue, _menu.reducedPriceValue];
+    NSLocale *german = [[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setLocale:german];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    NSString *priceString1 = [formatter stringFromNumber:[_menu price]];
+    NSString *priceString2 = [formatter stringFromNumber:[_menu reducedPrice]];
+    
+    NSMutableString *infoString = [NSMutableString stringWithFormat:@"%@/%@", priceString1, priceString2];
     
     if (_menu.extraChars.length > 0) {
         [infoString appendFormat:@" - %@", _menu.extraChars];
