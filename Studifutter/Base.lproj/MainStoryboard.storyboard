@@ -54,9 +54,17 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ohm-Platz 1" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-7O-hPd">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YlQ-RB-zbN"/>
-                                    <constraint firstAttribute="width" constant="159" id="zCl-Rk-xkA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mensataria" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="g7O-FO-pKx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Xj4-sE-prQ"/>
+                                    <constraint firstAttribute="width" constant="159" id="k8U-Iw-9lc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -68,8 +76,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In diesem Restaurant gibt es nichts Besonderes, nur den ganzen Kram von gestern." lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="T8k-FS-Rae">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="In diesem Restaurant gibt es nichts Besonderes, nur den ganzen Kram von gestern." lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="T8k-FS-Rae">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="JdL-OG-zpx"/>
                                     <constraint firstAttribute="height" constant="56" id="zVm-8r-Wnx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
@@ -85,23 +94,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kbR-tv-Riy" firstAttribute="trailing" secondItem="py2-3X-UNx" secondAttribute="trailing" type="default" id="0UZ-pO-uZJ"/>
-                            <constraint firstItem="KV8-SJ-YiF" firstAttribute="centerX" secondItem="T8k-FS-Rae" secondAttribute="centerX" type="default" id="0td-lR-uhg"/>
+                            <constraint firstItem="OBH-8d-5n5" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="91" id="0Xj-0X-LO0"/>
                             <constraint firstItem="a4M-Mm-P0W" firstAttribute="top" secondItem="iR4-h3-sqi" secondAttribute="bottom" type="user" id="3kO-qj-JdH"/>
-                            <constraint firstItem="T8k-FS-Rae" firstAttribute="centerX" secondItem="kbR-tv-Riy" secondAttribute="centerX" type="default" id="H2A-Fm-wHw"/>
+                            <constraint firstItem="OBH-8d-5n5" firstAttribute="centerX" secondItem="kbR-tv-Riy" secondAttribute="centerX" type="default" id="49A-9C-dCp"/>
+                            <constraint firstItem="kbR-tv-Riy" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="153" id="4ML-dQ-JJ9"/>
+                            <constraint firstItem="g7O-FO-pKx" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="47" id="Bu6-qr-Rvh"/>
+                            <constraint firstItem="g7O-FO-pKx" firstAttribute="leading" secondItem="vaE-7O-hPd" secondAttribute="leading" type="default" id="Iyz-SS-2Ti"/>
+                            <constraint firstItem="vaE-7O-hPd" firstAttribute="centerY" secondItem="KV8-SJ-YiF" secondAttribute="centerY" type="default" id="JrQ-T6-h23"/>
                             <constraint firstAttribute="bottom" secondItem="a4M-Mm-P0W" secondAttribute="bottom" constant="-1" type="user" id="KvB-yG-oSU"/>
-                            <constraint firstItem="T8k-FS-Rae" firstAttribute="trailing" secondItem="OBH-8d-5n5" secondAttribute="trailing" type="default" id="LhS-uG-52P"/>
-                            <constraint firstItem="OBH-8d-5n5" firstAttribute="leading" secondItem="T8k-FS-Rae" secondAttribute="leading" type="default" id="Qm0-2l-mRt"/>
                             <constraint firstItem="iR4-h3-sqi" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" type="user" id="QmX-Bh-3iN"/>
                             <constraint firstItem="a4M-Mm-P0W" firstAttribute="trailing" secondItem="py2-3X-UNx" secondAttribute="trailing" type="default" id="SjW-bx-GfC"/>
-                            <constraint firstItem="kbR-tv-Riy" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="153" id="Wjl-TM-ZTn"/>
                             <constraint firstItem="iR4-h3-sqi" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="167" type="user" id="Wpc-Nc-Phj"/>
-                            <constraint firstItem="vaE-7O-hPd" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="28" id="YtF-tC-blG"/>
                             <constraint firstItem="iR4-h3-sqi" firstAttribute="trailing" secondItem="py2-3X-UNx" secondAttribute="trailing" type="user" id="aK4-hd-nQH"/>
+                            <constraint firstItem="g7O-FO-pKx" firstAttribute="centerX" secondItem="KV8-SJ-YiF" secondAttribute="centerX" type="default" id="aMK-7N-dUR"/>
                             <constraint firstItem="a4M-Mm-P0W" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" type="default" id="bV4-rX-7jh"/>
-                            <constraint firstItem="T8k-FS-Rae" firstAttribute="top" secondItem="OBH-8d-5n5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gTx-DE-FPZ"/>
+                            <constraint firstAttribute="trailing" secondItem="T8k-FS-Rae" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fml-47-V0Y"/>
                             <constraint firstItem="kbR-tv-Riy" firstAttribute="leading" secondItem="py2-3X-UNx" secondAttribute="leading" type="default" id="iKH-vp-KoV"/>
-                            <constraint firstItem="OBH-8d-5n5" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="46" id="lMg-oR-ZhT"/>
                             <constraint firstItem="OBH-8d-5n5" firstAttribute="leading" secondItem="vaE-7O-hPd" secondAttribute="leading" type="default" id="nvd-Gj-RPY"/>
+                            <constraint firstItem="g7O-FO-pKx" firstAttribute="trailing" secondItem="vaE-7O-hPd" secondAttribute="trailing" type="default" id="pXv-8v-wFt"/>
+                            <constraint firstItem="iR4-h3-sqi" firstAttribute="top" secondItem="T8k-FS-Rae" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tvj-Dz-21i"/>
                             <constraint firstItem="KV8-SJ-YiF" firstAttribute="top" secondItem="py2-3X-UNx" secondAttribute="top" constant="12" id="wi8-WT-jWp"/>
                             <constraint firstItem="vaE-7O-hPd" firstAttribute="trailing" secondItem="OBH-8d-5n5" secondAttribute="trailing" type="default" id="yus-P2-2nZ"/>
                         </constraints>
@@ -112,6 +123,7 @@
                         <outlet property="bannerVisibleConstraint" destination="KvB-yG-oSU" id="mIx-2x-Bb5"/>
                         <outlet property="containerView" destination="py2-3X-UNx" id="z8f-KP-ZJv"/>
                         <outlet property="mapView" destination="iR4-h3-sqi" id="qjj-Z4-tpI"/>
+                        <outlet property="nameLabel" destination="g7O-FO-pKx" id="gaR-gt-UxQ"/>
                         <outlet property="notesLabel" destination="T8k-FS-Rae" id="GAK-s3-SNN"/>
                         <outlet property="postItView" destination="KV8-SJ-YiF" id="kJh-MK-5dL"/>
                         <outlet property="streetLabel" destination="vaE-7O-hPd" id="Jj7-Dn-oaW"/>
@@ -756,6 +768,7 @@
                 <relationship kind="outlet" name="bannerVisibleConstraint" candidateClass="NSLayoutConstraint"/>
                 <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="notesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="postItView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="streetLabel" candidateClass="UILabel"/>

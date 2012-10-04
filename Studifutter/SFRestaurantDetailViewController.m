@@ -23,6 +23,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *streetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *zipAndCityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
@@ -44,6 +45,7 @@
     bannerVisible = YES;
     [self moveBannerOffScreen];
     
+    self.nameLabel.text = _restaurant.name;
     self.streetLabel.text = _restaurant.street;
     self.zipAndCityLabel.text = [NSString stringWithFormat:@"%@ %@", _restaurant.zipCode, _restaurant.city];
     self.notesLabel.text = _restaurant.notes;
@@ -71,6 +73,7 @@
 
 - (void)viewDidUnload
 {
+    [self setNameLabel:nil];
     [self setStreetLabel:nil];
     [self setZipAndCityLabel:nil];
     [self setNotesLabel:nil];
