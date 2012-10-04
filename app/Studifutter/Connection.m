@@ -241,9 +241,9 @@ static Connection *_connection;
                     menu.menuSet = menuSet;
                 }
                 
-                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] endUndoGrouping];
-                
-                [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
+                SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+                [[[delegate managedObjectContext] undoManager] endUndoGrouping];
+                [delegate saveContext];
             }
             success = YES;
         }
