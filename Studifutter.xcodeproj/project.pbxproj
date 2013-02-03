@@ -92,6 +92,7 @@
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.txt */; };
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
+		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
 		8FD5EB9215370A98008476F8 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FD5EB9115370A98008476F8 /* Entitlements.plist */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
@@ -246,6 +247,8 @@
 		8FA40B5916BED22000736EC3 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDataAccessor.h; sourceTree = "<group>"; };
 		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
+		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHVersionUpdate.h; sourceTree = "<group>"; };
+		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHVersionUpdate.m; sourceTree = "<group>"; };
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				8F4748F815B7522D00078434 /* Studifutter.entitlements */,
 				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
 				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
+				8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */,
+				8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */,
 				8F729BCF145F2AD000FE166B /* Misc */,
 				8F729BCE145F2AC300FE166B /* Network */,
 				8F729BC8145F247500FE166B /* Resources */,
@@ -759,6 +764,7 @@
 				8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */,
 				8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */,
 				8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */,
+				8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
