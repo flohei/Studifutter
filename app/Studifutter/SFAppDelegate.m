@@ -13,12 +13,11 @@
 #import "TestFlight.h"
 #import "Restaurant.h"
 #import "MenuSet.h"
-#import <AudioToolbox/AudioToolbox.h>
 
 @interface SFAppDelegate ()
 
 - (void)cleanupLocalMenus;
-- (void)downloadData;
+- (void)downloadRestaurants;
 - (void)clearStores;
 
 @end
@@ -51,7 +50,8 @@
     }
     
     self.operationBalance = 0;
-    [self refreshLocalData];
+    [self cleanupLocalMenus];
+    [self downloadRestaurants];
     
     // check if there's a last restaurant saved. if so push it.
     Restaurant *lastRestaurant = (Restaurant *)[self managedObjectForID:[[NSUserDefaults standardUserDefaults] objectForKey:LAST_OPENED_RESTAURANT_ID]];
@@ -95,8 +95,8 @@
 }
 
 - (void)refreshLocalData {
-    [self downloadData];
-//    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    [self cleanupLocalMenus];
+    [self downloadRestaurants];
 }
 
 - (void)cleanupLocalMenus {
@@ -159,7 +159,7 @@
 
 - (void)completeCleanup {
     [self clearStores];
-    [self downloadData];
+    [self downloadRestaurants];
 }
 
 - (void)clearStores {
@@ -195,7 +195,7 @@
 
 #pragma mark Download
 
-- (void)downloadData {
+- (void)downloadRestaurants {
     NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
     [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
     self.operationBalance += 1;
@@ -213,51 +213,35 @@
     
     if (success) {
         [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
-        
-        NSInvocationOperation *downloadMenus = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadMenusForRestaurants) object:nil];
-        [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadMenus];
     }
 }
 
-- (void)doDownloadMenusForRestaurants {
-    NSArray *restaurants = [self localRestaurants];
-    BOOL success = YES;
+- (void)downloadMenuForRestaurant:(Restaurant *)restaurant {
+    [self performSelectorInBackground:@selector(doDownloadMenuForRestaurant:) withObject:restaurant];
+}
+
+- (void)doDownloadMenuForRestaurant:(Restaurant *)restaurant {
+    BOOL success = NO;
     
-    NSMutableArray *exceptions = [[NSMutableArray alloc] init];
-    
-    // go ahead and look for every menu
-    for (Restaurant *r in restaurants) {
-        @try {
-            if (![[Connection sharedConnection] readMenuForRestaurant:r]) {
-                success = NO;
-            }
-        }
-        @catch (NSException *exception) {
-            // log the exception
-            [exceptions addObject:exception];
+    @try {
+        if ([[Connection sharedConnection] readMenuForRestaurant:restaurant]) {
+            success = YES;
         }
     }
-    
-    // check if there were any exceptions
-    if ([exceptions count] > 0) {
+    @catch (NSException *exception) {
         // notify the user
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..." 
-                                                          message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal." 
-                                                         delegate:nil 
-                                                cancelButtonTitle:@"OK" 
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..."
+                                                          message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal."
+                                                         delegate:nil
+                                                cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
         [message show];
-        
-        // we could loop through all error messages here and create a more adequate string for the user.
-        
-        exceptions = nil;
     }
     
     [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
 - (void)finishedDownloadMenusForRestaurant:(BOOL)success {
-    [self cleanupLocalMenus];
     [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:MENUS_UPDATED_NOTIFICATION object:nil]];
 }
 

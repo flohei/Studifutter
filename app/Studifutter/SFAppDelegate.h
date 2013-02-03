@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class Restaurant;
+
 @interface SFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -18,6 +20,8 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+- (void)downloadMenuForRestaurant:(Restaurant *)restaurant;
 
 - (void)refreshLocalData;
 

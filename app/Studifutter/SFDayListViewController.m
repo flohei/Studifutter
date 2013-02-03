@@ -15,6 +15,7 @@
 #import "SFRestaurantDetailViewController.h"
 #import "TestFlight.h"
 #import "FHGradientView.h"
+#import "SFAppDelegate.h"
 
 @interface SFDayListViewController ()
 
@@ -77,6 +78,7 @@
 #pragma mark - Misc
 
 - (void)reloadData:(NSNotification *)notification {
+    _sections = nil;
     [[self tableView] reloadData];
 }
 
@@ -85,6 +87,9 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    SFAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate downloadMenuForRestaurant:_restaurant];
 }
 
 - (NSDictionary *)sections {
