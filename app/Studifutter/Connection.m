@@ -210,6 +210,19 @@ static Connection *_connection;
                 // if the date is nil stop adding the new menu set
                 if (!date) continue;
                 
+                // if the date is older than today stop adding it
+                NSCalendar *calendar = [NSCalendar currentCalendar];
+                NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+                [calendar setTimeZone:timeZone];
+                
+                NSDate *today = [NSDate date];
+                NSDateComponents *todaysComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:today];
+                NSDate *yesterday = [calendar dateFromComponents:todaysComponents];
+                
+                if ([date earlierDate:yesterday] == date) {
+                    continue;
+                }
+                
                 // compare the incoming date with the last one saved
                 NSTimeInterval halfADay = 43200;
                 if (lastDayOfOldMenus && date == [[lastDayOfOldMenus dateByAddingTimeInterval:halfADay] earlierDate:date]) continue;
