@@ -1,3 +1,10 @@
+TODOs
+
+- + (NSArray *)localRestaurants in App Delegate bereinigen (ist jetzt im Data Accessor)
+- Möglichkeit zum Checken der Version bei Update schaffen
+
+///////////////////////////////////////////////////////
+
 - (void)doDownloadMenusForRestaurants {
     NSArray *restaurants = [self localRestaurants];
     BOOL success = YES;
