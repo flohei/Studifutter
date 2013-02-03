@@ -13,6 +13,7 @@
 #import "TestFlight.h"
 #import "Restaurant.h"
 #import "MenuSet.h"
+#import "FHVersionUpdate.h"
 
 @interface SFAppDelegate ()
 
@@ -33,6 +34,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Register for the use of TestFlight
     [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
+    
+    // check and handle update if neccessary
+    [FHVersionUpdate checkAndHandleUpdate];
     
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
