@@ -120,16 +120,30 @@ static Connection *_connection;
         
         if (status == SF_API_STATUS_OK) {
             NSArray *rawRestaurants = [result objectForKey:@"data"];
-            NSArray *localRestaurants = [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] localRestaurants];
             
             for (NSDictionary *rawRestaurant in rawRestaurants) {
+                NSNumber *newRestaurantID = ([rawRestaurant objectForKey:@"id"] != [NSNull null]) ? [NSNumber numberWithInt:[[rawRestaurant objectForKey:@"id"] intValue]] : nil;
+                
+                if (newRestaurantID) {
+                    // check if this new restaurant is already locally saved                 
+                    Restaurant *reference = [SFDataAccessor restaurantByID:newRestaurantID];
+                    
+                    if (reference) {
+                        // reference found. no need to parse this one.
+                        continue;
+                    }
+                } else {
+                    // the new data does not have a restaurant id. meh.
+                    continue;
+                }
+                
                 [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] beginUndoGrouping];
                 
                 Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                 
                 // ([rawMessage objectForKey:@"subject"] != [NSNull null]) ? [rawMessage objectForKey:@"subject"] : nil;
                 aNewRestaurant.name = ([rawRestaurant objectForKey:@"name"] != [NSNull null]) ? [rawRestaurant objectForKey:@"name"] : nil;
-                aNewRestaurant.restaurantID = ([rawRestaurant objectForKey:@"id"] != [NSNull null]) ? [NSNumber numberWithInt:[[rawRestaurant objectForKey:@"id"] intValue]] : nil;
+                aNewRestaurant.restaurantID = newRestaurantID;
                 aNewRestaurant.menuURL = ([rawRestaurant objectForKey:@"url"] != [NSNull null]) ? [rawRestaurant objectForKey:@"url"] : nil;
                 aNewRestaurant.closed = ([rawRestaurant objectForKey:@"closed"] != [NSNull null]) ? [NSNumber numberWithBool:[[rawRestaurant objectForKey:@"closed"] boolValue]] : nil;
                 aNewRestaurant.city = ([rawRestaurant objectForKey:@"city"] != [NSNull null]) ? [rawRestaurant objectForKey:@"city"] : nil;
@@ -139,24 +153,12 @@ static Connection *_connection;
                 aNewRestaurant.street = ([rawRestaurant objectForKey:@"street"] != [NSNull null]) ? [rawRestaurant objectForKey:@"street"] : nil;
                 aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
                 
-                // check if aNewRestaurant is already locally saved
-                BOOL notFound = YES;
-                for (Restaurant *localRestaurant in localRestaurants) {
-                    if ([[localRestaurant restaurantID] isEqualToNumber:[aNewRestaurant restaurantID]]) {
-                        notFound = NO;
-                    }
-                }
-                
                 [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] endUndoGrouping];
                 
-                // save aNewRestaurant if it has not been found locally; delete it otherwise
-                if (notFound) {
-                    [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
-                    success = YES;
-                } else {
-                    [[self context] deleteObject:aNewRestaurant];
-                }
+                [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
             }
+            
+            success = YES;
         }
     }
     
