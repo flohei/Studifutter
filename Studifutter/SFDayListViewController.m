@@ -29,6 +29,10 @@
 - (NSString *)monthStringForDate:(NSDate *)date;
 - (void)reloadData:(NSNotification *)notification;
 
+- (void)setupInfoView;
+- (void)showInfoView;
+- (void)hideInfoView;
+
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bannerVisibleConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHiddenConstraint;
 
@@ -127,6 +131,14 @@
 - (NSArray *)allMenus {
     NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     NSSet *unsortedMenuSet = [[self restaurant] menuSet];
+    
+    if ([unsortedMenuSet count] == 0) {
+        [self setupInfoView];
+        [self showInfoView];
+    } else {
+        [self hideInfoView];
+    }
+    
     return [unsortedMenuSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
 }
 
@@ -178,6 +190,40 @@
     }
     
     return _bannerHiddenConstraint;
+}
+
+- (void)setupInfoView {
+    if (!infoView) {
+        int width = 198;
+        int height = 142;
+        CGRect frame = CGRectMake(30, 10, width, height);
+        infoView = [[UIView alloc] initWithFrame:frame];
+        
+        UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"studifutter-post-it.png"]];
+        [image setFrame:frame];
+        [image setCenter:[infoView center]];
+        
+        UILabel *infoLabel = [[UILabel alloc] initWithFrame:[image bounds]];
+        NSString *infoText = NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"Infotext, der angezeigt wird, wenn keine Menus vorhanden sind.");
+        [infoLabel setBackgroundColor:[UIColor clearColor]];
+        [infoLabel setText:infoText];
+        [infoLabel setFont:[UIFont fontWithName:@"Marker Felt" size:16]];
+        [infoLabel setCenter:[infoView center]];
+        [infoLabel setNumberOfLines:0];
+        [infoLabel setTextAlignment:NSTextAlignmentCenter];
+        
+        [infoView setBackgroundColor:[UIColor clearColor]];
+        [infoView addSubview:image];
+        [infoView addSubview:infoLabel];
+    }
+}
+
+- (void)showInfoView {
+    [[[self tableView] superview] addSubview:infoView];
+}
+
+- (void)hideInfoView {
+    [infoView removeFromSuperview];
 }
 
 #pragma mark - Table view data source

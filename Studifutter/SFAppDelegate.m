@@ -234,12 +234,7 @@
     }
     @catch (NSException *exception) {
         // notify the user
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..."
-                                                          message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal."
-                                                         delegate:nil
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
-        [message show];
+        [self performSelectorOnMainThread:@selector(raiseAlertOnMainThread) withObject:nil waitUntilDone:YES];
     }
     
     [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
@@ -247,6 +242,15 @@
 
 - (void)finishedDownloadMenusForRestaurant:(BOOL)success {
     [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:MENUS_UPDATED_NOTIFICATION object:nil]];
+}
+
+- (void)raiseAlertOnMainThread {
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..."
+                                                      message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal."
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [message show];
 }
 
 #pragma mark - Core Data stack
