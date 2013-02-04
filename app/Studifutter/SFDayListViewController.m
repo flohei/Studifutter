@@ -203,7 +203,8 @@
         [image setFrame:frame];
         [image setCenter:[infoView center]];
         
-        UILabel *infoLabel = [[UILabel alloc] initWithFrame:[image bounds]];
+        CGRect labelFrame = CGRectMake(10, 10, width-20, height-20);
+        UILabel *infoLabel = [[UILabel alloc] initWithFrame:labelFrame];
         NSString *infoText = NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"Infotext, der angezeigt wird, wenn keine Menus vorhanden sind.");
         [infoLabel setBackgroundColor:[UIColor clearColor]];
         [infoLabel setText:infoText];
