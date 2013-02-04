@@ -14,6 +14,7 @@
 
 @interface SFDayListViewController : SFViewController <ADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource> {
     bool bannerVisible;
+    UIView *infoView;
 }
 
 @property (nonatomic, retain) Restaurant *restaurant;

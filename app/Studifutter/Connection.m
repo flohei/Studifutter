@@ -70,7 +70,7 @@ static Connection *_connection;
  @param exception The exception the NSAlert shall be created for.
  */
 - (void)alertForException:(NSException *)exception {
-    [self performSelectorInBackground:@selector(showAlertForException:) withObject:exception];
+    [self performSelectorOnMainThread:@selector(showAlertForException:) withObject:exception waitUntilDone:YES];
 }
 
 - (void)showAlertForException:(NSException *)exception {
