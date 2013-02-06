@@ -16,13 +16,6 @@
 		8F0BA79C145C72F1003E2DE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79B145C72F1003E2DE0 /* main.m */; };
 		8F0BA7A0145C72F1003E2DE0 /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */; };
 		8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
-		8F0BA7B4145C72F2003E2DE0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA7B3145C72F2003E2DE0 /* SenTestingKit.framework */; };
-		8F0BA7B5145C72F2003E2DE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA78D145C72F1003E2DE0 /* UIKit.framework */; };
-		8F0BA7B6145C72F2003E2DE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA78F145C72F1003E2DE0 /* Foundation.framework */; };
-		8F0BA7B7145C72F2003E2DE0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA793145C72F1003E2DE0 /* CoreData.framework */; };
-		8F0BA7BF145C72F2003E2DE0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F0BA7BD145C72F2003E2DE0 /* InfoPlist.strings */; };
-		8F0BA7C2145C72F2003E2DE0 /* StudifutterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7C1145C72F2003E2DE0 /* StudifutterTests.m */; };
-		8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D77114697CF700896CE9 /* MainStoryboard.storyboard */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A53BC149CFFAC00F915DE /* FHGradientView.m */; };
@@ -94,19 +87,8 @@
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
-		8FD5EB9215370A98008476F8 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FD5EB9115370A98008476F8 /* Entitlements.plist */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8F0BA7B8145C72F2003E2DE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F0BA788145C72F1003E2DE0;
-			remoteInfo = Studifutter;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8F04F22D1536F5F100BA25C7 /* info-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-white.png"; path = "Graphics/info-white.png"; sourceTree = "<group>"; };
@@ -122,12 +104,7 @@
 		8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
 		8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
 		8F0BA7A5145C72F1003E2DE0 /* Studifutter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Studifutter.xcdatamodel; sourceTree = "<group>"; };
-		8F0BA7B2145C72F2003E2DE0 /* StudifutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudifutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0BA7B3145C72F2003E2DE0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8F0BA7BC145C72F2003E2DE0 /* StudifutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudifutterTests-Info.plist"; sourceTree = "<group>"; };
-		8F0BA7BE145C72F2003E2DE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8F0BA7C0145C72F2003E2DE0 /* StudifutterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudifutterTests.h; sourceTree = "<group>"; };
-		8F0BA7C1145C72F2003E2DE0 /* StudifutterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudifutterTests.m; sourceTree = "<group>"; };
 		8F10D78B146AE0F700896CE9 /* MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSet.h; sourceTree = "<group>"; };
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
@@ -229,7 +206,6 @@
 		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
 		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
-		8F78A27E1521E36D0060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = /Users/flohei/dev/studifutter/StudifutterTests/de.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
 		8F78A2801521E8B90060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Default.png; sourceTree = "<group>"; };
 		8F78A2821521E8C30060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/Default.png; sourceTree = "<group>"; };
 		8F78A2841521F0090060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -276,17 +252,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F0BA7AE145C72F2003E2DE0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F0BA7B4145C72F2003E2DE0 /* SenTestingKit.framework in Frameworks */,
-				8F0BA7B5145C72F2003E2DE0 /* UIKit.framework in Frameworks */,
-				8F0BA7B6145C72F2003E2DE0 /* Foundation.framework in Frameworks */,
-				8F0BA7B7145C72F2003E2DE0 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -294,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
-				8F0BA7BA145C72F2003E2DE0 /* StudifutterTests */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
 			);
@@ -304,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA789145C72F1003E2DE0 /* Studifutter.app */,
-				8F0BA7B2145C72F2003E2DE0 /* StudifutterTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				8FA40B5916BED22000736EC3 /* Notes.txt */,
-				8F4748F815B7522D00078434 /* Studifutter.entitlements */,
 				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
 				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
 				8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */,
@@ -359,25 +321,7 @@
 				8F0BA79B145C72F1003E2DE0 /* main.m */,
 				8F0BA79D145C72F1003E2DE0 /* Studifutter-Prefix.pch */,
 				8FD5EB9115370A98008476F8 /* Entitlements.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8F0BA7BA145C72F2003E2DE0 /* StudifutterTests */ = {
-			isa = PBXGroup;
-			children = (
-				8F0BA7C0145C72F2003E2DE0 /* StudifutterTests.h */,
-				8F0BA7C1145C72F2003E2DE0 /* StudifutterTests.m */,
-				8F0BA7BB145C72F2003E2DE0 /* Supporting Files */,
-			);
-			path = StudifutterTests;
-			sourceTree = "<group>";
-		};
-		8F0BA7BB145C72F2003E2DE0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8F0BA7BC145C72F2003E2DE0 /* StudifutterTests-Info.plist */,
-				8F0BA7BD145C72F2003E2DE0 /* InfoPlist.strings */,
+				8F4748F815B7522D00078434 /* Studifutter.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -607,25 +551,6 @@
 			productReference = 8F0BA789145C72F1003E2DE0 /* Studifutter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8F0BA7B1145C72F2003E2DE0 /* StudifutterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8F0BA7C8145C72F2003E2DE0 /* Build configuration list for PBXNativeTarget "StudifutterTests" */;
-			buildPhases = (
-				8F0BA7AD145C72F2003E2DE0 /* Sources */,
-				8F0BA7AE145C72F2003E2DE0 /* Frameworks */,
-				8F0BA7AF145C72F2003E2DE0 /* Resources */,
-				8F0BA7B0145C72F2003E2DE0 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8F0BA7B9145C72F2003E2DE0 /* PBXTargetDependency */,
-			);
-			name = StudifutterTests;
-			productName = StudifutterTests;
-			productReference = 8F0BA7B2145C72F2003E2DE0 /* StudifutterTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -650,7 +575,6 @@
 			projectRoot = "";
 			targets = (
 				8F0BA788145C72F1003E2DE0 /* Studifutter */,
-				8F0BA7B1145C72F2003E2DE0 /* StudifutterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -660,7 +584,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F10D77314697CF700896CE9 /* MainStoryboard.storyboard in Resources */,
 				8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */,
 				8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */,
 				8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */,
@@ -677,7 +600,6 @@
 				8F6232F6153613E200BA786E /* twitter.png in Resources */,
 				8F04F22E1536F5F100BA25C7 /* info-white.png in Resources */,
 				8F04F2311536FC5200BA25C7 /* pin.png in Resources */,
-				8FD5EB9215370A98008476F8 /* Entitlements.plist in Resources */,
 				8F408F72153B687600B73CA4 /* info-white@2x.png in Resources */,
 				8F408F73153B687600B73CA4 /* pin@2x.png in Resources */,
 				8F408F76153B696B00B73CA4 /* mail1@2x.png in Resources */,
@@ -690,31 +612,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F0BA7AF145C72F2003E2DE0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F0BA7BF145C72F2003E2DE0 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8F0BA7B0145C72F2003E2DE0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F0BA785145C72F1003E2DE0 /* Sources */ = {
@@ -768,42 +666,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F0BA7AD145C72F2003E2DE0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F0BA7C2145C72F2003E2DE0 /* StudifutterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8F0BA7B9145C72F2003E2DE0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8F0BA788145C72F1003E2DE0 /* Studifutter */;
-			targetProxy = 8F0BA7B8145C72F2003E2DE0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		8F0BA7BD145C72F2003E2DE0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F0BA7BE145C72F2003E2DE0 /* en */,
-				8F78A27E1521E36D0060BE14 /* de */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8F10D77114697CF700896CE9 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-			);
-			name = MainStoryboard.storyboard;
-			path = "/Users/flohei/dev/studifutter-repo/trunk/app/Studifutter";
-			sourceTree = "<absolute>";
-		};
 		8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -914,7 +779,7 @@
 		8F0BA7C6145C72F2003E2DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -936,7 +801,9 @@
 		8F0BA7C7145C72F2003E2DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
@@ -947,41 +814,9 @@
 					"\"$(SRCROOT)/TestFlightSDK1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		8F0BA7C9145C72F2003E2DE0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Studifutter.app/Studifutter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
-				INFOPLIST_FILE = "StudifutterTests/StudifutterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		8F0BA7CA145C72F2003E2DE0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Studifutter.app/Studifutter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
-				INFOPLIST_FILE = "StudifutterTests/StudifutterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1016,8 +851,8 @@
 		8FD5EB8F153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
-				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Studifutter/Entitlements.plist;
+				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -1033,23 +868,6 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
-			};
-			name = "Ad hoc";
-		};
-		8FD5EB90153709ED008476F8 /* Ad hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Studifutter.app/Studifutter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
-				INFOPLIST_FILE = "StudifutterTests/StudifutterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = "Ad hoc";
 		};
@@ -1072,16 +890,6 @@
 				8F0BA7C6145C72F2003E2DE0 /* Debug */,
 				8F0BA7C7145C72F2003E2DE0 /* Release */,
 				8FD5EB8F153709ED008476F8 /* Ad hoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8F0BA7C8145C72F2003E2DE0 /* Build configuration list for PBXNativeTarget "StudifutterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8F0BA7C9145C72F2003E2DE0 /* Debug */,
-				8F0BA7CA145C72F2003E2DE0 /* Release */,
-				8FD5EB90153709ED008476F8 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

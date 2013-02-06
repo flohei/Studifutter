@@ -4,5 +4,15 @@
 <dict>
 	<key>DataProtectionClass</key>
 	<string>NSFileProtectionComplete</string>
+	<key>application-identifier</key>
+	<string>TXCSW6TB5Q.net.rootof.mensa</string>
+	<key>aps-environment</key>
+	<string>development</string>
+	<key>get-task-allow</key>
+	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>TXCSW6TB5Q.*</string>
+	</array>
 </dict>
 </plist>

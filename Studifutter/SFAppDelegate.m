@@ -29,19 +29,10 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize operationBalance = _operationBalance;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Register for the use of TestFlight
     [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
-    
-    // check and handle update if neccessary
-    [FHVersionUpdate checkAndHandleUpdate];
-    
-    // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
     
     // create one of these fancy new UUIDs if needed
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
@@ -53,7 +44,14 @@
         CFRelease(uuid);
     }
     
-    self.operationBalance = 0;
+    // check and handle update if neccessary
+    [FHVersionUpdate checkAndHandleUpdate];
+    
+    // Override point for customization after application launch.
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
+    controller.managedObjectContext = self.managedObjectContext;
+    
     [self cleanupLocalMenus];
     [self downloadRestaurants];
     
@@ -103,6 +101,30 @@
     [self downloadRestaurants];
 }
 
+- (void)completeCleanup {
+    [self clearStores];
+    [self downloadRestaurants];
+}
+
+- (void)clearStores {
+    NSArray *stores = [[self persistentStoreCoordinator] persistentStores];
+    
+    for (NSPersistentStore *store in stores) {
+        NSError *deleteError = nil;
+        NSError *removeError = nil;
+        
+        [[self persistentStoreCoordinator] removePersistentStore:store error:&removeError];
+        [[NSFileManager defaultManager] removeItemAtPath:store.URL.path error:&deleteError];
+        
+        NSAssert(removeError == nil, [removeError localizedDescription]);
+        NSAssert(deleteError == nil, [deleteError localizedDescription]);
+    }
+    
+    __managedObjectContext = nil;
+    __managedObjectModel = nil;
+    __persistentStoreCoordinator = nil;
+}
+
 - (void)cleanupLocalMenus {
     if (self.localRestaurants) {
         NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -144,7 +166,7 @@
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
                                         managedObjectContext:[self managedObjectContext] 
                                           sectionNameKeyPath:nil 
-                                                   cacheName:@"Restaurant"];
+                                                   cacheName:nil];
     
     NSError *error;
 	if (![theFetchedResultsController performFetch:&error]) {
@@ -161,48 +183,11 @@
     }
 }
 
-- (void)completeCleanup {
-    [self clearStores];
-    [self downloadRestaurants];
-}
-
-- (void)clearStores {
-    NSArray *stores = [[self persistentStoreCoordinator] persistentStores];
-    
-    for (NSPersistentStore *store in stores) {
-        NSError *error = nil;
-        [[NSFileManager defaultManager] removeItemAtPath:store.URL.path error:&error];
-        
-        NSAssert(error == nil, [error localizedDescription]);
-    }
-    
-    __managedObjectContext = nil;
-    __managedObjectModel = nil;
-    __persistentStoreCoordinator = nil;
-}
-
-#pragma mark Operation Balance
-
-- (int)operationBalance {
-    return _operationBalance;
-}
-
-- (void)setOperationBalance:(int)operationBalance {
-    _operationBalance = operationBalance;
-    
-    if (operationBalance > 0) {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    } else {
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    }
-}
-
 #pragma mark Download
 
 - (void)downloadRestaurants {
     NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
     [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
-    self.operationBalance += 1;
 }
 
 - (void)doDownloadRestaurants {
@@ -213,8 +198,6 @@
 
 - (void)finishedDownloadRestaurants:(BOOL)success {
     // get the restaurants here and fetch all the menus for each restaurant
-    self.operationBalance -= 1;
-    
     if (success) {
         [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
     }

@@ -74,7 +74,11 @@
 + (void)handleUpdate {  
     // upate handling: just delete the old stuff and re-download it
     SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [delegate refreshLocalData];
+    [delegate completeCleanup];
+    
+    // also, remove the last reference view controller
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:LAST_OPENED_RESTAURANT_ID];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (void)checkAndHandleUpdate {

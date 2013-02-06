@@ -42,7 +42,7 @@
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                         managedObjectContext:[delegate managedObjectContext]
                                           sectionNameKeyPath:nil
-                                                   cacheName:@"Restaurant"];
+                                                   cacheName:nil];
     
     NSError *error;
 	if (![theFetchedResultsController performFetch:&error]) {
