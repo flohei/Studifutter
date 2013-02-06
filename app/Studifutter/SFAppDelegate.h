@@ -24,10 +24,7 @@
 - (void)downloadMenuForRestaurant:(Restaurant *)restaurant;
 
 - (void)refreshLocalData;
-
 - (void)completeCleanup;
-
-@property int operationBalance;
 
 - (NSArray *)localRestaurants;
 

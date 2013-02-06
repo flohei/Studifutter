@@ -60,6 +60,7 @@
 #pragma mark - Misc
 
 - (void)reloadData:(NSNotification *)notification {
+    _fetchedResultsController = nil;
     [[self tableView] reloadData];
 }
 
@@ -93,7 +94,7 @@
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
                                         managedObjectContext:[self context] 
                                           sectionNameKeyPath:nil 
-                                                   cacheName:@"Restaurant"];
+                                                   cacheName:nil];
     self.fetchedResultsController = theFetchedResultsController;
     _fetchedResultsController.delegate = self;
     
