@@ -25,7 +25,6 @@
 
 @implementation Connection
 
-@synthesize context = _context;
 @synthesize hostReachable = _hostReachable;
 @synthesize sharedOperationQueue = _sharedOperationQueue;
 
@@ -86,10 +85,7 @@ static Connection *_connection;
  Returns the App's managed object context, saved in the App delegate.
  */
 - (NSManagedObjectContext *)context {
-    if (_context == nil)
-        _context = [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    
-    return _context;
+    return [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
 }
 
 - (NSOperationQueue *)sharedOperationQueue {

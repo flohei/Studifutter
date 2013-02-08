@@ -1,6 +1,6 @@
 TODOs
 
-- + (NSArray *)localRestaurants in App Delegate bereinigen (ist jetzt im Data Accessor)
+- Reload der Restaurants nach dem Löschen der DB
 
 ///////////////////////////////////////////////////////
 

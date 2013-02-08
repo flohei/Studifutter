@@ -21,9 +21,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-        // download all the data
-        NSLog(@"download");
-        
         SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
         [delegate completeCleanup];
     }
