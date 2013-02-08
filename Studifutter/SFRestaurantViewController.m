@@ -16,13 +16,13 @@
 
 @interface SFRestaurantViewController ()
 
+- (void)performFetch;
 - (void)reloadData:(NSNotification *)notification;
 
 @end
 
 @implementation SFRestaurantViewController
 
-@synthesize managedObjectContext = _managedObjectContext;
 @synthesize fetchedResultsController = _fetchedResultsController;
 
 #pragma mark - View lifecycle
@@ -32,16 +32,10 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData:) name:RESTAURANTS_UPDATED_NOTIFICATION object:nil];
     
-    NSError *error;
-	if (![[self fetchedResultsController] performFetch:&error]) {
-		// Update to handle the error appropriately.
-		//NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
-	}
+    [self performFetch];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -59,8 +53,18 @@
 
 #pragma mark - Misc
 
+- (void)performFetch {
+    NSError *error;
+	if (![[self fetchedResultsController] performFetch:&error]) {
+		// Update to handle the error appropriately.
+		//NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+}
+
 - (void)reloadData:(NSNotification *)notification {
     _fetchedResultsController = nil;
+    [self performFetch];
     [[self tableView] reloadData];
 }
 

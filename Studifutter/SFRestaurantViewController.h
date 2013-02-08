@@ -12,7 +12,6 @@
 
 @interface SFRestaurantViewController : SFTableViewController <SFInfoViewDelegate, NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 @end

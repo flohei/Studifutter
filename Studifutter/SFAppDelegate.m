@@ -49,11 +49,6 @@
     
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    SFRestaurantViewController *controller = (SFRestaurantViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
-    
-    [self cleanupLocalMenus];
-    [self downloadRestaurants];
     
     // check if there's a last restaurant saved. if so push it.
     Restaurant *lastRestaurant = (Restaurant *)[self managedObjectForID:[[NSUserDefaults standardUserDefaults] objectForKey:LAST_OPENED_RESTAURANT_ID]];
@@ -66,6 +61,11 @@
     [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // check for new restaurants and delete old menu sets
+    [self refreshLocalData];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -103,7 +103,7 @@
 
 - (void)completeCleanup {
     [self clearStores];
-    [self downloadRestaurants];
+    [self refreshLocalData];
 }
 
 - (void)clearStores {
@@ -151,36 +151,7 @@
 }
 
 - (NSArray *)localRestaurants {    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription 
-                                   entityForName:@"Restaurant" inManagedObjectContext:[self managedObjectContext]];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] 
-                              initWithKey:@"name" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    [fetchRequest setFetchBatchSize:20];
-    
-    NSFetchedResultsController *theFetchedResultsController = 
-    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest 
-                                        managedObjectContext:[self managedObjectContext] 
-                                          sectionNameKeyPath:nil 
-                                                   cacheName:nil];
-    
-    NSError *error;
-	if (![theFetchedResultsController performFetch:&error]) {
-		// Update to handle the error appropriately.
-		//NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
-	}
-    
-    NSArray *fetchedObjects = [theFetchedResultsController fetchedObjects];
-    if (!fetchedObjects || [fetchedObjects count] == 0) {
-        return nil;
-    } else {
-        return fetchedObjects;
-    }
+    return [SFDataAccessor localRestaurants];
 }
 
 #pragma mark Download
