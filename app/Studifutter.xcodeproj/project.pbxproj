@@ -541,6 +541,7 @@
 				8F0BA785145C72F1003E2DE0 /* Sources */,
 				8F0BA786145C72F1003E2DE0 /* Frameworks */,
 				8F0BA787145C72F1003E2DE0 /* Resources */,
+				8F2A347816C924CB00F8FB30 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -613,6 +614,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F2A347816C924CB00F8FB30 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" ./Studifutter/Studifutter-Info.plist)\necho $buildNumber\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" ./Studifutter/Studifutter-Info.plist\necho $buildNumber";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F0BA785145C72F1003E2DE0 /* Sources */ = {
