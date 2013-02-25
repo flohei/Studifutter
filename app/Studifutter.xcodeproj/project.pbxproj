@@ -83,6 +83,7 @@
 		8F82AF9A160B1C24008F6CC9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F82AF98160B1C24008F6CC9 /* Default-568h@2x.png */; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
+		8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B378616DB681B00C0A92C /* Crashlytics.framework */; };
 		8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.txt */; };
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
@@ -220,6 +221,7 @@
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDE146AF180001F4E74 /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
+		8F9B378616DB681B00C0A92C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8FA40B5916BED22000736EC3 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDataAccessor.h; sourceTree = "<group>"; };
 		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
 				8F450C05153468BF00F647CF /* libTestFlight.a in Frameworks */,
+				8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +278,7 @@
 		8F0BA78C145C72F1003E2DE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
 				8F450C0615346A1C00F647CF /* libz.dylib */,
 				8F450C02153462A100F647CF /* MessageUI.framework */,
 				8F450BFA1534628600F647CF /* TestFlightSDK1 */,
@@ -542,6 +546,7 @@
 				8F0BA786145C72F1003E2DE0 /* Frameworks */,
 				8F0BA787145C72F1003E2DE0 /* Resources */,
 				8F2A347816C924CB00F8FB30 /* ShellScript */,
+				8F9B378516DB67C800C0A92C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -628,6 +633,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" ./Studifutter/Studifutter-Info.plist)\necho $buildNumber\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" ./Studifutter/Studifutter-Info.plist\necho $buildNumber";
+		};
+		8F9B378516DB67C800C0A92C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -800,6 +818,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
@@ -822,6 +844,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
@@ -873,6 +899,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
