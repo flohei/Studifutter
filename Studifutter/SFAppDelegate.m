@@ -14,6 +14,7 @@
 #import "Restaurant.h"
 #import "MenuSet.h"
 #import "FHVersionUpdate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface SFAppDelegate ()
 
@@ -33,6 +34,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Register for the use of TestFlight
     [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
+    
+    // register for crashlytics
+    [Crashlytics startWithAPIKey:@"d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c"];
     
     // create one of these fancy new UUIDs if needed
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
