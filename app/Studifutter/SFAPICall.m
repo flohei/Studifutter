@@ -10,11 +10,8 @@
 #import "SFAppDelegate.h"
 #import "SFAPIException.h"
 #import "NSString+URLEncode.h"
-#import "SBJson.h"
+#import "JSONKit.h"
 #import "Common.h"
-
-
-static SBJsonParser *jsonParser;
 
 @interface SFAPICall ()
 
@@ -24,8 +21,6 @@ static SBJsonParser *jsonParser;
 - (NSString *)doRequest;
 - (NSString *)cacheFilename;
 + (NSString *)stringFromArgument:(id)arg argName:(NSString *)argName encode:(BOOL)encode;
-
-+ (SBJsonParser *)jsonParser;
 
 - (NSMutableDictionary *)defaultPostArguments;
 
@@ -208,7 +203,10 @@ static SBJsonParser *jsonParser;
         
 		NSString *rawAnswer = [self doRequest];
 		NSError *jsonError = nil;
-		NSDictionary *answer = [[self.class jsonParser] objectWithString:rawAnswer error:&jsonError];
+        JSONDecoder *decoder = [JSONDecoder decoder];
+		NSDictionary *answer = [decoder objectWithUTF8String:(const unsigned char *)[rawAnswer UTF8String]
+                                                      length:[rawAnswer length]
+                                                       error:&jsonError];
         
 		if (jsonError != nil) {
 			//NSLog(@"JSON error: %@ | %@", [jsonError description], rawAnswer);
@@ -402,14 +400,7 @@ static SBJsonParser *jsonParser;
         } else {
             NSMutableDictionary *JSONDictionary = [NSMutableDictionary dictionaryWithDictionary:_postArgs];
             [JSONDictionary setObject:_checksum forKey:@"checksum"];
-            
-            SBJsonWriter *JSONWriter = [[SBJsonWriter alloc] init];
-            NSError *JSONError = nil;
-            _postString = [JSONWriter stringWithObject:JSONDictionary error:&JSONError];
-            
-            if (JSONError) {
-                //NSLog(@"%@", JSONError);
-            }
+            _postString = [JSONDictionary JSONString];
         }
         
         //NSLog(@"postString: %@", _postString);
@@ -490,13 +481,6 @@ static SBJsonParser *jsonParser;
 }
 
 #pragma mark - Helper methods
-
-+ (SBJsonParser *)jsonParser {
-	if (jsonParser == nil) {
-		jsonParser = [[SBJsonParser alloc] init];
-	}
-	return jsonParser;
-}
 
 + (NSString *)getAPIServerPath {
 	if (API_LIVE_SERVER) {

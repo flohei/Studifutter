@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface SFAPICall : NSObject {
     NSDictionary *_answer;
     
