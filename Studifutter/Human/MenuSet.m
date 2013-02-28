@@ -7,7 +7,26 @@
     return [NSString stringWithFormat:@"MenuSet for day %@ in restaurant %@", [self date], [self restaurant]];
 }
 
-- (NSString *)shareText {
+- (NSString *)shareTextTwitter {
+    NSMutableString *shareText = [NSMutableString string];
+    [shareText appendFormat:@"%@ bin ich in der Mensa (%@). Wer kommt mit? /via @studifutter", [self relativeDayReference], [self restaurant]];
+    return [self stripDoubleSpaceFrom:shareText];
+}
+
+- (NSString *)shareTextMail {
+    NSMutableString *shareText = [NSMutableString string];
+    [shareText appendString:@"Hi Freund,\n\n"];
+    [shareText appendString:[self longShareTextBase]];
+    [shareText appendString:@" Kommst du mit?\n\n"];
+    [shareText appendString:@"Via Studifutter (http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=313502627&mt=8)"];
+    return [self stripDoubleSpaceFrom:shareText];
+}
+
+- (NSString *)shareTextFacebook {    
+    return [NSString stringWithFormat:@"%@ Wer kommt mit? :)", [self longShareTextBase]];
+}
+
+- (NSString *)longShareTextBase {
     // allocate the mutable string to construct the share string
     NSMutableString *shareText = [NSMutableString string];
     
@@ -39,10 +58,7 @@
         }
     }
     
-    // finish share text
-    [shareText appendString:@" Wer kommt mit? :)"];
-    
-    return shareText;
+    return [self stripDoubleSpaceFrom:shareText];
 }
 
 - (NSString *)relativeDayReference {
@@ -84,6 +100,13 @@
     NSDateComponents *difference = [calendar components:NSDayCalendarUnit fromDate:fromDate toDate:toDate options:0];
     
     return [difference day];
+}
+
+- (NSString *)stripDoubleSpaceFrom:(NSString *)str {
+    while ([str rangeOfString:@"  "].location != NSNotFound) {
+        str = [str stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+    }
+    return str;
 }
 
 @end

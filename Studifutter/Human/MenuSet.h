@@ -2,6 +2,8 @@
 
 @interface MenuSet : _MenuSet {}
 
-- (NSString *)shareText;
+- (NSString *)shareTextTwitter;
+- (NSString *)shareTextFacebook;
+- (NSString *)shareTextMail;
 
 @end
