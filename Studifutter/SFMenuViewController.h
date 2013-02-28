@@ -15,5 +15,6 @@
 
 @property (nonatomic, retain) MenuSet *menuSet;
 @property (strong, nonatomic) UISwipeGestureRecognizer *swipeGestureRecognizer;
+- (IBAction)showActionMenu:(id)sender;
 
 @end
