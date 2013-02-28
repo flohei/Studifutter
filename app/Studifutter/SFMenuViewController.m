@@ -15,6 +15,7 @@
 #import "FHGradientView.h"
 #import "PostItView.h"
 #import <Social/Social.h>
+#import "SFActivityProvider.h"
 
 @interface SFMenuViewController ()
 
@@ -111,13 +112,9 @@
 }
 
 - (IBAction)showActionMenu:(id)sender {
-    NSString *shareText = [[self menuSet] shareText];
-    NSArray *activityItems = @[shareText];
-//    NSArray *activities = @[UIActivityTypePostToFacebook,
-//                            UIActivityTypePostToTwitter,
-//                            UIActivityTypeMail,
-//                            UIActivityTypeMessage,
-//                            UIActivityTypeCopyToPasteboard];
+    SFActivityProvider *activityProvider = [[SFActivityProvider alloc] init];
+    [activityProvider setMenuSet:[self menuSet]];
+    NSArray *activityItems = @[activityProvider];
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:nil];

@@ -8,7 +8,7 @@
 
 #import "SFRestaurantDetailViewController.h"
 #import "Restaurant.h"
-#import "TestFlight.h"
+//#import "TestFlight.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SFRestaurantDetailViewController () {
@@ -154,7 +154,7 @@
 }
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
-    [TestFlight passCheckpoint:AD_WATCHED_CHECKPOINT];
+//    [TestFlight passCheckpoint:AD_WATCHED_CHECKPOINT];
     return YES;
 }
 

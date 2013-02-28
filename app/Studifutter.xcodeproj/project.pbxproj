@@ -78,6 +78,7 @@
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
+		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +198,8 @@
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFActivityProvider.h; sourceTree = "<group>"; };
+		8FEEF15816DFB32900988BCC /* SFActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFActivityProvider.m; sourceTree = "<group>"; };
 		8FFC1BAB15234163001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FFC1BAD1523416B001F0EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -441,6 +444,8 @@
 				8F729C05145F2DE700FE166B /* NSString+URLEncode.m */,
 				8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */,
 				8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */,
+				8FEEF15716DFB32900988BCC /* SFActivityProvider.h */,
+				8FEEF15816DFB32900988BCC /* SFActivityProvider.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -623,6 +628,7 @@
 				8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */,
 				8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */,
 				8F7A8FF216DE6FF900C97E00 /* JSONKit.m in Sources */,
+				8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
