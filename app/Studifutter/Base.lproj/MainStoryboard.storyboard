@@ -503,7 +503,13 @@
                             <outlet property="delegate" destination="t5j-8Y-meI" id="7a2-vR-Rlh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Menü" id="RRK-PH-uYD"/>
+                    <navigationItem key="navigationItem" title="Menü" id="RRK-PH-uYD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="8Pr-Gp-YBg">
+                            <connections>
+                                <action selector="showActionMenu:" destination="t5j-8Y-meI" id="X9I-W3-ghx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9j-Fr-u17" sceneMemberID="firstResponder"/>
             </objects>

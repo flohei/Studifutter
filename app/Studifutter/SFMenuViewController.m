@@ -14,6 +14,7 @@
 #import "MenuTableViewCell.h"
 #import "FHGradientView.h"
 #import "PostItView.h"
+#import <Social/Social.h>
 
 @interface SFMenuViewController ()
 
@@ -109,6 +110,19 @@
     }
 }
 
+- (IBAction)showActionMenu:(id)sender {
+    NSString *shareText = [[self menuSet] shareText];
+    NSArray *activityItems = @[shareText];
+//    NSArray *activities = @[UIActivityTypePostToFacebook,
+//                            UIActivityTypePostToTwitter,
+//                            UIActivityTypeMail,
+//                            UIActivityTypeMessage,
+//                            UIActivityTypeCopyToPasteboard];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
+}
+
 - (NSArray *)allMenuSets {
     NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     NSSet *unsortedMenuSet = [[[self menuSet] restaurant] menuSet];
@@ -163,4 +177,5 @@
     [self setSwipeGestureRecognizer:nil];
     [super viewDidUnload];
 }
+
 @end
