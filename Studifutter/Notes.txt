@@ -1,0 +1,2 @@
+- deactivating TestFlight
+- fixing twitter text (closes #293)
