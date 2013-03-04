@@ -7,7 +7,6 @@
 //
 
 #import "SFInfoViewController.h"
-//#import "TestFlight.h"
 #import "SFWebViewController.h"
 
 @interface SFInfoViewController ()
@@ -43,8 +42,6 @@
     
     [[self backgroundImageView] setImage:background];
     
-//    [TestFlight passCheckpoint:INFO_SHOW_CHECKPOINT];
-    
     [[self versionLabel] setText:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
 }
 
@@ -70,7 +67,7 @@
 }
 
 - (IBAction)feedback:(id)sender {
-//    [TestFlight openFeedbackView];
+    
 }
 
 - (IBAction)mail:(id)sender {

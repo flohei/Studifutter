@@ -10,7 +10,6 @@
 #import "SFRestaurantViewController.h"
 #import "SFDayListViewController.h"
 #import "Connection.h"
-//#import "TestFlight.h"
 #import "Restaurant.h"
 #import "MenuSet.h"
 #import "FHVersionUpdate.h"
@@ -32,8 +31,6 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Register for the use of TestFlight
-//    [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
     
     // register for crashlytics
     [Crashlytics startWithAPIKey:@"d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c"];
@@ -61,8 +58,6 @@
         [dayListViewController setRestaurant:lastRestaurant];
         [navigationController pushViewController:dayListViewController animated:NO];
     }
-    
-//    [TestFlight passCheckpoint:APP_START_CHECKPOINT];
     
     return YES;
 }

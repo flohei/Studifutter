@@ -13,7 +13,6 @@
 #import "DayTableViewCell.h"
 #import "SFMenuViewController.h"
 #import "SFRestaurantDetailViewController.h"
-//#import "TestFlight.h"
 #import "FHGradientView.h"
 #import "SFAppDelegate.h"
 
@@ -328,7 +327,6 @@
 }
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
-//    [TestFlight passCheckpoint:AD_WATCHED_CHECKPOINT];
     return YES;
 }
 

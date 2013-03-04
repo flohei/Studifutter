@@ -34,7 +34,6 @@
 		8F408F77153B696B00B73CA4 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F408F75153B696B00B73CA4 /* twitter@2x.png */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
-		8F450C05153468BF00F647CF /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C04153468BF00F647CF /* libTestFlight.a */; };
 		8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C0615346A1C00F647CF /* libz.dylib */; };
 		8F46480C161DC41B006E79C3 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F46480B161DC41B006E79C3 /* gradient.png */; };
 		8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D2C6214A20EA7007023AF /* PostItView.m */; };
@@ -121,9 +120,7 @@
 		8F408F75153B696B00B73CA4 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "Graphics/twitter@2x.png"; sourceTree = "<group>"; };
 		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
-		8F450BFE1534628600F647CF /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F450C02153462A100F647CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		8F450C04153468BF00F647CF /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		8F450C0615346A1C00F647CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8F46480B161DC41B006E79C3 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		8F4748F815B7522D00078434 /* Studifutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Studifutter.entitlements; sourceTree = "<group>"; };
@@ -221,7 +218,6 @@
 				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
-				8F450C05153468BF00F647CF /* libTestFlight.a in Frameworks */,
 				8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +248,6 @@
 				8F7A8FF016DE6FF900C97E00 /* JSONKit.h */,
 				8F7A8FF116DE6FF900C97E00 /* JSONKit.m */,
 				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
-				8F450BFA1534628600F647CF /* TestFlightSDK1 */,
 				8F450C0615346A1C00F647CF /* libz.dylib */,
 				8FABE9F516DF946F00A64944 /* Social.framework */,
 				8F450C02153462A100F647CF /* MessageUI.framework */,
@@ -324,15 +319,6 @@
 				8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */,
 			);
 			path = "ICON-DERIVATE";
-			sourceTree = "<group>";
-		};
-		8F450BFA1534628600F647CF /* TestFlightSDK1 */ = {
-			isa = PBXGroup;
-			children = (
-				8F450C04153468BF00F647CF /* libTestFlight.a */,
-				8F450BFE1534628600F647CF /* TestFlight.h */,
-			);
-			path = TestFlightSDK1;
 			sourceTree = "<group>";
 		};
 		8F729BB0145F232F00FE166B /* ViewController */ = {
@@ -757,10 +743,7 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -783,10 +766,7 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -838,10 +818,7 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/TestFlightSDK1\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
