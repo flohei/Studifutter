@@ -41,7 +41,6 @@
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
 		8F6232F5153613E200BA786E /* mail1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6232F3153613E200BA786E /* mail1.png */; };
 		8F6232F6153613E200BA786E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6232F4153613E200BA786E /* twitter.png */; };
-		8F669F5C149A636900B7CE96 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F669F5B149A636900B7CE96 /* AudioToolbox.framework */; };
 		8F6CD33316132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CD33216132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png */; };
 		8F6F134B147E990600FE5455 /* studifutter-infoscreen-blanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */; };
 		8F6F134C147E990600FE5455 /* studifutter-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1349147E990600FE5455 /* studifutter-pattern.png */; };
@@ -95,7 +94,6 @@
 		8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
 		8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
 		8F0BA7A5145C72F1003E2DE0 /* Studifutter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Studifutter.xcdatamodel; sourceTree = "<group>"; };
-		8F0BA7B3145C72F2003E2DE0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8F10D78B146AE0F700896CE9 /* MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSet.h; sourceTree = "<group>"; };
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		8F6232F3153613E200BA786E /* mail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mail1.png; path = Graphics/mail1.png; sourceTree = "<group>"; };
 		8F6232F4153613E200BA786E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Graphics/twitter.png; sourceTree = "<group>"; };
-		8F669F5B149A636900B7CE96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8F6CD33216132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-infoscreen-blanko-568h@2x.png"; sourceTree = "<group>"; };
 		8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-infoscreen-blanko.png"; sourceTree = "<group>"; };
 		8F6F1349147E990600FE5455 /* studifutter-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-pattern.png"; sourceTree = "<group>"; };
@@ -209,7 +206,6 @@
 				8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */,
 				8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */,
 				8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */,
-				8F669F5C149A636900B7CE96 /* AudioToolbox.framework in Frameworks */,
 				8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */,
 				8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */,
 				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
@@ -245,13 +241,8 @@
 		8F0BA78C145C72F1003E2DE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F7A8FF016DE6FF900C97E00 /* JSONKit.h */,
-				8F7A8FF116DE6FF900C97E00 /* JSONKit.m */,
-				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
-				8F450C0615346A1C00F647CF /* libz.dylib */,
 				8FABE9F516DF946F00A64944 /* Social.framework */,
 				8F450C02153462A100F647CF /* MessageUI.framework */,
-				8F669F5B149A636900B7CE96 /* AudioToolbox.framework */,
 				8F6F134F147EA15900FE5455 /* QuartzCore.framework */,
 				8F338218147D0BD4000344D3 /* MapKit.framework */,
 				8F25E69B146B0337000D4806 /* iAd.framework */,
@@ -260,7 +251,10 @@
 				8F0BA791145C72F1003E2DE0 /* CoreGraphics.framework */,
 				8F0BA793145C72F1003E2DE0 /* CoreData.framework */,
 				8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */,
-				8F0BA7B3145C72F2003E2DE0 /* SenTestingKit.framework */,
+				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
+				8F450C0615346A1C00F647CF /* libz.dylib */,
+				8F7A8FF016DE6FF900C97E00 /* JSONKit.h */,
+				8F7A8FF116DE6FF900C97E00 /* JSONKit.m */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -474,6 +468,7 @@
 				8F0BA787145C72F1003E2DE0 /* Resources */,
 				8F2A347816C924CB00F8FB30 /* ShellScript */,
 				8F9B378516DB67C800C0A92C /* ShellScript */,
+				8F776D77173D67D800FD4872 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -559,7 +554,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" ./Studifutter/Studifutter-Info.plist)\necho $buildNumber\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" ./Studifutter/Studifutter-Info.plist\necho $buildNumber";
+			shellScript = "\"${PROJECT_DIR}/Scripts/update_build_number.sh\"";
+		};
+		8F776D77173D67D800FD4872 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Scripts/update_storyboard_strings.sh\"";
 		};
 		8F9B378516DB67C800C0A92C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
