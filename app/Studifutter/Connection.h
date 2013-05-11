@@ -20,8 +20,6 @@
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 
-@property (nonatomic, retain) NSOperationQueue *sharedOperationQueue;
-
 - (BOOL)readRestaurants;
 - (BOOL)readMenuForRestaurant:(Restaurant *)restaurant;
 

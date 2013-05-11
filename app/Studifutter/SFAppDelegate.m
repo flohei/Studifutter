@@ -156,8 +156,7 @@
 #pragma mark Download
 
 - (void)downloadRestaurants {
-    NSInvocationOperation *downloadRestaurants = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(doDownloadRestaurants) object:nil];
-    [[[Connection sharedConnection] sharedOperationQueue] addOperation:downloadRestaurants];
+    [self performSelectorInBackground:@selector(doDownloadRestaurants) withObject:nil];
 }
 
 - (void)doDownloadRestaurants {

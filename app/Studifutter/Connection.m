@@ -26,7 +26,6 @@
 @implementation Connection
 
 @synthesize hostReachable = _hostReachable;
-@synthesize sharedOperationQueue = _sharedOperationQueue;
 
 static Connection *_connection;
 
@@ -88,14 +87,6 @@ static Connection *_connection;
     return [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
 }
 
-- (NSOperationQueue *)sharedOperationQueue {
-    if (!_sharedOperationQueue) {
-        _sharedOperationQueue = [[NSOperationQueue alloc] init];
-    }
-    
-    return _sharedOperationQueue;
-}
-
 - (BOOL)readRestaurants {
     BOOL success = NO;
     
@@ -116,49 +107,53 @@ static Connection *_connection;
         
         if (status == SF_API_STATUS_OK) {
             NSArray *rawRestaurants = [result objectForKey:@"data"];
-            
-            for (NSDictionary *rawRestaurant in rawRestaurants) {
-                NSNumber *newRestaurantID = ([rawRestaurant objectForKey:@"id"] != [NSNull null]) ? [NSNumber numberWithInt:[[rawRestaurant objectForKey:@"id"] intValue]] : nil;
-                
-                if (newRestaurantID) {
-                    // check if this new restaurant is already locally saved                 
-                    Restaurant *reference = [SFDataAccessor restaurantByID:newRestaurantID];
-                    
-                    if (reference) {
-                        // reference found. no need to parse this one.
-                        continue;
-                    }
-                } else {
-                    // the new data does not have a restaurant id. meh.
-                    continue;
-                }
-                
-                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] beginUndoGrouping];
-                
-                Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
-                
-                // ([rawMessage objectForKey:@"subject"] != [NSNull null]) ? [rawMessage objectForKey:@"subject"] : nil;
-                aNewRestaurant.name = ([rawRestaurant objectForKey:@"name"] != [NSNull null]) ? [rawRestaurant objectForKey:@"name"] : nil;
-                aNewRestaurant.restaurantID = newRestaurantID;
-                aNewRestaurant.menuURL = ([rawRestaurant objectForKey:@"url"] != [NSNull null]) ? [rawRestaurant objectForKey:@"url"] : nil;
-                aNewRestaurant.closed = ([rawRestaurant objectForKey:@"closed"] != [NSNull null]) ? [NSNumber numberWithBool:[[rawRestaurant objectForKey:@"closed"] boolValue]] : nil;
-                aNewRestaurant.city = ([rawRestaurant objectForKey:@"city"] != [NSNull null]) ? [rawRestaurant objectForKey:@"city"] : nil;
-                aNewRestaurant.longitude = ([rawRestaurant objectForKey:@"longitude"] != [NSNull null]) ? [NSNumber numberWithDouble:[[rawRestaurant objectForKey:@"longitude"] doubleValue]] : nil;
-                aNewRestaurant.latitude = ([rawRestaurant objectForKey:@"latitude"] != [NSNull null]) ? [NSNumber numberWithDouble:[[rawRestaurant objectForKey:@"latitude"] doubleValue]] : nil;
-                aNewRestaurant.notes = ([rawRestaurant objectForKey:@"notes"] != [NSNull null]) ? [rawRestaurant objectForKey:@"notes"] : nil;
-                aNewRestaurant.street = ([rawRestaurant objectForKey:@"street"] != [NSNull null]) ? [rawRestaurant objectForKey:@"street"] : nil;
-                aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
-                
-                [[[(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] undoManager] endUndoGrouping];
-                
-                [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] saveContext];
-            }
+            [self performSelectorOnMainThread:@selector(parseAndSaveRestaurants:) withObject:rawRestaurants waitUntilDone:YES];
             
             success = YES;
         }
     }
     
     return success;
+}
+
+- (void)parseAndSaveRestaurants:(NSArray *)rawRestaurants {
+    for (NSDictionary *rawRestaurant in rawRestaurants) {
+        NSNumber *newRestaurantID = ([rawRestaurant objectForKey:@"id"] != [NSNull null]) ? [NSNumber numberWithInt:[[rawRestaurant objectForKey:@"id"] intValue]] : nil;
+        
+        if (newRestaurantID) {
+            // check if this new restaurant is already locally saved
+            Restaurant *reference = [SFDataAccessor restaurantByID:newRestaurantID];
+            
+            if (reference) {
+                // reference found. no need to parse this one.
+                continue;
+            }
+        } else {
+            // the new data does not have a restaurant id. meh.
+            continue;
+        }
+        
+        SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [[[delegate managedObjectContext] undoManager] beginUndoGrouping];
+        
+        Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
+        
+        // ([rawMessage objectForKey:@"subject"] != [NSNull null]) ? [rawMessage objectForKey:@"subject"] : nil;
+        aNewRestaurant.name = ([rawRestaurant objectForKey:@"name"] != [NSNull null]) ? [rawRestaurant objectForKey:@"name"] : nil;
+        aNewRestaurant.restaurantID = newRestaurantID;
+        aNewRestaurant.menuURL = ([rawRestaurant objectForKey:@"url"] != [NSNull null]) ? [rawRestaurant objectForKey:@"url"] : nil;
+        aNewRestaurant.closed = ([rawRestaurant objectForKey:@"closed"] != [NSNull null]) ? [NSNumber numberWithBool:[[rawRestaurant objectForKey:@"closed"] boolValue]] : nil;
+        aNewRestaurant.city = ([rawRestaurant objectForKey:@"city"] != [NSNull null]) ? [rawRestaurant objectForKey:@"city"] : nil;
+        aNewRestaurant.longitude = ([rawRestaurant objectForKey:@"longitude"] != [NSNull null]) ? [NSNumber numberWithDouble:[[rawRestaurant objectForKey:@"longitude"] doubleValue]] : nil;
+        aNewRestaurant.latitude = ([rawRestaurant objectForKey:@"latitude"] != [NSNull null]) ? [NSNumber numberWithDouble:[[rawRestaurant objectForKey:@"latitude"] doubleValue]] : nil;
+        aNewRestaurant.notes = ([rawRestaurant objectForKey:@"notes"] != [NSNull null]) ? [rawRestaurant objectForKey:@"notes"] : nil;
+        aNewRestaurant.street = ([rawRestaurant objectForKey:@"street"] != [NSNull null]) ? [rawRestaurant objectForKey:@"street"] : nil;
+        aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
+        
+        
+        [[[delegate managedObjectContext] undoManager] endUndoGrouping];
+        [delegate saveContext];
+    }
 }
 
 - (BOOL)readMenuForRestaurant:(Restaurant *)restaurant {
