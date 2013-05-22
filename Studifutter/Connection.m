@@ -72,12 +72,14 @@ static Connection *_connection;
 }
 
 - (void)showAlertForException:(NSException *)exception {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"OOPS", @"Oops...")
-                                                        message:[exception reason]
-                                                       delegate:nil 
-                                              cancelButtonTitle:NSLocalizedString(@"OK", @"OK") 
-                                              otherButtonTitles:nil];
-    [alertView show];
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"OOPS", @"Oops...")
+//                                                        message:[exception reason]
+//                                                       delegate:nil 
+//                                              cancelButtonTitle:NSLocalizedString(@"OK", @"OK") 
+//                                              otherButtonTitles:nil];
+//    [alertView show];
+    
+    NSLog(@"Error %@: %@", [exception reason], [exception description]);
 }
 
 /**

@@ -161,7 +161,15 @@
 
 - (void)doDownloadRestaurants {
     // call the API here
-    BOOL success = [[Connection sharedConnection] readRestaurants];
+    BOOL success = NO;
+    @try {
+        success = [[Connection sharedConnection] readRestaurants];
+    }
+    @catch (NSException *exception) {
+        [self performSelectorOnMainThread:@selector(raiseAlertOnMainThread:) withObject:exception waitUntilDone:YES];
+        return;
+    }
+    
     [self performSelectorOnMainThread:@selector(finishedDownloadRestaurants:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
 }
 
@@ -186,7 +194,7 @@
     }
     @catch (NSException *exception) {
         // notify the user
-        [self performSelectorOnMainThread:@selector(raiseAlertOnMainThread) withObject:nil waitUntilDone:YES];
+        [self performSelectorOnMainThread:@selector(raiseAlertOnMainThread:) withObject:exception waitUntilDone:YES];
     }
     
     [self performSelectorOnMainThread:@selector(finishedDownloadMenusForRestaurant:) withObject:[NSNumber numberWithBool:success] waitUntilDone:YES];
@@ -196,7 +204,8 @@
     [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:MENUS_UPDATED_NOTIFICATION object:nil]];
 }
 
-- (void)raiseAlertOnMainThread {
+- (void)raiseAlertOnMainThread:(NSException *)exception {
+    NSLog(@"Error %@: %@", [exception reason], [exception description]);
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..."
                                                       message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal."
                                                      delegate:nil
