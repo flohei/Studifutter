@@ -30,8 +30,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // API
-#define API_LIVE_SERVER                                 NO
-#define API_SERVER_PATH_TEST                            @"http://v2.studifutter.rtfnt.com/api"
+#define API_LIVE_SERVER                                 YES
+#define API_SERVER_PATH_TEST                            @"http://foo.9023jfsldfj09.com/api"
 #define API_SERVER_PATH_LIVE                            @"http://v2.studifutter.rtfnt.com/api"
 #define API_AUTH                                        "key=key&secret=secret&"
 #define API_SECRET                                      "bGBHAvNRNsTsOJv7JbvtPTXwQoxi2XpL"
