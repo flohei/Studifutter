@@ -4,6 +4,18 @@
 #import <CoreData/CoreData.h>
 
 
+extern const struct MenuSetAttributes {
+	__unsafe_unretained NSString *date;
+} MenuSetAttributes;
+
+extern const struct MenuSetRelationships {
+	__unsafe_unretained NSString *menu;
+	__unsafe_unretained NSString *restaurant;
+} MenuSetRelationships;
+
+extern const struct MenuSetFetchedProperties {
+} MenuSetFetchedProperties;
+
 @class Menu;
 @class Restaurant;
 
@@ -21,7 +33,9 @@
 
 
 
-@property (nonatomic, retain) NSDate *date;
+
+@property (nonatomic, strong) NSDate* date;
+
 
 
 //- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
@@ -30,16 +44,17 @@
 
 
 
-@property (nonatomic, retain) NSSet* menu;
+@property (nonatomic, strong) NSSet *menu;
 
 - (NSMutableSet*)menuSet;
 
 
 
 
-@property (nonatomic, retain) Restaurant* restaurant;
+@property (nonatomic, strong) Restaurant *restaurant;
 
 //- (BOOL)validateRestaurant:(id*)value_ error:(NSError**)error_;
+
 
 
 
