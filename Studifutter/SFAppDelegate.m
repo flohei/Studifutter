@@ -52,11 +52,16 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
     // check if there's a last restaurant saved. if so push it.
-    Restaurant *lastRestaurant = (Restaurant *)[self managedObjectForID:[[NSUserDefaults standardUserDefaults] objectForKey:LAST_OPENED_RESTAURANT_ID]];
-    if (lastRestaurant) {
-        SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
-        [dayListViewController setRestaurant:lastRestaurant];
-        [navigationController pushViewController:dayListViewController animated:NO];
+    @try {
+        Restaurant *lastRestaurant = (Restaurant *)[self managedObjectForID:[[NSUserDefaults standardUserDefaults] objectForKey:LAST_OPENED_RESTAURANT_ID]];
+        if (lastRestaurant) {
+            SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
+            [dayListViewController setRestaurant:lastRestaurant];
+            [navigationController pushViewController:dayListViewController animated:NO];
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
     }
     
     return YES;
