@@ -175,9 +175,7 @@
 
 - (void)finishedDownloadRestaurants:(BOOL)success {
     // get the restaurants here and fetch all the menus for each restaurant
-    if (success) {
-        [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
-    }
+    [NSNotificationCenter.defaultCenter postNotification:[NSNotification notificationWithName:RESTAURANTS_UPDATED_NOTIFICATION object:nil]];
 }
 
 - (void)downloadMenuForRestaurant:(Restaurant *)restaurant {
