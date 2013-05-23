@@ -3,6 +3,18 @@
 
 #import "_MenuSet.h"
 
+const struct MenuSetAttributes MenuSetAttributes = {
+	.date = @"date",
+};
+
+const struct MenuSetRelationships MenuSetRelationships = {
+	.menu = @"menu",
+	.restaurant = @"restaurant",
+};
+
+const struct MenuSetFetchedProperties MenuSetFetchedProperties = {
+};
+
 @implementation MenuSetID
 @end
 
@@ -26,7 +38,7 @@
 	return (MenuSetID*)[super objectID];
 }
 
-+ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
++ (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
 
@@ -48,7 +60,9 @@
 	
 - (NSMutableSet*)menuSet {
 	[self willAccessValueForKey:@"menu"];
+  
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"menu"];
+  
 	[self didAccessValueForKey:@"menu"];
 	return result;
 }
@@ -57,6 +71,7 @@
 @dynamic restaurant;
 
 	
+
 
 
 

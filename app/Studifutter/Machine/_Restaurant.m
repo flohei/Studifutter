@@ -3,6 +3,26 @@
 
 #import "_Restaurant.h"
 
+const struct RestaurantAttributes RestaurantAttributes = {
+	.city = @"city",
+	.closed = @"closed",
+	.latitude = @"latitude",
+	.longitude = @"longitude",
+	.menuURL = @"menuURL",
+	.name = @"name",
+	.notes = @"notes",
+	.restaurantID = @"restaurantID",
+	.street = @"street",
+	.zipCode = @"zipCode",
+};
+
+const struct RestaurantRelationships RestaurantRelationships = {
+	.menuSet = @"menuSet",
+};
+
+const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
+};
+
 @implementation RestaurantID
 @end
 
@@ -26,24 +46,28 @@
 	return (RestaurantID*)[super objectID];
 }
 
-+ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
++ (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
 	if ([key isEqualToString:@"closedValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"closed"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
 	}
 	if ([key isEqualToString:@"latitudeValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"latitude"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
 	}
 	if ([key isEqualToString:@"longitudeValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"longitude"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
 	}
 	if ([key isEqualToString:@"restaurantIDValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"restaurantID"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
 	}
 
 	return keyPaths;
@@ -162,21 +186,21 @@
 
 
 
-- (int)restaurantIDValue {
+- (int32_t)restaurantIDValue {
 	NSNumber *result = [self restaurantID];
 	return [result intValue];
 }
 
-- (void)setRestaurantIDValue:(int)value_ {
+- (void)setRestaurantIDValue:(int32_t)value_ {
 	[self setRestaurantID:[NSNumber numberWithInt:value_]];
 }
 
-- (int)primitiveRestaurantIDValue {
+- (int32_t)primitiveRestaurantIDValue {
 	NSNumber *result = [self primitiveRestaurantID];
 	return [result intValue];
 }
 
-- (void)setPrimitiveRestaurantIDValue:(int)value_ {
+- (void)setPrimitiveRestaurantIDValue:(int32_t)value_ {
 	[self setPrimitiveRestaurantID:[NSNumber numberWithInt:value_]];
 }
 
@@ -203,11 +227,14 @@
 	
 - (NSMutableSet*)menuSetSet {
 	[self willAccessValueForKey:@"menuSet"];
+  
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"menuSet"];
+  
 	[self didAccessValueForKey:@"menuSet"];
 	return result;
 }
 	
+
 
 
 

@@ -4,6 +4,26 @@
 #import <CoreData/CoreData.h>
 
 
+extern const struct RestaurantAttributes {
+	__unsafe_unretained NSString *city;
+	__unsafe_unretained NSString *closed;
+	__unsafe_unretained NSString *latitude;
+	__unsafe_unretained NSString *longitude;
+	__unsafe_unretained NSString *menuURL;
+	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *notes;
+	__unsafe_unretained NSString *restaurantID;
+	__unsafe_unretained NSString *street;
+	__unsafe_unretained NSString *zipCode;
+} RestaurantAttributes;
+
+extern const struct RestaurantRelationships {
+	__unsafe_unretained NSString *menuSet;
+} RestaurantRelationships;
+
+extern const struct RestaurantFetchedProperties {
+} RestaurantFetchedProperties;
+
 @class MenuSet;
 
 
@@ -29,7 +49,9 @@
 
 
 
-@property (nonatomic, retain) NSString *city;
+
+@property (nonatomic, strong) NSString* city;
+
 
 
 //- (BOOL)validateCity:(id*)value_ error:(NSError**)error_;
@@ -37,7 +59,9 @@
 
 
 
-@property (nonatomic, retain) NSNumber *closed;
+
+@property (nonatomic, strong) NSNumber* closed;
+
 
 
 @property BOOL closedValue;
@@ -49,7 +73,9 @@
 
 
 
-@property (nonatomic, retain) NSNumber *latitude;
+
+@property (nonatomic, strong) NSNumber* latitude;
+
 
 
 @property double latitudeValue;
@@ -61,7 +87,9 @@
 
 
 
-@property (nonatomic, retain) NSNumber *longitude;
+
+@property (nonatomic, strong) NSNumber* longitude;
+
 
 
 @property double longitudeValue;
@@ -73,7 +101,9 @@
 
 
 
-@property (nonatomic, retain) NSString *menuURL;
+
+@property (nonatomic, strong) NSString* menuURL;
+
 
 
 //- (BOOL)validateMenuURL:(id*)value_ error:(NSError**)error_;
@@ -81,7 +111,9 @@
 
 
 
-@property (nonatomic, retain) NSString *name;
+
+@property (nonatomic, strong) NSString* name;
+
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
@@ -89,7 +121,9 @@
 
 
 
-@property (nonatomic, retain) NSString *notes;
+
+@property (nonatomic, strong) NSString* notes;
+
 
 
 //- (BOOL)validateNotes:(id*)value_ error:(NSError**)error_;
@@ -97,19 +131,23 @@
 
 
 
-@property (nonatomic, retain) NSNumber *restaurantID;
+
+@property (nonatomic, strong) NSNumber* restaurantID;
 
 
-@property int restaurantIDValue;
-- (int)restaurantIDValue;
-- (void)setRestaurantIDValue:(int)value_;
+
+@property int32_t restaurantIDValue;
+- (int32_t)restaurantIDValue;
+- (void)setRestaurantIDValue:(int32_t)value_;
 
 //- (BOOL)validateRestaurantID:(id*)value_ error:(NSError**)error_;
 
 
 
 
-@property (nonatomic, retain) NSString *street;
+
+@property (nonatomic, strong) NSString* street;
+
 
 
 //- (BOOL)validateStreet:(id*)value_ error:(NSError**)error_;
@@ -117,7 +155,9 @@
 
 
 
-@property (nonatomic, retain) NSString *zipCode;
+
+@property (nonatomic, strong) NSString* zipCode;
+
 
 
 //- (BOOL)validateZipCode:(id*)value_ error:(NSError**)error_;
@@ -126,9 +166,10 @@
 
 
 
-@property (nonatomic, retain) NSSet* menuSet;
+@property (nonatomic, strong) NSSet *menuSet;
 
 - (NSMutableSet*)menuSetSet;
+
 
 
 
@@ -201,8 +242,8 @@
 - (NSNumber*)primitiveRestaurantID;
 - (void)setPrimitiveRestaurantID:(NSNumber*)value;
 
-- (int)primitiveRestaurantIDValue;
-- (void)setPrimitiveRestaurantIDValue:(int)value_;
+- (int32_t)primitiveRestaurantIDValue;
+- (void)setPrimitiveRestaurantIDValue:(int32_t)value_;
 
 
 

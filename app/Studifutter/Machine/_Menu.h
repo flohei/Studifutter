@@ -4,6 +4,23 @@
 #import <CoreData/CoreData.h>
 
 
+extern const struct MenuAttributes {
+	__unsafe_unretained NSString *currency;
+	__unsafe_unretained NSString *date;
+	__unsafe_unretained NSString *extraChars;
+	__unsafe_unretained NSString *extraNumbers;
+	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *price;
+	__unsafe_unretained NSString *reducedPrice;
+} MenuAttributes;
+
+extern const struct MenuRelationships {
+	__unsafe_unretained NSString *menuSet;
+} MenuRelationships;
+
+extern const struct MenuFetchedProperties {
+} MenuFetchedProperties;
+
 @class MenuSet;
 
 
@@ -26,7 +43,9 @@
 
 
 
-@property (nonatomic, retain) NSString *currency;
+
+@property (nonatomic, strong) NSString* currency;
+
 
 
 //- (BOOL)validateCurrency:(id*)value_ error:(NSError**)error_;
@@ -34,7 +53,9 @@
 
 
 
-@property (nonatomic, retain) NSDate *date;
+
+@property (nonatomic, strong) NSDate* date;
+
 
 
 //- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
@@ -42,7 +63,9 @@
 
 
 
-@property (nonatomic, retain) NSString *extraChars;
+
+@property (nonatomic, strong) NSString* extraChars;
+
 
 
 //- (BOOL)validateExtraChars:(id*)value_ error:(NSError**)error_;
@@ -50,7 +73,9 @@
 
 
 
-@property (nonatomic, retain) NSString *extraNumbers;
+
+@property (nonatomic, strong) NSString* extraNumbers;
+
 
 
 //- (BOOL)validateExtraNumbers:(id*)value_ error:(NSError**)error_;
@@ -58,7 +83,9 @@
 
 
 
-@property (nonatomic, retain) NSString *name;
+
+@property (nonatomic, strong) NSString* name;
+
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
@@ -66,7 +93,9 @@
 
 
 
-@property (nonatomic, retain) NSNumber *price;
+
+@property (nonatomic, strong) NSNumber* price;
+
 
 
 @property float priceValue;
@@ -78,7 +107,9 @@
 
 
 
-@property (nonatomic, retain) NSNumber *reducedPrice;
+
+@property (nonatomic, strong) NSNumber* reducedPrice;
+
 
 
 @property float reducedPriceValue;
@@ -91,9 +122,10 @@
 
 
 
-@property (nonatomic, retain) MenuSet* menuSet;
+@property (nonatomic, strong) MenuSet *menuSet;
 
 //- (BOOL)validateMenuSet:(id*)value_ error:(NSError**)error_;
+
 
 
 

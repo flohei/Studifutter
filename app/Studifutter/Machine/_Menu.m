@@ -3,6 +3,23 @@
 
 #import "_Menu.h"
 
+const struct MenuAttributes MenuAttributes = {
+	.currency = @"currency",
+	.date = @"date",
+	.extraChars = @"extraChars",
+	.extraNumbers = @"extraNumbers",
+	.name = @"name",
+	.price = @"price",
+	.reducedPrice = @"reducedPrice",
+};
+
+const struct MenuRelationships MenuRelationships = {
+	.menuSet = @"menuSet",
+};
+
+const struct MenuFetchedProperties MenuFetchedProperties = {
+};
+
 @implementation MenuID
 @end
 
@@ -26,16 +43,18 @@
 	return (MenuID*)[super objectID];
 }
 
-+ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
++ (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
 	if ([key isEqualToString:@"priceValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"price"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
 	}
 	if ([key isEqualToString:@"reducedPriceValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"reducedPrice"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
 	}
 
 	return keyPaths;
@@ -134,6 +153,7 @@
 @dynamic menuSet;
 
 	
+
 
 
 
