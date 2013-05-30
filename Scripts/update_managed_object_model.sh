@@ -1,2 +1,1 @@
-mogenerator -m ../neapptrix1/Model/NEAModel.xcdatamodeld/NEAModel.xcdatamodel -M ../neapptrix1/Model/Machine -H ../neapptrix1/Model/Human --template-var arc=true
-mogenerator -m ../neapptrix1/Model/BLSModel.xcdatamodeld/BLSModel.xcdatamodel -M ../neapptrix1/Model/Machine -H ../neapptrix1/Model/Human --template-var arc=true
+mogenerator -m ../Studifutter/Studifutter.xcdatamodeld/Studifutter.xcdatamodel -M ../Studifutter/Machine -H ../Studifutter/Human --template-var arc=true
