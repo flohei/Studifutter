@@ -10,7 +10,6 @@
 #import "SFAppDelegate.h"
 #import "SFAPIException.h"
 #import "NSString+URLEncode.h"
-#import "JSONKit.h"
 #import "Common.h"
 
 @interface SFAPICall ()
@@ -202,11 +201,10 @@
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         
 		NSString *rawAnswer = [self doRequest];
-		NSError *jsonError = nil;
-        JSONDecoder *decoder = [JSONDecoder decoder];
-		NSDictionary *answer = [decoder objectWithUTF8String:(const unsigned char *)[rawAnswer UTF8String]
-                                                      length:[rawAnswer length]
-                                                       error:&jsonError];
+        NSData *answerData = [rawAnswer dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSError *jsonError = nil;
+		NSDictionary *answer = [NSJSONSerialization JSONObjectWithData:answerData options:NSJSONReadingMutableContainers error:&jsonError];
         
 		if (jsonError != nil) {
 			//NSLog(@"JSON error: %@ | %@", [jsonError description], rawAnswer);
@@ -400,11 +398,18 @@
         } else {
             NSMutableDictionary *JSONDictionary = [NSMutableDictionary dictionaryWithDictionary:_postArgs];
             [JSONDictionary setObject:_checksum forKey:@"checksum"];
-            _postString = [JSONDictionary JSONString];
+            
+            NSError *error;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:JSONDictionary
+                                                               options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                                 error:&error];
+            if (!jsonData) {
+                NSLog(@"Got an error: %@", error);
+            } else {
+                _postString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            }
         }
-        
-        //NSLog(@"postString: %@", _postString);
-	}
+    }
 }
 
 - (NSMutableDictionary *)defaultPostArguments {

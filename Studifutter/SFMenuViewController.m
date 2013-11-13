@@ -13,7 +13,6 @@
 #import "Menu.h"
 #import "MenuTableViewCell.h"
 #import "FHGradientView.h"
-#import "PostItView.h"
 #import <Social/Social.h>
 #import "SFActivityProvider.h"
 
@@ -46,6 +45,11 @@
     [self setSwipeGestureRecognizer:nil];
     
     [self setupInterface];
+}
+
+- (void)viewDidUnload {
+    [self setSwipeGestureRecognizer:nil];
+    [super viewDidUnload];
 }
 
 - (void)setupInterface {
@@ -170,9 +174,11 @@
     return cell;
 }
 
-- (void)viewDidUnload {
-    [self setSwipeGestureRecognizer:nil];
-    [super viewDidUnload];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Menu *menu = [[self allMenus] objectAtIndex:[indexPath row]];
+    CGSize titleSize = [[menu name] sizeWithFont:[UIFont boldSystemFontOfSize:17] constrainedToSize:CGSizeMake(260, 500) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    return titleSize.height + 40.0;
 }
 
 @end

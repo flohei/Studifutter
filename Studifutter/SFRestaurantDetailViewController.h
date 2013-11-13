@@ -6,14 +6,13 @@
 //  Copyright (c) 2011 rootof.net Heiber & Wiewel GbR. All rights reserved.
 //
 
-#import "SFViewController.h"
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <iAd/iAd.h>
 
 @class Restaurant;
 
-@interface SFRestaurantDetailViewController : SFViewController <MKMapViewDelegate>
+@interface SFRestaurantDetailViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, retain) Restaurant *restaurant;
 

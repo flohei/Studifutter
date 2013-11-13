@@ -37,6 +37,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)setWebURL:(NSURL *)webURL {
+    _webURL = webURL;
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:_webURL];
+    [[self webView] loadRequest:request];
+}
+
 #pragma UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

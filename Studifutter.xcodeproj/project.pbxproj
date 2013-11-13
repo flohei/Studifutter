@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F04F22E1536F5F100BA25C7 /* info-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F04F22D1536F5F100BA25C7 /* info-white.png */; };
-		8F04F2311536FC5200BA25C7 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F04F2301536FC5200BA25C7 /* pin.png */; };
 		8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA78D145C72F1003E2DE0 /* UIKit.framework */; };
 		8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA78F145C72F1003E2DE0 /* Foundation.framework */; };
 		8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA791145C72F1003E2DE0 /* CoreGraphics.framework */; };
@@ -28,29 +26,15 @@
 		8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
-		8F408F72153B687600B73CA4 /* info-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F408F70153B687600B73CA4 /* info-white@2x.png */; };
-		8F408F73153B687600B73CA4 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F408F71153B687600B73CA4 /* pin@2x.png */; };
-		8F408F76153B696B00B73CA4 /* mail1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F408F74153B696B00B73CA4 /* mail1@2x.png */; };
-		8F408F77153B696B00B73CA4 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F408F75153B696B00B73CA4 /* twitter@2x.png */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
 		8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C0615346A1C00F647CF /* libz.dylib */; };
-		8F46480C161DC41B006E79C3 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F46480B161DC41B006E79C3 /* gradient.png */; };
-		8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D2C6214A20EA7007023AF /* PostItView.m */; };
-		8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
-		8F6232F5153613E200BA786E /* mail1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6232F3153613E200BA786E /* mail1.png */; };
-		8F6232F6153613E200BA786E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6232F4153613E200BA786E /* twitter.png */; };
-		8F6CD33316132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6CD33216132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png */; };
-		8F6F134B147E990600FE5455 /* studifutter-infoscreen-blanko.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */; };
-		8F6F134C147E990600FE5455 /* studifutter-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1349147E990600FE5455 /* studifutter-pattern.png */; };
-		8F6F134D147E990600FE5455 /* studifutter-post-it.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F134A147E990600FE5455 /* studifutter-post-it.png */; };
 		8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F134F147EA15900FE5455 /* QuartzCore.framework */; };
 		8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */; };
 		8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB6145F23BB00FE166B /* SFDayListViewController.m */; };
 		8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB9145F240700FE166B /* SFMenuViewController.m */; };
 		8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */; };
-		8F729BC6145F245800FE166B /* SFInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BC4145F245800FE166B /* SFInfoViewController.m */; };
 		8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFC145F2D5100FE166B /* SFAPICall.m */; };
 		8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFE145F2D5100FE166B /* SFAPIException.m */; };
 		8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C05145F2DE700FE166B /* NSString+URLEncode.m */; };
@@ -62,16 +46,13 @@
 		8F729C451464BADD00FE166B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
 		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
-		8F776D81173EB90400FD4872 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F776D80173EB90400FD4872 /* Default-568h@2x.png */; };
-		8F776D83173EB90D00FD4872 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F776D82173EB90D00FD4872 /* Default@2x.png */; };
-		8F776D84173EB92100FD4872 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F776D7E173EB8FE00FD4872 /* Default.png */; };
 		8F78A2851521F0090060BE14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F78A2831521F0090060BE14 /* Localizable.strings */; };
-		8F7A8FF216DE6FF900C97E00 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A8FF116DE6FF900C97E00 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D03147E971E00AB17E9 /* SFViewController.m */; };
-		8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B378616DB681B00C0A92C /* Crashlytics.framework */; };
+		8F9DAA4D183403BD00B7ADB9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */; };
+		8F9DAA5218340C9000B7ADB9 /* studifutter-app-icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DAA5118340C9000B7ADB9 /* studifutter-app-icon-120.png */; };
+		8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */; };
 		8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.txt */; };
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
@@ -82,8 +63,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F04F22D1536F5F100BA25C7 /* info-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-white.png"; path = "Graphics/info-white.png"; sourceTree = "<group>"; };
-		8F04F2301536FC5200BA25C7 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = Graphics/pin.png; sourceTree = "<group>"; };
 		8F0BA789145C72F1003E2DE0 /* Studifutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studifutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0BA78D145C72F1003E2DE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8F0BA78F145C72F1003E2DE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,27 +92,13 @@
 		8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-spotlight-58-retina.png"; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8F408F70153B687600B73CA4 /* info-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-white@2x.png"; path = "Graphics/info-white@2x.png"; sourceTree = "<group>"; };
-		8F408F71153B687600B73CA4 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin@2x.png"; path = "Graphics/pin@2x.png"; sourceTree = "<group>"; };
-		8F408F74153B696B00B73CA4 /* mail1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mail1@2x.png"; path = "Graphics/mail1@2x.png"; sourceTree = "<group>"; };
-		8F408F75153B696B00B73CA4 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "Graphics/twitter@2x.png"; sourceTree = "<group>"; };
 		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
 		8F450C02153462A100F647CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8F450C0615346A1C00F647CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		8F46480B161DC41B006E79C3 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		8F4748F815B7522D00078434 /* Studifutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Studifutter.entitlements; sourceTree = "<group>"; };
-		8F5D2C6114A20EA7007023AF /* PostItView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItView.h; sourceTree = "<group>"; };
-		8F5D2C6214A20EA7007023AF /* PostItView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItView.m; sourceTree = "<group>"; };
-		8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-schnipsel.png"; sourceTree = "<group>"; };
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
-		8F6232F3153613E200BA786E /* mail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mail1.png; path = Graphics/mail1.png; sourceTree = "<group>"; };
-		8F6232F4153613E200BA786E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Graphics/twitter.png; sourceTree = "<group>"; };
-		8F6CD33216132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-infoscreen-blanko-568h@2x.png"; sourceTree = "<group>"; };
-		8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-infoscreen-blanko.png"; sourceTree = "<group>"; };
-		8F6F1349147E990600FE5455 /* studifutter-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-pattern.png"; sourceTree = "<group>"; };
-		8F6F134A147E990600FE5455 /* studifutter-post-it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-post-it.png"; sourceTree = "<group>"; };
 		8F6F134F147EA15900FE5455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantViewController.h; sourceTree = "<group>"; };
 		8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantViewController.m; sourceTree = "<group>"; };
@@ -143,8 +108,6 @@
 		8F729BB9145F240700FE166B /* SFMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMenuViewController.m; sourceTree = "<group>"; };
 		8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantDetailViewController.h; sourceTree = "<group>"; };
 		8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantDetailViewController.m; sourceTree = "<group>"; };
-		8F729BC3145F245800FE166B /* SFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFInfoViewController.h; sourceTree = "<group>"; };
-		8F729BC4145F245800FE166B /* SFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFInfoViewController.m; sourceTree = "<group>"; };
 		8F729BFB145F2D5100FE166B /* SFAPICall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPICall.h; sourceTree = "<group>"; };
 		8F729BFC145F2D5100FE166B /* SFAPICall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPICall.m; sourceTree = "<group>"; };
 		8F729BFD145F2D5100FE166B /* SFAPIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPIException.h; sourceTree = "<group>"; };
@@ -167,22 +130,17 @@
 		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
 		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
-		8F776D7E173EB8FE00FD4872 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		8F776D80173EB90400FD4872 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8F776D82173EB90D00FD4872 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8F78A2841521F0090060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F78A28A1521F0470060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8F7A8FF016DE6FF900C97E00 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		8F7A8FF116DE6FF900C97E00 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		8F7C9D02147E971E00AB17E9 /* SFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
-		8F7C9D03147E971E00AB17E9 /* SFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
-		8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTableViewController.h; sourceTree = "<group>"; };
-		8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTableViewController.m; sourceTree = "<group>"; };
 		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDE146AF180001F4E74 /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
 		8F9B378616DB681B00C0A92C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8F9DAA5118340C9000B7ADB9 /* studifutter-app-icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-120.png"; sourceTree = "<group>"; };
+		8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTeamListViewController.h; sourceTree = "<group>"; };
+		8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTeamListViewController.m; sourceTree = "<group>"; };
 		8FA40B5916BED22000736EC3 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDataAccessor.h; sourceTree = "<group>"; };
 		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
@@ -203,9 +161,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */,
 				8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */,
 				8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */,
-				8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */,
 				8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */,
 				8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */,
 				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
@@ -224,9 +182,7 @@
 		8F0BA77E145C72F1003E2DE0 = {
 			isa = PBXGroup;
 			children = (
-				8F776D82173EB90D00FD4872 /* Default@2x.png */,
-				8F776D80173EB90400FD4872 /* Default-568h@2x.png */,
-				8F776D7E173EB8FE00FD4872 /* Default.png */,
+				8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
@@ -256,8 +212,6 @@
 				8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */,
 				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
 				8F450C0615346A1C00F647CF /* libz.dylib */,
-				8F7A8FF016DE6FF900C97E00 /* JSONKit.h */,
-				8F7A8FF116DE6FF900C97E00 /* JSONKit.m */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -295,20 +249,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F1A53BA149CFEF700F915DE /* Super classes */ = {
-			isa = PBXGroup;
-			children = (
-				8F7C9D02147E971E00AB17E9 /* SFViewController.h */,
-				8F7C9D03147E971E00AB17E9 /* SFViewController.m */,
-				8F7C9D06147E972F00AB17E9 /* SFTableViewController.h */,
-				8F7C9D07147E972F00AB17E9 /* SFTableViewController.m */,
-			);
-			name = "Super classes";
-			sourceTree = "<group>";
-		};
 		8F250105146BC71000453E58 /* ICON-DERIVATE */ = {
 			isa = PBXGroup;
 			children = (
+				8F9DAA5118340C9000B7ADB9 /* studifutter-app-icon-120.png */,
 				8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */,
 				8F250107146BC71000453E58 /* studifutter-app-icon-512.png */,
 				8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */,
@@ -321,11 +265,8 @@
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8F1A53BA149CFEF700F915DE /* Super classes */,
 				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
 				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
-				8F729BC3145F245800FE166B /* SFInfoViewController.h */,
-				8F729BC4145F245800FE166B /* SFInfoViewController.m */,
 				8F729BB5145F23BB00FE166B /* SFDayListViewController.h */,
 				8F729BB6145F23BB00FE166B /* SFDayListViewController.m */,
 				8F729BB8145F240700FE166B /* SFMenuViewController.h */,
@@ -336,6 +277,8 @@
 				8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */,
 				8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */,
 				8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */,
+				8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */,
+				8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -351,8 +294,6 @@
 				8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */,
 				8F1A53BB149CFFAC00F915DE /* FHGradientView.h */,
 				8F1A53BC149CFFAC00F915DE /* FHGradientView.m */,
-				8F5D2C6114A20EA7007023AF /* PostItView.h */,
-				8F5D2C6214A20EA7007023AF /* PostItView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -369,20 +310,6 @@
 		8F729BC9145F248C00FE166B /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				8F46480B161DC41B006E79C3 /* gradient.png */,
-				8F04F2301536FC5200BA25C7 /* pin.png */,
-				8F408F71153B687600B73CA4 /* pin@2x.png */,
-				8F04F22D1536F5F100BA25C7 /* info-white.png */,
-				8F408F70153B687600B73CA4 /* info-white@2x.png */,
-				8F6232F3153613E200BA786E /* mail1.png */,
-				8F408F74153B696B00B73CA4 /* mail1@2x.png */,
-				8F6232F4153613E200BA786E /* twitter.png */,
-				8F408F75153B696B00B73CA4 /* twitter@2x.png */,
-				8F6F1348147E990600FE5455 /* studifutter-infoscreen-blanko.png */,
-				8F6CD33216132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png */,
-				8F6F1349147E990600FE5455 /* studifutter-pattern.png */,
-				8F6F134A147E990600FE5455 /* studifutter-post-it.png */,
-				8F5E9E56147D8C5900FF2327 /* studifutter-schnipsel.png */,
 				8F250105146BC71000453E58 /* ICON-DERIVATE */,
 			);
 			name = Graphics;
@@ -487,7 +414,7 @@
 		8F0BA780145C72F1003E2DE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
 			};
 			buildConfigurationList = 8F0BA783145C72F1003E2DE0 /* Build configuration list for PBXProject "Studifutter" */;
@@ -514,32 +441,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9DAA5218340C9000B7ADB9 /* studifutter-app-icon-120.png in Resources */,
 				8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */,
 				8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */,
 				8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */,
 				8F25010F146BC71000453E58 /* studifutter-app-icon-spotlight-29.png in Resources */,
 				8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */,
-				8F5E9E58147D8C5900FF2327 /* studifutter-schnipsel.png in Resources */,
-				8F6F134B147E990600FE5455 /* studifutter-infoscreen-blanko.png in Resources */,
-				8F6F134C147E990600FE5455 /* studifutter-pattern.png in Resources */,
-				8F6F134D147E990600FE5455 /* studifutter-post-it.png in Resources */,
+				8F9DAA4D183403BD00B7ADB9 /* Default-568h@2x.png in Resources */,
 				8F78A2851521F0090060BE14 /* Localizable.strings in Resources */,
 				8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */,
-				8F6232F5153613E200BA786E /* mail1.png in Resources */,
-				8F6232F6153613E200BA786E /* twitter.png in Resources */,
-				8F04F22E1536F5F100BA25C7 /* info-white.png in Resources */,
-				8F04F2311536FC5200BA25C7 /* pin.png in Resources */,
-				8F408F72153B687600B73CA4 /* info-white@2x.png in Resources */,
-				8F408F73153B687600B73CA4 /* pin@2x.png in Resources */,
-				8F408F76153B696B00B73CA4 /* mail1@2x.png in Resources */,
-				8F408F77153B696B00B73CA4 /* twitter@2x.png in Resources */,
-				8F6CD33316132CFB005CB325 /* studifutter-infoscreen-blanko-568h@2x.png in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
-				8F46480C161DC41B006E79C3 /* gradient.png in Resources */,
 				8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */,
-				8F776D81173EB90400FD4872 /* Default-568h@2x.png in Resources */,
-				8F776D83173EB90D00FD4872 /* Default@2x.png in Resources */,
-				8F776D84173EB92100FD4872 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,12 +519,12 @@
 			files = (
 				8F0BA79C145C72F1003E2DE0 /* main.m in Sources */,
 				8F0BA7A0145C72F1003E2DE0 /* SFAppDelegate.m in Sources */,
+				8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */,
 				8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */,
 				8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */,
 				8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */,
 				8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */,
 				8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */,
-				8F729BC6145F245800FE166B /* SFInfoViewController.m in Sources */,
 				8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */,
 				8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */,
 				8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */,
@@ -628,16 +540,12 @@
 				8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */,
 				8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */,
 				8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */,
-				8F7C9D04147E971E00AB17E9 /* SFViewController.m in Sources */,
-				8F7C9D08147E972F00AB17E9 /* SFTableViewController.m in Sources */,
 				8F1A53BD149CFFAC00F915DE /* FHGradientView.m in Sources */,
-				8F5D2C6314A20EA7007023AF /* PostItView.m in Sources */,
 				8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */,
 				8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */,
 				8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */,
 				8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */,
 				8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */,
-				8F7A8FF216DE6FF900C97E00 /* JSONKit.m in Sources */,
 				8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,9 +588,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -697,11 +606,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -710,9 +623,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -721,9 +635,12 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -786,9 +703,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -797,9 +715,12 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
