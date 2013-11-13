@@ -138,7 +138,11 @@
         [self hideInfoView];
     }
     
-    return [unsortedMenuSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
+    if (unsortedMenuSet) {
+         return [unsortedMenuSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
+    } else {
+        return nil;
+    }
 }
 
 - (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate {
