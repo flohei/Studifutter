@@ -22,13 +22,8 @@
 
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *streetLabel;
-@property (weak, nonatomic) IBOutlet UILabel *zipAndCityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
-@property (weak, nonatomic) IBOutlet UIImageView *postItView;
 
 @end
 
@@ -36,18 +31,12 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     bannerVisible = YES;
     [self moveBannerOffScreen];
-    
-    self.nameLabel.text = _restaurant.name;
-    self.streetLabel.text = _restaurant.street;
-    self.zipAndCityLabel.text = [NSString stringWithFormat:@"%@ %@", _restaurant.zipCode, _restaurant.city];
-    self.notesLabel.text = _restaurant.notes;
     
     MKCoordinateRegion region;
     MKCoordinateSpan span;
@@ -70,20 +59,7 @@
     [self.mapView addAnnotation:self.restaurant];
 }
 
-- (void)viewDidUnload
-{
-    [self setNameLabel:nil];
-    [self setStreetLabel:nil];
-    [self setZipAndCityLabel:nil];
-    [self setNotesLabel:nil];
-    [self setMapView:nil];
-    [self setBannerView:nil];
-    [self setPostItView:nil];
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }

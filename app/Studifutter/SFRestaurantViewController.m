@@ -44,10 +44,6 @@
     if ([[segue identifier] isEqualToString:@"ShowDayList"]) {
         SFDayListViewController *dayListViewController = (SFDayListViewController *)[segue destinationViewController];
         dayListViewController.restaurant = [(RestaurantTableViewCell *)sender restaurant];
-    } else if ([[segue identifier] isEqualToString:@"ShowInfoView"]) {
-        UINavigationController *infoNavigationController = (UINavigationController *)[segue destinationViewController];
-        SFInfoViewController *infoViewController = (SFInfoViewController *)[infoNavigationController topViewController];
-        infoViewController.delegate = self;
     }
 }
 

@@ -13,10 +13,12 @@
 #import "DayTableViewCell.h"
 #import "SFMenuViewController.h"
 #import "SFRestaurantDetailViewController.h"
-#import "FHGradientView.h"
 #import "SFAppDelegate.h"
+#import "SFRestaurantDetailViewController.h"
 
-@interface SFDayListViewController ()
+@interface SFDayListViewController () {
+    UILabel *_noDataAvailableLabel;
+}
 
 - (NSArray *)allMenus;
 
@@ -27,10 +29,6 @@
 
 - (NSString *)monthStringForDate:(NSDate *)date;
 - (void)reloadData:(NSNotification *)notification;
-
-- (void)setupInfoView;
-- (void)showInfoView;
-- (void)hideInfoView;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bannerVisibleConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHiddenConstraint;
@@ -132,10 +130,13 @@
     NSSet *unsortedMenuSet = [[self restaurant] menuSet];
     
     if ([unsortedMenuSet count] == 0) {
-        [self setupInfoView];
-        [self showInfoView];
+        // show info that there's no data
+        [[self containerView] addSubview:[self noDataAvailableLabel]];
+        [[self tableView] setHidden:YES];
     } else {
-        [self hideInfoView];
+        // hide info that there's no data
+        [[self noDataAvailableLabel] removeFromSuperview];
+        [[self tableView] setHidden:NO];
     }
     
     if (unsortedMenuSet) {
@@ -143,6 +144,16 @@
     } else {
         return nil;
     }
+}
+
+- (UILabel *)noDataAvailableLabel {
+    if (!_noDataAvailableLabel) {
+        _noDataAvailableLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 100)];
+        [_noDataAvailableLabel setNumberOfLines:0];
+        [_noDataAvailableLabel setText:NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"")];
+    }
+    
+    return _noDataAvailableLabel;
 }
 
 - (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate {
@@ -195,41 +206,6 @@
     return _bannerHiddenConstraint;
 }
 
-- (void)setupInfoView {
-    if (!infoView) {
-        int width = 198;
-        int height = 142;
-        CGRect frame = CGRectMake(30, 10, width, height);
-        infoView = [[UIView alloc] initWithFrame:frame];
-        
-        UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"studifutter-post-it.png"]];
-        [image setFrame:frame];
-        [image setCenter:[infoView center]];
-        
-        CGRect labelFrame = CGRectMake(10, 10, width-20, height-20);
-        UILabel *infoLabel = [[UILabel alloc] initWithFrame:labelFrame];
-        NSString *infoText = NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"Infotext, der angezeigt wird, wenn keine Menus vorhanden sind.");
-        [infoLabel setBackgroundColor:[UIColor clearColor]];
-        [infoLabel setText:infoText];
-        [infoLabel setFont:[UIFont fontWithName:@"Marker Felt" size:16]];
-        [infoLabel setCenter:[infoView center]];
-        [infoLabel setNumberOfLines:0];
-        [infoLabel setTextAlignment:NSTextAlignmentCenter];
-        
-        [infoView setBackgroundColor:[UIColor clearColor]];
-        [infoView addSubview:image];
-        [infoView addSubview:infoLabel];
-    }
-}
-
-- (void)showInfoView {
-    [[[self tableView] superview] addSubview:infoView];
-}
-
-- (void)hideInfoView {
-    [infoView removeFromSuperview];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -250,9 +226,6 @@
     if (cell == nil) {
         cell = [[DayTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    FHGradientView *backgroundView = [[FHGradientView alloc] initWithFrame:[cell bounds]];
-    [cell setSelectedBackgroundView:backgroundView];
     
     // Configure the cell...
     NSDate *currentMonth = [[self sortedMonths] objectAtIndex:[indexPath section]];

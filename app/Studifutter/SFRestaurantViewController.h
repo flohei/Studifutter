@@ -6,11 +6,9 @@
 //  Copyright (c) 2011 rootof.net Heiber & Wiewel GbR. All rights reserved.
 //
 
-#import "SFTableViewController.h"
 #import <UIKit/UIKit.h>
-#import "SFInfoViewController.h"
 
-@interface SFRestaurantViewController : SFTableViewController <SFInfoViewDelegate, NSFetchedResultsControllerDelegate>
+@interface SFRestaurantViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 

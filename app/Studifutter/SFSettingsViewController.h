@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SFSettingsViewController : UITableViewController
+@interface SFSettingsViewController : UITableViewController <MFMailComposeViewControllerDelegate>
+
+- (IBAction)done:(id)sender;
 
 @end
