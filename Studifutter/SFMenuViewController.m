@@ -53,18 +53,28 @@
 
 - (void)setupInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
-    if (![restaurantNotes isEqualToString:[NSString string]]) {        
-        UITextView *notesTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 120, 160)];
-        [notesTextView setText:restaurantNotes];
-        [notesTextView setFont:[UIFont systemFontOfSize:10]];
-        [notesTextView setBackgroundColor:[UIColor clearColor]];
-        [notesTextView setEditable:NO];
-        [[self tableView] setTableFooterView:notesTextView];
-        [notesTextView sizeToFit];
+    if (![restaurantNotes isEqualToString:[NSString string]]) {
+        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
+        [footerView setBackgroundColor:[UIColor clearColor]];
+        [[self tableView] setTableFooterView:footerView];
+        
+        CGSize labelSize = [restaurantNotes sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]
+                                       constrainedToSize:CGSizeMake(280, 200)
+                                           lineBreakMode:NSLineBreakByCharWrapping];
+        CGPoint origin = CGPointMake(20, 20);
+        CGRect labelFrame = { origin, labelSize };
+        
+        UILabel *notesLabel = [[UILabel alloc] initWithFrame:labelFrame];
+        
+        [notesLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]];
+        [notesLabel setText:restaurantNotes];
+        [notesLabel setBackgroundColor:[UIColor clearColor]];
+        [notesLabel setNumberOfLines:0];
+        [notesLabel setLineBreakMode:NSLineBreakByCharWrapping];
+        [footerView addSubview:notesLabel];
     }
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
-//    [titleDateFormatter setDateFormat:@"dd.MM."];
     [titleDateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [titleDateFormatter setDoesRelativeDateFormatting:YES];
     
