@@ -500,7 +500,7 @@
             </objects>
             <point key="canvasLocation" x="912" y="1453"/>
         </scene>
-        <!--Settings View Controller - Einstellungen-->
+        <!--Settings View Controller - Info-->
         <scene sceneID="WYm-d5-3t9">
             <objects>
                 <tableViewController id="dBS-Cr-sOM" customClass="SFSettingsViewController" sceneMemberID="viewController">
@@ -621,7 +621,7 @@
                             <outlet property="delegate" destination="dBS-Cr-sOM" id="3Rv-9e-jV4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Einstellungen" id="ASq-YB-vCV">
+                    <navigationItem key="navigationItem" title="Info" id="ASq-YB-vCV">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="GK6-dM-CVx">
                             <connections>
                                 <action selector="done:" destination="dBS-Cr-sOM" id="puh-NS-BDa"/>
