@@ -253,11 +253,11 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 280, 44)];
     NSString *title = [self tableView:tableView titleForHeaderInSection:section];
     [label setText:title];
-    [label setFont:[UIFont boldSystemFontOfSize:14]];
-    [label setTextColor:[UIColor whiteColor]];
+    [label setFont:[UIFont boldSystemFontOfSize:17]];
+    [label setTextColor:[UIColor redColor]];
     [label setBackgroundColor:[UIColor clearColor]];
     
-    [containerView setBackgroundColor:[UIColor blackColor]];
+    [containerView setBackgroundColor:[UIColor whiteColor]];
     [containerView addSubview:label];
     
     return containerView;

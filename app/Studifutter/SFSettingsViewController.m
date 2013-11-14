@@ -33,7 +33,7 @@
     NSString *title = [NSString string];
     
     if (section == 0) {
-        title = NSLocalizedString(@"RedownloadDescription", @"Erneuter Download aller Restaurant und Menüs – falls mal was schief läuft.");
+        title = NSLocalizedString(@"REDOWNLOAD_DESCRIPTION", @"Erneuter Download aller Restaurant und Menüs – falls mal was schief läuft.");
     } else if (section == 2) {
         title = [NSString stringWithFormat:@"Version %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     }

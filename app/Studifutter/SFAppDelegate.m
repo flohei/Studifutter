@@ -31,9 +31,11 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     // register for crashlytics
     [Crashlytics startWithAPIKey:@"d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c"];
+    
+    // setup appearance changes
+    [self setupAppearance];
     
     // create one of these fancy new UUIDs if needed
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
@@ -78,6 +80,12 @@
 }
 
 #pragma mark - Custom Code
+
+- (void)setupAppearance {
+    // Set the overall UINavigationBar's tint color to the Studifutter red. This mimics the iOS 7
+    // style of Notes.app etc.
+    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+}
 
 - (void)saveContext {
     NSError *error = nil;
