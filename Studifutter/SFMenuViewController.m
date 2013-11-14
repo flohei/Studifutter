@@ -12,7 +12,6 @@
 #import "MenuSet.h"
 #import "Menu.h"
 #import "MenuTableViewCell.h"
-#import "FHGradientView.h"
 #import <Social/Social.h>
 #import "SFActivityProvider.h"
 
@@ -162,9 +161,6 @@
     if (cell == nil) {
         cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    FHGradientView *backgroundView = [[FHGradientView alloc] initWithFrame:[cell bounds]];
-    [cell setSelectedBackgroundView:backgroundView];
     
     Menu *menu = [[self allMenus] objectAtIndex:[indexPath row]];
     

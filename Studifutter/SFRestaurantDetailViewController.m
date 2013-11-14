@@ -57,11 +57,20 @@
     [self.mapView setRegion:region];
     [self.mapView regionThatFits:region];
     [self.mapView addAnnotation:self.restaurant];
+    
+    [self openAnnotation:self.restaurant];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Misc
+
+- (void)openAnnotation:(id)annotation; {
+    //mv is the mapView
+    [[self mapView] selectAnnotation:annotation animated:YES];
 }
 
 #pragma mark - MKMapViewDelegate
@@ -131,6 +140,5 @@
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
     return YES;
 }
-
 
 @end
