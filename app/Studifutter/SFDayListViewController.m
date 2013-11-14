@@ -148,7 +148,8 @@
 
 - (UILabel *)noDataAvailableLabel {
     if (!_noDataAvailableLabel) {
-        _noDataAvailableLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 100)];
+        _noDataAvailableLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 280, 200)];
+        [_noDataAvailableLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
         [_noDataAvailableLabel setNumberOfLines:0];
         [_noDataAvailableLabel setText:NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"")];
     }
