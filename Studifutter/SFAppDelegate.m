@@ -14,6 +14,7 @@
 #import "MenuSet.h"
 #import "FHVersionUpdate.h"
 #import <Crashlytics/Crashlytics.h>
+#import "TestFlight.h"
 
 @interface SFAppDelegate ()
 
@@ -31,8 +32,11 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // register for crashlytics
+    // register for Crashlytics
     [Crashlytics startWithAPIKey:@"d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c"];
+    
+    // register for TestFlight
+    [TestFlight takeOff:TESTFLIGHT_TEAM_TOKEN];
     
     // setup appearance changes
     [self setupAppearance];
@@ -41,7 +45,6 @@
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
         CFUUIDRef uuid = CFUUIDCreate(NULL);
         NSString *uuidString = (__bridge NSString *)CFUUIDCreateString(NULL, uuid);
-        //NSLog(@"Created new custom UUID: %@", uuidString);
         [[NSUserDefaults standardUserDefaults] setObject:uuidString forKey:UUID_KEY];
         [[NSUserDefaults standardUserDefaults] synchronize];
         CFRelease(uuid);
