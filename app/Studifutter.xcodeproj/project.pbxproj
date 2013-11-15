@@ -477,7 +477,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/Scripts/update_storyboard_strings.sh\"";
+			shellScript = "";
 		};
 		8F78E5381769CBFC00D39CA8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

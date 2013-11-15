@@ -1,0 +1,105 @@
+
+/* Class = "IBUILabel"; text = "Brokkoli-Nussecke mit Rahmkartoffeln"; ObjectID = "2oe-qZ-cZI"; */
+"2oe-qZ-cZI.text" = "Brokkoli-Nussecke mit Rahmkartoffeln";
+
+/* Class = "IBUILabel"; text = "Simon Heidingsfelder"; ObjectID = "2rg-bt-rrd"; */
+"2rg-bt-rrd.text" = "Simon Heidingsfelder";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Version 2.3"; ObjectID = "4xd-Lz-MRK"; */
+"4xd-Lz-MRK.footerTitle" = "Version 2.3";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Impressum"; ObjectID = "4xd-Lz-MRK"; */
+"4xd-Lz-MRK.headerTitle" = "Imprint";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Code"; ObjectID = "9I0-fR-rvn"; */
+"9I0-fR-rvn.headerTitle" = "Code";
+
+/* Class = "IBUILabel"; text = "Florian Heiber"; ObjectID = "AFV-2F-7Hc"; */
+"AFV-2F-7Hc.text" = "Florian Heiber";
+
+/* Class = "IBUINavigationItem"; title = "Info"; ObjectID = "ASq-YB-vCV"; */
+"ASq-YB-vCV.title" = "Info";
+
+/* Class = "IBUINavigationItem"; title = "Team"; ObjectID = "BYm-ht-AW4"; */
+"BYm-ht-AW4.title" = "Team";
+
+/* Class = "IBUILabel"; text = "Mail"; ObjectID = "Gwc-TF-2Et"; */
+"Gwc-TF-2Et.text" = "Mail";
+
+/* Class = "IBUILabel"; text = "Daniel Wiewel"; ObjectID = "NMJ-Dz-WHj"; */
+"NMJ-Dz-WHj.text" = "Daniel Wiewel";
+
+/* Class = "IBUIBarButtonItem"; title = "Info"; ObjectID = "NbD-kN-6hf"; */
+"NbD-kN-6hf.title" = "Info";
+
+/* Class = "IBUINavigationItem"; title = "Nächste Tage"; ObjectID = "QM9-w5-Dii"; */
+"QM9-w5-Dii.title" = "Next Days";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Design"; ObjectID = "Qtl-Et-cnf"; */
+"Qtl-Et-cnf.headerTitle" = "Design";
+
+/* Class = "IBUINavigationItem"; title = "Menü"; ObjectID = "RRK-PH-uYD"; */
+"RRK-PH-uYD.title" = "Menü";
+
+/* Class = "IBUILabel"; text = "rootof.net"; ObjectID = "TxD-gs-XYZ"; */
+"TxD-gs-XYZ.text" = "ROOTOF.NET";
+
+/* Class = "IBUILabel"; text = "Lars Thorben Fischer"; ObjectID = "Y3F-k5-rAK"; */
+"Y3F-k5-rAK.text" = "Lars Thorben Fischer";
+
+/* Class = "IBUILabel"; text = "Twitter"; ObjectID = "ZYP-gZ-srh"; */
+"ZYP-gZ-srh.text" = "Twitter";
+
+/* Class = "IBUINavigationItem"; title = "Details"; ObjectID = "dkv-kK-VIl"; */
+"dkv-kK-VIl.title" = "Details";
+
+/* Class = "IBUILabel"; text = "Mensataria"; ObjectID = "duS-OA-uok"; */
+"duS-OA-uok.text" = "Mensataria";
+
+/* Class = "IBUIBarButtonItem"; title = "Mensa"; ObjectID = "eO4-FL-wj6"; */
+"eO4-FL-wj6.title" = "Restaurant";
+
+/* Class = "IBUINavigationItem"; title = "Restaurants"; ObjectID = "fCT-Iz-fw6"; */
+"fCT-Iz-fw6.title" = "Restaurants";
+
+/* Class = "IBUILabel"; text = "Lammragout Mazedonische Art"; ObjectID = "hMj-JN-jcY"; */
+"hMj-JN-jcY.text" = "Lammragout Mazedonische Art";
+
+/* Class = "IBUILabel"; text = "23."; ObjectID = "kyy-4k-xHs"; */
+"kyy-4k-xHs.text" = "23.";
+
+/* Class = "IBUILabel"; text = "Steffen Wiewel"; ObjectID = "mEo-d1-Mgp"; */
+"mEo-d1-Mgp.text" = "Steffen Wiewel";
+
+/* Class = "IBUILabel"; text = "1,60 Euro v"; ObjectID = "qqr-Uv-Tym"; */
+"qqr-Uv-Tym.text" = "1,60 Euro v";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Erneuter Download aller Restaurant und Menüs – falls mal was schief läuft."; ObjectID = "sfP-qL-dfO"; */
+"sfP-qL-dfO.footerTitle" = "Re-download all the data—just in case something breaks.";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Daten"; ObjectID = "sfP-qL-dfO"; */
+"sfP-qL-dfO.headerTitle" = "Data";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "t5j-8Y-meI"; */
+"t5j-8Y-meI.title" = "Master";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Idee"; ObjectID = "upp-yx-Qmo"; */
+"upp-yx-Qmo.headerTitle" = "Idea";
+
+/* Class = "IBUILabel"; text = "Erneuter Download"; ObjectID = "vNo-hx-iTl"; */
+"vNo-hx-iTl.text" = "Re-download";
+
+/* Class = "IBUILabel"; text = "Simon-Ohm-Platz 1, Nürnberg"; ObjectID = "w9j-Di-SWo"; */
+"w9j-Di-SWo.text" = "Simon-Ohm-Platz 1, Nürnberg";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Kontakt"; ObjectID = "x9h-tb-i3V"; */
+"x9h-tb-i3V.headerTitle" = "Contact";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "xYN-Ew-x2z"; */
+"xYN-Ew-x2z.title" = "Master";
+
+/* Class = "IBUILabel"; text = "Team"; ObjectID = "xid-1A-PTB"; */
+"xid-1A-PTB.text" = "Team";
+
+/* Class = "IBUILabel"; text = "Kathrin Ziegelhöfer "; ObjectID = "ycV-us-6Cu"; */
+"ycV-us-6Cu.text" = "Kathrin Ziegelhöfer ";
