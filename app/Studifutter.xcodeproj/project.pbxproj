@@ -14,6 +14,9 @@
 		8F0BA79C145C72F1003E2DE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79B145C72F1003E2DE0 /* main.m */; };
 		8F0BA7A0145C72F1003E2DE0 /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */; };
 		8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
+		8F0C31C41836A4E000D96574 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0C31BE1836A4E000D96574 /* libTestFlight.a */; };
+		8F0C31C51836A4E000D96574 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F0C31BF1836A4E000D96574 /* README.md */; };
+		8F0C31C61836A4E000D96574 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F0C31C01836A4E000D96574 /* release_notes.md */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
@@ -73,6 +76,12 @@
 		8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
 		8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
 		8F0BA7A5145C72F1003E2DE0 /* Studifutter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Studifutter.xcdatamodel; sourceTree = "<group>"; };
+		8F0C31BE1836A4E000D96574 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		8F0C31BF1836A4E000D96574 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		8F0C31C01836A4E000D96574 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		8F0C31C11836A4E000D96574 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		8F0C31C21836A4E000D96574 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		8F0C31C31836A4E000D96574 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		8F10D78B146AE0F700896CE9 /* MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSet.h; sourceTree = "<group>"; };
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
@@ -167,6 +176,7 @@
 				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
 				8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */,
 				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
+				8F0C31C41836A4E000D96574 /* libTestFlight.a in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
 				8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */,
@@ -197,6 +207,7 @@
 		8F0BA78C145C72F1003E2DE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F0C31BD1836A4E000D96574 /* TestFlightSDK2 */,
 				8FABE9F516DF946F00A64944 /* Social.framework */,
 				8F450C02153462A100F647CF /* MessageUI.framework */,
 				8F6F134F147EA15900FE5455 /* QuartzCore.framework */,
@@ -244,6 +255,19 @@
 				8F4748F815B7522D00078434 /* Studifutter.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F0C31BD1836A4E000D96574 /* TestFlightSDK2 */ = {
+			isa = PBXGroup;
+			children = (
+				8F0C31BE1836A4E000D96574 /* libTestFlight.a */,
+				8F0C31BF1836A4E000D96574 /* README.md */,
+				8F0C31C01836A4E000D96574 /* release_notes.md */,
+				8F0C31C11836A4E000D96574 /* TestFlight+AsyncLogging.h */,
+				8F0C31C21836A4E000D96574 /* TestFlight+ManualSessions.h */,
+				8F0C31C31836A4E000D96574 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2;
 			sourceTree = "<group>";
 		};
 		8F250105146BC71000453E58 /* ICON-DERIVATE */ = {
@@ -411,6 +435,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
+				TargetAttributes = {
+					8F0BA788145C72F1003E2DE0 = {
+						DevelopmentTeam = F5ATLHMKLU;
+					};
+				};
 			};
 			buildConfigurationList = 8F0BA783145C72F1003E2DE0 /* Build configuration list for PBXProject "Studifutter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -442,10 +471,12 @@
 				8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */,
 				8F25010F146BC71000453E58 /* studifutter-app-icon-spotlight-29.png in Resources */,
 				8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */,
+				8F0C31C51836A4E000D96574 /* README.md in Resources */,
 				8F9DAA4D183403BD00B7ADB9 /* Default-568h@2x.png in Resources */,
 				8F78A2851521F0090060BE14 /* Localizable.strings in Resources */,
 				8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
+				8F0C31C61836A4E000D96574 /* release_notes.md in Resources */,
 				8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,7 +691,10 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/flohei/Development/studifutter/dev/trunk/app/TestFlightSDK2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -673,8 +707,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,7 +718,10 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/flohei/Development/studifutter/dev/trunk/app/TestFlightSDK2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -730,8 +767,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -741,7 +778,10 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/flohei/Development/studifutter/dev/trunk/app/TestFlightSDK2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
