@@ -415,7 +415,6 @@
 				8F0BA787145C72F1003E2DE0 /* Resources */,
 				8F2A347816C924CB00F8FB30 /* ShellScript */,
 				8F9B378516DB67C800C0A92C /* ShellScript */,
-				8F776D77173D67D800FD4872 /* ShellScript */,
 				8F78E5381769CBFC00D39CA8 /* ShellScript */,
 			);
 			buildRules = (
@@ -495,20 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/Scripts/update_build_number.sh\"";
-		};
-		8F776D77173D67D800FD4872 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "./Scripts/builds.sh com.rootof.mensa";
 		};
 		8F78E5381769CBFC00D39CA8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
