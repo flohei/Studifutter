@@ -11,6 +11,8 @@
 
 @interface SFSettingsViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UISwitch *userLocationSwitch;
+
 - (IBAction)done:(id)sender;
 
 @end

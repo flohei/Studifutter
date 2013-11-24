@@ -16,6 +16,16 @@
 
 @implementation SFSettingsViewController
 
+- (void)viewDidLoad {
+    [[self userLocationSwitch] setOn:[[NSUserDefaults standardUserDefaults] boolForKey:SHOW_USER_LOCATION]];
+    [[self userLocationSwitch] addTarget:self action:@selector(userLocationSwitchChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)userLocationSwitchChanged:(UIEvent *)event {
+    [[NSUserDefaults standardUserDefaults] setBool:[[self userLocationSwitch] isOn] forKey:SHOW_USER_LOCATION];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

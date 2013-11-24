@@ -38,6 +38,13 @@
     bannerVisible = YES;
     [self moveBannerOffScreen];
     
+    BOOL showUserLocation = [[NSUserDefaults standardUserDefaults] boolForKey:SHOW_USER_LOCATION];
+    
+    if (showUserLocation) {
+        // make the map show the user location
+        [[self mapView] setShowsUserLocation:YES];
+    }
+    
     MKCoordinateRegion region;
     MKCoordinateSpan span;
     span.latitudeDelta = 0.003;
@@ -73,6 +80,36 @@
     [[self mapView] selectAnnotation:annotation animated:YES];
 }
 
+- (void)zoomToFitMapAnnotations:(MKMapView *)mapView {
+    if ([mapView.annotations count] == 0) return;
+    
+    CLLocationCoordinate2D topLeftCoord;
+    topLeftCoord.latitude = -90;
+    topLeftCoord.longitude = 180;
+    
+    CLLocationCoordinate2D bottomRightCoord;
+    bottomRightCoord.latitude = 90;
+    bottomRightCoord.longitude = -180;
+    
+    for (id<MKAnnotation> annotation in mapView.annotations) {
+        topLeftCoord.longitude = fmin(topLeftCoord.longitude, annotation.coordinate.longitude);
+        topLeftCoord.latitude = fmax(topLeftCoord.latitude, annotation.coordinate.latitude);
+        bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, annotation.coordinate.longitude);
+        bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, annotation.coordinate.latitude);
+    }
+    
+    MKCoordinateRegion region;
+    region.center.latitude = topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) * 0.5;
+    region.center.longitude = topLeftCoord.longitude + (bottomRightCoord.longitude - topLeftCoord.longitude) * 0.5;
+    
+    // Add a little extra space on the sides
+    region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.5;
+    region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.5;
+    
+    region = [mapView regionThatFits:region];
+    [mapView setRegion:region animated:YES];
+}
+
 #pragma mark - MKMapViewDelegate
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -81,6 +118,11 @@
     annotationView.pinColor = MKPinAnnotationColorRed;
     annotationView.canShowCallout = YES;
 	return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    // create a new region and span to show both the user's and the restaurant's location
+    [self zoomToFitMapAnnotations:[self mapView]];
 }
 
 #pragma mark - iAds
