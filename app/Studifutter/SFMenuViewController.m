@@ -58,7 +58,16 @@
         [footerView setBackgroundColor:[UIColor clearColor]];
         [[self tableView] setTableFooterView:footerView];
         
-        CGSize labelSize = [restaurantNotes sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]
+        UIFont *theFont = nil;
+        
+        // check for iOS 7 or later
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+            theFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+        } else {
+            theFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+        }
+        
+        CGSize labelSize = [restaurantNotes sizeWithFont:theFont
                                        constrainedToSize:CGSizeMake(280, 200)
                                            lineBreakMode:NSLineBreakByCharWrapping];
         CGPoint origin = CGPointMake(20, 20);
@@ -66,7 +75,7 @@
         
         UILabel *notesLabel = [[UILabel alloc] initWithFrame:labelFrame];
         
-        [notesLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1]];
+        [notesLabel setFont:theFont];
         [notesLabel setText:restaurantNotes];
         [notesLabel setBackgroundColor:[UIColor clearColor]];
         [notesLabel setNumberOfLines:0];

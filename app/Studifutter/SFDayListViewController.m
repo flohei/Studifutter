@@ -148,8 +148,17 @@
 
 - (UILabel *)noDataAvailableLabel {
     if (!_noDataAvailableLabel) {
+        UIFont *theFont = nil;
+        
+        // check for iOS 7 or later
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+            theFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        } else {
+            theFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+        }
+        
         _noDataAvailableLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 280, 200)];
-        [_noDataAvailableLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
+        [_noDataAvailableLabel setFont:theFont];
         [_noDataAvailableLabel setNumberOfLines:0];
         [_noDataAvailableLabel setText:NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"")];
     }
