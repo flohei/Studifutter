@@ -14,7 +14,6 @@
 #import "MenuSet.h"
 #import "FHVersionUpdate.h"
 #import <Crashlytics/Crashlytics.h>
-#import "TestFlight.h"
 
 @interface SFAppDelegate ()
 
@@ -34,9 +33,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // register for Crashlytics
     [Crashlytics startWithAPIKey:@"d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c"];
-    
-    // register for TestFlight
-    [TestFlight takeOff:@"d786cc4b-ef2e-4bc7-8ec6-2711b1b4c25b"];
     
     // setup appearance changes
     [self setupAppearance];

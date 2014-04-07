@@ -29,12 +29,12 @@
     NSArray *versionComponents1 = [version1 componentsSeparatedByString:@"."];
     NSArray *versionComponents2 = [version2 componentsSeparatedByString:@"."];
     
-    int numberOfComponents = 0;
+    NSUInteger numberOfComponents = 0;
     if ([versionComponents1 count] == [versionComponents2 count]) {
         numberOfComponents = [versionComponents1 count];
     } else {
-        int count1 = [versionComponents1 count];
-        int count2 = [versionComponents2 count];
+        NSUInteger count1 = [versionComponents1 count];
+        NSUInteger count2 = [versionComponents2 count];
         
         numberOfComponents = (count1 < count2) ? count1 : count2;
     }
