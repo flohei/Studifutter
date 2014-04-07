@@ -473,9 +473,11 @@
 	} else if ([arg isKindOfClass:[NSDictionary class]]) {
         // are you a dictionary?
         
-        for (NSString *key in [(NSDictionary *)arg allKeys]) {
-            
-        }
+//        for (NSString *key in [(NSDictionary *)arg allKeys]) {
+//            
+//        }
+        
+        // looks like this has been smelling code for the last three years and nobody noticed...
         
     } else if (![arg isKindOfClass:NSString.class]) {
         // are you an ordinary string?
