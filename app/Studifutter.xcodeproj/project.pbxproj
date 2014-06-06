@@ -57,9 +57,45 @@
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
+		8FCA3B791942018400F6E058 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA3B781942018400F6E058 /* NotificationCenter.framework */; };
+		8FCA3B7E1942018400F6E058 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA3B7D1942018400F6E058 /* TodayViewController.swift */; };
+		8FCA3B801942018400F6E058 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA3B7F1942018400F6E058 /* MainInterface.storyboard */; };
+		8FCA3B831942018400F6E058 /* net.rootof.mensa.StudifutterWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8FCA3B771942018300F6E058 /* net.rootof.mensa.StudifutterWidget.appex */; };
+		8FCA3B8E1942052C00F6E058 /* SFWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA3B8C194201B800F6E058 /* SFWidgetViewController.swift */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FCA3B811942018400F6E058 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FCA3B761942018300F6E058;
+			remoteInfo = StudifutterWidget;
+		};
+		8FCA3B841942018400F6E058 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FCA3B761942018300F6E058;
+			remoteInfo = StudifutterWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FCA3B8A1942018400F6E058 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8FCA3B831942018400F6E058 /* net.rootof.mensa.StudifutterWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F0BA789145C72F1003E2DE0 /* Studifutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studifutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +182,13 @@
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
+		8FCA3B771942018300F6E058 /* net.rootof.mensa.StudifutterWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = net.rootof.mensa.StudifutterWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8FCA3B7C1942018400F6E058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FCA3B7D1942018400F6E058 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8FCA3B7F1942018400F6E058 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		8FCA3B8B194201B700F6E058 /* Studifutter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studifutter-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FCA3B8C194201B800F6E058 /* SFWidgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFWidgetViewController.swift; sourceTree = "<group>"; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFActivityProvider.h; sourceTree = "<group>"; };
 		8FEEF15816DFB32900988BCC /* SFActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFActivityProvider.m; sourceTree = "<group>"; };
@@ -173,6 +216,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FCA3B741942018300F6E058 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA3B791942018400F6E058 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -181,6 +232,7 @@
 			children = (
 				8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
+				8FCA3B7A1942018400F6E058 /* StudifutterWidget */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
 			);
@@ -190,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA789145C72F1003E2DE0 /* Studifutter.app */,
+				8FCA3B771942018300F6E058 /* net.rootof.mensa.StudifutterWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +262,7 @@
 				8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */,
 				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
 				8F450C0615346A1C00F647CF /* libz.dylib */,
+				8FCA3B781942018400F6E058 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,6 +316,7 @@
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8FCA3B72194200C500F6E058 /* Today Extension */,
 				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
 				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
 				8F729BB5145F23BB00FE166B /* SFDayListViewController.h */,
@@ -379,6 +434,33 @@
 			path = Machine;
 			sourceTree = "<group>";
 		};
+		8FCA3B72194200C500F6E058 /* Today Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA3B8C194201B800F6E058 /* SFWidgetViewController.swift */,
+				8FCA3B8B194201B700F6E058 /* Studifutter-Bridging-Header.h */,
+			);
+			name = "Today Extension";
+			sourceTree = "<group>";
+		};
+		8FCA3B7A1942018400F6E058 /* StudifutterWidget */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA3B7D1942018400F6E058 /* TodayViewController.swift */,
+				8FCA3B7F1942018400F6E058 /* MainInterface.storyboard */,
+				8FCA3B7B1942018400F6E058 /* Supporting Files */,
+			);
+			path = StudifutterWidget;
+			sourceTree = "<group>";
+		};
+		8FCA3B7B1942018400F6E058 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA3B7C1942018400F6E058 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,15 +474,35 @@
 				8F2A347816C924CB00F8FB30 /* ShellScript */,
 				8F9B378516DB67C800C0A92C /* ShellScript */,
 				8F78E5381769CBFC00D39CA8 /* ShellScript */,
+				8FCA3B8A1942018400F6E058 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8FCA3B821942018400F6E058 /* PBXTargetDependency */,
+				8FCA3B851942018400F6E058 /* PBXTargetDependency */,
 			);
 			name = Studifutter;
 			productName = Studifutter;
 			productReference = 8F0BA789145C72F1003E2DE0 /* Studifutter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8FCA3B761942018300F6E058 /* StudifutterWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCA3B861942018400F6E058 /* Build configuration list for PBXNativeTarget "StudifutterWidget" */;
+			buildPhases = (
+				8FCA3B731942018300F6E058 /* Sources */,
+				8FCA3B741942018300F6E058 /* Frameworks */,
+				8FCA3B751942018300F6E058 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudifutterWidget;
+			productName = StudifutterWidget;
+			productReference = 8FCA3B771942018300F6E058 /* net.rootof.mensa.StudifutterWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -408,10 +510,14 @@
 		8F0BA780145C72F1003E2DE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
 				TargetAttributes = {
 					8F0BA788145C72F1003E2DE0 = {
+						DevelopmentTeam = F5ATLHMKLU;
+					};
+					8FCA3B761942018300F6E058 = {
+						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = F5ATLHMKLU;
 					};
 				};
@@ -431,6 +537,7 @@
 			projectRoot = "";
 			targets = (
 				8F0BA788145C72F1003E2DE0 /* Studifutter */,
+				8FCA3B761942018300F6E058 /* StudifutterWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -451,6 +558,14 @@
 				8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
 				8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCA3B751942018300F6E058 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA3B801942018400F6E058 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +650,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FCA3B731942018300F6E058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCA3B7E1942018400F6E058 /* TodayViewController.swift in Sources */,
+				8FCA3B8E1942052C00F6E058 /* SFWidgetViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FCA3B821942018400F6E058 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FCA3B761942018300F6E058 /* StudifutterWidget */;
+			targetProxy = 8FCA3B811942018400F6E058 /* PBXContainerItemProxy */;
+		};
+		8FCA3B851942018400F6E058 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FCA3B761942018300F6E058 /* StudifutterWidget */;
+			targetProxy = 8FCA3B841942018400F6E058 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */ = {
@@ -579,9 +716,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Florian Heiber (5LCRQN3WPA)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -614,10 +753,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -639,6 +780,7 @@
 		8F0BA7C6145C72F2003E2DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -651,10 +793,13 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -663,6 +808,7 @@
 		8F0BA7C7145C72F2003E2DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -675,14 +821,86 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		8FCA3B871942018400F6E058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = StudifutterWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "net.rootof.mensa.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FCA3B881942018400F6E058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = StudifutterWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "net.rootof.mensa.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8FCA3B891942018400F6E058 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = StudifutterWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "net.rootof.mensa.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = "Ad hoc";
 		};
 		8FD5EB8E153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
@@ -694,10 +912,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -719,6 +939,7 @@
 		8FD5EB8F153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -732,10 +953,12 @@
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
 				INFOPLIST_FILE = "Studifutter/Studifutter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -763,6 +986,15 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8FCA3B861942018400F6E058 /* Build configuration list for PBXNativeTarget "StudifutterWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCA3B871942018400F6E058 /* Debug */,
+				8FCA3B881942018400F6E058 /* Release */,
+				8FCA3B891942018400F6E058 /* Ad hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

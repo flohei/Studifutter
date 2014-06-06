@@ -109,7 +109,7 @@
 	NSKeyedUnarchiver *decoder;
 	NSMutableDictionary *cachedData = [NSMutableDictionary dictionary];
 	
-	theData = [NSData dataWithContentsOfFile:cacheFilename];
+	theData = [[NSData dataWithContentsOfFile:cacheFilename] mutableCopy];
 	if (theData) {
 		decoder = [[NSKeyedUnarchiver alloc] initForReadingWithData:theData];
 		
