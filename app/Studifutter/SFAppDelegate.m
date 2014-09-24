@@ -271,7 +271,8 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Studifutter.sqlite"];
+    NSURL *directoryURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.StudifutterContainer"];
+    NSURL *storeURL = [directoryURL URLByAppendingPathComponent:@"Studifutter.sqlite"];
     
     NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
     [options setValue:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
