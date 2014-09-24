@@ -18,11 +18,6 @@
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
-		8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */; };
-		8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250107146BC71000453E58 /* studifutter-app-icon-512.png */; };
-		8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */; };
-		8F25010F146BC71000453E58 /* studifutter-app-icon-spotlight-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F250109146BC71000453E58 /* studifutter-app-icon-spotlight-29.png */; };
-		8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
@@ -46,11 +41,14 @@
 		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
 		8F78A2851521F0090060BE14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F78A2831521F0090060BE14 /* Localizable.strings */; };
+		8F8A3B2B19D30B7500B2C308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A3B2A19D30B7500B2C308 /* Images.xcassets */; };
+		8F8A3B3119D30C1100B2C308 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA3B781942018400F6E058 /* NotificationCenter.framework */; };
+		8F8A3B3719D30C1100B2C308 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A3B3619D30C1100B2C308 /* TodayViewController.m */; };
+		8F8A3B3919D30C1100B2C308 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A3B3819D30C1100B2C308 /* MainInterface.storyboard */; };
+		8F8A3B3C19D30C1100B2C308 /* StudifutterToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B378616DB681B00C0A92C /* Crashlytics.framework */; };
-		8F9DAA4D183403BD00B7ADB9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */; };
-		8F9DAA5218340C9000B7ADB9 /* studifutter-app-icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9DAA5118340C9000B7ADB9 /* studifutter-app-icon-120.png */; };
 		8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */; };
 		8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.txt */; };
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
@@ -60,6 +58,37 @@
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F8A3B3A19D30C1100B2C308 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F8A3B2F19D30C1100B2C308;
+			remoteInfo = StudifutterToday;
+		};
+		8F8A3B3D19D30C1100B2C308 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F8A3B2F19D30C1100B2C308;
+			remoteInfo = StudifutterToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F8A3B4319D30C1100B2C308 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F8A3B3C19D30C1100B2C308 /* StudifutterToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F0BA789145C72F1003E2DE0 /* Studifutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studifutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,11 +111,6 @@
 		8F1E5CFA16134A4400E5E79F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
 		8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
-		8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-114-retina.png"; sourceTree = "<group>"; };
-		8F250107146BC71000453E58 /* studifutter-app-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-512.png"; sourceTree = "<group>"; };
-		8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-57-getanewphoneres.png"; sourceTree = "<group>"; };
-		8F250109146BC71000453E58 /* studifutter-app-icon-spotlight-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-spotlight-29.png"; sourceTree = "<group>"; };
-		8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-spotlight-58-retina.png"; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
@@ -129,13 +153,18 @@
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
 		8F78A2841521F0090060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F78A28A1521F0470060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8F8A3B2A19D30B7500B2C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StudifutterToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8A3B3419D30C1100B2C308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8A3B3519D30C1100B2C308 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		8F8A3B3619D30C1100B2C308 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		8F8A3B3819D30C1100B2C308 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		8F8A3B4419D30F8700B2C308 /* StudifutterToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StudifutterToday.entitlements; sourceTree = "<group>"; };
 		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDE146AF180001F4E74 /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
 		8F9B378616DB681B00C0A92C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8F9DAA5118340C9000B7ADB9 /* studifutter-app-icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "studifutter-app-icon-120.png"; sourceTree = "<group>"; };
 		8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTeamListViewController.h; sourceTree = "<group>"; };
 		8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTeamListViewController.m; sourceTree = "<group>"; };
 		8FA40B5916BED22000736EC3 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
@@ -176,14 +205,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F8A3B2D19D30C1100B2C308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8A3B3119D30C1100B2C308 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8F0BA77E145C72F1003E2DE0 = {
 			isa = PBXGroup;
 			children = (
-				8F9DAA4C183403BD00B7ADB9 /* Default-568h@2x.png */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
+				8F8A3B3219D30C1100B2C308 /* StudifutterToday */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
 			);
@@ -193,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA789145C72F1003E2DE0 /* Studifutter.app */,
+				8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,19 +288,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F250105146BC71000453E58 /* ICON-DERIVATE */ = {
-			isa = PBXGroup;
-			children = (
-				8F9DAA5118340C9000B7ADB9 /* studifutter-app-icon-120.png */,
-				8F250106146BC71000453E58 /* studifutter-app-icon-114-retina.png */,
-				8F250107146BC71000453E58 /* studifutter-app-icon-512.png */,
-				8F250108146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png */,
-				8F250109146BC71000453E58 /* studifutter-app-icon-spotlight-29.png */,
-				8F25010A146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png */,
-			);
-			path = "ICON-DERIVATE";
-			sourceTree = "<group>";
-		};
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,18 +326,10 @@
 		8F729BC8145F247500FE166B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8F8A3B2A19D30B7500B2C308 /* Images.xcassets */,
 				8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */,
-				8F729BC9145F248C00FE166B /* Graphics */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		8F729BC9145F248C00FE166B /* Graphics */ = {
-			isa = PBXGroup;
-			children = (
-				8F250105146BC71000453E58 /* ICON-DERIVATE */,
-			);
-			name = Graphics;
 			sourceTree = "<group>";
 		};
 		8F729BCA145F24F400FE166B /* Model */ = {
@@ -384,6 +401,26 @@
 			path = Machine;
 			sourceTree = "<group>";
 		};
+		8F8A3B3219D30C1100B2C308 /* StudifutterToday */ = {
+			isa = PBXGroup;
+			children = (
+				8F8A3B4419D30F8700B2C308 /* StudifutterToday.entitlements */,
+				8F8A3B3519D30C1100B2C308 /* TodayViewController.h */,
+				8F8A3B3619D30C1100B2C308 /* TodayViewController.m */,
+				8F8A3B3819D30C1100B2C308 /* MainInterface.storyboard */,
+				8F8A3B3319D30C1100B2C308 /* Supporting Files */,
+			);
+			path = StudifutterToday;
+			sourceTree = "<group>";
+		};
+		8F8A3B3319D30C1100B2C308 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F8A3B3419D30C1100B2C308 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8FCA3B72194200C500F6E058 /* Today Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,15 +443,35 @@
 				8F2A347816C924CB00F8FB30 /* ShellScript */,
 				8F9B378516DB67C800C0A92C /* ShellScript */,
 				8F78E5381769CBFC00D39CA8 /* ShellScript */,
+				8F8A3B4319D30C1100B2C308 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F8A3B3B19D30C1100B2C308 /* PBXTargetDependency */,
+				8F8A3B3E19D30C1100B2C308 /* PBXTargetDependency */,
 			);
 			name = Studifutter;
 			productName = Studifutter;
 			productReference = 8F0BA789145C72F1003E2DE0 /* Studifutter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8F8A3B2F19D30C1100B2C308 /* StudifutterToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F8A3B3F19D30C1100B2C308 /* Build configuration list for PBXNativeTarget "StudifutterToday" */;
+			buildPhases = (
+				8F8A3B2C19D30C1100B2C308 /* Sources */,
+				8F8A3B2D19D30C1100B2C308 /* Frameworks */,
+				8F8A3B2E19D30C1100B2C308 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudifutterToday;
+			productName = StudifutterToday;
+			productReference = 8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -427,6 +484,20 @@
 				TargetAttributes = {
 					8F0BA788145C72F1003E2DE0 = {
 						DevelopmentTeam = F5ATLHMKLU;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8F8A3B2F19D30C1100B2C308 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = F5ATLHMKLU;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -445,6 +516,7 @@
 			projectRoot = "";
 			targets = (
 				8F0BA788145C72F1003E2DE0 /* Studifutter */,
+				8F8A3B2F19D30C1100B2C308 /* StudifutterToday */,
 			);
 		};
 /* End PBXProject section */
@@ -454,17 +526,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F9DAA5218340C9000B7ADB9 /* studifutter-app-icon-120.png in Resources */,
-				8F25010C146BC71000453E58 /* studifutter-app-icon-114-retina.png in Resources */,
-				8F25010D146BC71000453E58 /* studifutter-app-icon-512.png in Resources */,
-				8F25010E146BC71000453E58 /* studifutter-app-icon-57-getanewphoneres.png in Resources */,
-				8F25010F146BC71000453E58 /* studifutter-app-icon-spotlight-29.png in Resources */,
-				8F250110146BC71000453E58 /* studifutter-app-icon-spotlight-58-retina.png in Resources */,
-				8F9DAA4D183403BD00B7ADB9 /* Default-568h@2x.png in Resources */,
 				8F78A2851521F0090060BE14 /* Localizable.strings in Resources */,
 				8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */,
+				8F8A3B2B19D30B7500B2C308 /* Images.xcassets in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
 				8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8A3B2E19D30C1100B2C308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8A3B3919D30C1100B2C308 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +623,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F8A3B2C19D30C1100B2C308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8A3B3719D30C1100B2C308 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F8A3B3B19D30C1100B2C308 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F8A3B2F19D30C1100B2C308 /* StudifutterToday */;
+			targetProxy = 8F8A3B3A19D30C1100B2C308 /* PBXContainerItemProxy */;
+		};
+		8F8A3B3E19D30C1100B2C308 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F8A3B2F19D30C1100B2C308 /* StudifutterToday */;
+			targetProxy = 8F8A3B3D19D30C1100B2C308 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */ = {
@@ -657,8 +752,10 @@
 		8F0BA7C6145C72F2003E2DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -685,8 +782,10 @@
 		8F0BA7C7145C72F2003E2DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -708,6 +807,81 @@
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		8F8A3B4019D30C1100B2C308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_ENTITLEMENTS = StudifutterToday/StudifutterToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = StudifutterToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8F8A3B4119D30C1100B2C308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_ENTITLEMENTS = StudifutterToday/StudifutterToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = StudifutterToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8F8A3B4219D30C1100B2C308 /* Ad hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_ENTITLEMENTS = StudifutterToday/StudifutterToday.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = StudifutterToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = "Ad hoc";
 		};
 		8FD5EB8E153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
@@ -746,8 +920,10 @@
 		8FD5EB8F153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -793,6 +969,15 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8F8A3B3F19D30C1100B2C308 /* Build configuration list for PBXNativeTarget "StudifutterToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F8A3B4019D30C1100B2C308 /* Debug */,
+				8F8A3B4119D30C1100B2C308 /* Release */,
+				8F8A3B4219D30C1100B2C308 /* Ad hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

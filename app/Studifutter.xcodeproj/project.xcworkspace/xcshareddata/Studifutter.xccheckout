@@ -10,34 +10,27 @@
 	<string>Studifutter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4AEEE595-7165-45E3-A1C2-2599B980100C</key>
+		<key>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</key>
 		<string>http://svn.rtfnt.com/svn/studifutter</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>dev/trunk/app/Studifutter.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4AEEE595-7165-45E3-A1C2-2599B980100C</key>
+		<key>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</key>
 		<string>../../../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>4AEEE595-7165-45E3-A1C2-2599B980100C</key>
-		<string>http://svn.rtfnt.com/svn/studifutter</string>
-	</dict>
-	<key>IDESourceControlProjectURL</key>
-	<string>http://svn.rtfnt.com/svn/studifutter/dev/trunk/app/Studifutter.xcodeproj</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4AEEE595-7165-45E3-A1C2-2599B980100C</string>
+	<string>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4AEEE595-7165-45E3-A1C2-2599B980100C</string>
+			<string>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>studifutter</string>
 		</dict>
