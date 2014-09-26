@@ -9,6 +9,7 @@
 #import "SFDataAccessor.h"
 #import "Restaurant.h"
 #import "SFAppDelegate.h"
+#import "FHCoreDataStack.h"
 
 @implementation SFDataAccessor
 
@@ -24,12 +25,10 @@
     }
 }
 
-+ (NSArray *)localRestaurants {
-    SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
++ (NSArray *)localRestaurants {  
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Restaurant" inManagedObjectContext:[delegate managedObjectContext]];
+                                   entityForName:@"Restaurant" inManagedObjectContext:[[FHCoreDataStack sharedStack] managedObjectContext]];
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]
@@ -40,7 +39,7 @@
     
     NSFetchedResultsController *theFetchedResultsController =
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:[delegate managedObjectContext]
+                                        managedObjectContext:[[FHCoreDataStack sharedStack] managedObjectContext]
                                           sectionNameKeyPath:nil
                                                    cacheName:nil];
     

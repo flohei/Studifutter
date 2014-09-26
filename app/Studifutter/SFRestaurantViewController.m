@@ -7,11 +7,11 @@
 //
 
 #import "SFRestaurantViewController.h"
-#import "SFAppDelegate.h"
 #import "Restaurant.h"
 #import "Connection.h"
 #import "SFDayListViewController.h"
 #import "RestaurantTableViewCell.h"
+#import "FHCoreDataStack.h"
 
 @interface SFRestaurantViewController ()
 
@@ -70,7 +70,7 @@
 #pragma mark - NSFetchedResultsController
 
 - (NSManagedObjectContext *)context {    
-    return [(SFAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];;
+    return [[FHCoreDataStack sharedStack] managedObjectContext];;
 }
 
 - (NSFetchedResultsController *)fetchedResultsController {
