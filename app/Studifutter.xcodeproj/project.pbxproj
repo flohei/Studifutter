@@ -16,6 +16,7 @@
 		8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
+		8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
@@ -106,6 +107,7 @@
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
 		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
+		8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F1E5CF516134A3200E5E79F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8F1E5CF816134A3D00E5E79F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFA16134A4400E5E79F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			children = (
 				8F8A3B2A19D30B7500B2C308 /* Images.xcassets */,
 				8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */,
+				8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				8F78A2851521F0090060BE14 /* Localizable.strings in Resources */,
 				8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */,
 				8F8A3B2B19D30B7500B2C308 /* Images.xcassets in Resources */,
+				8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
 				8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */,
 			);
@@ -753,7 +757,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -783,7 +786,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -921,7 +923,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
@@ -978,6 +979,7 @@
 				8F8A3B4219D30C1100B2C308 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
