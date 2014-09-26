@@ -19,6 +19,8 @@
 		8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */; };
 		8F10DF5F19D5CBA900190665 /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
 		8F10DF6019D5CBA900190665 /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
+		8F10DF6119D5D13900190665 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
+		8F10DF6319D5DE3600190665 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
@@ -638,6 +640,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F10DF6319D5DE3600190665 /* DayTableViewCell.m in Sources */,
+				8F10DF6119D5D13900190665 /* SFDataAccessor.m in Sources */,
 				8F8A3B3719D30C1100B2C308 /* TodayViewController.m in Sources */,
 				8F10DF6019D5CBA900190665 /* FHCoreDataStack.m in Sources */,
 			);
