@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.preferredContentSize = self.tableView.contentSize;
 }
 
 - (void)didReceiveMemoryWarning {
