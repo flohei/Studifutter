@@ -8,5 +8,6 @@
 @property (nonatomic, readonly, copy) NSString *title;
 
 - (NSString *)coreDataID;
+- (MenuSet *)menuSetForDate:(NSDate *)date;
 
 @end
