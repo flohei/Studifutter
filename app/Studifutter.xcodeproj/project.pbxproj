@@ -18,9 +18,6 @@
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */; };
 		8F10DF5F19D5CBA900190665 /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
-		8F10DF6019D5CBA900190665 /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
-		8F10DF6119D5D13900190665 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
-		8F10DF6319D5DE3600190665 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
@@ -47,10 +44,6 @@
 		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
 		8F78A2851521F0090060BE14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F78A2831521F0090060BE14 /* Localizable.strings */; };
 		8F8A3B2B19D30B7500B2C308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A3B2A19D30B7500B2C308 /* Images.xcassets */; };
-		8F8A3B3119D30C1100B2C308 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA3B781942018400F6E058 /* NotificationCenter.framework */; };
-		8F8A3B3719D30C1100B2C308 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F8A3B3619D30C1100B2C308 /* TodayViewController.m */; };
-		8F8A3B3919D30C1100B2C308 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A3B3819D30C1100B2C308 /* MainInterface.storyboard */; };
-		8F8A3B3C19D30C1100B2C308 /* StudifutterToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B378616DB681B00C0A92C /* Crashlytics.framework */; };
@@ -59,25 +52,33 @@
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
+		8FAC4B5119DEF44B005A7EFE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA3B781942018400F6E058 /* NotificationCenter.framework */; };
+		8FAC4B5719DEF44B005A7EFE /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */; };
+		8FAC4B5919DEF44B005A7EFE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */; };
+		8FAC4B5C19DEF44B005A7EFE /* Studifutter Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8FAC4B6419DEF527005A7EFE /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
+		8FAC4B6519DEF530005A7EFE /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
+		8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
+		8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8F8A3B3A19D30C1100B2C308 /* PBXContainerItemProxy */ = {
+		8FAC4B5A19DEF44B005A7EFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8F8A3B2F19D30C1100B2C308;
-			remoteInfo = StudifutterToday;
+			remoteGlobalIDString = 8FAC4B4F19DEF44B005A7EFE;
+			remoteInfo = "Studifutter Widget";
 		};
-		8F8A3B3D19D30C1100B2C308 /* PBXContainerItemProxy */ = {
+		8FAC4B5D19DEF44B005A7EFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8F8A3B2F19D30C1100B2C308;
-			remoteInfo = StudifutterToday;
+			remoteGlobalIDString = 8FAC4B4F19DEF44B005A7EFE;
+			remoteInfo = "Studifutter Widget";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,7 +89,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8F8A3B3C19D30C1100B2C308 /* StudifutterToday.appex in Embed App Extensions */,
+				8FAC4B5C19DEF44B005A7EFE /* Studifutter Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,12 +163,6 @@
 		8F78A2841521F0090060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F78A28A1521F0470060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F8A3B2A19D30B7500B2C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StudifutterToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F8A3B3419D30C1100B2C308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F8A3B3519D30C1100B2C308 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		8F8A3B3619D30C1100B2C308 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		8F8A3B3819D30C1100B2C308 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		8F8A3B4419D30F8700B2C308 /* StudifutterToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StudifutterToday.entitlements; sourceTree = "<group>"; };
 		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
@@ -181,11 +176,15 @@
 		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHVersionUpdate.h; sourceTree = "<group>"; };
 		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHVersionUpdate.m; sourceTree = "<group>"; };
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Studifutter Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FAC4B5419DEF44B005A7EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Studifutter Widget.entitlements"; sourceTree = "<group>"; };
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		8FCA3B8B194201B700F6E058 /* Studifutter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studifutter-Bridging-Header.h"; sourceTree = "<group>"; };
-		8FCA3B8C194201B800F6E058 /* SFWidgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFWidgetViewController.swift; sourceTree = "<group>"; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFActivityProvider.h; sourceTree = "<group>"; };
 		8FEEF15816DFB32900988BCC /* SFActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFActivityProvider.m; sourceTree = "<group>"; };
@@ -213,11 +212,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F8A3B2D19D30C1100B2C308 /* Frameworks */ = {
+		8FAC4B4D19DEF44B005A7EFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8A3B3119D30C1100B2C308 /* NotificationCenter.framework in Frameworks */,
+				8FAC4B5119DEF44B005A7EFE /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,8 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
+				8FAC4B5219DEF44B005A7EFE /* Studifutter Widget */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
-				8F8A3B3219D30C1100B2C308 /* StudifutterToday */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA789145C72F1003E2DE0 /* Studifutter.app */,
-				8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */,
+				8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,7 +298,6 @@
 		8F729BB0145F232F00FE166B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8FCA3B72194200C500F6E058 /* Today Extension */,
 				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
 				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
 				8F729BB5145F23BB00FE166B /* SFDayListViewController.h */,
@@ -412,33 +410,24 @@
 			path = Machine;
 			sourceTree = "<group>";
 		};
-		8F8A3B3219D30C1100B2C308 /* StudifutterToday */ = {
+		8FAC4B5219DEF44B005A7EFE /* Studifutter Widget */ = {
 			isa = PBXGroup;
 			children = (
-				8F8A3B4419D30F8700B2C308 /* StudifutterToday.entitlements */,
-				8F8A3B3519D30C1100B2C308 /* TodayViewController.h */,
-				8F8A3B3619D30C1100B2C308 /* TodayViewController.m */,
-				8F8A3B3819D30C1100B2C308 /* MainInterface.storyboard */,
-				8F8A3B3319D30C1100B2C308 /* Supporting Files */,
+				8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */,
+				8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */,
+				8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */,
+				8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */,
+				8FAC4B5319DEF44B005A7EFE /* Supporting Files */,
 			);
-			path = StudifutterToday;
+			path = "Studifutter Widget";
 			sourceTree = "<group>";
 		};
-		8F8A3B3319D30C1100B2C308 /* Supporting Files */ = {
+		8FAC4B5319DEF44B005A7EFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8F8A3B3419D30C1100B2C308 /* Info.plist */,
+				8FAC4B5419DEF44B005A7EFE /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8FCA3B72194200C500F6E058 /* Today Extension */ = {
-			isa = PBXGroup;
-			children = (
-				8FCA3B8C194201B800F6E058 /* SFWidgetViewController.swift */,
-				8FCA3B8B194201B700F6E058 /* Studifutter-Bridging-Header.h */,
-			);
-			name = "Today Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,29 +448,29 @@
 			buildRules = (
 			);
 			dependencies = (
-				8F8A3B3B19D30C1100B2C308 /* PBXTargetDependency */,
-				8F8A3B3E19D30C1100B2C308 /* PBXTargetDependency */,
+				8FAC4B5B19DEF44B005A7EFE /* PBXTargetDependency */,
+				8FAC4B5E19DEF44B005A7EFE /* PBXTargetDependency */,
 			);
 			name = Studifutter;
 			productName = Studifutter;
 			productReference = 8F0BA789145C72F1003E2DE0 /* Studifutter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8F8A3B2F19D30C1100B2C308 /* StudifutterToday */ = {
+		8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F8A3B3F19D30C1100B2C308 /* Build configuration list for PBXNativeTarget "StudifutterToday" */;
+			buildConfigurationList = 8FAC4B5F19DEF44C005A7EFE /* Build configuration list for PBXNativeTarget "Studifutter Widget" */;
 			buildPhases = (
-				8F8A3B2C19D30C1100B2C308 /* Sources */,
-				8F8A3B2D19D30C1100B2C308 /* Frameworks */,
-				8F8A3B2E19D30C1100B2C308 /* Resources */,
+				8FAC4B4C19DEF44B005A7EFE /* Sources */,
+				8FAC4B4D19DEF44B005A7EFE /* Frameworks */,
+				8FAC4B4E19DEF44B005A7EFE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = StudifutterToday;
-			productName = StudifutterToday;
-			productReference = 8F8A3B3019D30C1100B2C308 /* StudifutterToday.appex */;
+			name = "Studifutter Widget";
+			productName = "Studifutter Widget";
+			productReference = 8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -501,7 +490,7 @@
 							};
 						};
 					};
-					8F8A3B2F19D30C1100B2C308 = {
+					8FAC4B4F19DEF44B005A7EFE = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = F5ATLHMKLU;
 						SystemCapabilities = {
@@ -527,7 +516,7 @@
 			projectRoot = "";
 			targets = (
 				8F0BA788145C72F1003E2DE0 /* Studifutter */,
-				8F8A3B2F19D30C1100B2C308 /* StudifutterToday */,
+				8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -546,11 +535,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F8A3B2E19D30C1100B2C308 /* Resources */ = {
+		8FAC4B4E19DEF44B005A7EFE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8A3B3919D30C1100B2C308 /* MainInterface.storyboard in Resources */,
+				8FAC4B5919DEF44B005A7EFE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,29 +625,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F8A3B2C19D30C1100B2C308 /* Sources */ = {
+		8FAC4B4C19DEF44B005A7EFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F10DF6319D5DE3600190665 /* DayTableViewCell.m in Sources */,
-				8F10DF6119D5D13900190665 /* SFDataAccessor.m in Sources */,
-				8F8A3B3719D30C1100B2C308 /* TodayViewController.m in Sources */,
-				8F10DF6019D5CBA900190665 /* FHCoreDataStack.m in Sources */,
+				8FAC4B6519DEF530005A7EFE /* Studifutter.xcdatamodeld in Sources */,
+				8FAC4B6419DEF527005A7EFE /* DayTableViewCell.m in Sources */,
+				8FAC4B5719DEF44B005A7EFE /* TodayViewController.m in Sources */,
+				8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */,
+				8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8F8A3B3B19D30C1100B2C308 /* PBXTargetDependency */ = {
+		8FAC4B5B19DEF44B005A7EFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F8A3B2F19D30C1100B2C308 /* StudifutterToday */;
-			targetProxy = 8F8A3B3A19D30C1100B2C308 /* PBXContainerItemProxy */;
+			target = 8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */;
+			targetProxy = 8FAC4B5A19DEF44B005A7EFE /* PBXContainerItemProxy */;
 		};
-		8F8A3B3E19D30C1100B2C308 /* PBXTargetDependency */ = {
+		8FAC4B5E19DEF44B005A7EFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F8A3B2F19D30C1100B2C308 /* StudifutterToday */;
-			targetProxy = 8F8A3B3D19D30C1100B2C308 /* PBXContainerItemProxy */;
+			target = 8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */;
+			targetProxy = 8FAC4B5D19DEF44B005A7EFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -822,7 +812,7 @@
 			};
 			name = Release;
 		};
-		8F8A3B4019D30C1100B2C308 /* Debug */ = {
+		8FAC4B6019DEF44C005A7EFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -830,7 +820,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = StudifutterToday/StudifutterToday.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Studifutter Widget/Studifutter Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -839,7 +829,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = StudifutterToday/Info.plist;
+				INFOPLIST_FILE = "Studifutter Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -849,7 +839,7 @@
 			};
 			name = Debug;
 		};
-		8F8A3B4119D30C1100B2C308 /* Release */ = {
+		8FAC4B6119DEF44C005A7EFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -857,13 +847,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = StudifutterToday/StudifutterToday.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Studifutter Widget/Studifutter Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = StudifutterToday/Info.plist;
+				INFOPLIST_FILE = "Studifutter Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -873,7 +863,7 @@
 			};
 			name = Release;
 		};
-		8F8A3B4219D30C1100B2C308 /* Ad hoc */ = {
+		8FAC4B6219DEF44C005A7EFE /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -881,13 +871,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = StudifutterToday/StudifutterToday.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Studifutter Widget/Studifutter Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = StudifutterToday/Info.plist;
+				INFOPLIST_FILE = "Studifutter Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -983,15 +973,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F8A3B3F19D30C1100B2C308 /* Build configuration list for PBXNativeTarget "StudifutterToday" */ = {
+		8FAC4B5F19DEF44C005A7EFE /* Build configuration list for PBXNativeTarget "Studifutter Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F8A3B4019D30C1100B2C308 /* Debug */,
-				8F8A3B4119D30C1100B2C308 /* Release */,
-				8F8A3B4219D30C1100B2C308 /* Ad hoc */,
+				8FAC4B6019DEF44C005A7EFE /* Debug */,
+				8FAC4B6119DEF44C005A7EFE /* Release */,
+				8FAC4B6219DEF44C005A7EFE /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

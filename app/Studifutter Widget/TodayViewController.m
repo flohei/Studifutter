@@ -11,12 +11,25 @@
 #import "FHCoreDataStack.h"
 #import "DayTableViewCell.h"
 #import "MenuSet.h"
+#import "Constants.h"
 
 @interface TodayViewController () <NCWidgetProviding>
 
 @end
 
 @implementation TodayViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    if (self = [super initWithCoder:aDecoder]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(userDefaultsDidChange:)
+                                                     name:NSUserDefaultsDidChangeNotification
+                                                   object:nil];
+    }
+
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,8 +49,12 @@
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
-
+    
     completionHandler(NCUpdateResultNewData);
+}
+
+- (void)userDefaultsDidChange:(NSNotification *)notification {
+    
 }
 
 - (NSDictionary *)sections {
@@ -78,7 +95,7 @@
     
     if ([unsortedMenuSet count] == 0) {
         // show info that there's no data
-//        [[self view] addSubview:[self noDataAvailableLabel]];
+        //        [[self view] addSubview:[self noDataAvailableLabel]];
         [[self tableView] setHidden:YES];
     } else {
         // hide info that there's no data
@@ -99,6 +116,19 @@
     return [formatter stringFromDate:date];
 }
 
+- (Restaurant *)restaurant {
+    Restaurant *lastRestaurant = nil;
+    // check if there's a last restaurant saved
+    @try {
+        NSString *restaurantID = [[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID];
+        lastRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
+    }
+    
+    return lastRestaurant;
+}
 
 #pragma mark - Table view data source
 

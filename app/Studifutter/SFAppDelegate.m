@@ -51,7 +51,7 @@
     
     // check if there's a last restaurant saved. if so push it.
     @try {
-        Restaurant *lastRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:[[NSUserDefaults standardUserDefaults] objectForKey:LAST_OPENED_RESTAURANT_ID]];
+        Restaurant *lastRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:[[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID]];
         if (lastRestaurant) {
             SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
             [dayListViewController setRestaurant:lastRestaurant];
