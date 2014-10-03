@@ -11,7 +11,8 @@
 
 @interface TodayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, retain) Restaurant *restaurant;
+@property (nonatomic, retain, readonly) Restaurant *restaurant;
+@property (nonatomic, retain, readonly) NSArray *menus;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

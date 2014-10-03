@@ -981,6 +981,7 @@
 				8FAC4B6219DEF44C005A7EFE /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

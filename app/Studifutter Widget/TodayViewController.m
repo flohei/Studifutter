@@ -11,6 +11,7 @@
 #import "FHCoreDataStack.h"
 #import "DayTableViewCell.h"
 #import "MenuSet.h"
+#import "Menu.h"
 #import "Constants.h"
 
 @interface TodayViewController () <NCWidgetProviding>
@@ -18,6 +19,9 @@
 @end
 
 @implementation TodayViewController
+
+@synthesize restaurant = _restaurant;
+@synthesize menus = _menus;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     
@@ -54,60 +58,9 @@
 }
 
 - (void)userDefaultsDidChange:(NSNotification *)notification {
-    
-}
-
-- (NSDictionary *)sections {
-    if (!_sections) {
-        NSMutableDictionary *mutableSections = [[NSMutableDictionary alloc] init];
-        NSArray *allMenus = [self allMenus];
-        NSMutableArray *monthArray = [[NSMutableArray alloc] init];
-        
-        for (MenuSet *menuSet in allMenus) {
-            // get the month of the current menus date
-            NSString *monthStringForDate = [self monthStringForDate:[menuSet date]];
-            
-            // if we don't have an array for the current month yet go ahead and create one
-            NSMutableArray *menusInMonth = [mutableSections objectForKey:monthStringForDate];
-            if (!menusInMonth) {
-                menusInMonth = [[NSMutableArray alloc] init];
-                [mutableSections setObject:menusInMonth forKey:monthStringForDate];
-                [monthArray addObject:monthStringForDate];
-            }
-            
-            // add the menu
-            [menusInMonth addObject:menuSet];
-        }
-        
-        _sections = (NSDictionary *)[mutableSections copy];
-        mutableSections = nil;
-        
-        // create a list of sorted months
-        self.sortedMonths = (NSArray *)monthArray;
-    }
-    
-    return _sections;
-}
-
-- (NSArray *)allMenus {
-    NSSortDescriptor *dateSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
-    NSSet *unsortedMenuSet = self.restaurant.menuSet;
-    
-    if ([unsortedMenuSet count] == 0) {
-        // show info that there's no data
-        //        [[self view] addSubview:[self noDataAvailableLabel]];
-        [[self tableView] setHidden:YES];
-    } else {
-        // hide info that there's no data
-        [[self view] removeFromSuperview];
-        [[self tableView] setHidden:NO];
-    }
-    
-    if (unsortedMenuSet) {
-        return [unsortedMenuSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:dateSortDescriptor]];
-    } else {
-        return nil;
-    }
+    _restaurant = nil;
+    _menus = nil;
+    [[self tableView] reloadData];
 }
 
 - (NSString *)monthStringForDate:(NSDate *)date {
@@ -130,61 +83,47 @@
     return lastRestaurant;
 }
 
+- (NSArray *)menus {
+    if (!_menus) {
+        // this really sucks. the first menu set is the actual MenuSet, the second one is
+        // the NSSet of all Menus
+        _menus = [[[[self restaurant] menuSetForDate:[NSDate date]] menuSet] allObjects];
+    }
+    
+    return _menus;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return [[self sections] count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSString *currentMonth = [[self sortedMonths] objectAtIndex:section];
-    NSArray *menusThatMonth = [[self sections] objectForKey:currentMonth];
-    return [menusThatMonth count];
+    return [[self menus] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"DayCellIdentifier";
     
-    DayTableViewCell *cell = (DayTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[DayTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
-    NSDate *currentMonth = [[self sortedMonths] objectAtIndex:[indexPath section]];
-    NSArray *menusThatMonth = [[self sections] objectForKey:currentMonth];
     
-    MenuSet *menuSet = [menusThatMonth objectAtIndex:[indexPath row]];
-    cell.menuSet = menuSet;
+    Menu *menu = [[self menus] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [menu name];
     
     return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSString *monthName = [self.sortedMonths objectAtIndex:section];
-    return monthName;
 }
 
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 44;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 280, 44)];
-    NSString *title = [self tableView:tableView titleForHeaderInSection:section];
-    [label setText:title];
-    [label setFont:[UIFont boldSystemFontOfSize:17]];
-    [label setTextColor:[UIColor redColor]];
-    [label setBackgroundColor:[UIColor clearColor]];
-    
-    [containerView setBackgroundColor:[UIColor whiteColor]];
-    [containerView addSubview:label];
-    
-    return containerView;
 }
 
 @end
