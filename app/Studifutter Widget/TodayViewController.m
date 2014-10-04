@@ -70,24 +70,28 @@
 }
 
 - (Restaurant *)restaurant {
-    Restaurant *lastRestaurant = nil;
+    Restaurant *lastUsedRestaurant = nil;
     // check if there's a last restaurant saved
     @try {
         NSString *restaurantID = [[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID];
-        lastRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
+        lastUsedRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
     }
     @catch (NSException *exception) {
         NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
     }
     
-    return lastRestaurant;
+    return lastUsedRestaurant;
 }
 
 - (NSArray *)menus {
     if (!_menus) {
         // this really sucks. the first menu set is the actual MenuSet, the second one is
         // the NSSet of all Menus
-        _menus = [[[[self restaurant] menuSetForDate:[NSDate date]] menuSet] allObjects];
+        NSDate *today = [NSDate date];
+        Restaurant *restaurant = self.restaurant;
+        MenuSet *menuSet = [restaurant menuSetForDate:today];
+        NSSet *todaysMenuAsASet = menuSet.menuSet;
+        _menus = [todaysMenuAsASet allObjects];
     }
     
     return _menus;
