@@ -28,7 +28,21 @@
 }
 
 - (MenuSet *)menuSetForDate:(NSDate *)date {
-    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"date == %@", date];
+    // clean the date first, we only need the date itself, not the time
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+    [calendar setTimeZone:timeZone];
+    NSDateComponents *daysComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
+    NSDate *cleanedDate = [calendar dateFromComponents:daysComponents];
+    
+    // create another date for a one day span
+    NSDateComponents *oneDay = [NSDateComponents new];
+    [oneDay setDay:1];
+    NSDate *cleanedDateEnd = [calendar dateByAddingComponents:oneDay toDate:cleanedDate options:0];
+    
+    // check for that one day span
+    NSPredicate *datePredicate = [NSPredicate predicateWithFormat:@"(date >= %@) AND (date <= %@)", cleanedDate, cleanedDateEnd];
+    
     NSSet *menus = [[self menuSet] filteredSetUsingPredicate:datePredicate];
     MenuSet *menuSet = nil;
     
