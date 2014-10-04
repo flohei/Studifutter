@@ -260,7 +260,7 @@
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self.class getAPIServerPath], _requestPath]];
 	
 	// Initiate asynchronous URL connection on main thread and block the calling thread
-	NSTimeInterval start = CFAbsoluteTimeGetCurrent();
+//	NSTimeInterval start = CFAbsoluteTimeGetCurrent();
 	if (![NSThread isMainThread]) {
 		//NSLog(@"Asynchronous API call from background thread");
 		[self performSelectorOnMainThread:@selector(startConnectionWithURL:) withObject:url waitUntilDone:YES];
@@ -276,8 +276,8 @@
 		[self startSynchronousAPIRequestWithURL:url];
 	}
     
-	NSTimeInterval delta = (CFAbsoluteTimeGetCurrent() - start);
-	NSLog(@"API request on network executed within: %f sec", delta);
+//	NSTimeInterval delta = (CFAbsoluteTimeGetCurrent() - start);
+//	NSLog(@"API request on network executed within: %f sec", delta);
     
 	if (_error != nil || [_receivedData length] == 0) {
 		//NSLog(@"Request error: %@", [_error description]);
