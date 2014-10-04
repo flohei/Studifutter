@@ -60,6 +60,7 @@
 		8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
 		8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
+		8FACAB0619E035B000864C5A /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -630,6 +631,7 @@
 			files = (
 				8FAC4B6419DEF527005A7EFE /* DayTableViewCell.m in Sources */,
 				8FAC4B5719DEF44B005A7EFE /* TodayViewController.m in Sources */,
+				8FACAB0619E035B000864C5A /* Studifutter.xcdatamodeld in Sources */,
 				8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */,
 				8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */,
 			);
