@@ -100,7 +100,7 @@
         [calendar setTimeZone:timeZone];
         
         NSDate *today = [NSDate date];
-        NSDateComponents *todaysComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:today];
+        NSDateComponents *todaysComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:today];
         
         //[todaysComponents setDay:[todaysComponents day] - 1];        
         NSDate *yesterday = [calendar dateFromComponents:todaysComponents];

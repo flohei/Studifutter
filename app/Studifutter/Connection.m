@@ -210,7 +210,7 @@ static Connection *_connection;
                 [calendar setTimeZone:timeZone];
                 
                 NSDate *today = [NSDate date];
-                NSDateComponents *todaysComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:today];
+                NSDateComponents *todaysComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:today];
                 NSDate *yesterday = [calendar dateFromComponents:todaysComponents];
                 
                 if ([date earlierDate:yesterday] == date) {
