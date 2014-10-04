@@ -93,6 +93,8 @@ static FHCoreDataStack *_stack;
     return __persistentStoreCoordinator;
 }
 
+#pragma mark -
+
 - (NSManagedObjectID *)managedObjectIDForURIRepresentation:(NSURL *)URL {
     return [self.persistentStoreCoordinator managedObjectIDForURIRepresentation:URL];
 }
@@ -113,8 +115,6 @@ static FHCoreDataStack *_stack;
     
     return result;
 }
-
-#pragma mark -
 
 - (void)saveContext {
     NSError *error = nil;
