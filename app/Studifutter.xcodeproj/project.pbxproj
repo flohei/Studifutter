@@ -68,6 +68,7 @@
 		8FACAB0E19E0685000864C5A /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8FACAB0F19E0685000864C5A /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8FACAB1019E0685000864C5A /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
+		8FACAB1119E077A800864C5A /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -647,6 +648,7 @@
 				8FACAB0619E035B000864C5A /* Studifutter.xcdatamodeld in Sources */,
 				8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */,
 				8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */,
+				8FACAB1119E077A800864C5A /* MenuTableViewCell.m in Sources */,
 				8FACAB1019E0685000864C5A /* _Restaurant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
