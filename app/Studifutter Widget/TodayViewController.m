@@ -9,7 +9,7 @@
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import "FHCoreDataStack.h"
-#import "DayTableViewCell.h"
+#import "WidgetTableViewCell.h"
 #import "MenuSet.h"
 #import "Menu.h"
 #import "Constants.h"
@@ -118,25 +118,32 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"DayCellIdentifier";
+    static NSString *CellIdentifier = @"MenuCellIdentifier";
     
-    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    WidgetTableViewCell *cell = (WidgetTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[WidgetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
     
     Menu *menu = [[self menus] objectAtIndex:indexPath.row];
-    cell.textLabel.text = [menu name];
+
+    [[cell menuTitleLabel] setText:[menu name]];
+    
+    NSLocale *german = [[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setLocale:german];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    NSString *priceString1 = [formatter stringFromNumber:[menu price]];
+    NSString *priceString2 = [formatter stringFromNumber:[menu reducedPrice]];
+    
+    NSMutableString *infoString = [NSMutableString stringWithFormat:@"%@/%@", priceString1, priceString2];
+
+    [[cell menuPriceLabel] setText:infoString];
     
     return cell;
-}
-
-#pragma mark - Table view delegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 44;
 }
 
 @end

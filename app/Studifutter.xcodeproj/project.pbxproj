@@ -69,6 +69,7 @@
 		8FACAB0F19E0685000864C5A /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
 		8FACAB1019E0685000864C5A /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
 		8FACAB1119E077A800864C5A /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
+		8FBC11C419E079DB002D976E /* WidgetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -192,6 +193,8 @@
 		8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Studifutter Widget.entitlements"; sourceTree = "<group>"; };
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
+		8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetTableViewCell.h; sourceTree = "<group>"; };
+		8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetTableViewCell.m; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFActivityProvider.h; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */,
 				8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */,
 				8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */,
+				8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */,
+				8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */,
 				8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */,
 				8FAC4B5319DEF44B005A7EFE /* Supporting Files */,
 			);
@@ -643,6 +648,7 @@
 				8FACAB0E19E0685000864C5A /* _MenuSet.m in Sources */,
 				8FACAB0C19E0684A00864C5A /* Menu.m in Sources */,
 				8FACAB0B19E0684A00864C5A /* MenuSet.m in Sources */,
+				8FBC11C419E079DB002D976E /* WidgetTableViewCell.m in Sources */,
 				8FAC4B5719DEF44B005A7EFE /* TodayViewController.m in Sources */,
 				8FACAB0F19E0685000864C5A /* _Menu.m in Sources */,
 				8FACAB0619E035B000864C5A /* Studifutter.xcdatamodeld in Sources */,
