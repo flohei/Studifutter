@@ -103,7 +103,7 @@
         _menus = [todaysMenuAsASet allObjects];
         
         // set the preferred content size to update the layout
-        CGFloat cellHeight = 64.0;
+        CGFloat cellHeight = 55.0;
         NSUInteger count = [_menus count];
         self.preferredContentSize = CGSizeMake(0, cellHeight * count);
     }
