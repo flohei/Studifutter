@@ -25,7 +25,6 @@
 @synthesize menus = _menus;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    
     if (self = [super initWithCoder:aDecoder]) {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(userDefaultsDidChange:)
@@ -39,8 +38,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    self.preferredContentSize = self.tableView.contentSize;
 }
 
 - (void)didReceiveMemoryWarning {
