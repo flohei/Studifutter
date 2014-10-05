@@ -111,7 +111,7 @@
     return _menus;
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view data source & delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -149,6 +149,10 @@
     [[cell menuPriceLabel] setText:infoString];
     
     return cell;
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 @end
