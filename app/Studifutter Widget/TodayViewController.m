@@ -15,6 +15,7 @@
 #import "Constants.h"
 
 @interface TodayViewController () <NCWidgetProviding>
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end
 
