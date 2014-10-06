@@ -170,7 +170,7 @@
     [calendar setTimeZone:timeZone];
     
     // Selectively convert the date components (year, month, day) of the input date
-    NSDateComponents *dateComps = [calendar components:NSMonthCalendarUnit fromDate:inputDate];
+    NSDateComponents *dateComps = [calendar components:NSCalendarUnitMonth fromDate:inputDate];
     
     // Set the time components manually
     [dateComps setDay:0];

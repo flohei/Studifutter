@@ -67,9 +67,13 @@
             theFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
         }
         
-        CGSize labelSize = [restaurantNotes sizeWithFont:theFont
-                                       constrainedToSize:CGSizeMake(280, 200)
-                                           lineBreakMode:NSLineBreakByCharWrapping];
+        CGSize maximumSize = CGSizeMake(280, 200);
+        CGRect labelRect = [restaurantNotes boundingRectWithSize:maximumSize
+                                                         options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
+                                                      attributes:@{NSFontAttributeName:theFont}
+                                                         context:nil];
+        
+        CGSize labelSize = labelRect.size;
         CGPoint origin = CGPointMake(20, 20);
         CGRect labelFrame = { origin, labelSize };
         
@@ -191,7 +195,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Menu *menu = [[self allMenus] objectAtIndex:[indexPath row]];
-    CGSize titleSize = [[menu name] sizeWithFont:[UIFont boldSystemFontOfSize:17] constrainedToSize:CGSizeMake(260, 500) lineBreakMode:NSLineBreakByWordWrapping];
+    
+    CGSize maximumSize = CGSizeMake(260, 500);
+    CGRect labelRect = [[menu name] boundingRectWithSize:maximumSize
+                                                 options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
+                                              attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17]}
+                                                 context:nil];
+    
+    CGSize titleSize = labelRect.size;
     
     return titleSize.height + 40.0;
 }

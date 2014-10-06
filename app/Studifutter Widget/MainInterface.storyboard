@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -29,15 +29,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYl-As-uRH" id="Swv-eN-TGB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schweinshaxe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
-                                                    <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schweinshaxe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
+                                                    <rect key="frame" x="0.0" y="8" width="99" height="18"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
-                                                    <rect key="frame" x="8" y="25" width="304" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
+                                                    <rect key="frame" x="0.0" y="25" width="49.5" height="13.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -45,6 +45,13 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="Dt0-0e-vtR"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" constant="-8" id="Ivk-8E-YvV"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" constant="-8" id="JrS-Aw-qjD"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" constant="17" id="OMb-h2-XJJ"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" constant="-8" id="gcB-5h-U1z"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -67,10 +74,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ADr-pg-FxT" secondAttribute="trailing" id="PTK-Ju-PCB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ADr-pg-FxT" secondAttribute="trailing" constant="-16" id="PTK-Ju-PCB"/>
                             <constraint firstItem="ADr-pg-FxT" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="XzO-vq-8dr"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="ADr-pg-FxT" secondAttribute="bottom" id="dTc-Ga-era"/>
-                            <constraint firstItem="ADr-pg-FxT" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="hKI-iD-A6u"/>
+                            <constraint firstItem="ADr-pg-FxT" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="-16" id="hKI-iD-A6u"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>

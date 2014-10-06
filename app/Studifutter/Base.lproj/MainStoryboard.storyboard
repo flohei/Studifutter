@@ -61,7 +61,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="dkv-kK-VIl">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="gnV-cl-HCu">
+                        <barButtonItem key="rightBarButtonItem" id="gnV-cl-HCu">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JNy-4K-sQb" customClass="FHStarButton">
                                 <rect key="frame" x="233" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
