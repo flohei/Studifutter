@@ -15,5 +15,6 @@
 @interface SFRestaurantDetailViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, retain) Restaurant *restaurant;
+- (IBAction)favoriteToggled:(id)sender;
 
 @end

@@ -9,9 +9,11 @@
 #import "SFRestaurantDetailViewController.h"
 #import "Restaurant.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FHStarButton.h"
 
 @interface SFRestaurantDetailViewController () {
     bool bannerVisible;
+    __weak IBOutlet FHStarButton *favoriteButton;
 }
 
 - (void)moveBannerOffScreen;
@@ -66,6 +68,11 @@
     [self.mapView addAnnotation:self.restaurant];
     
     [self openAnnotation:self.restaurant];
+    
+    // update the favorite toggle button
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
+    NSString *storedRestaurantID = [sharedDefaults valueForKey:LAST_OPENED_RESTAURANT_ID];
+    [favoriteButton setSelected:[[[self restaurant] coreDataID] isEqualToString:storedRestaurantID]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -181,6 +188,12 @@
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
     return YES;
+}
+
+- (IBAction)favoriteToggled:(id)sender {
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
+    [sharedDefaults setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
+    [sharedDefaults synchronize];
 }
 
 @end

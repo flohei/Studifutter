@@ -70,6 +70,7 @@
 		8FACAB1019E0685000864C5A /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
 		8FACAB1119E077A800864C5A /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
 		8FBC11C419E079DB002D976E /* WidgetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */; };
+		8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -195,6 +196,8 @@
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
 		8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetTableViewCell.h; sourceTree = "<group>"; };
 		8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetTableViewCell.m; sourceTree = "<group>"; };
+		8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHStarButton.m; sourceTree = "<group>"; };
+		8FC9FD2419E2DCE0003308E6 /* FHStarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHStarButton.h; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFActivityProvider.h; sourceTree = "<group>"; };
@@ -283,6 +286,7 @@
 				8F729BCF145F2AD000FE166B /* Misc */,
 				8F729BCE145F2AC300FE166B /* Networking */,
 				8F729BB0145F232F00FE166B /* ViewController */,
+				8FC9FD1C19E2D133003308E6 /* Views */,
 				8F729BC8145F247500FE166B /* Resources */,
 				8F729BCA145F24F400FE166B /* Model */,
 				8F0BA796145C72F1003E2DE0 /* Supporting Files */,
@@ -442,6 +446,15 @@
 				8FAC4B5419DEF44B005A7EFE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FC9FD1C19E2D133003308E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8FC9FD2419E2DCE0003308E6 /* FHStarButton.h */,
+				8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -615,6 +628,7 @@
 				8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */,
 				8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */,
 				8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */,
+				8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */,
 				8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */,
 				8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */,
 				8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */,

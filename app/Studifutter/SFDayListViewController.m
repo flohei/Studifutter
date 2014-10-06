@@ -86,10 +86,6 @@
 - (void)setRestaurant:(Restaurant *)restaurant {
     _restaurant = restaurant;
     
-    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
-    [sharedDefaults setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
-    [sharedDefaults synchronize];
-    
     SFAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     [delegate downloadMenuForRestaurant:_restaurant];
 }
