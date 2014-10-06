@@ -26,31 +26,6 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-        [delegate completeCleanup];
-    } else if (indexPath.section == 1 && indexPath.row == 0) {
-        [self presentMailSheet];
-    }
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    NSString *title = [NSString string];
-    
-    if (section == 0) {
-        title = NSLocalizedString(@"REDOWNLOAD_DESCRIPTION", @"Erneuter Download aller Restaurant und Menüs – falls mal was schief läuft.");
-    } else if (section == 2) {
-        title = [NSString stringWithFormat:@"Version %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
-    }
-    
-    return title;
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSString *segueIdentifier = [segue identifier];
     
@@ -79,13 +54,32 @@
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-//    if (result == MFMailComposeResultSent) {
-//        UIAlertView *sentMail = [[UIAlertView alloc] initWithTitle: @"Mail Sent:" message: @"Your mail has been sent!" delegate: self cancelButtonTitle: nil otherButtonTitles: @"Close", nil];
-//        [sentMail show];
-//        [sentMail release];
-//    }
-    
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [delegate completeCleanup];
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
+        [self presentMailSheet];
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    NSString *title = [NSString string];
+    
+    if (section == 0) {
+        title = NSLocalizedString(@"REDOWNLOAD_DESCRIPTION", @"Erneuter Download aller Restaurant und Menüs – falls mal was schief läuft.");
+    } else if (section == 2) {
+        title = [NSString stringWithFormat:@"Version %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    }
+    
+    return title;
 }
 
 @end
