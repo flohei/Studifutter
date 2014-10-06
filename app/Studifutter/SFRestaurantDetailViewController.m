@@ -191,9 +191,22 @@
 }
 
 - (IBAction)favoriteToggled:(id)sender {
+    // get the app container's user defaults
     NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
-    [sharedDefaults setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
+    
+    // if the current restaurant is the one already in store remove it
+    if (favoriteButton.selected) {
+        [sharedDefaults setObject:[NSString string] forKey:LAST_OPENED_RESTAURANT_ID];
+    } else {
+        // if not store the new restaurant's id
+        [sharedDefaults setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
+    }
+    
+    // write it to disk
     [sharedDefaults synchronize];
+    
+    // update the buttons selected state
+    favoriteButton.selected = !favoriteButton.selected;
 }
 
 @end
