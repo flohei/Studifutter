@@ -200,7 +200,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lammragout Mazedonische Art" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hMj-JN-jcY">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lammragout Mazedonische Art" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hMj-JN-jcY">
                                             <rect key="frame" x="20" y="10" width="347" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -214,13 +214,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="hMj-JN-jcY" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leading" constant="20" symbolic="YES" id="96z-wh-qz0"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="hMj-JN-jcY" secondAttribute="trailing" id="GF3-BH-BRP"/>
-                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leadingMargin" id="Iu8-Al-3f9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="hMj-JN-jcY" secondAttribute="trailing" constant="-55" id="GF3-BH-BRP"/>
                                         <constraint firstItem="hMj-JN-jcY" firstAttribute="top" secondItem="wYm-ag-OkC" secondAttribute="top" constant="10" id="Nwg-iu-eTj"/>
                                         <constraint firstItem="qqr-Uv-Tym" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leadingMargin" constant="12" id="O1a-eQ-Iq9"/>
                                         <constraint firstItem="hMj-JN-jcY" firstAttribute="leading" secondItem="qqr-Uv-Tym" secondAttribute="leading" id="Od0-1M-qYm"/>
                                         <constraint firstItem="qqr-Uv-Tym" firstAttribute="trailing" secondItem="wYm-ag-OkC" secondAttribute="trailingMargin" id="aum-g0-NHD"/>
-                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="top" secondItem="wYm-ag-OkC" secondAttribute="topMargin" id="cSH-GA-oG2"/>
+                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="top" secondItem="wYm-ag-OkC" secondAttribute="topMargin" constant="2" id="cSH-GA-oG2"/>
                                         <constraint firstItem="qqr-Uv-Tym" firstAttribute="top" secondItem="hMj-JN-jcY" secondAttribute="bottom" constant="8" symbolic="YES" id="kEY-gx-Jn7"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -275,9 +274,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-4k-xHs">
                                                     <rect key="frame" x="8" y="0.0" width="45" height="43"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="23I-lT-DCf"/>
-                                                        <constraint firstAttribute="width" constant="45" id="D6D-EZ-D8o"/>
-                                                        <constraint firstAttribute="height" constant="43" id="TTl-Gz-Pd9"/>
+                                                        <constraint firstAttribute="width" constant="45" id="O52-5v-x5V"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -285,27 +282,22 @@
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Brokkoli-Nussecke mit Rahmkartoffeln" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="12" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="2oe-qZ-cZI">
                                                     <rect key="frame" x="61" y="0.0" width="227" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="227" id="w1j-iC-6KU"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2oe-qZ-cZI" secondAttribute="trailing" constant="-9" id="AgJ-0m-608"/>
-                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="leading" secondItem="kyy-4k-xHs" secondAttribute="trailing" constant="8" id="ttD-KM-bEl"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="bottom" secondItem="2oe-qZ-cZI" secondAttribute="bottom" id="0hU-CL-nIc"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="leading" secondItem="Res-08-u8T" secondAttribute="leadingMargin" id="6zB-RN-sYK"/>
+                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="leading" secondItem="kyy-4k-xHs" secondAttribute="trailing" constant="8" symbolic="YES" id="EtB-ED-JGm"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="top" secondItem="Res-08-u8T" secondAttribute="top" id="W0Y-3b-hfA"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="top" secondItem="2oe-qZ-cZI" secondAttribute="top" id="lVC-wO-ce8"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="centerY" secondItem="Res-08-u8T" secondAttribute="centerY" id="otf-yI-XF2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2oe-qZ-cZI" secondAttribute="trailing" constant="-9" id="wFi-FS-q2G"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="2oe-qZ-cZI" firstAttribute="top" secondItem="yue-rN-gC8" secondAttribute="top" id="aYR-Nr-zr5"/>
-                                            <constraint firstItem="kyy-4k-xHs" firstAttribute="top" secondItem="yue-rN-gC8" secondAttribute="top" id="ed3-si-7ow"/>
-                                            <constraint firstItem="2oe-qZ-cZI" firstAttribute="bottom" secondItem="kyy-4k-xHs" secondAttribute="bottom" id="jhw-l6-bza"/>
-                                            <constraint firstItem="2oe-qZ-cZI" firstAttribute="leading" secondItem="kyy-4k-xHs" secondAttribute="trailing" constant="8" symbolic="YES" id="sQy-pz-Cp7"/>
-                                            <constraint firstItem="kyy-4k-xHs" firstAttribute="leading" secondItem="yue-rN-gC8" secondAttribute="leading" constant="8" id="zpn-fp-I12"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="kyy-4k-xHs" id="8qE-LJ-vNc"/>
                                             <outlet property="menuLabel" destination="2oe-qZ-cZI" id="4Qh-yD-99y"/>
