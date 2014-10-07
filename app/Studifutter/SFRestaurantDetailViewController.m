@@ -117,6 +117,25 @@
     [mapView setRegion:region animated:YES];
 }
 
+- (IBAction)favoriteToggled:(id)sender {
+    // get the app container's user defaults
+    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
+    
+    // if the current restaurant is the one already in store remove it
+    if (favoriteButton.selected) {
+        [sharedDefaults setObject:[NSString string] forKey:LAST_OPENED_RESTAURANT_ID];
+    } else {
+        // if not store the new restaurant's id
+        [sharedDefaults setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
+    }
+    
+    // write it to disk
+    [sharedDefaults synchronize];
+    
+    // update the buttons selected state
+    favoriteButton.selected = !favoriteButton.selected;
+}
+
 #pragma mark - MKMapViewDelegate
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -188,25 +207,6 @@
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
     return YES;
-}
-
-- (IBAction)favoriteToggled:(id)sender {
-    // get the app container's user defaults
-    NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
-    
-    // if the current restaurant is the one already in store remove it
-    if (favoriteButton.selected) {
-        [sharedDefaults setObject:[NSString string] forKey:LAST_OPENED_RESTAURANT_ID];
-    } else {
-        // if not store the new restaurant's id
-        [sharedDefaults setObject:[[self restaurant] coreDataID] forKey:LAST_OPENED_RESTAURANT_ID];
-    }
-    
-    // write it to disk
-    [sharedDefaults synchronize];
-    
-    // update the buttons selected state
-    favoriteButton.selected = !favoriteButton.selected;
 }
 
 @end
