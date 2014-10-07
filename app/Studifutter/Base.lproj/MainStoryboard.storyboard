@@ -194,6 +194,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="NKA-MC-8ne" userLabel="Footer View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCellIdentifier" rowHeight="64" id="fpt-Le-VkY" customClass="MenuTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="87"/>
@@ -243,6 +248,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="footerView" destination="NKA-MC-8ne" id="dlY-6H-Otp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9j-Fr-u17" sceneMemberID="firstResponder"/>
             </objects>

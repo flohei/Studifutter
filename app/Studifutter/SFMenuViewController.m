@@ -17,6 +17,7 @@
 
 @interface SFMenuViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *footerView;
 - (NSArray *)allMenus;
 - (NSArray *)allMenuSets;
 
@@ -53,38 +54,45 @@
 
 - (void)setupInterface {
     NSString *restaurantNotes = [[[self menuSet] restaurant] notes];
-    if (![restaurantNotes isEqualToString:[NSString string]]) {
-        UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
-        [footerView setBackgroundColor:[UIColor clearColor]];
-        [[self tableView] setTableFooterView:footerView];
+    if (![restaurantNotes isEqualToString:[NSString string]]) {        
+        // get the font
+        UIFont *theFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
         
-        UIFont *theFont = nil;
-        
-        // check for iOS 7 or later
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-            theFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
-        } else {
-            theFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-        }
-        
+        // get the rect to figure out the height for our layout constraints
         CGSize maximumSize = CGSizeMake(280, 200);
         CGRect labelRect = [restaurantNotes boundingRectWithSize:maximumSize
                                                          options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
                                                       attributes:@{NSFontAttributeName:theFont}
                                                          context:nil];
         
-        CGSize labelSize = labelRect.size;
-        CGPoint origin = CGPointMake(20, 20);
-        CGRect labelFrame = { origin, labelSize };
-        
-        UILabel *notesLabel = [[UILabel alloc] initWithFrame:labelFrame];
-        
+        // create and configure the final label
+        UILabel *notesLabel = [UILabel new];
         [notesLabel setFont:theFont];
         [notesLabel setText:restaurantNotes];
         [notesLabel setBackgroundColor:[UIColor clearColor]];
         [notesLabel setNumberOfLines:0];
-        [notesLabel setLineBreakMode:NSLineBreakByCharWrapping];
-        [footerView addSubview:notesLabel];
+        [notesLabel setLineBreakMode:NSLineBreakByWordWrapping];
+        [notesLabel setPreferredMaxLayoutWidth:200];
+        [notesLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        [notesLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+        
+        [[self footerView] setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        
+        // add it to the container view
+        [[self footerView] addSubview:notesLabel];
+        
+        // use constraints to get rid of weird layout issues when new phones appear
+        NSDictionary *views = @{@"label":notesLabel};
+        NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|-[label]-|"
+                                                                        options:0
+                                                                        metrics:nil
+                                                                          views:views];
+        NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:|-[label(%f)]-|", labelRect.size.height]
+                                                                        options:0
+                                                                        metrics:nil
+                                                                          views:views];
+        
+        [[self footerView] addConstraints:[vConstraints arrayByAddingObjectsFromArray:hConstraints]];
     }
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];
