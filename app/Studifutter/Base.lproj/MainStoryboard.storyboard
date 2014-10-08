@@ -282,9 +282,8 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-4k-xHs">
                                                     <rect key="frame" x="8" y="0.0" width="45" height="43"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="O52-5v-x5V"/>
-                                                        <constraint firstAttribute="height" constant="43" id="TKp-C4-QJi"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="qp8-tM-uuE"/>
+                                                        <constraint firstAttribute="width" constant="45" id="48C-u3-xd7"/>
+                                                        <constraint firstAttribute="height" constant="43" id="vvJ-6w-f8f"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -298,18 +297,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="bottom" secondItem="2oe-qZ-cZI" secondAttribute="bottom" id="0hU-CL-nIc"/>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="leading" secondItem="Res-08-u8T" secondAttribute="leadingMargin" id="4Z9-MK-62G"/>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="leading" secondItem="Res-08-u8T" secondAttribute="leadingMargin" id="6zB-RN-sYK"/>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="top" secondItem="Res-08-u8T" secondAttribute="topMargin" constant="-8" id="AiL-Xz-ybc"/>
-                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="leading" secondItem="kyy-4k-xHs" secondAttribute="trailing" constant="8" id="Bcv-zA-XDm"/>
-                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="top" secondItem="Res-08-u8T" secondAttribute="topMargin" constant="-8" id="E0a-hf-dLN"/>
-                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="leading" secondItem="kyy-4k-xHs" secondAttribute="trailing" constant="8" symbolic="YES" id="EtB-ED-JGm"/>
-                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="trailing" secondItem="Res-08-u8T" secondAttribute="trailingMargin" id="MAD-No-8n8"/>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="top" secondItem="Res-08-u8T" secondAttribute="top" id="W0Y-3b-hfA"/>
-                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="trailing" secondItem="Res-08-u8T" secondAttribute="trailingMargin" id="ki5-F0-6fq"/>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="top" secondItem="2oe-qZ-cZI" secondAttribute="top" id="lVC-wO-ce8"/>
-                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="centerY" secondItem="Res-08-u8T" secondAttribute="centerY" id="otf-yI-XF2"/>
+                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="leading" secondItem="kyy-4k-xHs" secondAttribute="trailing" constant="8" id="1IH-mY-WoI"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="leading" secondItem="Res-08-u8T" secondAttribute="leadingMargin" id="FLG-Rw-zC0"/>
+                                                <constraint firstItem="2oe-qZ-cZI" firstAttribute="trailing" secondItem="Res-08-u8T" secondAttribute="trailingMargin" id="Mxa-Vd-euz"/>
+                                                <constraint firstAttribute="centerY" secondItem="2oe-qZ-cZI" secondAttribute="centerY" id="SZB-vj-AUs"/>
+                                                <constraint firstItem="kyy-4k-xHs" firstAttribute="height" secondItem="2oe-qZ-cZI" secondAttribute="height" id="WZE-jT-P7v"/>
+                                                <constraint firstAttribute="centerY" secondItem="kyy-4k-xHs" secondAttribute="centerY" id="g65-iZ-2lS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
