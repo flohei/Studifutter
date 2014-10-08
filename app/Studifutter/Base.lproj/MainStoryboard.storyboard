@@ -549,23 +549,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qKk-Yp-HbF">
-                                                    <rect key="frame" x="318" y="7" width="51" height="31"/>
-                                                </switch>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standort anzeigen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gx-Ke-vnJ">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Standort anzeigen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaU-UA-m7y">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-rx-zc3">
+                                                    <rect key="frame" x="311" y="7" width="51" height="31"/>
+                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9Gx-Ke-vnJ" firstAttribute="top" secondItem="fPQ-HI-fAP" secondAttribute="top" id="THG-CU-x2E"/>
-                                                <constraint firstItem="9Gx-Ke-vnJ" firstAttribute="centerX" secondItem="fPQ-HI-fAP" secondAttribute="centerX" id="WSY-VA-lJn"/>
-                                                <constraint firstItem="qKk-Yp-HbF" firstAttribute="trailing" secondItem="fPQ-HI-fAP" secondAttribute="trailingMargin" id="a4T-gX-UoI"/>
-                                                <constraint firstItem="9Gx-Ke-vnJ" firstAttribute="leading" secondItem="fPQ-HI-fAP" secondAttribute="leadingMargin" constant="7" id="b9R-Og-RRq"/>
-                                                <constraint firstItem="9Gx-Ke-vnJ" firstAttribute="centerY" secondItem="qKk-Yp-HbF" secondAttribute="centerY" id="eq2-vD-tOW"/>
-                                                <constraint firstAttribute="centerY" secondItem="qKk-Yp-HbF" secondAttribute="centerY" id="srf-po-r5D"/>
+                                                <constraint firstAttribute="centerY" secondItem="IPH-rx-zc3" secondAttribute="centerY" id="Oj7-cR-9XU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IPH-rx-zc3" secondAttribute="trailing" constant="7" id="uur-Gu-0kK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -670,12 +666,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="userLocationSwitch" destination="qKk-Yp-HbF" id="X4z-wR-RFw"/>
+                        <outlet property="userLocationSwitch" destination="IPH-rx-zc3" id="dlf-3U-okB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJl-Ec-zGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="1453"/>
+            <point key="canvasLocation" x="1349.5" y="1451.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
