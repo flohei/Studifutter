@@ -11,6 +11,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "FHStarButton.h"
 
+@import CoreLocation;
+
 @interface SFRestaurantDetailViewController () {
     bool bannerVisible;
     __weak IBOutlet FHStarButton *favoriteButton;
@@ -26,6 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
+
+@property CLLocationManager *locationManager;
 
 @end
 
@@ -43,6 +47,10 @@
     BOOL showUserLocation = [[NSUserDefaults standardUserDefaults] boolForKey:SHOW_USER_LOCATION];
     
     if (showUserLocation) {
+        // ask the user if the app should show the location
+        _locationManager = [[CLLocationManager alloc] init];
+        [[self locationManager] requestWhenInUseAuthorization];
+        
         // make the map show the user location
         [[self mapView] setShowsUserLocation:YES];
     }
