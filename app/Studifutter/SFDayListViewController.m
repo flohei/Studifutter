@@ -128,7 +128,25 @@
     
     if ([unsortedMenuSet count] == 0) {
         // show info that there's no data
-        [[self containerView] addSubview:[self noDataAvailableLabel]];
+        UILabel *noDataAvailableLabel = [self noDataAvailableLabel];
+        
+        [[self containerView] addSubview:noDataAvailableLabel];
+        [[self containerView] setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        
+        // use constraints to get rid of weird layout issues when new phones appear
+        NSDictionary *views = @{@"label":noDataAvailableLabel};
+        NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|-[label]-|"
+                                                                        options:0
+                                                                        metrics:nil
+                                                                          views:views];
+        NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[label]-|"
+                                                                        options:0
+                                                                        metrics:nil
+                                                                          views:views];
+        
+        [[self containerView] addConstraints:[vConstraints arrayByAddingObjectsFromArray:hConstraints]];
+        
+        // hide the table
         [[self tableView] setHidden:YES];
     } else {
         // hide info that there's no data
@@ -154,10 +172,15 @@
             theFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
         }
         
-        _noDataAvailableLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 280, 200)];
+        _noDataAvailableLabel = [UILabel new];
         [_noDataAvailableLabel setFont:theFont];
-        [_noDataAvailableLabel setNumberOfLines:0];
         [_noDataAvailableLabel setText:NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"")];
+        [_noDataAvailableLabel setBackgroundColor:[UIColor clearColor]];
+        [_noDataAvailableLabel setNumberOfLines:0];
+        [_noDataAvailableLabel setLineBreakMode:NSLineBreakByWordWrapping];
+        [_noDataAvailableLabel setPreferredMaxLayoutWidth:200];
+        [_noDataAvailableLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        [_noDataAvailableLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     }
     
     return _noDataAvailableLabel;
