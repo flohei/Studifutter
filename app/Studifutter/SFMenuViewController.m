@@ -22,6 +22,7 @@
 - (NSArray *)allMenuSets;
 
 - (void)setupInterface;
+@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 
 @end
 
@@ -58,41 +59,17 @@
         // get the font
         UIFont *theFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
         
-        // get the rect to figure out the height for our layout constraints
-        CGSize maximumSize = CGSizeMake(280, 200);
-        CGRect labelRect = [restaurantNotes boundingRectWithSize:maximumSize
-                                                         options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
-                                                      attributes:@{NSFontAttributeName:theFont}
-                                                         context:nil];
-        
         // create and configure the final label
-        UILabel *notesLabel = [UILabel new];
-        [notesLabel setFont:theFont];
-        [notesLabel setText:restaurantNotes];
-        [notesLabel setBackgroundColor:[UIColor clearColor]];
-        [notesLabel setNumberOfLines:0];
-        [notesLabel setLineBreakMode:NSLineBreakByWordWrapping];
-        [notesLabel setPreferredMaxLayoutWidth:200];
-        [notesLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-        [notesLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [[self notesLabel] setFont:theFont];
+        [[self notesLabel] setText:restaurantNotes];
+        [[self notesLabel] setBackgroundColor:[UIColor clearColor]];
+        [[self notesLabel] setNumberOfLines:0];
+        [[self notesLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+        [[self notesLabel] setPreferredMaxLayoutWidth:200];
+        [[self notesLabel] setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        [[self notesLabel] setTranslatesAutoresizingMaskIntoConstraints:NO];
         
         [[self footerView] setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-        
-        // add it to the container view
-        [[self footerView] addSubview:notesLabel];
-        
-        // use constraints to get rid of weird layout issues when new phones appear
-        NSDictionary *views = @{@"label":notesLabel};
-        NSArray *hConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"|-[label]-|"
-                                                                        options:0
-                                                                        metrics:nil
-                                                                          views:views];
-        NSArray *vConstraints = [NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:|-[label(%f)]-|", labelRect.size.height]
-                                                                        options:0
-                                                                        metrics:nil
-                                                                          views:views];
-        
-        [[self footerView] addConstraints:[vConstraints arrayByAddingObjectsFromArray:hConstraints]];
     }
     
     NSDateFormatter *titleDateFormatter = [[NSDateFormatter alloc] init];

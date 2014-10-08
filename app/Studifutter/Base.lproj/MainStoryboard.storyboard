@@ -125,7 +125,7 @@
         <scene sceneID="3nF-Q3-J8G">
             <objects>
                 <tableViewController title="Master" id="xYN-Ew-x2z" customClass="SFRestaurantViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FzE-lu-lrp">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="FzE-lu-lrp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,13 +138,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mensataria" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="duS-OA-uok">
-                                            <rect key="frame" x="20" y="2" width="314" height="20.5"/>
+                                            <rect key="frame" x="20" y="3" width="314" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Simon-Ohm-Platz 1, Nürnberg" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="w9j-Di-SWo">
-                                            <rect key="frame" x="20" y="23" width="314" height="17"/>
+                                            <rect key="frame" x="20" y="24" width="314" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -152,11 +152,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="w9j-Di-SWo" firstAttribute="trailing" secondItem="4Ba-eH-kzq" secondAttribute="trailingMargin" id="LAf-FC-7mi"/>
-                                        <constraint firstItem="w9j-Di-SWo" firstAttribute="top" secondItem="4Ba-eH-kzq" secondAttribute="topMargin" constant="15" id="UDi-Zf-cCP"/>
+                                        <constraint firstItem="w9j-Di-SWo" firstAttribute="top" secondItem="4Ba-eH-kzq" secondAttribute="topMargin" constant="16" id="UDi-Zf-cCP"/>
                                         <constraint firstItem="duS-OA-uok" firstAttribute="leading" secondItem="4Ba-eH-kzq" secondAttribute="leadingMargin" constant="12" id="VVm-h5-VkD"/>
                                         <constraint firstItem="duS-OA-uok" firstAttribute="trailing" secondItem="4Ba-eH-kzq" secondAttribute="trailingMargin" id="Ygt-PN-QQo"/>
                                         <constraint firstItem="w9j-Di-SWo" firstAttribute="leading" secondItem="4Ba-eH-kzq" secondAttribute="leadingMargin" constant="12" id="rTl-3G-6IT"/>
-                                        <constraint firstItem="duS-OA-uok" firstAttribute="top" secondItem="4Ba-eH-kzq" secondAttribute="topMargin" constant="-6" id="zhS-Bu-zzY"/>
+                                        <constraint firstItem="duS-OA-uok" firstAttribute="top" secondItem="4Ba-eH-kzq" secondAttribute="topMargin" constant="-5" id="zhS-Bu-zzY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,9 +195,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="NKA-MC-8ne" userLabel="Footer View">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="150" width="375" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-vX-adI">
+                                    <rect key="frame" x="8" y="8" width="359" height="124"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ifU-vX-adI" secondAttribute="bottom" constant="8" id="Fbv-0g-L5z"/>
+                                <constraint firstAttribute="trailing" secondItem="ifU-vX-adI" secondAttribute="trailing" constant="8" id="cgW-oJ-Gaj"/>
+                                <constraint firstItem="ifU-vX-adI" firstAttribute="leading" secondItem="NKA-MC-8ne" secondAttribute="leading" constant="8" id="pA2-hY-x2p"/>
+                                <constraint firstItem="ifU-vX-adI" firstAttribute="top" secondItem="NKA-MC-8ne" secondAttribute="top" constant="8" id="zcc-ff-55M"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCellIdentifier" rowHeight="64" id="fpt-Le-VkY" customClass="MenuTableViewCell">
@@ -215,17 +229,20 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,60 Euro v" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqr-Uv-Tym">
                                             <rect key="frame" x="20" y="38" width="335" height="14.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14.5" id="8fF-tA-Ur5"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="top" secondItem="wYm-ag-OkC" secondAttribute="topMargin" constant="2" id="0HN-bz-FAH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="qqr-Uv-Tym" secondAttribute="bottom" constant="3" id="GTd-VD-mCQ"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="qqr-Uv-Tym" secondAttribute="trailing" constant="12" id="SLx-5U-tHO"/>
-                                        <constraint firstItem="qqr-Uv-Tym" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leadingMargin" constant="12" id="fG0-7C-X9r"/>
-                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leadingMargin" constant="12" id="rzJ-nn-Dag"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="hMj-JN-jcY" secondAttribute="trailing" constant="12" id="yF1-Vy-wko"/>
+                                        <constraint firstItem="qqr-Uv-Tym" firstAttribute="top" secondItem="hMj-JN-jcY" secondAttribute="bottom" constant="7.5" id="2jz-ne-VXW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="hMj-JN-jcY" secondAttribute="trailing" constant="12" id="4L9-i9-WMe"/>
+                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leadingMargin" constant="12" id="Whj-iA-1yU"/>
+                                        <constraint firstItem="hMj-JN-jcY" firstAttribute="top" secondItem="wYm-ag-OkC" secondAttribute="topMargin" constant="2" id="YL3-T5-I1i"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qqr-Uv-Tym" secondAttribute="trailing" constant="12" id="eQ1-bt-Jj2"/>
+                                        <constraint firstItem="qqr-Uv-Tym" firstAttribute="leading" secondItem="wYm-ag-OkC" secondAttribute="leadingMargin" constant="12" id="ptF-EJ-dye"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -250,11 +267,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="footerView" destination="NKA-MC-8ne" id="dlY-6H-Otp"/>
+                        <outlet property="notesLabel" destination="ifU-vX-adI" id="VHV-OK-Rkt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9j-Fr-u17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349" y="63"/>
+            <point key="canvasLocation" x="1348.5" y="62.5"/>
         </scene>
         <!--Nächste Tage-->
         <scene sceneID="lXO-yY-8uj">
