@@ -103,16 +103,17 @@
     if (!_menus) {
         // this really sucks. the first menu set is the actual MenuSet, the second one is
         // the NSSet of all Menus
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
-        [calendar setTimeZone:timeZone];
-
-        NSDateComponents *testDateComponents = [NSDateComponents new];
-        [testDateComponents setYear:2014];
-        [testDateComponents setMonth:10];
-        [testDateComponents setDay:7];
+//        NSCalendar *calendar = [NSCalendar currentCalendar];
+//        NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+//        [calendar setTimeZone:timeZone];
+//
+//        NSDateComponents *testDateComponents = [NSDateComponents new];
+//        [testDateComponents setYear:2014];
+//        [testDateComponents setMonth:10];
+//        [testDateComponents setDay:7];
         
-        NSDate *today = [calendar dateFromComponents:testDateComponents]; //[NSDate date];
+//        NSDate *today = [calendar dateFromComponents:testDateComponents]; //[NSDate date];
+        NSDate *today = [NSDate date];
         Restaurant *restaurant = self.restaurant;
         MenuSet *menuSet = [restaurant menuSetForDate:today];
         NSSet *todaysMenuAsASet = menuSet.menuSet;
