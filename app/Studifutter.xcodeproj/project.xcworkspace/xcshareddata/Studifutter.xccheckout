@@ -11,15 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</key>
-		<string>http://svn.rtfnt.com/svn/studifutter</string>
+		<string>ssh://rtfnt.lynx.uberspace.de/~/git/studifutter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>dev/trunk/app/Studifutter.xcodeproj/project.xcworkspace</string>
+	<string>app/Studifutter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</key>
-		<string>../../../../..</string>
+		<string>../../..</string>
 	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://rtfnt.lynx.uberspace.de/~/git/studifutter.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -28,7 +30,7 @@
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</string>
 			<key>IDESourceControlWCCName</key>

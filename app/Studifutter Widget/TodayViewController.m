@@ -38,6 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self checkForAvailableDataAndShowInfo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +53,6 @@
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
-    
     completionHandler(NCUpdateResultNewData);
 }
 
@@ -67,21 +68,38 @@
     return [formatter stringFromDate:date];
 }
 
+- (void)checkForAvailableDataAndShowInfo {
+    if (![self restaurant]) {
+        // show a label that there is no restaurant set
+        NSLog(@"no restaurant");
+        return;
+    }
+    
+    if (![self menus] || [[self menus] count] == 0) {
+        // show a label that there is no data available
+        NSLog(@"no menus");
+        return;
+    }
+}
+
 - (Restaurant *)restaurant {
-    Restaurant *lastUsedRestaurant = nil;
     // check if there's a last restaurant saved
     @try {
         NSString *restaurantID = [[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID];
-        lastUsedRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
+        _restaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
     }
     @catch (NSException *exception) {
         NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
     }
     
-    return lastUsedRestaurant;
+    return _restaurant;
 }
 
 - (NSArray *)menus {
+    if (![self restaurant]) {
+        return nil;
+    }
+    
     if (!_menus) {
         // this really sucks. the first menu set is the actual MenuSet, the second one is
         // the NSSet of all Menus
