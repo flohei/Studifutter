@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -29,16 +29,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYl-As-uRH" id="Swv-eN-TGB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schweinshaxe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
-                                                    <rect key="frame" x="8" y="8" width="99" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schweinshaxe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
+                                                    <rect key="frame" x="8" y="8" width="304" height="18"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
-                                                    <rect key="frame" x="8" y="33" width="49.5" height="13.5"/>
+                                                    <rect key="frame" x="8" y="33" width="304" height="13.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="13.5" id="tIh-hh-Q3e"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -46,11 +49,12 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="Dt0-0e-vtR"/>
-                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="Ivk-8E-YvV"/>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="JrS-Aw-qjD"/>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" constant="25" id="OMb-h2-XJJ"/>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="gcB-5h-U1z"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" id="B9o-Be-cwe"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" id="CVL-du-mSd"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="JE1-Ts-fxs"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="top" secondItem="aZH-KE-PVl" secondAttribute="bottom" constant="7" id="NfH-DY-TEi"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qhy-ge-Ege"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qtG-9Q-6G2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

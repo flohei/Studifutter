@@ -39,6 +39,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.tableView.estimatedRowHeight = 55.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    
     [self checkForAvailableDataAndShowInfo];
 }
 
@@ -69,16 +73,21 @@
 }
 
 - (void)checkForAvailableDataAndShowInfo {
+    NSString *errorString = nil;
+    
     if (![self restaurant]) {
         // show a label that there is no restaurant set
-        NSLog(@"no restaurant");
-        return;
+        errorString = NSLocalizedString(@"NO_RESTAURANTS_INFO_TEXT", @"");
     }
     
     if (![self menus] || [[self menus] count] == 0) {
         // show a label that there is no data available
         NSLog(@"no menus");
-        return;
+        errorString = NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"");
+    }
+    
+    if (errorString) {
+        // create a label to show the string
     }
 }
 
@@ -103,16 +112,6 @@
     if (!_menus) {
         // this really sucks. the first menu set is the actual MenuSet, the second one is
         // the NSSet of all Menus
-//        NSCalendar *calendar = [NSCalendar currentCalendar];
-//        NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
-//        [calendar setTimeZone:timeZone];
-//
-//        NSDateComponents *testDateComponents = [NSDateComponents new];
-//        [testDateComponents setYear:2014];
-//        [testDateComponents setMonth:10];
-//        [testDateComponents setDay:7];
-        
-//        NSDate *today = [calendar dateFromComponents:testDateComponents]; //[NSDate date];
         NSDate *today = [NSDate date];
         Restaurant *restaurant = self.restaurant;
         MenuSet *menuSet = [restaurant menuSetForDate:today];
@@ -148,7 +147,6 @@
     }
     
     // Configure the cell...
-    
     Menu *menu = [[self menus] objectAtIndex:indexPath.row];
 
     [[cell menuTitleLabel] setText:[menu name]];
