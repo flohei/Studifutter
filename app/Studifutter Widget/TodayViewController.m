@@ -40,11 +40,6 @@
     [self checkForAvailableDataAndShowInfo];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
     // Perform any setup necessary in order to update the view.
     
@@ -153,21 +148,8 @@
     
     // Configure the cell...
     Menu *menu = [[self menus] objectAtIndex:indexPath.row];
+    [cell setMenu:menu];
 
-    [[cell menuTitleLabel] setText:[menu name]];
-    
-    NSLocale *german = [[NSLocale alloc] initWithLocaleIdentifier:@"de_DE"];
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setLocale:german];
-    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    
-    NSString *priceString1 = [formatter stringFromNumber:[menu price]];
-    NSString *priceString2 = [formatter stringFromNumber:[menu reducedPrice]];
-    
-    NSMutableString *infoString = [NSMutableString stringWithFormat:@"%@/%@", priceString1, priceString2];
-
-    [[cell menuPriceLabel] setText:infoString];
-    
     return cell;
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,33 +18,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GT-h4-ui2">
-                                <rect key="frame" x="16" y="0.0" width="288" height="270"/>
+                                <rect key="frame" x="0.0" y="103" width="320" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.084156221870000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Meg-G7-h9n"/>
+                                    <constraint firstAttribute="height" constant="65" id="a1m-DM-zIg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellIdentifier" rowHeight="55" id="vYl-As-uRH" customClass="WidgetTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellIdentifier" id="vYl-As-uRH" customClass="WidgetTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYl-As-uRH" id="Swv-eN-TGB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schweinshaxe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
-                                                    <rect key="frame" x="8" y="8" width="304" height="18"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
-                                                    <rect key="frame" x="8" y="33" width="304" height="14"/>
+                                                    <rect key="frame" x="8" y="34" width="294" height="14"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13.5" id="tIh-hh-Q3e"/>
@@ -53,13 +50,20 @@
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schweinshaxe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
+                                                    <rect key="frame" x="8" y="8" width="294" height="18"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" id="B9o-Be-cwe"/>
-                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" id="CVL-du-mSd"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" constant="-10" id="B9o-Be-cwe"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" constant="-10" id="CVL-du-mSd"/>
                                                 <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="JE1-Ts-fxs"/>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="top" secondItem="aZH-KE-PVl" secondAttribute="bottom" constant="7" id="NfH-DY-TEi"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="top" secondItem="aZH-KE-PVl" secondAttribute="bottom" constant="8" id="NfH-DY-TEi"/>
                                                 <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qhy-ge-Ege"/>
                                                 <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qtG-9Q-6G2"/>
                                             </constraints>
@@ -82,11 +86,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ADr-pg-FxT" secondAttribute="trailing" constant="-16" id="PTK-Ju-PCB"/>
                             <constraint firstItem="ADr-pg-FxT" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="XzO-vq-8dr"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="ADr-pg-FxT" secondAttribute="bottom" id="dTc-Ga-era"/>
+                            <constraint firstAttribute="centerY" secondItem="1GT-h4-ui2" secondAttribute="centerY" id="ei0-ST-0Oa"/>
+                            <constraint firstAttribute="centerX" secondItem="1GT-h4-ui2" secondAttribute="centerX" id="gjL-bI-OeW"/>
                             <constraint firstItem="ADr-pg-FxT" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="-16" id="hKI-iD-A6u"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="1GT-h4-ui2" secondAttribute="bottom" id="mrx-JT-hQy"/>
-                            <constraint firstItem="1GT-h4-ui2" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="qGc-ml-UAB"/>
-                            <constraint firstItem="1GT-h4-ui2" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="qnd-Ie-jCa"/>
-                            <constraint firstItem="1GT-h4-ui2" firstAttribute="trailing" secondItem="S3S-Oj-5AN" secondAttribute="trailingMargin" id="wki-aR-OXj"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -107,6 +109,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina47"/>
     </simulatedMetricsContainer>
 </document>

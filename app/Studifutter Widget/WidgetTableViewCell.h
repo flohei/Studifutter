@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Menu;
+
 @interface WidgetTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *menuTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *menuPriceLabel;
+
+@property Menu *menu;
 
 @end
