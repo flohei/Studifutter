@@ -15,7 +15,7 @@
 #import "Constants.h"
 
 @interface TodayViewController () <NCWidgetProviding>
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
 @end
 
@@ -24,17 +24,6 @@
 @synthesize restaurant = _restaurant;
 @synthesize menus = _menus;
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(userDefaultsDidChange:)
-                                                     name:NSUserDefaultsDidChangeNotification
-                                                   object:nil];
-    }
-
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -42,6 +31,11 @@
     self.tableView.estimatedRowHeight = 55.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self
+               selector:@selector(userDefaultsDidChange:)
+                   name:NSUserDefaultsDidChangeNotification
+                 object:nil];
     
     [self checkForAvailableDataAndShowInfo];
 }
@@ -64,6 +58,7 @@
     _restaurant = nil;
     _menus = nil;
     [[self tableView] reloadData];
+    [self checkForAvailableDataAndShowInfo];
 }
 
 - (NSString *)monthStringForDate:(NSDate *)date {
@@ -80,25 +75,35 @@
         errorString = NSLocalizedString(@"NO_RESTAURANTS_INFO_TEXT", @"");
     }
     
-    if (![self menus] || [[self menus] count] == 0) {
+    if ((![self menus] || [[self menus] count] == 0)
+        && !errorString) {
         // show a label that there is no data available
         NSLog(@"no menus");
         errorString = NSLocalizedString(@"NO_MENUS_INFO_TEXT", @"");
     }
     
     if (errorString) {
-        // create a label to show the string
+        // show the error label
+        [[self errorLabel] setText:errorString];
+        [[self errorLabel] setHidden:NO];
+        [[self tableView] setHidden:YES];
+    } else {
+        [[self errorLabel] setHidden:YES];
+        [[self tableView] setHidden:NO];
     }
 }
 
 - (Restaurant *)restaurant {
-    // check if there's a last restaurant saved
-    @try {
-        NSString *restaurantID = [[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID];
-        _restaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
-    }
-    @catch (NSException *exception) {
-        NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
+    if (!_restaurant) {
+        // check if there's a last restaurant saved
+        @try {
+            NSUserDefaults *groupUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
+            NSString *restaurantID = [groupUserDefaults objectForKey:LAST_OPENED_RESTAURANT_ID];
+            _restaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
+        }
     }
     
     return _restaurant;
