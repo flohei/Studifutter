@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GT-h4-ui2">
-                                <rect key="frame" x="0.0" y="103" width="320" height="65"/>
+                                <rect key="frame" x="0.0" y="97" width="320" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.084156221870000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Meg-G7-h9n"/>
@@ -29,12 +29,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellIdentifier" id="vYl-As-uRH" customClass="WidgetTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellIdentifier" rowHeight="55" id="vYl-As-uRH" customClass="WidgetTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYl-As-uRH" id="Swv-eN-TGB">
@@ -51,7 +51,7 @@
                                                     <rect key="frame" x="8" y="32" width="294" height="14"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="13.5" id="tIh-hh-Q3e"/>
+                                                        <constraint firstAttribute="height" constant="14" id="tIh-hh-Q3e"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -66,6 +66,7 @@
                                                 <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="obK-R8-jnH"/>
                                                 <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qhy-ge-Ege"/>
                                                 <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qtG-9Q-6G2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zfv-hC-sCr" secondAttribute="bottom" id="uXr-k2-KGM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -96,7 +97,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="270"/>
+                    <size key="freeformSize" width="320" height="260"/>
                     <connections>
                         <outlet property="errorLabel" destination="1GT-h4-ui2" id="f0m-gj-cmB"/>
                         <outlet property="tableView" destination="ADr-pg-FxT" id="CuX-6u-nUr"/>
