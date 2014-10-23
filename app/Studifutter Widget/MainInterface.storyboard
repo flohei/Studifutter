@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +28,7 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-pg-FxT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -40,8 +40,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYl-As-uRH" id="Swv-eN-TGB">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
-                                                    <rect key="frame" x="8" y="34" width="294" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="16.5" text="Schweinshaxe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
+                                                    <rect key="frame" x="8" y="8" width="294" height="16.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="14" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
+                                                    <rect key="frame" x="8" y="32" width="294" height="14"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13.5" id="tIh-hh-Q3e"/>
@@ -50,20 +57,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schweinshaxe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
-                                                    <rect key="frame" x="8" y="8" width="294" height="18"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" constant="-10" id="B9o-Be-cwe"/>
-                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="trailing" secondItem="Swv-eN-TGB" secondAttribute="trailingMargin" constant="-10" id="CVL-du-mSd"/>
-                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="JE1-Ts-fxs"/>
                                                 <constraint firstItem="zfv-hC-sCr" firstAttribute="top" secondItem="aZH-KE-PVl" secondAttribute="bottom" constant="8" id="NfH-DY-TEi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zfv-hC-sCr" secondAttribute="trailing" constant="10" id="VZV-qB-hAG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aZH-KE-PVl" secondAttribute="trailing" constant="10" id="XcD-qS-iTF"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="obK-R8-jnH"/>
                                                 <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qhy-ge-Ege"/>
                                                 <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qtG-9Q-6G2"/>
                                             </constraints>
@@ -99,6 +99,7 @@
                     <size key="freeformSize" width="320" height="270"/>
                     <connections>
                         <outlet property="errorLabel" destination="1GT-h4-ui2" id="f0m-gj-cmB"/>
+                        <outlet property="tableView" destination="ADr-pg-FxT" id="CuX-6u-nUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

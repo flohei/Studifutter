@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.tableView.estimatedRowHeight = 55.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 55.0;
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self
