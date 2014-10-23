@@ -106,6 +106,7 @@
 
 - (NSArray *)menus {
     if (![self restaurant]) {
+        self.preferredContentSize = self.errorLabel.frame.size;
         return nil;
     }
     
@@ -117,11 +118,8 @@
         MenuSet *menuSet = [restaurant menuSetForDate:today];
         NSSet *todaysMenuAsASet = menuSet.menuSet;
         _menus = [todaysMenuAsASet allObjects];
-        
-        // set the preferred content size to update the layout
-        CGFloat cellHeight = 55.0;
-        NSUInteger count = [_menus count];
-        self.preferredContentSize = CGSizeMake(0, cellHeight * count);
+    
+        self.preferredContentSize = self.tableView.contentSize;
     }
     
     return _menus;
@@ -149,6 +147,8 @@
     // Configure the cell...
     Menu *menu = [[self menus] objectAtIndex:indexPath.row];
     [cell setMenu:menu];
+    
+    self.preferredContentSize = self.tableView.contentSize;
 
     return cell;
 }
