@@ -46,20 +46,25 @@
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
+    [self reload];
     completionHandler(NCUpdateResultNewData);
 }
 
 - (void)userDefaultsDidChange:(NSNotification *)notification {
-    _restaurant = nil;
-    _menus = nil;
-    [[self tableView] reloadData];
-    [self checkForAvailableDataAndShowInfo];
+    [self reload];
 }
 
 - (NSString *)monthStringForDate:(NSDate *)date {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMMM"];
     return [formatter stringFromDate:date];
+}
+
+- (void)reload {
+    _restaurant = nil;
+    _menus = nil;
+    [[self tableView] reloadData];
+    [self checkForAvailableDataAndShowInfo];
 }
 
 - (void)checkForAvailableDataAndShowInfo {
@@ -82,9 +87,13 @@
         [[self errorLabel] setText:errorString];
         [[self errorLabel] setHidden:NO];
         [[self tableView] setHidden:YES];
+        
+        self.preferredContentSize = self.errorLabel.frame.size;
     } else {
         [[self errorLabel] setHidden:YES];
         [[self tableView] setHidden:NO];
+        
+        self.preferredContentSize = self.tableView.contentSize;
     }
 }
 

@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GT-h4-ui2">
-                                <rect key="frame" x="0.0" y="97" width="320" height="65"/>
+                                <rect key="frame" x="0.0" y="90" width="320" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Meg-G7-h9n"/>
-                                    <constraint firstAttribute="height" constant="65" id="a1m-DM-zIg"/>
+                                    <constraint firstAttribute="height" constant="80" id="a1m-DM-zIg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,14 +41,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="16.5" text="Schweinshaxe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-KE-PVl">
-                                                    <rect key="frame" x="8" y="8" width="294" height="16.5"/>
+                                                    <rect key="frame" x="17" y="8" width="285" height="16.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="14" text="1,50 Euro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfv-hC-sCr">
-                                                    <rect key="frame" x="8" y="32" width="294" height="14"/>
+                                                    <rect key="frame" x="16" y="32" width="286" height="14"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="tIh-hh-Q3e"/>
@@ -64,8 +64,8 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="zfv-hC-sCr" secondAttribute="trailing" constant="10" id="VZV-qB-hAG"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aZH-KE-PVl" secondAttribute="trailing" constant="10" id="XcD-qS-iTF"/>
                                                 <constraint firstItem="aZH-KE-PVl" firstAttribute="top" secondItem="Swv-eN-TGB" secondAttribute="topMargin" id="obK-R8-jnH"/>
-                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qhy-ge-Ege"/>
-                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" id="qtG-9Q-6G2"/>
+                                                <constraint firstItem="zfv-hC-sCr" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" constant="8" id="qhy-ge-Ege"/>
+                                                <constraint firstItem="aZH-KE-PVl" firstAttribute="leading" secondItem="Swv-eN-TGB" secondAttribute="leadingMargin" constant="9" id="qtG-9Q-6G2"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zfv-hC-sCr" secondAttribute="bottom" id="uXr-k2-KGM"/>
                                             </constraints>
                                         </tableViewCellContentView>
