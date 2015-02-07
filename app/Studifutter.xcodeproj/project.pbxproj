@@ -48,7 +48,7 @@
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
 		8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B378616DB681B00C0A92C /* Crashlytics.framework */; };
 		8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */; };
-		8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.txt */; };
+		8FA40B5A16BED22000736EC3 /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.md */; };
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
@@ -181,7 +181,7 @@
 		8F9B378616DB681B00C0A92C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTeamListViewController.h; sourceTree = "<group>"; };
 		8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTeamListViewController.m; sourceTree = "<group>"; };
-		8FA40B5916BED22000736EC3 /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
+		8FA40B5916BED22000736EC3 /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDataAccessor.h; sourceTree = "<group>"; };
 		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
 		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHVersionUpdate.h; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 		8F0BA795145C72F1003E2DE0 /* Studifutter */ = {
 			isa = PBXGroup;
 			children = (
-				8FA40B5916BED22000736EC3 /* Notes.txt */,
+				8FA40B5916BED22000736EC3 /* Notes.md */,
 				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
 				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
 				8F729BCF145F2AD000FE166B /* Misc */,
@@ -559,7 +559,7 @@
 				8F8A3B2B19D30B7500B2C308 /* Images.xcassets in Resources */,
 				8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
-				8FA40B5A16BED22000736EC3 /* Notes.txt in Resources */,
+				8FA40B5A16BED22000736EC3 /* Notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

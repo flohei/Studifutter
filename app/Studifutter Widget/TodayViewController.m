@@ -16,6 +16,7 @@
 
 @interface TodayViewController () <NCWidgetProviding>
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -104,6 +105,9 @@
             NSUserDefaults *groupUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
             NSString *restaurantID = [groupUserDefaults objectForKey:LAST_OPENED_RESTAURANT_ID];
             _restaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:restaurantID];
+            
+            // update the title label
+            [[self titleLabel] setText:[_restaurant name]];
         }
         @catch (NSException *exception) {
             NSLog(@"Error finding object: %@: %@", [exception name], [exception reason]);
@@ -122,7 +126,7 @@
     if (!_menus) {
         // this really sucks. the first menu set is the actual MenuSet, the second one is
         // the NSSet of all Menus
-        NSDate *today = [NSDate date];
+        NSDate *today = [NSDate date]; // for weekend testing: [NSDate dateWithTimeIntervalSinceNow:60*60*24*3];
         Restaurant *restaurant = self.restaurant;
         MenuSet *menuSet = [restaurant menuSetForDate:today];
         NSSet *todaysMenuAsASet = menuSet.menuSet;
