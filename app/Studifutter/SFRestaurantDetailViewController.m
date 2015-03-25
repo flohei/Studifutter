@@ -206,7 +206,9 @@
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+#ifndef DEBUG
     [self moveBannerOnScreen];
+#endif
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
