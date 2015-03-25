@@ -12,9 +12,6 @@ const struct MenuSetRelationships MenuSetRelationships = {
 	.restaurant = @"restaurant",
 };
 
-const struct MenuSetFetchedProperties MenuSetFetchedProperties = {
-};
-
 @implementation MenuSetID
 @end
 
@@ -40,41 +37,24 @@ const struct MenuSetFetchedProperties MenuSetFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
 
 	return keyPaths;
 }
 
-
-
-
 @dynamic date;
-
-
-
-
-
 
 @dynamic menu;
 
-	
 - (NSMutableSet*)menuSet {
 	[self willAccessValueForKey:@"menu"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"menu"];
-  
+
 	[self didAccessValueForKey:@"menu"];
 	return result;
 }
-	
 
 @dynamic restaurant;
 
-	
-
-
-
-
-
-
 @end
+

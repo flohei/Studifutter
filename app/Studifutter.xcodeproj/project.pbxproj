@@ -123,7 +123,7 @@
 		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
 		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
-		8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Studifutter/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F10DF5D19D5CBA900190665 /* FHCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHCoreDataStack.h; sourceTree = "<group>"; };
 		8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHCoreDataStack.m; sourceTree = "<group>"; };
 		8F1E5CF516134A3200E5E79F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 		8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
-		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
+		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TrimWhitespace.h"; path = "Studifutter/NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
+		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TrimWhitespace.m"; path = "Studifutter/NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
 		8F450C02153462A100F647CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8F450C0615346A1C00F647CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8F5C301219F98DA500F44B96 /* Studifutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Studifutter.entitlements; sourceTree = "<group>"; };
@@ -153,11 +153,11 @@
 		8F729BFC145F2D5100FE166B /* SFAPICall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPICall.m; sourceTree = "<group>"; };
 		8F729BFD145F2D5100FE166B /* SFAPIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPIException.h; sourceTree = "<group>"; };
 		8F729BFE145F2D5100FE166B /* SFAPIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPIException.m; sourceTree = "<group>"; };
-		8F729C01145F2DA300FE166B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		8F729C04145F2DE700FE166B /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
-		8F729C05145F2DE700FE166B /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
-		8F729C07145F31F600FE166B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		8F729C08145F31F600FE166B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		8F729C01145F2DA300FE166B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Studifutter/Constants.h; sourceTree = "<group>"; };
+		8F729C04145F2DE700FE166B /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "Studifutter/NSString+URLEncode.h"; sourceTree = "<group>"; };
+		8F729C05145F2DE700FE166B /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "Studifutter/NSString+URLEncode.m"; sourceTree = "<group>"; };
+		8F729C07145F31F600FE166B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Studifutter/Common.h; sourceTree = "<group>"; };
+		8F729C08145F31F600FE166B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = Studifutter/Common.m; sourceTree = "<group>"; };
 		8F729C121460313900FE166B /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		8F729C131460313900FE166B /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		8F729C1A1460322000FE166B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
 		8F78A2841521F0090060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F78A28A1521F0470060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8F8A3B2A19D30B7500B2C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8F8A3B2A19D30B7500B2C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Studifutter/Images.xcassets; sourceTree = "<group>"; };
 		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
@@ -181,11 +181,11 @@
 		8F9B378616DB681B00C0A92C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTeamListViewController.h; sourceTree = "<group>"; };
 		8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTeamListViewController.m; sourceTree = "<group>"; };
-		8FA40B5916BED22000736EC3 /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
+		8FA40B5916BED22000736EC3 /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Notes.md; path = Studifutter/Notes.md; sourceTree = "<group>"; };
 		8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDataAccessor.h; sourceTree = "<group>"; };
 		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
-		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHVersionUpdate.h; sourceTree = "<group>"; };
-		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHVersionUpdate.m; sourceTree = "<group>"; };
+		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHVersionUpdate.h; path = Studifutter/FHVersionUpdate.h; sourceTree = "<group>"; };
+		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHVersionUpdate.m; path = Studifutter/FHVersionUpdate.m; sourceTree = "<group>"; };
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Studifutter Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAC4B5419DEF44B005A7EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 		8FC9FD2419E2DCE0003308E6 /* FHStarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHStarButton.h; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8FD5EB9115370A98008476F8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFActivityProvider.h; sourceTree = "<group>"; };
-		8FEEF15816DFB32900988BCC /* SFActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFActivityProvider.m; sourceTree = "<group>"; };
+		8FEEF15716DFB32900988BCC /* SFActivityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFActivityProvider.h; path = Studifutter/SFActivityProvider.h; sourceTree = "<group>"; };
+		8FEEF15816DFB32900988BCC /* SFActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFActivityProvider.m; path = Studifutter/SFActivityProvider.m; sourceTree = "<group>"; };
 		8FFC1BAB15234163001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FFC1BAD1523416B001F0EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +242,7 @@
 		8F0BA77E145C72F1003E2DE0 = {
 			isa = PBXGroup;
 			children = (
+				8FA40B5916BED22000736EC3 /* Notes.md */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
 				8FAC4B5219DEF44B005A7EFE /* Studifutter Widget */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
@@ -281,15 +282,8 @@
 		8F0BA795145C72F1003E2DE0 /* Studifutter */ = {
 			isa = PBXGroup;
 			children = (
-				8FA40B5916BED22000736EC3 /* Notes.md */,
-				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
-				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
-				8F729BCF145F2AD000FE166B /* Misc */,
-				8F729BCE145F2AC300FE166B /* Networking */,
-				8F729BB0145F232F00FE166B /* ViewController */,
-				8FC9FD1C19E2D133003308E6 /* Views */,
-				8F729BC8145F247500FE166B /* Resources */,
-				8F729BCA145F24F400FE166B /* Model */,
+				8FF223061AC2F77D00FDF6FE /* Source */,
+				8FF223071AC2F78400FDF6FE /* Interface */,
 				8F0BA796145C72F1003E2DE0 /* Supporting Files */,
 			);
 			path = Studifutter;
@@ -302,14 +296,12 @@
 				8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */,
 				8F78A2831521F0090060BE14 /* Localizable.strings */,
 				8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */,
-				8F0BA79B145C72F1003E2DE0 /* main.m */,
-				8F0BA79D145C72F1003E2DE0 /* Studifutter-Prefix.pch */,
 				8FD5EB9115370A98008476F8 /* Entitlements.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F729BB0145F232F00FE166B /* ViewController */ = {
+		8F729BB0145F232F00FE166B /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8F729BC2145F244000FE166B /* UITableViewCells */,
@@ -328,7 +320,8 @@
 				8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */,
 				8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */,
 			);
-			name = ViewController;
+			name = "Interface Controllers";
+			path = Studifutter;
 			sourceTree = "<group>";
 		};
 		8F729BC2145F244000FE166B /* UITableViewCells */ = {
@@ -344,16 +337,6 @@
 			name = UITableViewCells;
 			sourceTree = "<group>";
 		};
-		8F729BC8145F247500FE166B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8F8A3B2A19D30B7500B2C308 /* Images.xcassets */,
-				8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */,
-				8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		8F729BCA145F24F400FE166B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +349,7 @@
 				8F729C3D1464BADD00FE166B /* Machine */,
 			);
 			name = Model;
+			path = Studifutter;
 			sourceTree = "<group>";
 		};
 		8F729BCE145F2AC300FE166B /* Networking */ = {
@@ -381,24 +365,17 @@
 				8F729BFE145F2D5100FE166B /* SFAPIException.m */,
 			);
 			name = Networking;
+			path = Studifutter;
 			sourceTree = "<group>";
 		};
-		8F729BCF145F2AD000FE166B /* Misc */ = {
+		8F729BCF145F2AD000FE166B /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				8F729C01145F2DA300FE166B /* Constants.h */,
-				8F729C07145F31F600FE166B /* Common.h */,
-				8F729C08145F31F600FE166B /* Common.m */,
-				8F729C04145F2DE700FE166B /* NSString+URLEncode.h */,
-				8F729C05145F2DE700FE166B /* NSString+URLEncode.m */,
-				8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */,
-				8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */,
-				8FEEF15716DFB32900988BCC /* SFActivityProvider.h */,
-				8FEEF15816DFB32900988BCC /* SFActivityProvider.m */,
-				8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */,
-				8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */,
+				8F0BA79B145C72F1003E2DE0 /* main.m */,
+				8F0BA79D145C72F1003E2DE0 /* Studifutter-Prefix.pch */,
 			);
-			name = Misc;
+			name = Others;
+			path = Studifutter;
 			sourceTree = "<group>";
 		};
 		8F729C361464BADD00FE166B /* Human */ = {
@@ -430,12 +407,8 @@
 		8FAC4B5219DEF44B005A7EFE /* Studifutter Widget */ = {
 			isa = PBXGroup;
 			children = (
-				8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */,
-				8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */,
-				8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */,
-				8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */,
-				8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */,
-				8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */,
+				8FF2230E1AC2F8AF00FDF6FE /* Source */,
+				8FF2230D1AC2F8A500FDF6FE /* Interface */,
 				8FAC4B5319DEF44B005A7EFE /* Supporting Files */,
 			);
 			path = "Studifutter Widget";
@@ -444,6 +417,7 @@
 		8FAC4B5319DEF44B005A7EFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */,
 				8FAC4B5419DEF44B005A7EFE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -456,6 +430,96 @@
 				8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */,
 			);
 			name = Views;
+			path = Studifutter;
+			sourceTree = "<group>";
+		};
+		8FF223061AC2F77D00FDF6FE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8FF223081AC2F79800FDF6FE /* General Controllers */,
+				8F729BB0145F232F00FE166B /* Interface Controllers */,
+				8F729BCE145F2AC300FE166B /* Networking */,
+				8FF2230C1AC2F83100FDF6FE /* Categories */,
+				8F729BCA145F24F400FE166B /* Model */,
+				8FC9FD1C19E2D133003308E6 /* Views */,
+				8FF2230B1AC2F82C00FDF6FE /* Helper Classes */,
+				8F729BCF145F2AD000FE166B /* Others */,
+			);
+			name = Source;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8FF223071AC2F78400FDF6FE /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8F8A3B2A19D30B7500B2C308 /* Images.xcassets */,
+				8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */,
+				8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */,
+			);
+			name = Interface;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8FF223081AC2F79800FDF6FE /* General Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
+				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
+			);
+			name = "General Controllers";
+			path = Studifutter;
+			sourceTree = "<group>";
+		};
+		8FF2230A1AC2F7FC00FDF6FE /* Interface Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */,
+				8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */,
+				8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */,
+				8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */,
+			);
+			name = "Interface Controllers";
+			sourceTree = "<group>";
+		};
+		8FF2230B1AC2F82C00FDF6FE /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8F729C01145F2DA300FE166B /* Constants.h */,
+				8F729C07145F31F600FE166B /* Common.h */,
+				8F729C08145F31F600FE166B /* Common.m */,
+				8FEEF15716DFB32900988BCC /* SFActivityProvider.h */,
+				8FEEF15816DFB32900988BCC /* SFActivityProvider.m */,
+				8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */,
+				8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		8FF2230C1AC2F83100FDF6FE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8F729C04145F2DE700FE166B /* NSString+URLEncode.h */,
+				8F729C05145F2DE700FE166B /* NSString+URLEncode.m */,
+				8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */,
+				8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		8FF2230D1AC2F8A500FDF6FE /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		8FF2230E1AC2F8AF00FDF6FE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8FF2230A1AC2F7FC00FDF6FE /* Interface Controllers */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,6 +763,7 @@
 				8F1E5CFA16134A4400E5E79F /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			path = Studifutter;
 			sourceTree = "<group>";
 		};
 		8F78A2831521F0090060BE14 /* Localizable.strings */ = {

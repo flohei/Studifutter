@@ -17,9 +17,6 @@ const struct MenuRelationships MenuRelationships = {
 	.menuSet = @"menuSet",
 };
 
-const struct MenuFetchedProperties MenuFetchedProperties = {
-};
-
 @implementation MenuID
 @end
 
@@ -45,7 +42,7 @@ const struct MenuFetchedProperties MenuFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"priceValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"price"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -60,47 +57,17 @@ const struct MenuFetchedProperties MenuFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic currency;
-
-
-
-
-
 
 @dynamic date;
 
-
-
-
-
-
 @dynamic extraChars;
-
-
-
-
-
 
 @dynamic extraNumbers;
 
-
-
-
-
-
 @dynamic name;
 
-
-
-
-
-
 @dynamic price;
-
-
 
 - (float)priceValue {
 	NSNumber *result = [self price];
@@ -120,13 +87,7 @@ const struct MenuFetchedProperties MenuFetchedProperties = {
 	[self setPrimitivePrice:[NSNumber numberWithFloat:value_]];
 }
 
-
-
-
-
 @dynamic reducedPrice;
-
-
 
 - (float)reducedPriceValue {
 	NSNumber *result = [self reducedPrice];
@@ -146,17 +107,7 @@ const struct MenuFetchedProperties MenuFetchedProperties = {
 	[self setPrimitiveReducedPrice:[NSNumber numberWithFloat:value_]];
 }
 
-
-
-
-
 @dynamic menuSet;
 
-	
-
-
-
-
-
-
 @end
+

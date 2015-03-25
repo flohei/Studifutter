@@ -20,9 +20,6 @@ const struct RestaurantRelationships RestaurantRelationships = {
 	.menuSet = @"menuSet",
 };
 
-const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
-};
-
 @implementation RestaurantID
 @end
 
@@ -48,7 +45,7 @@ const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
+
 	if ([key isEqualToString:@"closedValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"closed"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -73,19 +70,9 @@ const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
 	return keyPaths;
 }
 
-
-
-
 @dynamic city;
 
-
-
-
-
-
 @dynamic closed;
-
-
 
 - (BOOL)closedValue {
 	NSNumber *result = [self closed];
@@ -105,13 +92,7 @@ const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
 	[self setPrimitiveClosed:[NSNumber numberWithBool:value_]];
 }
 
-
-
-
-
 @dynamic latitude;
-
-
 
 - (double)latitudeValue {
 	NSNumber *result = [self latitude];
@@ -131,13 +112,7 @@ const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
 	[self setPrimitiveLatitude:[NSNumber numberWithDouble:value_]];
 }
 
-
-
-
-
 @dynamic longitude;
-
-
 
 - (double)longitudeValue {
 	NSNumber *result = [self longitude];
@@ -157,34 +132,13 @@ const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
 	[self setPrimitiveLongitude:[NSNumber numberWithDouble:value_]];
 }
 
-
-
-
-
 @dynamic menuURL;
-
-
-
-
-
 
 @dynamic name;
 
-
-
-
-
-
 @dynamic notes;
 
-
-
-
-
-
 @dynamic restaurantID;
-
-
 
 - (int32_t)restaurantIDValue {
 	NSNumber *result = [self restaurantID];
@@ -204,40 +158,20 @@ const struct RestaurantFetchedProperties RestaurantFetchedProperties = {
 	[self setPrimitiveRestaurantID:[NSNumber numberWithInt:value_]];
 }
 
-
-
-
-
 @dynamic street;
-
-
-
-
-
 
 @dynamic zipCode;
 
-
-
-
-
-
 @dynamic menuSet;
 
-	
 - (NSMutableSet*)menuSetSet {
 	[self willAccessValueForKey:@"menuSet"];
-  
+
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"menuSet"];
-  
+
 	[self didAccessValueForKey:@"menuSet"];
 	return result;
 }
-	
-
-
-
-
-
 
 @end
+
