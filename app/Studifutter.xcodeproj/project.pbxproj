@@ -52,46 +52,11 @@
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
-		8FAC4B5119DEF44B005A7EFE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA3B781942018400F6E058 /* NotificationCenter.framework */; };
-		8FAC4B5719DEF44B005A7EFE /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */; };
-		8FAC4B5919DEF44B005A7EFE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */; };
-		8FAC4B5C19DEF44B005A7EFE /* Studifutter Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8FAC4B6419DEF527005A7EFE /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
-		8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
-		8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FAC6EFC1535D3B100661B89 /* SFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */; };
-		8FACAB0619E035B000864C5A /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
-		8FACAB0719E067A500864C5A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA793145C72F1003E2DE0 /* CoreData.framework */; };
-		8FACAB0B19E0684A00864C5A /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
-		8FACAB0C19E0684A00864C5A /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3A1464BADD00FE166B /* Menu.m */; };
-		8FACAB0D19E0684A00864C5A /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
-		8FACAB0E19E0685000864C5A /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
-		8FACAB0F19E0685000864C5A /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
-		8FACAB1019E0685000864C5A /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
-		8FACAB1119E077A800864C5A /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
-		8FBC11C419E079DB002D976E /* WidgetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */; };
 		8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */; };
-		8FEDA00419EC64C900CACB39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F78A2831521F0090060BE14 /* Localizable.strings */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8FAC4B5A19DEF44B005A7EFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8FAC4B4F19DEF44B005A7EFE;
-			remoteInfo = "Studifutter Widget";
-		};
-		8FAC4B5D19DEF44B005A7EFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8F0BA780145C72F1003E2DE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8FAC4B4F19DEF44B005A7EFE;
-			remoteInfo = "Studifutter Widget";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8F8A3B4319D30C1100B2C308 /* Embed App Extensions */ = {
@@ -100,7 +65,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8FAC4B5C19DEF44B005A7EFE /* Studifutter Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,16 +151,8 @@
 		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHVersionUpdate.h; path = Studifutter/FHVersionUpdate.h; sourceTree = "<group>"; };
 		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHVersionUpdate.m; path = Studifutter/FHVersionUpdate.m; sourceTree = "<group>"; };
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Studifutter Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FAC4B5419DEF44B005A7EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Studifutter Widget.entitlements"; sourceTree = "<group>"; };
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
-		8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetTableViewCell.h; sourceTree = "<group>"; };
-		8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetTableViewCell.m; sourceTree = "<group>"; };
 		8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHStarButton.m; sourceTree = "<group>"; };
 		8FC9FD2419E2DCE0003308E6 /* FHStarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHStarButton.h; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -227,15 +183,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FAC4B4D19DEF44B005A7EFE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FAC4B5119DEF44B005A7EFE /* NotificationCenter.framework in Frameworks */,
-				8FACAB0719E067A500864C5A /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -244,7 +191,6 @@
 			children = (
 				8FA40B5916BED22000736EC3 /* Notes.md */,
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
-				8FAC4B5219DEF44B005A7EFE /* Studifutter Widget */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
 			);
@@ -254,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				8F0BA789145C72F1003E2DE0 /* Studifutter.app */,
-				8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -404,25 +349,6 @@
 			path = Machine;
 			sourceTree = "<group>";
 		};
-		8FAC4B5219DEF44B005A7EFE /* Studifutter Widget */ = {
-			isa = PBXGroup;
-			children = (
-				8FF2230E1AC2F8AF00FDF6FE /* Source */,
-				8FF2230D1AC2F8A500FDF6FE /* Interface */,
-				8FAC4B5319DEF44B005A7EFE /* Supporting Files */,
-			);
-			path = "Studifutter Widget";
-			sourceTree = "<group>";
-		};
-		8FAC4B5319DEF44B005A7EFE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8FAC4B6319DEF4DC005A7EFE /* Studifutter Widget.entitlements */,
-				8FAC4B5419DEF44B005A7EFE /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8FC9FD1C19E2D133003308E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,17 +396,6 @@
 			path = Studifutter;
 			sourceTree = "<group>";
 		};
-		8FF2230A1AC2F7FC00FDF6FE /* Interface Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				8FAC4B5519DEF44B005A7EFE /* TodayViewController.h */,
-				8FAC4B5619DEF44B005A7EFE /* TodayViewController.m */,
-				8FBC11C219E079DB002D976E /* WidgetTableViewCell.h */,
-				8FBC11C319E079DB002D976E /* WidgetTableViewCell.m */,
-			);
-			name = "Interface Controllers";
-			sourceTree = "<group>";
-		};
 		8FF2230B1AC2F82C00FDF6FE /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,22 +421,6 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		8FF2230D1AC2F8A500FDF6FE /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				8FAC4B5819DEF44B005A7EFE /* MainInterface.storyboard */,
-			);
-			name = Interface;
-			sourceTree = "<group>";
-		};
-		8FF2230E1AC2F8AF00FDF6FE /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				8FF2230A1AC2F7FC00FDF6FE /* Interface Controllers */,
-			);
-			name = Source;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -540,30 +439,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				8FAC4B5B19DEF44B005A7EFE /* PBXTargetDependency */,
-				8FAC4B5E19DEF44B005A7EFE /* PBXTargetDependency */,
 			);
 			name = Studifutter;
 			productName = Studifutter;
 			productReference = 8F0BA789145C72F1003E2DE0 /* Studifutter.app */;
 			productType = "com.apple.product-type.application";
-		};
-		8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8FAC4B5F19DEF44C005A7EFE /* Build configuration list for PBXNativeTarget "Studifutter Widget" */;
-			buildPhases = (
-				8FAC4B4C19DEF44B005A7EFE /* Sources */,
-				8FAC4B4D19DEF44B005A7EFE /* Frameworks */,
-				8FAC4B4E19DEF44B005A7EFE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Studifutter Widget";
-			productName = "Studifutter Widget";
-			productReference = 8FAC4B5019DEF44B005A7EFE /* Studifutter Widget.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -571,19 +451,10 @@
 		8F0BA780145C72F1003E2DE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
 				TargetAttributes = {
 					8F0BA788145C72F1003E2DE0 = {
-						DevelopmentTeam = F5ATLHMKLU;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					8FAC4B4F19DEF44B005A7EFE = {
-						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = F5ATLHMKLU;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -608,7 +479,6 @@
 			projectRoot = "";
 			targets = (
 				8F0BA788145C72F1003E2DE0 /* Studifutter */,
-				8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -624,15 +494,6 @@
 				8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */,
 				8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */,
 				8FA40B5A16BED22000736EC3 /* Notes.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FAC4B4E19DEF44B005A7EFE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FAC4B5919DEF44B005A7EFE /* MainInterface.storyboard in Resources */,
-				8FEDA00419EC64C900CACB39 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,40 +580,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FAC4B4C19DEF44B005A7EFE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FACAB0D19E0684A00864C5A /* Restaurant.m in Sources */,
-				8FAC4B6419DEF527005A7EFE /* DayTableViewCell.m in Sources */,
-				8FACAB0E19E0685000864C5A /* _MenuSet.m in Sources */,
-				8FACAB0C19E0684A00864C5A /* Menu.m in Sources */,
-				8FACAB0B19E0684A00864C5A /* MenuSet.m in Sources */,
-				8FBC11C419E079DB002D976E /* WidgetTableViewCell.m in Sources */,
-				8FAC4B5719DEF44B005A7EFE /* TodayViewController.m in Sources */,
-				8FACAB0F19E0685000864C5A /* _Menu.m in Sources */,
-				8FACAB0619E035B000864C5A /* Studifutter.xcdatamodeld in Sources */,
-				8FAC4B6719DEF539005A7EFE /* SFDataAccessor.m in Sources */,
-				8FAC4B6619DEF535005A7EFE /* FHCoreDataStack.m in Sources */,
-				8FACAB1119E077A800864C5A /* MenuTableViewCell.m in Sources */,
-				8FACAB1019E0685000864C5A /* _Restaurant.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8FAC4B5B19DEF44B005A7EFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */;
-			targetProxy = 8FAC4B5A19DEF44B005A7EFE /* PBXContainerItemProxy */;
-		};
-		8FAC4B5E19DEF44B005A7EFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8FAC4B4F19DEF44B005A7EFE /* Studifutter Widget */;
-			targetProxy = 8FAC4B5D19DEF44B005A7EFE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */ = {
@@ -804,6 +632,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -841,6 +670,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -912,81 +742,6 @@
 			};
 			name = Release;
 		};
-		8FAC4B6019DEF44C005A7EFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = "Studifutter Widget/Studifutter Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Studifutter Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8FAC4B6119DEF44C005A7EFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = "Studifutter Widget/Studifutter Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Studifutter Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		8FAC4B6219DEF44C005A7EFE /* Ad hoc */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = "Studifutter Widget/Studifutter Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Studifutter Widget/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = "Ad hoc";
-		};
 		8FD5EB8E153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1004,6 +759,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -1068,16 +824,6 @@
 				8F0BA7C6145C72F2003E2DE0 /* Debug */,
 				8F0BA7C7145C72F2003E2DE0 /* Release */,
 				8FD5EB8F153709ED008476F8 /* Ad hoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8FAC4B5F19DEF44C005A7EFE /* Build configuration list for PBXNativeTarget "Studifutter Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8FAC4B6019DEF44C005A7EFE /* Debug */,
-				8FAC4B6119DEF44C005A7EFE /* Release */,
-				8FAC4B6219DEF44C005A7EFE /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
