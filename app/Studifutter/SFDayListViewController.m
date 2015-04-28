@@ -22,16 +22,10 @@
 
 - (NSArray *)allMenus;
 
-- (void)moveBannerOffScreen;
-- (void)moveBannerOnScreen;
-
 - (NSDate *)dateReducedToMonthForDate:(NSDate *)inputDate;
 
 - (NSString *)monthStringForDate:(NSDate *)date;
 - (void)reloadData:(NSNotification *)notification;
-
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bannerVisibleConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHiddenConstraint;
 
 @end
 
@@ -43,9 +37,6 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData:) name:MENUS_UPDATED_NOTIFICATION object:nil];
-    
-    bannerVisible = YES;
-    [self moveBannerOffScreen];
     
     [[self tableView] setBackgroundColor:[UIColor clearColor]];
     
@@ -68,10 +59,8 @@
 
 - (void)viewDidUnload {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self setBannerView:nil];
     [self setTableView:nil];
     [self setContainerView:nil];
-    [self setBannerHiddenConstraint:nil];
     [super viewDidUnload];    
     self.restaurant = nil;
 }
@@ -222,20 +211,6 @@
     }
 }
 
-- (NSLayoutConstraint *)bannerHiddenConstraint {
-    if (!_bannerHiddenConstraint) {
-        _bannerHiddenConstraint = [NSLayoutConstraint constraintWithItem:_bannerView
-                                                               attribute:NSLayoutAttributeBottom
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:_containerView
-                                                               attribute:NSLayoutAttributeBottom
-                                                              multiplier:1.0
-                                                                constant:50.0];
-    }
-    
-    return _bannerHiddenConstraint;
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -291,52 +266,6 @@
     [containerView addSubview:label];
     
     return containerView;
-}
-
-#pragma mark - iAds
-
-- (void)moveBannerOffScreen {
-    if (!bannerVisible) return;
-    
-    // layout to starting position  
-    [_containerView layoutIfNeeded];
-    
-    [UIView animateWithDuration:.5 animations:^{
-        [_containerView removeConstraint:[self bannerVisibleConstraint]];
-        [_containerView addConstraint:[self bannerHiddenConstraint]];
-        [_containerView layoutIfNeeded];
-    }];
-    
-    bannerVisible = NO;
-}
-
-- (void)moveBannerOnScreen {
-    if (bannerVisible) return;
-    
-    // layout to starting position
-    [_containerView layoutIfNeeded];
-    
-    [UIView animateWithDuration:.5 animations:^{
-        [_containerView removeConstraint:[self bannerHiddenConstraint]];
-        [_containerView addConstraint:[self bannerVisibleConstraint]];
-        [_containerView layoutIfNeeded];
-    }];
-    
-    bannerVisible = YES;
-}
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-#ifndef DEBUG
-    [self moveBannerOnScreen];
-#endif
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    [self moveBannerOffScreen];
-}
-
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
-    return YES;
 }
 
 @end

@@ -14,20 +14,11 @@
 @import CoreLocation;
 
 @interface SFRestaurantDetailViewController () {
-    bool bannerVisible;
     __weak IBOutlet FHStarButton *favoriteButton;
 }
 
-- (void)moveBannerOffScreen;
-- (void)moveBannerOnScreen;
-
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bannerVisibleConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerHiddenConstraint;
-
 @property (strong, nonatomic) IBOutlet UIView *containerView;
-
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
 
 @property CLLocationManager *locationManager;
 
@@ -40,9 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    bannerVisible = YES;
-    [self moveBannerOffScreen];
     
     BOOL showUserLocation = [[NSUserDefaults standardUserDefaults] boolForKey:SHOW_USER_LOCATION];
     
@@ -157,66 +145,6 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     // create a new region and span to show both the user's and the restaurant's location
     [self zoomToFitMapAnnotations:[self mapView]];
-}
-
-#pragma mark - iAds
-
-- (NSLayoutConstraint *)bannerHiddenConstraint {
-    if (!_bannerHiddenConstraint) {
-        _bannerHiddenConstraint = [NSLayoutConstraint constraintWithItem:_bannerView
-                                                               attribute:NSLayoutAttributeBottom
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:_containerView
-                                                               attribute:NSLayoutAttributeBottom
-                                                              multiplier:1.0
-                                                                constant:50.0];
-    }
-    
-    return _bannerHiddenConstraint;
-}
-
-- (void)moveBannerOffScreen {
-    if (!bannerVisible) return;
-    
-    // layout to starting position
-    [_containerView layoutIfNeeded];
-    
-    [UIView animateWithDuration:.5 animations:^{
-        [_containerView removeConstraint:[self bannerVisibleConstraint]];
-        [_containerView addConstraint:[self bannerHiddenConstraint]];
-        [_containerView layoutIfNeeded];
-    }];
-    
-    bannerVisible = NO;
-}
-
-- (void)moveBannerOnScreen {
-    if (bannerVisible) return;
-    
-    // layout to starting position
-    [_containerView layoutIfNeeded];
-    
-    [UIView animateWithDuration:.5 animations:^{
-        [_containerView removeConstraint:[self bannerHiddenConstraint]];
-        [_containerView addConstraint:[self bannerVisibleConstraint]];
-        [_containerView layoutIfNeeded];
-    }];
-    
-    bannerVisible = YES;
-}
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-#ifndef DEBUG
-    [self moveBannerOnScreen];
-#endif
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    [self moveBannerOffScreen];
-}
-
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
-    return YES;
 }
 
 @end

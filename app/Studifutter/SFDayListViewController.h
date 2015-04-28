@@ -12,13 +12,11 @@
 @class Restaurant;
 
 @interface SFDayListViewController : UIViewController <ADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource> {
-    bool bannerVisible;
     UIView *infoView;
 }
 
 @property (nonatomic, retain) Restaurant *restaurant;
 @property (strong, nonatomic) IBOutlet UIView *containerView;
-@property (strong, nonatomic) IBOutlet ADBannerView *bannerView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, retain) NSDictionary *sections;
