@@ -17,10 +17,10 @@
 		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
 		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */; };
-		8F10DF5F19D5CBA900190665 /* FHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
+		8F2F9C301AF2609400A29C7D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
@@ -88,14 +88,13 @@
 		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
 		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
 		8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Studifutter/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8F10DF5D19D5CBA900190665 /* FHCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHCoreDataStack.h; sourceTree = "<group>"; };
-		8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHCoreDataStack.m; sourceTree = "<group>"; };
 		8F1E5CF516134A3200E5E79F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8F1E5CF816134A3D00E5E79F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFA16134A4400E5E79F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
 		8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TrimWhitespace.h"; path = "Studifutter/NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TrimWhitespace.m"; path = "Studifutter/NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
@@ -150,6 +149,7 @@
 		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
 		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHVersionUpdate.h; path = Studifutter/FHVersionUpdate.h; sourceTree = "<group>"; };
 		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHVersionUpdate.m; path = Studifutter/FHVersionUpdate.m; sourceTree = "<group>"; };
+		8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studifutter-Bridging-Header.h"; sourceTree = "<group>"; };
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		8FAC6EFA1535D3B100661B89 /* SFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFWebViewController.h; sourceTree = "<group>"; };
 		8FAC6EFB1535D3B100661B89 /* SFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFWebViewController.m; sourceTree = "<group>"; };
@@ -168,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
 				8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */,
 				8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */,
 				8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */,
@@ -176,7 +177,6 @@
 				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
 				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
 				8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */,
-				8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
 				8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */,
@@ -285,10 +285,10 @@
 		8F729BCA145F24F400FE166B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */,
+				8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */,
 				8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */,
 				8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */,
-				8F10DF5D19D5CBA900190665 /* FHCoreDataStack.h */,
-				8F10DF5E19D5CBA900190665 /* FHCoreDataStack.m */,
 				8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */,
 				8F729C361464BADD00FE166B /* Human */,
 				8F729C3D1464BADD00FE166B /* Machine */,
@@ -551,11 +551,11 @@
 				8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */,
 				8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */,
 				8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */,
-				8F10DF5F19D5CBA900190665 /* FHCoreDataStack.m in Sources */,
 				8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */,
 				8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */,
 				8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */,
 				8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */,
+				8F2F9C301AF2609400A29C7D /* CoreDataStack.swift in Sources */,
 				8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */,
 				8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */,
 				8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */,
@@ -697,6 +697,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -710,6 +712,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -724,6 +728,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -737,6 +743,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -787,6 +794,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -800,6 +809,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

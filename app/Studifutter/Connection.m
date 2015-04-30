@@ -13,7 +13,7 @@
 #import "MenuSet.h"
 #import "Menu.h"
 #import "NSString+TrimWhitespace.h"
-#import "FHCoreDataStack.h"
+#import "Studifutter-Swift.h"
 
 
 @interface Connection ()
@@ -86,7 +86,7 @@ static Connection *_connection;
  Returns the App's managed object context, saved in the App delegate.
  */
 - (NSManagedObjectContext *)context {
-    return [[FHCoreDataStack sharedStack] managedObjectContext];
+    return [[CoreDataStack sharedInstance] managedObjectContext];
 }
 
 - (BOOL)readRestaurants {
@@ -135,7 +135,7 @@ static Connection *_connection;
             continue;
         }
         
-        [[[[FHCoreDataStack sharedStack] managedObjectContext] undoManager] beginUndoGrouping];
+        [[[[CoreDataStack sharedInstance] managedObjectContext] undoManager] beginUndoGrouping];
         
         Restaurant *aNewRestaurant = [[Restaurant alloc] initWithEntity:[NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
         
@@ -152,8 +152,8 @@ static Connection *_connection;
         aNewRestaurant.zipCode = ([rawRestaurant objectForKey:@"zipCode"] != [NSNull null]) ? [rawRestaurant objectForKey:@"zipCode"] : nil;
         
         
-        [[[[FHCoreDataStack sharedStack] managedObjectContext] undoManager] endUndoGrouping];
-        [[FHCoreDataStack sharedStack] saveContext];
+        [[[[CoreDataStack sharedInstance] managedObjectContext] undoManager] endUndoGrouping];
+        [[CoreDataStack sharedInstance] saveContext];
     }
 }
 
@@ -221,7 +221,7 @@ static Connection *_connection;
                 NSTimeInterval halfADay = 43200;
                 if (lastDayOfOldMenus && date == [[lastDayOfOldMenus dateByAddingTimeInterval:halfADay] earlierDate:date]) continue;
                 
-                [[[[FHCoreDataStack sharedStack] managedObjectContext] undoManager] beginUndoGrouping];
+                [[[[CoreDataStack sharedInstance] managedObjectContext] undoManager] beginUndoGrouping];
                 
                 MenuSet *menuSet = [[MenuSet alloc] initWithEntity:[NSEntityDescription entityForName:@"MenuSet" inManagedObjectContext:[self context]] insertIntoManagedObjectContext:[self context]];
                 menuSet.restaurant = restaurant;
@@ -248,8 +248,8 @@ static Connection *_connection;
                     menu.menuSet = menuSet;
                 }
                 
-                [[[[FHCoreDataStack sharedStack] managedObjectContext] undoManager] endUndoGrouping];
-                [[FHCoreDataStack sharedStack] saveContext];
+                [[[[CoreDataStack sharedInstance] managedObjectContext] undoManager] endUndoGrouping];
+                [[CoreDataStack sharedInstance] saveContext];
             }
             success = YES;
         }

@@ -14,7 +14,7 @@
 #import "MenuSet.h"
 #import "FHVersionUpdate.h"
 #import <Crashlytics/Crashlytics.h>
-#import "FHCoreDataStack.h"
+#import "Studifutter-Swift.h"
 
 @interface SFAppDelegate ()
 
@@ -51,11 +51,14 @@
     
     // check if there's a last restaurant saved. if so push it.
     @try {
-        Restaurant *lastRestaurant = (Restaurant *)[[FHCoreDataStack sharedStack] managedObjectForID:[[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID]];
-        if (lastRestaurant) {
-            SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
-            [dayListViewController setRestaurant:lastRestaurant];
-            [navigationController pushViewController:dayListViewController animated:NO];
+        NSString *lastRestaurantKey = [[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID];
+        if (lastRestaurantKey) {
+            Restaurant *lastRestaurant = (Restaurant *)[[CoreDataStack sharedInstance] managedObjectForID:lastRestaurantKey];
+            if (lastRestaurant) {
+                SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
+                [dayListViewController setRestaurant:lastRestaurant];
+                [navigationController pushViewController:dayListViewController animated:NO];
+            }
         }
     }
     @catch (NSException *exception) {
@@ -72,7 +75,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Saves changes in the application's managed object context before the application terminates.
-    [[FHCoreDataStack sharedStack] saveContext];
+    [[CoreDataStack sharedInstance] saveContext];
 }
 
 #pragma mark - Custom Code
@@ -89,7 +92,7 @@
 }
 
 - (void)completeCleanup {
-    [[FHCoreDataStack sharedStack] clearStores];
+    [[CoreDataStack sharedInstance] clearStores];
     [self refreshLocalData];
 }
 
@@ -109,11 +112,11 @@
             for (MenuSet *ms in r.menuSet) {
                 NSDate *menuSetDate = [ms date];
                 if (menuSetDate == [menuSetDate earlierDate:yesterday]) {
-                    [[[FHCoreDataStack sharedStack] managedObjectContext] deleteObject:ms];
+                    [[[CoreDataStack sharedInstance] managedObjectContext] deleteObject:ms];
                 }
             }
             
-            [[FHCoreDataStack sharedStack] saveContext];
+            [[CoreDataStack sharedInstance] saveContext];
         }
     }
 }

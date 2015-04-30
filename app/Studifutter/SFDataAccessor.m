@@ -9,7 +9,7 @@
 #import "SFDataAccessor.h"
 #import "Restaurant.h"
 #import "SFAppDelegate.h"
-#import "FHCoreDataStack.h"
+#import "Studifutter-Swift.h"
 
 @implementation SFDataAccessor
 
@@ -28,7 +28,7 @@
 + (NSArray *)localRestaurants {  
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Restaurant" inManagedObjectContext:[[FHCoreDataStack sharedStack] managedObjectContext]];
+                                   entityForName:@"Restaurant" inManagedObjectContext:[[CoreDataStack sharedInstance] managedObjectContext]];
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]
@@ -39,7 +39,7 @@
     
     NSFetchedResultsController *theFetchedResultsController =
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:[[FHCoreDataStack sharedStack] managedObjectContext]
+                                        managedObjectContext:[[CoreDataStack sharedInstance] managedObjectContext]
                                           sectionNameKeyPath:nil
                                                    cacheName:nil];
     
