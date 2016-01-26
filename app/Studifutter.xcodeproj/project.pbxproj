@@ -103,7 +103,6 @@
 		8F450C0615346A1C00F647CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8F4B1D491C57A6B40088A273 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8F4B1D4D1C57AD380088A273 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIApplicationExtension.swift; path = Studifutter/UIApplicationExtension.swift; sourceTree = "<group>"; };
-		8F5C301219F98DA500F44B96 /* Studifutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Studifutter.entitlements; sourceTree = "<group>"; };
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		8F6F134F147EA15900FE5455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -240,7 +239,6 @@
 		8F0BA796145C72F1003E2DE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8F5C301219F98DA500F44B96 /* Studifutter.entitlements */,
 				8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */,
 				8F78A2831521F0090060BE14 /* Localizable.strings */,
 				8F0BA797145C72F1003E2DE0 /* Studifutter-Info.plist */,
@@ -698,7 +696,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -731,7 +728,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -798,7 +794,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Studifutter/Studifutter.entitlements;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
