@@ -321,19 +321,17 @@
 	_error = nil;
 	_response = nil;
     
-    NSURLResponse *response;
-    NSError *error;
-	
-	NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
-    
-    _response = response;
-    _error = error;
-    
-	NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)_response;
-    _statusCode = [httpResponse statusCode];
-	if (data) {
-		[_receivedData setData:data];
-	}
+    NSURLSession *session = [NSURLSession sharedSession];
+    [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        _response = response;
+        _error = error;
+        
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)_response;
+        _statusCode = [httpResponse statusCode];
+        if (data) {
+            [_receivedData setData:data];
+        }
+    }];
 }
 
 #pragma mark - Configuration

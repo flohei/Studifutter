@@ -137,7 +137,7 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"restaurantLocation"];
 	annotationView.animatesDrop = YES;
-    annotationView.pinColor = MKPinAnnotationColorRed;
+    annotationView.pinTintColor = [UIColor redColor];
     annotationView.canShowCallout = YES;
 	return annotationView;
 }

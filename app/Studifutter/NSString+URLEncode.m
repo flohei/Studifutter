@@ -12,7 +12,7 @@
 @implementation NSString (URLEncode)
 
 - (NSString *)URLEncoded {
-	return (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)self,NULL,(CFStringRef)@"!*’();:@&=+$,/?%#[]",kCFStringEncodingUTF8 );
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[[NSCharacterSet alloc] init]];
 }
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "SFTeamListViewController.h"
-#import "SFWebViewController.h"
+
+@import SafariServices;
 
 @interface SFTeamListViewController ()
 
@@ -15,23 +16,21 @@
 
 @implementation SFTeamListViewController
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSString *segueIdentifier = [segue identifier];
-    
-    if ([segueIdentifier isEqualToString:@"ShowFloheiSegue"]) {
-        NSURL *url = [NSURL URLWithString:@"http://flohei.de"];
-        SFWebViewController *webViewController = (SFWebViewController *)[segue destinationViewController];
-        [webViewController setWebURL:url];
-        
-    } else if ([segueIdentifier isEqualToString:@"ShowLTFSegue"]) {
-        NSURL *url = [NSURL URLWithString:@"http://vonvon.de"];
-        SFWebViewController *webViewController = (SFWebViewController *)[segue destinationViewController];
-        [webViewController setWebURL:url];
-    }
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SFSafariViewController *safariViewController = nil;
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        NSURL *url = [NSURL URLWithString:@"http://vonvon.de"];
+        safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+    } else if (indexPath.section == 2 && indexPath.row == 2) {
+        NSURL *url = [NSURL URLWithString:@"http://flohei.de"];
+        safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+    }
+    
+    if (safariViewController) {
+        [[self navigationController] pushViewController:safariViewController animated:YES];
+    }
 }
 
 @end

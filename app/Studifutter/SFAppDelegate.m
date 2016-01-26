@@ -176,12 +176,17 @@
 
 - (void)raiseAlertOnMainThread:(NSException *)exception {
     NSLog(@"Error %@: %@", [exception reason], [exception description]);
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hoppla..."
-                                                      message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal."
-                                                     delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    [message show];
+    
+    UIViewController *topViewController = [UIApplication topViewController:nil];
+    
+    UIAlertAction *okayAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [topViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Hoppla..." message:@"Da ist etwas schiefgelaufen, sorry. Probier's später bitte noch einmal." preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:okayAction];
+
+    [topViewController presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - Application's Documents directory

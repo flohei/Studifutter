@@ -8,7 +8,8 @@
 
 #import "SFSettingsViewController.h"
 #import "SFAppDelegate.h"
-#import "SFWebViewController.h"
+
+@import SafariServices;
 
 @interface SFSettingsViewController ()
 
@@ -26,18 +27,9 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSString *segueIdentifier = [segue identifier];
-    
-    if ([segueIdentifier isEqualToString:@"ShowTwitterSegue"]) {
-        NSURL *url = [NSURL URLWithString:@"http://twitter.com/studifutter"];
-        SFWebViewController *webViewController = (SFWebViewController *)[segue destinationViewController];
-        [webViewController setWebURL:url];
-    } else if ([segueIdentifier isEqualToString:@"ShowWebsiteSegue"]) {
-        NSURL *url = [NSURL URLWithString:@"http://rtfnt.com"];
-        SFWebViewController *webViewController = (SFWebViewController *)[segue destinationViewController];
-        [webViewController setWebURL:url];
-    }
+- (void)pushWebsite:(NSURL*)url {
+    SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+    [[self navigationController] pushViewController:safariViewController animated:YES];
 }
 
 - (IBAction)done:(id)sender {
@@ -67,6 +59,12 @@
         [delegate completeCleanup];
     } else if (indexPath.section == 1 && indexPath.row == 0) {
         [self presentMailSheet];
+    } else if (indexPath.section == 1 && indexPath.row == 1) {
+        // Twitter
+        [self pushWebsite:[NSURL URLWithString:@"http://twitter.com/studifutter"]];
+    } else if (indexPath.section == 2 && indexPath.row == 0) {
+        // RTFNT
+        [self pushWebsite:[NSURL URLWithString:@"http://rtfnt.com"]];
     }
 }
 
