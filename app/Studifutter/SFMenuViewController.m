@@ -123,7 +123,7 @@
 }
 
 - (IBAction)showActionMenu:(id)sender {
-    SFActivityProvider *activityProvider = [[SFActivityProvider alloc] init];
+    SFActivityProvider *activityProvider = [[SFActivityProvider alloc] initWithPlaceholderItem:@"Default"];
     [activityProvider setMenuSet:[self menuSet]];
     NSArray *activityItems = @[activityProvider];
     
@@ -147,7 +147,8 @@
 #pragma mark - Misc
 
 - (NSArray *)allMenus {
-    return [[[self menuSet] menu] sortedArrayUsingDescriptors:nil];
+    NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    return [[[self menuSet] menu] sortedArrayUsingDescriptors:sortDescriptors];
 }
 
 #pragma mark - Table view data source

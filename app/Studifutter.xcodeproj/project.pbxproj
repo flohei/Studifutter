@@ -25,6 +25,7 @@
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
 		8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C0615346A1C00F647CF /* libz.dylib */; };
+		8F4B1D4A1C57A6B40088A273 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4B1D491C57A6B40088A273 /* Fabric.framework */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
 		8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F134F147EA15900FE5455 /* QuartzCore.framework */; };
 		8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */; };
@@ -100,6 +101,7 @@
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TrimWhitespace.m"; path = "Studifutter/NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
 		8F450C02153462A100F647CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8F450C0615346A1C00F647CF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8F4B1D491C57A6B40088A273 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8F5C301219F98DA500F44B96 /* Studifutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Studifutter.entitlements; sourceTree = "<group>"; };
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */,
 				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
 				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
+				8F4B1D4A1C57A6B40088A273 /* Fabric.framework in Frameworks */,
 				8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
@@ -219,6 +222,7 @@
 				8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */,
 				8F9B378616DB681B00C0A92C /* Crashlytics.framework */,
 				8F450C0615346A1C00F647CF /* libz.dylib */,
+				8F4B1D491C57A6B40088A273 /* Fabric.framework */,
 				8FCA3B781942018400F6E058 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -451,7 +455,9 @@
 		8F0BA780145C72F1003E2DE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
 				TargetAttributes = {
 					8F0BA788145C72F1003E2DE0 = {
@@ -630,6 +636,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Florian Heiber (5LCRQN3WPA)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -701,7 +708,8 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
@@ -709,6 +717,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rootof.mensa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -732,7 +741,8 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
@@ -740,6 +750,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rootof.mensa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -798,7 +809,8 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Studifutter/Studifutter-Prefix.pch";
@@ -806,6 +818,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rootof.mensa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

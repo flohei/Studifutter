@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>216AEFA1-F2BD-4E8B-9891-74EDC52986D1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Studifutter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</key>
 		<string>https://bitbucket.org/flohei/studifutter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>app/Studifutter.xcodeproj/project.xcworkspace</string>
+	<string>app/Studifutter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>878C0D0B436C59BD030DFBBCA6F58089504F8BCA</key>
