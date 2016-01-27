@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <iAD/iAD.h>
 
 @class Restaurant;
 
-@interface SFDayListViewController : UIViewController <ADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface SFDayListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     UIView *infoView;
 }
 
