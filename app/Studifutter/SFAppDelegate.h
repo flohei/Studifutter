@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class Restaurant;
+@class CoreDataStack;
 
 @interface SFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) CoreDataStack *coreDataStack;
 
 - (NSURL *)applicationDocumentsDirectory;
 

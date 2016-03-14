@@ -26,6 +26,7 @@
 @implementation SFAppDelegate
 
 @synthesize window = _window;
+@synthesize coreDataStack = _coreDataStack;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // register for Crashlytics
@@ -33,6 +34,9 @@
     
     // setup appearance changes
     [self setupAppearance];
+    
+    // make sure we have a core data stack
+    _coreDataStack = [CoreDataStack new];
     
     // create one of these fancy new UUIDs if needed
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY]) {
@@ -53,7 +57,7 @@
     @try {
         NSString *lastRestaurantKey = [[[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"] objectForKey:LAST_OPENED_RESTAURANT_ID];
         if (lastRestaurantKey) {
-            Restaurant *lastRestaurant = (Restaurant *)[[CoreDataStack sharedInstance] managedObjectForID:lastRestaurantKey];
+            Restaurant *lastRestaurant = (Restaurant *)[self.coreDataStack managedObjectForID:lastRestaurantKey];
             if (lastRestaurant) {
                 SFDayListViewController *dayListViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"DayListViewController"];
                 [dayListViewController setRestaurant:lastRestaurant];
@@ -75,7 +79,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Saves changes in the application's managed object context before the application terminates.
-    [[CoreDataStack sharedInstance] saveContext];
+    [self.coreDataStack saveContext];
 }
 
 #pragma mark - Custom Code
@@ -92,7 +96,7 @@
 }
 
 - (void)completeCleanup {
-    [[CoreDataStack sharedInstance] clearStores];
+    [self.coreDataStack clearStores];
     [self refreshLocalData];
 }
 
@@ -112,11 +116,11 @@
             for (MenuSet *ms in r.menuSet) {
                 NSDate *menuSetDate = [ms date];
                 if (menuSetDate == [menuSetDate earlierDate:yesterday]) {
-                    [[[CoreDataStack sharedInstance] managedObjectContext] deleteObject:ms];
+                    [[self.coreDataStack managedObjectContext] deleteObject:ms];
                 }
             }
             
-            [[CoreDataStack sharedInstance] saveContext];
+            [self.coreDataStack saveContext];
         }
     }
 }

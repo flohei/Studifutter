@@ -12,6 +12,7 @@
 #import "SFDayListViewController.h"
 #import "RestaurantTableViewCell.h"
 #import "Studifutter-Swift.h"
+#import "SFAppDelegate.h"
 
 @interface SFRestaurantViewController ()
 
@@ -69,8 +70,9 @@
 
 #pragma mark - NSFetchedResultsController
 
-- (NSManagedObjectContext *)context {    
-    return [[CoreDataStack sharedInstance] managedObjectContext];;
+- (NSManagedObjectContext *)context {
+    SFAppDelegate *appDelegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
+    return [[appDelegate coreDataStack] managedObjectContext];;
 }
 
 - (NSFetchedResultsController *)fetchedResultsController {
