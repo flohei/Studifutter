@@ -431,9 +431,9 @@
 				8F0BA785145C72F1003E2DE0 /* Sources */,
 				8F0BA786145C72F1003E2DE0 /* Frameworks */,
 				8F0BA787145C72F1003E2DE0 /* Resources */,
-				8F2A347816C924CB00F8FB30 /* ShellScript */,
-				8F9B378516DB67C800C0A92C /* ShellScript */,
-				8F78E5381769CBFC00D39CA8 /* ShellScript */,
+				8F2A347816C924CB00F8FB30 /* Builds */,
+				8F9B378516DB67C800C0A92C /* Fabric/Crashlytics */,
+				8F78E5381769CBFC00D39CA8 /* Update MOM */,
 				8F8A3B4319D30C1100B2C308 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -502,44 +502,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8F2A347816C924CB00F8FB30 /* ShellScript */ = {
+		8F2A347816C924CB00F8FB30 /* Builds */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Builds;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Scripts/builds.sh com.rootof.mensa";
 		};
-		8F78E5381769CBFC00D39CA8 /* ShellScript */ = {
+		8F78E5381769CBFC00D39CA8 /* Update MOM */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Update MOM";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PROJECT_DIR}/Scripts/update_managed_object_model.sh\"";
 		};
-		8F9B378516DB67C800C0A92C /* ShellScript */ = {
+		8F9B378516DB67C800C0A92C /* Fabric/Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Fabric/Crashlytics;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c";
+			shellScript = "./Fabric.framework/run d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c 96f999d25d78ad473d825d16c48f845b73349d0891bfae0648b9d2c178cae7ce";
 		};
 /* End PBXShellScriptBuildPhase section */
 

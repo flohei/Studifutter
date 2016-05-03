@@ -13,6 +13,7 @@
 #import "Restaurant.h"
 #import "MenuSet.h"
 #import "FHVersionUpdate.h"
+#import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import "Studifutter-Swift.h"
 
@@ -30,7 +31,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // register for Crashlytics
-    [Crashlytics startWithAPIKey:@"d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c"];
+    [Fabric with:@[[Crashlytics class]]];
     
     // setup appearance changes
     [self setupAppearance];
