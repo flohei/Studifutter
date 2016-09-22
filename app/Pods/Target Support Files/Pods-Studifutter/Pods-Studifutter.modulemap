@@ -1,0 +1,6 @@
+framework module Pods_Studifutter {
+  umbrella header "Pods-Studifutter-umbrella.h"
+
+  export *
+  module * { export * }
+}

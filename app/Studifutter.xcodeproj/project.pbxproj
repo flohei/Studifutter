@@ -57,6 +57,7 @@
 		8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
+		94911A5E4A5C10A21D69E747 /* Pods_Studifutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EA672B739816E6D676F121 /* Pods_Studifutter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		090B8E51BE8A0C418A109AE1 /* Pods-Studifutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studifutter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Studifutter/Pods-Studifutter.debug.xcconfig"; sourceTree = "<group>"; };
+		67EA672B739816E6D676F121 /* Pods_Studifutter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Studifutter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B858E16FEE57DFC696FCC7 /* Pods-Studifutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studifutter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Studifutter/Pods-Studifutter.release.xcconfig"; sourceTree = "<group>"; };
 		8F0BA789145C72F1003E2DE0 /* Studifutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studifutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0BA78D145C72F1003E2DE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8F0BA78F145C72F1003E2DE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +165,7 @@
 		8FEEF15816DFB32900988BCC /* SFActivityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFActivityProvider.m; path = Studifutter/SFActivityProvider.m; sourceTree = "<group>"; };
 		8FFC1BAB15234163001F0EF1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FFC1BAD1523416B001F0EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95A9ED4DD82BCD9FEF7C810E /* Pods-Studifutter.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studifutter.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods-Studifutter/Pods-Studifutter.ad hoc.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,12 +186,23 @@
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
 				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
 				8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */,
+				94911A5E4A5C10A21D69E747 /* Pods_Studifutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B34A41232482F7E676A03A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				090B8E51BE8A0C418A109AE1 /* Pods-Studifutter.debug.xcconfig */,
+				69B858E16FEE57DFC696FCC7 /* Pods-Studifutter.release.xcconfig */,
+				95A9ED4DD82BCD9FEF7C810E /* Pods-Studifutter.ad hoc.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8F0BA77E145C72F1003E2DE0 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,7 @@
 				8F0BA795145C72F1003E2DE0 /* Studifutter */,
 				8F0BA78C145C72F1003E2DE0 /* Frameworks */,
 				8F0BA78A145C72F1003E2DE0 /* Products */,
+				2B34A41232482F7E676A03A3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +239,7 @@
 				8F450C0615346A1C00F647CF /* libz.dylib */,
 				8F4B1D491C57A6B40088A273 /* Fabric.framework */,
 				8FCA3B781942018400F6E058 /* NotificationCenter.framework */,
+				67EA672B739816E6D676F121 /* Pods_Studifutter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,6 +446,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F0BA7C5145C72F2003E2DE0 /* Build configuration list for PBXNativeTarget "Studifutter" */;
 			buildPhases = (
+				54A75A2A3C4DFE8BB891054A /* [CP] Check Pods Manifest.lock */,
 				8F0BA785145C72F1003E2DE0 /* Sources */,
 				8F0BA786145C72F1003E2DE0 /* Frameworks */,
 				8F0BA787145C72F1003E2DE0 /* Resources */,
@@ -435,6 +454,8 @@
 				8F9B378516DB67C800C0A92C /* Fabric/Crashlytics */,
 				8F78E5381769CBFC00D39CA8 /* Update MOM */,
 				8F8A3B4319D30C1100B2C308 /* Embed App Extensions */,
+				E61959E98185DEFE8041BE5B /* [CP] Embed Pods Frameworks */,
+				9601274AF51C975250DC22B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -453,11 +474,12 @@
 			attributes = {
 				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "rootof.net Heiber & Wiewel GbR";
 				TargetAttributes = {
 					8F0BA788145C72F1003E2DE0 = {
 						DevelopmentTeam = F5ATLHMKLU;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -502,6 +524,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54A75A2A3C4DFE8BB891054A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8F2A347816C924CB00F8FB30 /* Builds */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +580,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run d9cbb8a62daacff96a92d9685d4a63e71bdb8e1c 96f999d25d78ad473d825d16c48f845b73349d0891bfae0648b9d2c178cae7ce";
+		};
+		9601274AF51C975250DC22B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Studifutter/Pods-Studifutter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E61959E98185DEFE8041BE5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Studifutter/Pods-Studifutter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -624,12 +691,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Florian Heiber (5LCRQN3WPA)";
@@ -663,12 +733,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -690,20 +763,22 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		8F0BA7C6145C72F2003E2DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090B8E51BE8A0C418A109AE1 /* Pods-Studifutter.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -721,6 +796,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -728,14 +804,15 @@
 		};
 		8F0BA7C7145C72F2003E2DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69B858E16FEE57DFC696FCC7 /* Pods-Studifutter.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -752,6 +829,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -761,12 +839,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -794,7 +875,9 @@
 		};
 		8FD5EB8F153709ED008476F8 /* Ad hoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A9ED4DD82BCD9FEF7C810E /* Pods-Studifutter.ad hoc.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
@@ -802,7 +885,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -819,6 +901,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Studifutter/Studifutter-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
