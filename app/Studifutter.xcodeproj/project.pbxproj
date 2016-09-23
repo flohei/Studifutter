@@ -54,6 +54,7 @@
 		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
+		8FC113C81D95B23F00895E15 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC113C71D95B23F00895E15 /* Downloader.swift */; };
 		8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
@@ -157,6 +158,7 @@
 		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHVersionUpdate.m; path = Studifutter/FHVersionUpdate.m; sourceTree = "<group>"; };
 		8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studifutter-Bridging-Header.h"; sourceTree = "<group>"; };
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8FC113C71D95B23F00895E15 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHStarButton.m; sourceTree = "<group>"; };
 		8FC9FD2419E2DCE0003308E6 /* FHStarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHStarButton.h; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -302,7 +304,6 @@
 		8F729BCA145F24F400FE166B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */,
 				8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */,
 				8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */,
 				8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */,
@@ -406,8 +407,10 @@
 		8FF223081AC2F79800FDF6FE /* General Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */,
 				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
 				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
+				8FC113C71D95B23F00895E15 /* Downloader.swift */,
 			);
 			name = "General Controllers";
 			path = Studifutter;
@@ -644,6 +647,7 @@
 				8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */,
 				8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */,
 				8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */,
+				8FC113C81D95B23F00895E15 /* Downloader.swift in Sources */,
 				8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */,
 				8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */,
 				8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */,
