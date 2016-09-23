@@ -1,28 +1,7 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+This is Studifutter, an app that gives your the menu for a few cafeterias at some bavarian universities.
 
 ### Who do I talk to? ###
 
-Florian Heiber, @flohei, florian@heiber.me
+Florian Heiber, @flohei, flo@flohei.de
