@@ -37,10 +37,14 @@
 }
 
 - (void)presentMailSheet {
+    if (![MFMailComposeViewController canSendMail]) {
+        return;
+    }
+    
     MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
     [mailComposeViewController setMailComposeDelegate:self];
-    [mailComposeViewController setToRecipients:@[@"studifutter@rtfnt.com"]];
-    [mailComposeViewController setSubject:@"Comments, Suggestions, etc."];
+    [mailComposeViewController setToRecipients:@[@"studifutter@flohei.de"]];
+    [mailComposeViewController setSubject:@"Kommentar zu Studifutter"];
     
     [self presentViewController:mailComposeViewController animated:YES completion:nil];
 }

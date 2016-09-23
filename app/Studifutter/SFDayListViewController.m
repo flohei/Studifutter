@@ -75,7 +75,7 @@
 - (void)setRestaurant:(Restaurant *)restaurant {
     _restaurant = restaurant;
     
-    SFAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
     [delegate downloadMenuForRestaurant:_restaurant];
 }
 

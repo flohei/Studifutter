@@ -10,7 +10,7 @@ import CoreData
 
 @objc class CoreDataStack : NSObject {
     // Configure the model name here. This is the only setting you generally need to change.
-    private let modelName = "Studifutter"
+    fileprivate let modelName = "Studifutter"
     
     var managedObjectModel: NSManagedObjectModel?
     var persistentStoreCoordinator: NSPersistentStoreCoordinator?
@@ -20,32 +20,32 @@ import CoreData
         super.init()
         
         // Create the NSManagedObjectModel
-        let modelURL = NSBundle.mainBundle().URLForResource(self.modelName, withExtension: "momd")!
-        managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)!
+        let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd")!
+        managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)!
         
         createPersistentStoreCoordinator()
         createManagedObjectContext()
     }
     
-    private func createPersistentStoreCoordinator() {
+    fileprivate func createPersistentStoreCoordinator() {
         // Create the NSPersistentStoreCoordinator
         // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel!)
         let fileName = "\(self.modelName).sqlite"
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(fileName)
+        let url = self.applicationDocumentsDirectory.appendingPathComponent(fileName)
         var error: NSError? = nil
         let failureReason = "There was an error creating or loading the application's saved data."
-        let options = [NSMigratePersistentStoresAutomaticallyOption: NSNumber(bool: true),
-            NSInferMappingModelAutomaticallyOption: NSNumber(bool: true)]
+        let options = [NSMigratePersistentStoresAutomaticallyOption: NSNumber(value: true as Bool),
+            NSInferMappingModelAutomaticallyOption: NSNumber(value: true as Bool)]
         
         do {
-            try persistentStoreCoordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options)
+            try persistentStoreCoordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: options)
         } catch let error1 as NSError {
             error = error1
             persistentStoreCoordinator = nil
             // Report any error we got.
-            let dict: [NSObject : AnyObject] = [
+            let dict: [AnyHashable: Any] = [
                 NSLocalizedDescriptionKey: "Failed to initialize the application's saved data",
                 NSLocalizedFailureReasonErrorKey: failureReason,
                 NSUnderlyingErrorKey: error!]
@@ -60,15 +60,15 @@ import CoreData
         }
     }
     
-    private func createManagedObjectContext() {
+    fileprivate func createManagedObjectContext() {
         // Create the NSManagedObjectContext
-        managedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
+        managedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
         managedObjectContext!.persistentStoreCoordinator = persistentStoreCoordinator
     }
     
-    private lazy var applicationDocumentsDirectory: NSURL = {
+    fileprivate lazy var applicationDocumentsDirectory: URL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.rootof.LocationAlert" in the application's documents Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1] 
         }()
     
@@ -95,19 +95,19 @@ import CoreData
     
     // MARK: - Misc
     
-    func managedObjectIDForURIRepresentation(url: NSURL) -> NSManagedObjectID {
-        let objectID = self.persistentStoreCoordinator!.managedObjectIDForURIRepresentation(url)!
+    func managedObjectIDForURIRepresentation(_ url: URL) -> NSManagedObjectID {
+        let objectID = self.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: url)!
         return objectID
     }
     
-    func managedObjectForID(identifier: String) -> NSManagedObject {
+    func managedObjectForID(_ identifier: String) -> NSManagedObject {
         var result: NSManagedObject?
         
-        let idURL: NSURL = NSURL(string: identifier)!
+        let idURL: URL = URL(string: identifier)!
         let objectID: NSManagedObjectID? = self.managedObjectIDForURIRepresentation(idURL)
         
         if let constObjectID = objectID {
-            result = self.managedObjectContext?.objectWithID(constObjectID)
+            result = self.managedObjectContext?.object(with: constObjectID)
         }
         
         return result!
@@ -118,16 +118,16 @@ import CoreData
         
         for store in stores {
             var removeError: NSError? = nil
-            let path = store.URL?.path
+            let path = store.url?.path
             
             do {
-                try self.persistentStoreCoordinator?.removePersistentStore(store)
+                try self.persistentStoreCoordinator?.remove(store)
             } catch let error as NSError {
                 removeError = error
             }
             
             do {
-                try NSFileManager.defaultManager().removeItemAtPath(path!)
+                try FileManager.default.removeItem(atPath: path!)
             } catch let error as NSError {
                 removeError = error
             }
