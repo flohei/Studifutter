@@ -277,10 +277,10 @@
 				8F729BB6145F23BB00FE166B /* SFDayListViewController.m */,
 				8F729BB8145F240700FE166B /* SFMenuViewController.h */,
 				8F729BB9145F240700FE166B /* SFMenuViewController.m */,
+				8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */,
 				8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */,
 				8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */,
 				8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */,
-				8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */,
 				8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */,
 				8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */,
 			);
