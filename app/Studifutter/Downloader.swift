@@ -14,6 +14,6 @@ class Downloader {
     }
     
     private func downloadRestaurants() {
-        let success = Connection.shared().readRestaurants()
+        _ = Connection.shared().readRestaurants()
     }
 }
