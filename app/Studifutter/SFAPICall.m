@@ -260,24 +260,17 @@
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self.class getAPIServerPath], _requestPath]];
 	
 	// Initiate asynchronous URL connection on main thread and block the calling thread
-//	NSTimeInterval start = CFAbsoluteTimeGetCurrent();
 	if (![NSThread isMainThread]) {
 		//NSLog(@"Asynchronous API call from background thread");
 		[self performSelectorOnMainThread:@selector(startConnectionWithURL:) withObject:url waitUntilDone:YES];
-		if (_connection) {
+		if (_session) {
 			[_condition lock];
 			[_condition wait];
 			[_condition unlock];
-		} else {
-			//NSLog(@"failed to establish a connection for %@", [url absoluteString]);
 		}
 	} else {
-		//NSLog(@"Synchronous API call on main thread");
 		[self startSynchronousAPIRequestWithURL:url];
 	}
-    
-//	NSTimeInterval delta = (CFAbsoluteTimeGetCurrent() - start);
-//	NSLog(@"API request on network executed within: %f sec", delta);
     
 	if (_error != nil || [_receivedData length] == 0) {
 		//NSLog(@"Request error: %@", [_error description]);
@@ -304,8 +297,29 @@
 	_error = nil;
 	_response = nil;
 	
-	_connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
-	//[_connection start];
+    _session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [_session
+                                      dataTaskWithRequest:urlRequest
+                                      completionHandler:^(NSData * _Nullable data,
+                                                          NSURLResponse * _Nullable response,
+                                                          NSError * _Nullable error) {
+                                          if (error != nil) {
+                                              _error = [error copy];
+                                              NSLog(@"Error: %@", [error localizedDescription]);
+                                          } else {
+                                              // Store the response and retrieve HTTP status code
+                                              _response = response;
+                                              NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                                              _statusCode = [httpResponse statusCode];
+                                              
+                                              [_receivedData appendData:data];
+                                          }
+                                          
+                                          [_condition lock];
+                                          [_condition signal];
+                                          [_condition unlock];
+    }];
+    [dataTask resume];
 }
 
 - (void)startSynchronousAPIRequestWithURL:(NSURL *)url {
@@ -493,43 +507,6 @@
 	} else {
 		return API_SERVER_PATH_TEST;
 	}
-}
-
-#pragma mark - NSURLConnection delegate
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	// Store the response and retrieve HTTP status code
-	_response = response;
-    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-    _statusCode = [httpResponse statusCode];
-	
-	//NSLog(@"HTTP response with status code %d", _statusCode);
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	//NSLog(@"API response: appending %d bytes", [data length]);
-    [_receivedData appendData:data];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	//NSLog(@"API response completely received");
-	_connection = nil;
-	
-	// Signal the condition
-	[_condition lock];
-	[_condition signal];
-	[_condition unlock];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	//NSLog(@"API response error");
-    _error = [error copy];
-	_connection = nil;
-	
-	// Signal the condition
-	[_condition lock];
-	[_condition signal];
-	[_condition unlock];
 }
 
 @end

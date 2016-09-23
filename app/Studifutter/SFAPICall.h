@@ -21,7 +21,7 @@
 	NSString *_cacheFilename;
 	
 	NSMutableData   *_receivedData;
-	NSURLConnection *_connection;
+    NSURLSession    *_session;
 	NSURLResponse   *_response;
 	NSInteger       _statusCode;
 	NSCondition     *_condition;
