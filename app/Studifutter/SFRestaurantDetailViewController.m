@@ -26,6 +26,9 @@
 
 @implementation SFRestaurantDetailViewController
 
+BOOL explorationMode = false;
+NSTimer *explorationTimer = nil;
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -33,7 +36,6 @@
     // Do any additional setup after loading the view from its nib.
     
     BOOL showUserLocation = [[NSUserDefaults standardUserDefaults] boolForKey:SHOW_USER_LOCATION];
-    
     if (showUserLocation) {
         // ask the user if the app should show the location
         _locationManager = [[CLLocationManager alloc] init];
@@ -69,6 +71,14 @@
     NSUserDefaults *sharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.StudifutterContainer"];
     NSString *storedRestaurantID = [sharedDefaults valueForKey:LAST_OPENED_RESTAURANT_ID];
     [favoriteButton setSelected:[[[self restaurant] coreDataID] isEqualToString:storedRestaurantID]];
+    
+    // add gesture recognizers for panning and zooming to the map
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(startExploring)];
+    panGestureRecognizer.delegate = self;
+    [self.mapView addGestureRecognizer:panGestureRecognizer];
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(startExploring)];
+    pinchGestureRecognizer.delegate = self;
+    [self.mapView addGestureRecognizer:pinchGestureRecognizer];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -76,10 +86,34 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - UIGestureRecognizers
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return true;
+}
+
 #pragma mark - Misc
 
-- (void)openAnnotation:(id)annotation; {
-    //mv is the mapView
+- (void)startExploring {
+    if (!explorationMode) {
+        explorationMode = true;
+    }
+    
+    if (explorationTimer) {
+        [explorationTimer invalidate];
+        explorationTimer = nil;
+    }
+    
+    explorationTimer = [NSTimer timerWithTimeInterval:15 repeats:false block:^(NSTimer * _Nonnull timer) {
+        [explorationTimer invalidate];
+        explorationTimer = nil;
+        explorationMode = false;
+    }];
+    
+    [[NSRunLoop mainRunLoop] addTimer:explorationTimer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)openAnnotation:(id)annotation {
     [[self mapView] selectAnnotation:annotation animated:YES];
 }
 
@@ -143,8 +177,10 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-    // create a new region and span to show both the user's and the restaurant's location
-    [self zoomToFitMapAnnotations:[self mapView]];
+    if (!explorationMode) {
+        // create a new region and span to show both the user's and the restaurant's location
+        [self zoomToFitMapAnnotations:[self mapView]];
+    }
 }
 
 @end
