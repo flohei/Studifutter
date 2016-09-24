@@ -27,6 +27,7 @@
 @implementation SFRestaurantDetailViewController
 
 BOOL explorationMode = false;
+NSTimer *explorationTimer = nil;
 
 #pragma mark - View lifecycle
 
@@ -98,20 +99,18 @@ BOOL explorationMode = false;
         explorationMode = true;
     }
     
-    // TODO: Add a timer to regularly reset the exploration mode after inactivity
+    if (explorationTimer) {
+        [explorationTimer invalidate];
+        explorationTimer = nil;
+    }
     
-//    // Then check if we already have a running timer. If so, invalidate it.
-//    if explorationTimer != nil {
-//        explorationTimer?.invalidate()
-//        explorationTimer = nil
-//    }
-//    
-//    // Create a new exploration timer object.
-//    explorationTimer = NSTimer(timeInterval: EXPLORATION_TIME, target: self, selector: #selector(HomeViewController.finishedExploring), userInfo: nil, repeats: false)
-//    
-//    // Add it to a run loop to start it.
-//    let mainRunLoop = NSRunLoop.mainRunLoop()
-//    mainRunLoop.addTimer(explorationTimer!, forMode: NSDefaultRunLoopMode)
+    explorationTimer = [NSTimer timerWithTimeInterval:15 repeats:false block:^(NSTimer * _Nonnull timer) {
+        [explorationTimer invalidate];
+        explorationTimer = nil;
+        explorationMode = false;
+    }];
+    
+    [[NSRunLoop mainRunLoop] addTimer:explorationTimer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)openAnnotation:(id)annotation {
