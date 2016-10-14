@@ -59,8 +59,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-        SFAppDelegate *delegate = (SFAppDelegate *)[[UIApplication sharedApplication] delegate];
-        [delegate completeCleanup];
+        NSLog(@"We should empty the cache here");
     } else if (indexPath.section == 1 && indexPath.row == 0) {
         [self presentMailSheet];
     } else if (indexPath.section == 1 && indexPath.row == 1) {

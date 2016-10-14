@@ -14,9 +14,4 @@
 
 - (NSURL *)applicationDocumentsDirectory;
 
-- (void)refreshLocalData;
-- (void)completeCleanup;
-
-- (NSArray *)localRestaurants;
-
 @end

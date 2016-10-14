@@ -12,13 +12,6 @@
 #import <Crashlytics/Crashlytics.h>
 #import "Studifutter-Swift.h"
 
-@interface SFAppDelegate ()
-
-- (void)cleanupLocalMenus;
-- (void)downloadRestaurants;
-
-@end
-
 @implementation SFAppDelegate
 
 @synthesize window = _window;
