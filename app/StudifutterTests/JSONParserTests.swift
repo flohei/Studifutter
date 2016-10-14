@@ -23,7 +23,10 @@ class JSONParserTests: XCTestCase {
     }
     
     func testAddressParser() {
+        let addressString = "Hauptstraße 42, 12345 Bielefeld"
         
+        let address = parser.parseAddress(addressString: addressString)
+        XCTAssertEqual(address?.stringRepresentation, addressString, "Address strings don't match")
     }
     
     func testDateParser() {

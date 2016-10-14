@@ -34,7 +34,7 @@ struct Address {
                 result = result + ", "
             }
             
-            result = result + "\(postCode) \(city)"
+            result = result + "\(postCode!) \(city!)"
         }
         
         return result
