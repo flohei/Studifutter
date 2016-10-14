@@ -20,10 +20,15 @@ class DayTableViewCell: UITableViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd."
         
-        guard let date = day.meals?.first?.date else { return }
+        guard let date = day.date else { return }
         let dateString = dateFormatter.string(from: date)
         dateLabel.text = dateString
         
-        
+        // TODO: Update the string here
+        menuLabel.text = "Omnomnom"
+    }
+    
+    override func prepareForReuse() {
+        day = nil
     }
 }

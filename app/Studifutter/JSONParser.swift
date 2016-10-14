@@ -11,11 +11,22 @@ import Foundation
 struct JSONParser {
     func parseCafeteria(jsonObject: JSON) -> Cafeteria? {
         let meals = parseMeals(jsonObject: jsonObject["meals"] as! [JSON])
+        let days = reduceMeals(meals: meals)
         let description = jsonObject["description"] as? String
         let title = jsonObject["title"] as? String
         let address = parseAddress(addressString: jsonObject["address"] as! String)
         
-        return Cafeteria(description: description, title: title, address: address, meals: meals)
+        return Cafeteria(description: description, title: title, address: address, days: days)
+    }
+    
+    func reduceMeals(meals: [Meal]?) -> [Day]? {
+        guard let meals = meals else { return nil }
+        var days: [Day] = []
+        var lastDay = meals.first?.date
+        
+        // TODO: We need some clever combining here
+        
+        return []
     }
     
     func parseMeals(jsonObject: [JSON]) -> [Meal]? {

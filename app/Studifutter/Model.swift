@@ -64,7 +64,7 @@ struct Cafeteria {
         case Description = "description",
         Title = "title",
         Address = "address",
-        Meals = "meals"
+        Days = "days"
     }
     
     var description: String?

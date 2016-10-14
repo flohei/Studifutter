@@ -26,7 +26,7 @@
         <!--Details-->
         <scene sceneID="gtE-7d-hE1">
             <objects>
-                <viewController id="F8c-e6-yiX" customClass="SFRestaurantDetailViewController" sceneMemberID="viewController">
+                <viewController id="F8c-e6-yiX" customClass="CafeteriaDetailViewController" customModule="Studifutter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VAU-Hk-5EY"/>
                         <viewControllerLayoutGuide type="bottom" id="oZa-pL-lIX"/>

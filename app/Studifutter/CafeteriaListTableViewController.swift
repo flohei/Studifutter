@@ -11,10 +11,19 @@ import UIKit
 /// Replaces the old `SFRestaurantViewController` and displays a list of all the restaurants we have.
 class CafeteriaListTableViewController: UITableViewController {
     var cafeterias: [Cafeteria] = []
+    var selectedCafeteria: Cafeteria?
     
     func reloadData() {
         cafeterias = DataManager.shared.getCafeterias()
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDayList" {
+            let destination: DayListTableViewController = segue.destination as! DayListTableViewController
+            destination.cafeteria = selectedCafeteria
+            selectedCafeteria = nil
+        }
     }
     
     // MARK: UITableView
@@ -30,5 +39,9 @@ class CafeteriaListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CafeteriaCellIdentifier") as! CafeteriaTableViewCell
         cell.configure(cafeteria: cafeterias[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCafeteria = cafeterias[indexPath.row]
     }
 }

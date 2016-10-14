@@ -7,8 +7,6 @@
 //
 
 #import "SFAppDelegate.h"
-#import "SFRestaurantViewController.h"
-#import "SFDayListViewController.h"
 #import "FHVersionUpdate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
