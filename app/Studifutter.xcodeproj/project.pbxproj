@@ -10,7 +10,6 @@
 		8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA78D145C72F1003E2DE0 /* UIKit.framework */; };
 		8F0BA790145C72F1003E2DE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA78F145C72F1003E2DE0 /* Foundation.framework */; };
 		8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA791145C72F1003E2DE0 /* CoreGraphics.framework */; };
-		8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA793145C72F1003E2DE0 /* CoreData.framework */; };
 		8F0BA79C145C72F1003E2DE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79B145C72F1003E2DE0 /* main.m */; };
 		8F0BA7A0145C72F1003E2DE0 /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */; };
 		8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */; };
@@ -27,7 +26,6 @@
 		8F1729E91DB173340087F299 /* CafeteriaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1729E81DB173340087F299 /* CafeteriaDetailViewController.swift */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
-		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
@@ -166,12 +164,10 @@
 				8F450C0715346A1C00F647CF /* libz.dylib in Frameworks */,
 				8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */,
 				8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */,
-				8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */,
 				8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */,
 				8F4B1D4A1C57A6B40088A273 /* Fabric.framework in Frameworks */,
 				8F0BA78E145C72F1003E2DE0 /* UIKit.framework in Frameworks */,
 				8F0BA792145C72F1003E2DE0 /* CoreGraphics.framework in Frameworks */,
-				8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */,
 				8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */,
 				94911A5E4A5C10A21D69E747 /* Pods_Studifutter.framework in Frameworks */,
 			);
@@ -1041,6 +1037,7 @@
 				8F1729D81DB1560C0087F299 /* Ad hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
