@@ -41,6 +41,11 @@ struct Address {
     }
 }
 
+struct Day {
+    var date: Date?
+    var meals: [Meal]?
+}
+
 struct Meal {
     var title: String?
     var date: Date?
@@ -65,5 +70,5 @@ struct Cafeteria {
     var description: String?
     var title: String?
     var address: Address?
-    var meals: [Meal]?
+    var days: [Day]?
 }
