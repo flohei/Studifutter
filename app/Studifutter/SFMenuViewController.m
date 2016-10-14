@@ -8,9 +8,6 @@
 
 #import "SFMenuViewController.h"
 #import "SFDayListViewController.h"
-#import "Restaurant.h"
-#import "MenuSet.h"
-#import "Menu.h"
 #import "MenuTableViewCell.h"
 #import <Social/Social.h>
 #import "SFActivityProvider.h"

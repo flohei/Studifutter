@@ -13,14 +13,11 @@
 		8F0BA794145C72F1003E2DE0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BA793145C72F1003E2DE0 /* CoreData.framework */; };
 		8F0BA79C145C72F1003E2DE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79B145C72F1003E2DE0 /* main.m */; };
 		8F0BA7A0145C72F1003E2DE0 /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */; };
-		8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */; };
-		8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D78C146AE0F700896CE9 /* MenuSet.m */; };
-		8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D790146AE10300896CE9 /* _MenuSet.m */; };
 		8F10DF5C19D5C72000190665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */; };
+		8F1729C71DB123EC0087F299 /* CafeteriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1729C61DB123EC0087F299 /* CafeteriaTableViewCell.swift */; };
 		8F1E5CF616134A3200E5E79F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E5CF416134A3200E5E79F /* MainStoryboard.storyboard */; };
 		8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */; };
 		8F25E69C146B0337000D4806 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F25E69B146B0337000D4806 /* iAd.framework */; };
-		8F2F9C301AF2609400A29C7D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */; };
 		8F338219147D0BD4000344D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F338218147D0BD4000344D3 /* MapKit.framework */; };
 		8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */; };
 		8F450C03153462A100F647CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F450C02153462A100F647CF /* MessageUI.framework */; };
@@ -29,32 +26,25 @@
 		8F4B1D4E1C57AD380088A273 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B1D4D1C57AD380088A273 /* UIApplicationExtension.swift */; };
 		8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */; };
 		8F6F1350147EA15900FE5455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F134F147EA15900FE5455 /* QuartzCore.framework */; };
-		8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */; };
 		8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB6145F23BB00FE166B /* SFDayListViewController.m */; };
 		8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BB9145F240700FE166B /* SFMenuViewController.m */; };
 		8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */; };
-		8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFC145F2D5100FE166B /* SFAPICall.m */; };
-		8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729BFE145F2D5100FE166B /* SFAPIException.m */; };
 		8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C05145F2DE700FE166B /* NSString+URLEncode.m */; };
 		8F729C09145F31F600FE166B /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C08145F31F600FE166B /* Common.m */; };
-		8F729C141460313900FE166B /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C131460313900FE166B /* Connection.m */; };
 		8F729C1C1460322100FE166B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C1B1460322100FE166B /* Reachability.m */; };
 		8F729C301464B27F00FE166B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */; };
-		8F729C441464BADD00FE166B /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3A1464BADD00FE166B /* Menu.m */; };
-		8F729C451464BADD00FE166B /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3C1464BADD00FE166B /* Restaurant.m */; };
-		8F729C461464BADD00FE166B /* _Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C3F1464BADD00FE166B /* _Menu.m */; };
-		8F729C471464BADD00FE166B /* _Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F729C411464BADD00FE166B /* _Restaurant.m */; };
 		8F78A2851521F0090060BE14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F78A2831521F0090060BE14 /* Localizable.strings */; };
 		8F8A3B2B19D30B7500B2C308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8A3B2A19D30B7500B2C308 /* Images.xcassets */; };
-		8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */; };
 		8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F910BDE146AF180001F4E74 /* DayTableViewCell.m */; };
+		8F9A022A1DAED18A00ABBD6B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A02291DAED18A00ABBD6B /* DataManager.swift */; };
+		8F9A022E1DAED3B900ABBD6B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A022D1DAED3B900ABBD6B /* Model.swift */; };
+		8F9A02301DAED3F200ABBD6B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A022F1DAED3F200ABBD6B /* JSONParser.swift */; };
+		8F9A02321DAED83400ABBD6B /* CafeteriaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A02311DAED83400ABBD6B /* CafeteriaListTableViewController.swift */; };
 		8F9B378716DB681B00C0A92C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B378616DB681B00C0A92C /* Crashlytics.framework */; };
 		8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */; };
 		8FA40B5A16BED22000736EC3 /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 8FA40B5916BED22000736EC3 /* Notes.md */; };
-		8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */; };
 		8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */; };
 		8FABE9F616DF946F00A64944 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABE9F516DF946F00A64944 /* Social.framework */; };
-		8FC113C81D95B23F00895E15 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC113C71D95B23F00895E15 /* Downloader.swift */; };
 		8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */; };
 		8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF15816DFB32900988BCC /* SFActivityProvider.m */; };
 		8FFC1BAC15234163001F0EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC1BAA15234163001F0EF1 /* InfoPlist.strings */; };
@@ -88,19 +78,14 @@
 		8F0BA79D145C72F1003E2DE0 /* Studifutter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studifutter-Prefix.pch"; sourceTree = "<group>"; };
 		8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
 		8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
-		8F0BA7A5145C72F1003E2DE0 /* Studifutter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Studifutter.xcdatamodel; sourceTree = "<group>"; };
-		8F10D78B146AE0F700896CE9 /* MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSet.h; sourceTree = "<group>"; };
-		8F10D78C146AE0F700896CE9 /* MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSet.m; sourceTree = "<group>"; };
-		8F10D78F146AE10300896CE9 /* _MenuSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MenuSet.h; sourceTree = "<group>"; };
-		8F10D790146AE10300896CE9 /* _MenuSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MenuSet.m; sourceTree = "<group>"; };
 		8F10DF5B19D5C72000190665 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Studifutter/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F1729C61DB123EC0087F299 /* CafeteriaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriaTableViewCell.swift; sourceTree = "<group>"; };
 		8F1E5CF516134A3200E5E79F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8F1E5CF816134A3D00E5E79F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFA16134A4400E5E79F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		8F1E5CFB16135ED700E5E79F /* SFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSettingsViewController.h; sourceTree = "<group>"; };
 		8F1E5CFC16135ED700E5E79F /* SFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSettingsViewController.m; sourceTree = "<group>"; };
 		8F25E69B146B0337000D4806 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8F338218147D0BD4000344D3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F44E311151B6384007CBE1A /* NSString+TrimWhitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TrimWhitespace.h"; path = "Studifutter/NSString+TrimWhitespace.h"; sourceTree = "<group>"; };
 		8F44E312151B6384007CBE1A /* NSString+TrimWhitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TrimWhitespace.m"; path = "Studifutter/NSString+TrimWhitespace.m"; sourceTree = "<group>"; };
@@ -111,54 +96,37 @@
 		8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		8F5E9E5C147D907900FF2327 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		8F6F134F147EA15900FE5455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantViewController.h; sourceTree = "<group>"; };
-		8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantViewController.m; sourceTree = "<group>"; };
 		8F729BB5145F23BB00FE166B /* SFDayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDayListViewController.h; sourceTree = "<group>"; };
 		8F729BB6145F23BB00FE166B /* SFDayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDayListViewController.m; sourceTree = "<group>"; };
 		8F729BB8145F240700FE166B /* SFMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMenuViewController.h; sourceTree = "<group>"; };
 		8F729BB9145F240700FE166B /* SFMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMenuViewController.m; sourceTree = "<group>"; };
 		8F729BBD145F243900FE166B /* SFRestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRestaurantDetailViewController.h; sourceTree = "<group>"; };
 		8F729BBE145F243900FE166B /* SFRestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRestaurantDetailViewController.m; sourceTree = "<group>"; };
-		8F729BFB145F2D5100FE166B /* SFAPICall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPICall.h; sourceTree = "<group>"; };
-		8F729BFC145F2D5100FE166B /* SFAPICall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPICall.m; sourceTree = "<group>"; };
-		8F729BFD145F2D5100FE166B /* SFAPIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAPIException.h; sourceTree = "<group>"; };
-		8F729BFE145F2D5100FE166B /* SFAPIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAPIException.m; sourceTree = "<group>"; };
 		8F729C01145F2DA300FE166B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Studifutter/Constants.h; sourceTree = "<group>"; };
 		8F729C04145F2DE700FE166B /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "Studifutter/NSString+URLEncode.h"; sourceTree = "<group>"; };
 		8F729C05145F2DE700FE166B /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "Studifutter/NSString+URLEncode.m"; sourceTree = "<group>"; };
 		8F729C07145F31F600FE166B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Studifutter/Common.h; sourceTree = "<group>"; };
 		8F729C08145F31F600FE166B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = Studifutter/Common.m; sourceTree = "<group>"; };
-		8F729C121460313900FE166B /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
-		8F729C131460313900FE166B /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
 		8F729C1A1460322000FE166B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		8F729C1B1460322100FE166B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		8F729C2F1464B27F00FE166B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		8F729C391464BADD00FE166B /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
-		8F729C3A1464BADD00FE166B /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
-		8F729C3B1464BADD00FE166B /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
-		8F729C3C1464BADD00FE166B /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
-		8F729C3E1464BADD00FE166B /* _Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Menu.h; sourceTree = "<group>"; };
-		8F729C3F1464BADD00FE166B /* _Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Menu.m; sourceTree = "<group>"; };
-		8F729C401464BADD00FE166B /* _Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Restaurant.h; sourceTree = "<group>"; };
-		8F729C411464BADD00FE166B /* _Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Restaurant.m; sourceTree = "<group>"; };
 		8F78A2841521F0090060BE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F78A28A1521F0470060BE14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F8A3B2A19D30B7500B2C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Studifutter/Images.xcassets; sourceTree = "<group>"; };
-		8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
-		8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
 		8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
 		8F910BDE146AF180001F4E74 /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
+		8F9A02291DAED18A00ABBD6B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Studifutter/DataManager.swift; sourceTree = "<group>"; };
+		8F9A022D1DAED3B900ABBD6B /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Studifutter/Model.swift; sourceTree = "<group>"; };
+		8F9A022F1DAED3F200ABBD6B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = Studifutter/JSONParser.swift; sourceTree = "<group>"; };
+		8F9A02311DAED83400ABBD6B /* CafeteriaListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriaListTableViewController.swift; sourceTree = "<group>"; };
 		8F9B378616DB681B00C0A92C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8F9DAA53183411BF00B7ADB9 /* SFTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTeamListViewController.h; sourceTree = "<group>"; };
 		8F9DAA54183411BF00B7ADB9 /* SFTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTeamListViewController.m; sourceTree = "<group>"; };
 		8FA40B5916BED22000736EC3 /* Notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Notes.md; path = Studifutter/Notes.md; sourceTree = "<group>"; };
-		8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDataAccessor.h; sourceTree = "<group>"; };
-		8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDataAccessor.m; sourceTree = "<group>"; };
 		8FA40B5E16BF11AB00736EC3 /* FHVersionUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHVersionUpdate.h; path = Studifutter/FHVersionUpdate.h; sourceTree = "<group>"; };
 		8FA40B5F16BF11AC00736EC3 /* FHVersionUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHVersionUpdate.m; path = Studifutter/FHVersionUpdate.m; sourceTree = "<group>"; };
 		8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studifutter-Bridging-Header.h"; sourceTree = "<group>"; };
 		8FABE9F516DF946F00A64944 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		8FC113C71D95B23F00895E15 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		8FC9FD2319E2DCE0003308E6 /* FHStarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHStarButton.m; sourceTree = "<group>"; };
 		8FC9FD2419E2DCE0003308E6 /* FHStarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHStarButton.h; sourceTree = "<group>"; };
 		8FCA3B781942018400F6E058 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -271,8 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				8F729BC2145F244000FE166B /* UITableViewCells */,
-				8F729BB2145F23A300FE166B /* SFRestaurantViewController.h */,
-				8F729BB3145F23A300FE166B /* SFRestaurantViewController.m */,
+				8F9A02311DAED83400ABBD6B /* CafeteriaListTableViewController.swift */,
+				8F1729C61DB123EC0087F299 /* CafeteriaTableViewCell.swift */,
 				8F729BB5145F23BB00FE166B /* SFDayListViewController.h */,
 				8F729BB6145F23BB00FE166B /* SFDayListViewController.m */,
 				8F729BB8145F240700FE166B /* SFMenuViewController.h */,
@@ -291,8 +259,6 @@
 		8F729BC2145F244000FE166B /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				8F910BD9146AEC6D001F4E74 /* RestaurantTableViewCell.h */,
-				8F910BDA146AEC6D001F4E74 /* RestaurantTableViewCell.m */,
 				8F910BDD146AF17F001F4E74 /* DayTableViewCell.h */,
 				8F910BDE146AF180001F4E74 /* DayTableViewCell.m */,
 				8F5E9E5B147D907900FF2327 /* MenuTableViewCell.h */,
@@ -301,31 +267,11 @@
 			name = UITableViewCells;
 			sourceTree = "<group>";
 		};
-		8F729BCA145F24F400FE166B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8F2F9C2F1AF2609400A29C7D /* CoreDataStack.swift */,
-				8FA40B5B16BF096D00736EC3 /* SFDataAccessor.h */,
-				8FA40B5C16BF096D00736EC3 /* SFDataAccessor.m */,
-				8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */,
-				8F729C361464BADD00FE166B /* Human */,
-				8F729C3D1464BADD00FE166B /* Machine */,
-			);
-			name = Model;
-			path = Studifutter;
-			sourceTree = "<group>";
-		};
 		8F729BCE145F2AC300FE166B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				8F729C1A1460322000FE166B /* Reachability.h */,
 				8F729C1B1460322100FE166B /* Reachability.m */,
-				8F729C121460313900FE166B /* Connection.h */,
-				8F729C131460313900FE166B /* Connection.m */,
-				8F729BFB145F2D5100FE166B /* SFAPICall.h */,
-				8F729BFC145F2D5100FE166B /* SFAPICall.m */,
-				8F729BFD145F2D5100FE166B /* SFAPIException.h */,
-				8F729BFE145F2D5100FE166B /* SFAPIException.m */,
 			);
 			name = Networking;
 			path = Studifutter;
@@ -341,30 +287,14 @@
 			path = Studifutter;
 			sourceTree = "<group>";
 		};
-		8F729C361464BADD00FE166B /* Human */ = {
+		8F9A02281DAED15D00ABBD6B /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				8F10D78B146AE0F700896CE9 /* MenuSet.h */,
-				8F10D78C146AE0F700896CE9 /* MenuSet.m */,
-				8F729C391464BADD00FE166B /* Menu.h */,
-				8F729C3A1464BADD00FE166B /* Menu.m */,
-				8F729C3B1464BADD00FE166B /* Restaurant.h */,
-				8F729C3C1464BADD00FE166B /* Restaurant.m */,
+				8F9A02291DAED18A00ABBD6B /* DataManager.swift */,
+				8F9A022D1DAED3B900ABBD6B /* Model.swift */,
+				8F9A022F1DAED3F200ABBD6B /* JSONParser.swift */,
 			);
-			path = Human;
-			sourceTree = "<group>";
-		};
-		8F729C3D1464BADD00FE166B /* Machine */ = {
-			isa = PBXGroup;
-			children = (
-				8F10D78F146AE10300896CE9 /* _MenuSet.h */,
-				8F10D790146AE10300896CE9 /* _MenuSet.m */,
-				8F729C3E1464BADD00FE166B /* _Menu.h */,
-				8F729C3F1464BADD00FE166B /* _Menu.m */,
-				8F729C401464BADD00FE166B /* _Restaurant.h */,
-				8F729C411464BADD00FE166B /* _Restaurant.m */,
-			);
-			path = Machine;
+			name = "Data Layer";
 			sourceTree = "<group>";
 		};
 		8FC9FD1C19E2D133003308E6 /* Views */ = {
@@ -380,11 +310,11 @@
 		8FF223061AC2F77D00FDF6FE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8F9A02281DAED15D00ABBD6B /* Data Layer */,
 				8FF223081AC2F79800FDF6FE /* General Controllers */,
 				8F729BB0145F232F00FE166B /* Interface Controllers */,
 				8F729BCE145F2AC300FE166B /* Networking */,
 				8FF2230C1AC2F83100FDF6FE /* Categories/Extensions */,
-				8F729BCA145F24F400FE166B /* Model */,
 				8FC9FD1C19E2D133003308E6 /* Views */,
 				8FF2230B1AC2F82C00FDF6FE /* Helper Classes */,
 				8F729BCF145F2AD000FE166B /* Others */,
@@ -410,7 +340,6 @@
 				8FA588DF1AEFBFFA00736C03 /* Studifutter-Bridging-Header.h */,
 				8F0BA79E145C72F1003E2DE0 /* SFAppDelegate.h */,
 				8F0BA79F145C72F1003E2DE0 /* SFAppDelegate.m */,
-				8FC113C71D95B23F00895E15 /* Downloader.swift */,
 			);
 			name = "General Controllers";
 			path = Studifutter;
@@ -624,33 +553,23 @@
 				8F0BA79C145C72F1003E2DE0 /* main.m in Sources */,
 				8F0BA7A0145C72F1003E2DE0 /* SFAppDelegate.m in Sources */,
 				8F9DAA55183411BF00B7ADB9 /* SFTeamListViewController.m in Sources */,
-				8F0BA7A6145C72F2003E2DE0 /* Studifutter.xcdatamodeld in Sources */,
-				8F729BB4145F23A300FE166B /* SFRestaurantViewController.m in Sources */,
 				8F729BB7145F23BB00FE166B /* SFDayListViewController.m in Sources */,
 				8F729BBA145F240700FE166B /* SFMenuViewController.m in Sources */,
+				8F9A02321DAED83400ABBD6B /* CafeteriaListTableViewController.swift in Sources */,
 				8F729BC0145F243900FE166B /* SFRestaurantDetailViewController.m in Sources */,
 				8FC9FD2519E2DCE0003308E6 /* FHStarButton.m in Sources */,
-				8F2F9C301AF2609400A29C7D /* CoreDataStack.swift in Sources */,
-				8F729BFF145F2D5100FE166B /* SFAPICall.m in Sources */,
-				8F729C00145F2D5100FE166B /* SFAPIException.m in Sources */,
+				8F1729C71DB123EC0087F299 /* CafeteriaTableViewCell.swift in Sources */,
 				8F729C06145F2DE700FE166B /* NSString+URLEncode.m in Sources */,
 				8F729C09145F31F600FE166B /* Common.m in Sources */,
 				8F4B1D4E1C57AD380088A273 /* UIApplicationExtension.swift in Sources */,
-				8F729C141460313900FE166B /* Connection.m in Sources */,
+				8F9A02301DAED3F200ABBD6B /* JSONParser.swift in Sources */,
 				8F729C1C1460322100FE166B /* Reachability.m in Sources */,
-				8F729C441464BADD00FE166B /* Menu.m in Sources */,
-				8F729C451464BADD00FE166B /* Restaurant.m in Sources */,
-				8F729C461464BADD00FE166B /* _Menu.m in Sources */,
-				8F729C471464BADD00FE166B /* _Restaurant.m in Sources */,
-				8F10D78D146AE0F700896CE9 /* MenuSet.m in Sources */,
-				8F10D791146AE10300896CE9 /* _MenuSet.m in Sources */,
-				8F910BDB146AEC6D001F4E74 /* RestaurantTableViewCell.m in Sources */,
+				8F9A022A1DAED18A00ABBD6B /* DataManager.swift in Sources */,
 				8F910BDF146AF180001F4E74 /* DayTableViewCell.m in Sources */,
 				8F5E9E5D147D907900FF2327 /* MenuTableViewCell.m in Sources */,
-				8FC113C81D95B23F00895E15 /* Downloader.swift in Sources */,
+				8F9A022E1DAED3B900ABBD6B /* Model.swift in Sources */,
 				8F44E313151B6384007CBE1A /* NSString+TrimWhitespace.m in Sources */,
 				8F1E5CFD16135ED700E5E79F /* SFSettingsViewController.m in Sources */,
-				8FA40B5D16BF096D00736EC3 /* SFDataAccessor.m in Sources */,
 				8FA40B6016BF11AD00736EC3 /* FHVersionUpdate.m in Sources */,
 				8FEEF15916DFB32900988BCC /* SFActivityProvider.m in Sources */,
 			);
@@ -935,19 +854,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8F0BA7A4145C72F1003E2DE0 /* Studifutter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8F0BA7A5145C72F1003E2DE0 /* Studifutter.xcdatamodel */,
-			);
-			currentVersion = 8F0BA7A5145C72F1003E2DE0 /* Studifutter.xcdatamodel */;
-			path = Studifutter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8F0BA780145C72F1003E2DE0 /* Project object */;
 }

@@ -7,9 +7,6 @@
 //
 
 #import "SFDayListViewController.h"
-#import "Restaurant.h"
-#import "MenuSet.h"
-#import "Menu.h"
 #import "DayTableViewCell.h"
 #import "SFMenuViewController.h"
 #import "SFRestaurantDetailViewController.h"
