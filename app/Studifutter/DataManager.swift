@@ -15,9 +15,6 @@ import Foundation
  - Request route for restaurants
  - Throw errors
  - Add error handling
- - Add parser for the data
- - Parse data into structs
- - Add manager class that first loads the data and triggers parsing
  - Add caching
  
  */
@@ -29,7 +26,7 @@ enum RestAPIError: Error {
     case JSONParsingError
 }
 
-class RestAPIRequest {
+struct RestAPIRequest {
     let basePath = "https://api.fachschaft.in/scrapi/meals/"
     
     func loadData(cafeteria: CafeteriaKey, callback: @escaping ((Data?) -> Void)) {

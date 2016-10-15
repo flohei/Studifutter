@@ -72,7 +72,8 @@ struct JSONParser {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .none
         dateFormatter.dateFormat = dateFormat
-        return dateFormatter.date(from: dateString)
+        let date = dateFormatter.date(from: dateString)
+        return date
     }
     
     func parseAddress(addressString: String) -> Address? {
