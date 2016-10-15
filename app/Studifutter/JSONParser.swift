@@ -45,8 +45,6 @@ struct JSONParser {
         var mealsArray: [Meal] = []
         
         for mealJSON in jsonObject {
-            print(mealJSON)
-            
             // Get all the raw values
             let title = mealJSON["title"] as? String
             let types = mealJSON["types"] as? [String]
@@ -103,7 +101,6 @@ struct JSONParser {
             numberFormatter.currencyDecimalSeparator = ","
             
             let number = numberFormatter.number(from: rawPrice)
-            print(number)
             
             // Should be two components, first the value, second the currency symbol
             let priceValue = Float(components.first!)

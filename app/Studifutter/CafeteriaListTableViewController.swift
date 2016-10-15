@@ -10,19 +10,29 @@ import UIKit
 
 /// Replaces the old `SFRestaurantViewController` and displays a list of all the restaurants we have.
 class CafeteriaListTableViewController: UITableViewController {
-    var cafeterias: [Cafeteria] = []
-    var selectedCafeteria: Cafeteria?
+    var cafeterias: [Cafeteria] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
-    func reloadData() {
-        cafeterias = DataManager.shared.getCafeterias()
-        tableView.reloadData()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+    }
+    
+    func loadData() {
+        DataManager.shared.getCafeterias { cafeterias in
+            self.cafeterias = cafeterias
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDayList" {
             let destination: DayListTableViewController = segue.destination as! DayListTableViewController
-            destination.cafeteria = selectedCafeteria
-            selectedCafeteria = nil
+            let selectedIndexPath = tableView.indexPathForSelectedRow
+            let cafeteria: Cafeteria = cafeterias[selectedIndexPath!.row]
+            destination.cafeteria = cafeteria
         }
     }
     
@@ -41,7 +51,7 @@ class CafeteriaListTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCafeteria = cafeterias[indexPath.row]
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

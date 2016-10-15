@@ -51,14 +51,27 @@ class RestAPIRequest {
 class DataManager {
     static let shared = DataManager()
     
-    func getCafeterias() -> [Cafeteria] {
-        return []
+    func getCafeterias(cafeterias: @escaping (([Cafeteria]) -> Void)) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        var results: [Cafeteria] = []
+        
+        for key in CafeteriaKey.allValues {
+            DispatchQueue.global(qos: .background).async {
+                self.getCafeteria(key: key, newCafeteria: { cafeteria in
+                    DispatchQueue.main.async {
+                        results.append(cafeteria)
+                        cafeterias(results)
+                    }
+                })
+            }
+        }
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
-    func getCafeteria(key: CafeteriaKey) -> Cafeteria? {
+    func getCafeteria(key: CafeteriaKey, newCafeteria: @escaping ((Cafeteria) -> Void)) {
         let request = RestAPIRequest()
         var resultJSON: JSON? = nil
-        var cafeteria: Cafeteria? = nil
         
         request.loadData(cafeteria: key) { (jsonData) in
             guard let data = jsonData else { return }
@@ -70,10 +83,8 @@ class DataManager {
             }
             
             let parser = JSONParser()
-            cafeteria = parser.parseCafeteria(jsonObject: resultJSON!)
-            print(cafeteria)
+            guard let cafeteria = parser.parseCafeteria(jsonObject: resultJSON!) else { return }
+            newCafeteria(cafeteria)
         }
-        
-        return cafeteria
     }
 }
