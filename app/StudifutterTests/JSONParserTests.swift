@@ -54,13 +54,29 @@ class JSONParserTests: XCTestCase {
         let cafeteria = parser.parseCafeteria(jsonObject: exampleJSON!)
         
         XCTAssertNotNil(cafeteria, "Cafeteria shouldn't be nil")
+        XCTAssertEqual(cafeteria?.title, "Mensateria Ohm Nürnberg")
         XCTAssertEqual(cafeteria?.description, "Mensa am Hauptcampus der TH Nürnberg")
+        
+        let days = cafeteria?.days
+        XCTAssertEqual(days?.count, 9)
+        
+        let addressString = cafeteria?.address?.stringRepresentation
+        XCTAssertEqual(addressString, "Wollentorstraße 4, 90489 Nürnberg")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testMealParser() {
+        let cafeteria = parser.parseCafeteria(jsonObject: exampleJSON!)
+        let day = cafeteria?.days?.first
+        let firstMeal = day?.meals?.first
+        
+        // Check if the meal has the same date as the day
+        XCTAssertEqual(firstMeal?.date, day?.date)
     }
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
 }

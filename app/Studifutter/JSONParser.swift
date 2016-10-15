@@ -22,11 +22,23 @@ struct JSONParser {
     func reduceMeals(meals: [Meal]?) -> [Day]? {
         guard let meals = meals else { return nil }
         var days: [Day] = []
-        var lastDay = meals.first?.date
         
-        // TODO: We need some clever combining here
+        // Get all dates we need
+        var allDates: [Date] = []
+        for meal in meals {
+            guard let date = meal.date else { continue }
+            if !allDates.contains(date) {
+                allDates.append(date)
+            }
+        }
         
-        return []
+        // Filter meals for each day
+        for date in allDates {
+            let mealsForDay = meals.filter { $0.date == date }
+            days.append(Day(date: date, meals: mealsForDay))
+        }
+        
+        return days
     }
     
     func parseMeals(jsonObject: [JSON]) -> [Meal]? {
