@@ -19,7 +19,6 @@ extension Date {
 
 class DayListTableViewController: UITableViewController {
     var cafeteria: Cafeteria?
-    var selectedDay: Day? = nil
     lazy var sections: [String: [Day]] = {
         guard let days = self.cafeteria?.days else { return [:] }
         var sectionsAssembly: [String: [Day]] = [:]
@@ -47,7 +46,9 @@ class DayListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowMenu" {
             let destination = segue.destination as! MenuTableViewController
-            destination.day = selectedDay
+            let selectedIndexPath = tableView.indexPathForSelectedRow
+            let day = cafeteria?.days?[selectedIndexPath!.row]
+            destination.day = day
         }
     }
     
@@ -65,10 +66,6 @@ class DayListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DayCellIdentifier") as! DayTableViewCell
         cell.configure(day: (cafeteria?.days?[indexPath.row])!)
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedDay = cafeteria?.days?[indexPath.row]
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
