@@ -54,7 +54,7 @@ struct Meal {
 }
 
 struct Price {
-    var value: Float?
+    var value: Decimal?
     var currency: String?
     var label: String?
 }

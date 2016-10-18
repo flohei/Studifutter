@@ -92,23 +92,16 @@ struct JSONParser {
     func parsePrices(prices: [String]) -> [Price]? {
         var pricesArray: [Price] = []
         for rawPrice in prices {
-            
             let components = rawPrice.components(separatedBy: " ")
             
-            let numberFormatter = NumberFormatter()
-            numberFormatter.locale = Locale.current
-            numberFormatter.currencySymbol = components.last!
-            numberFormatter.numberStyle = .currency
-            numberFormatter.currencyDecimalSeparator = ","
-            
-            let number = numberFormatter.number(from: rawPrice)
-            
             // Should be two components, first the value, second the currency symbol
-            let priceValue = Float(components.first!)
+            guard let valueString = components.first else { continue }
+            let germanLocale = Locale(identifier: "de_DE")
+            let decimalNumber = Decimal(string: valueString, locale: germanLocale)
             let currencySymbol = components.last!
-            
+ 
             // TODO: Add the label
-            pricesArray.append(Price(value: priceValue, currency: currencySymbol, label: ""))
+            pricesArray.append(Price(value: decimalNumber, currency: currencySymbol, label: ""))
         }
         return pricesArray
     }

@@ -68,9 +68,31 @@ class JSONParserTests: XCTestCase {
         let cafeteria = parser.parseCafeteria(jsonObject: exampleJSON!)
         let day = cafeteria?.days?.first
         let firstMeal = day?.meals?.first
+        let supposedTitle = "Schäuferle fränkische Art mit Soße Kloß Weißkrautsalat"
+        let germanLocale = Locale(identifier: "de_DE")
+        let supposedPrice1 = Decimal(string: "4,44", locale: germanLocale)
+        let supposedPrice2 = Decimal(string: "5,44", locale: germanLocale)
+        let supposedPrice3 = Decimal(string: "8,88", locale: germanLocale)
+        let supposedType = "S"
         
         // Check if the meal has the same date as the day
         XCTAssertEqual(firstMeal?.date, day?.date)
+        
+        // Check title
+        XCTAssertEqual(firstMeal?.title, supposedTitle, "Title does not match")
+        
+        // Check prices
+        XCTAssertEqual(firstMeal?.prices?.count, 3, "There should be exactly three prices here")
+        XCTAssertEqual(firstMeal?.prices?[0].value, supposedPrice1)
+        XCTAssertEqual(firstMeal?.prices?[0].currency, "€", "Should be Euro")
+        XCTAssertEqual(firstMeal?.prices?[1].value, supposedPrice2)
+        XCTAssertEqual(firstMeal?.prices?[1].currency, "€", "Should be Euro")
+        XCTAssertEqual(firstMeal?.prices?[2].value, supposedPrice3)
+        XCTAssertEqual(firstMeal?.prices?[2].currency, "€", "Should be Euro")
+        
+        // Check symbols
+        XCTAssertEqual(firstMeal?.types?.count, 1, "There should be exactly one type here")
+        XCTAssertEqual(firstMeal?.types?.first, supposedType, "The only type should be S")
     }
     
 //    func testPerformanceExample() {
